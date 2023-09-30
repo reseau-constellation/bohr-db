@@ -1,0 +1,83 @@
+{
+  "name": "@constl/bohr-db",
+  "version": "0.0.1",
+  "description": "Type-safe databases for orbit-db.",
+  "author": "Julien Jean Malard-Adam",
+  "keywords": [
+    "Constellation",
+    "pair à pair"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/src/index.js",
+  "type": "module",
+  "types": "./dist/src/index.d.ts",
+  "exports": "./dist/src/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "pnpm version && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
+    "test": "pnpm compile && pnpm aegir test -t node && pnpm aegir test -t browser",
+    "coverage": "pnpm test -- --coverage",
+    "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "publish": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
+    "version": "pnpm genversion  --es6 --semi src/version.ts"
+  },
+  "dependencies": {
+    "@constl/orbit-db-kuiper": "^0.0.1",
+    "@orbitdb/core": "^1.0.0",
+    "ajv": "^8.12.0",
+    "events": "^3.3.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@constl/orbit-db-types": "^1.2.0",
+    "@types/mocha": "^10.0.1",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "aegir": "^40.0.11",
+    "browserify-fs": "^1.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "genversion": "^3.1.1",
+    "mocha": "^10.2.0",
+    "os-browserify": "^0.3.0",
+    "prettier": "^3.0.2",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.1",
+    "ts-patch": "^3.0.2",
+    "typescript": "^5.1.6",
+    "typescript-transform-paths": "^3.4.6"
+  },
+  "resolutions": {
+    "iso-constants": "git+https://github.com/inverted-capital/iso-constants.git#patch-1"
+  },
+  "overrides": {
+    "iso-constants": {
+      ".": "git+https://github.com/inverted-capital/iso-constants.git#patch-1"
+    }
+  },
+  "jest": {
+    "transform": {
+      "(.*).ts$": [
+        "ts-jest",
+        {
+          "useESM": true
+        }
+      ]
+    },
+    "preset": "ts-jest/presets/default-esm",
+    "moduleNameMapper": {
+      "^@/(.*).js$": "<rootDir>/src/$1",
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "testEnvironment": "node"
+  }
+}

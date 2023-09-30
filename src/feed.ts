@@ -1,0 +1,55 @@
+import type { JSONSchemaType } from "ajv";
+import type { FeedDatabaseType } from "@constl/orbit-db-kuiper";
+
+import type { DBElements } from "./types";
+import { generateListValidator } from "./utils.js";
+
+export type TypedFeed<T extends DBElements> = Omit<
+  FeedDatabaseType,
+  "add" | "all"
+> & {
+  add: (value: T) => Promise<string>;
+  all: () => Promise<
+    {
+      value: T;
+      hash: string;
+    }[]
+  >;
+};
+
+export const typedFeedStore = <T extends DBElements>({
+  db,
+  schema,
+}: {
+  db: FeedDatabaseType;
+  schema: JSONSchemaType<T>;
+}): TypedFeed<T> => {
+  const { validate } = generateListValidator(schema);
+
+  return new Proxy(db, {
+    get(target, prop) {
+      if (prop === "all") {
+        return async (): Promise<{ value: T; hash: string }[]> => {
+          const all = await target[prop]();
+          const valides = all.filter((x) => validate(x.value)) as {
+            value: T;
+            hash: string;
+          }[];
+          return valides;
+        };
+      } else if (prop === "add") {
+        return async (data: T): Promise<string> => {
+          const valid = validate(data);
+          if (valid) {
+            return await target.add(data);
+          }
+          throw new Error(
+            data.toString() + JSON.stringify(validate.errors, undefined, 2),
+          );
+        };
+      } else {
+        return target[prop as keyof typeof target];
+      }
+    },
+  }) as TypedFeed<T>;
+};
