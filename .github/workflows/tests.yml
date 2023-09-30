@@ -1,4 +1,4 @@
-name: Tests IPA
+name: Tests Bohr-DB
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   tests-et-couverture:
-    name: On test le mandataire
+    name: Test on Node.js
     runs-on: ubuntu-latest
     steps:
       - name: Préparation de Node.js
@@ -28,7 +28,7 @@ jobs:
         run: pnpm install --lockfile=false
 
       - name: Vérifier les tests
-        run: pnpm couverture
+        run: pnpm coverage
 
       - name: Envoyer couverure à Codecov
         uses: codecov/codecov-action@v3
