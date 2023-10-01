@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "pnpm version && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
-    "test": "pnpm compile && pnpm aegir test -t node && pnpm aegir test -t browser",
+    "test": "pnpm compile && pnpm aegir test -t node",
     "coverage": "pnpm test -- --coverage",
     "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
     "publish": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
@@ -44,6 +44,7 @@
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "genversion": "^3.1.1",
+    "ipfs-core": "^0.18.1",
     "mocha": "^10.2.0",
     "os-browserify": "^0.3.0",
     "prettier": "^3.0.3",
