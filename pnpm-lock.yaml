@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^6.7.3
     version: 6.7.3(eslint@8.50.0)(typescript@5.2.2)
   aegir:
-    specifier: ^40.0.13
-    version: 40.0.13(@babel/core@7.22.10)(@typescript-eslint/parser@6.7.3)(eslint-plugin-n@16.0.2)
+    specifier: ^41.0.0
+    version: 41.0.0(@babel/core@7.22.10)(@typescript-eslint/parser@6.7.3)(eslint-plugin-n@16.0.2)
   browserify-fs:
     specifier: ^1.0.0
     version: 1.0.0
@@ -3630,8 +3630,8 @@ packages:
     hasBin: true
     dev: true
 
-  /aegir@40.0.13(@babel/core@7.22.10)(@typescript-eslint/parser@6.7.3)(eslint-plugin-n@16.0.2):
-    resolution: {integrity: sha512-Z/rVx9RpSd0Bmj/0t56E5rcm23lss6WRqMVxO5bAfDPoEnb4Zrk+/JEjGM3Z9/8U7TP6KV3ioNJXy0N6rKi8Lg==}
+  /aegir@41.0.0(@babel/core@7.22.10)(@typescript-eslint/parser@6.7.3)(eslint-plugin-n@16.0.2):
+    resolution: {integrity: sha512-aEMmlQj3wzEveGcYM/rv+06wL5AZvhotfk2zicRw00plRLxovXUav8txzKExaR1AFvXlH5+ObexHX9TKNdtQ6A==}
     engines: {node: '>=18.0.0', npm: '>=8.6.0'}
     hasBin: true
     dependencies:
@@ -3667,7 +3667,7 @@ packages:
       env-paths: 3.0.0
       esbuild: 0.19.2
       eslint: 8.50.0
-      eslint-config-ipfs: 5.0.1(eslint-plugin-n@16.0.2)(eslint@8.50.0)(typescript@5.2.2)
+      eslint-config-ipfs: 6.0.0(eslint-plugin-n@16.0.2)(eslint@8.50.0)(typescript@5.2.2)
       eslint-plugin-etc: 2.0.3(eslint@8.50.0)(typescript@5.2.2)
       eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.3)(eslint@8.50.0)
       eslint-plugin-jsdoc: 46.5.0(eslint@8.50.0)
@@ -5719,8 +5719,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /eslint-config-ipfs@5.0.1(eslint-plugin-n@16.0.2)(eslint@8.50.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-rzMz44vDw4noJzFAz1gWT3/9VLFISGZsqg1o+svjiOQHzhee5GUK4yXXx89xNon77vQ/2tGvb6Qn/akIiNC1+g==}
+  /eslint-config-ipfs@6.0.0(eslint-plugin-n@16.0.2)(eslint@8.50.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-8ZzsQFicC6Yu64KR923MmP7JHjGfQ2xvnQF3yC5WPGWVmGEOR+qNr53ak5D37wtc0/xNz5IdqdGJ9ZB6Qnso9w==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     peerDependencies:
       typescript: '*'
