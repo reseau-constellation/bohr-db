@@ -17,7 +17,7 @@ export type TypedFeed<T extends DBElements> = Omit<
   >;
 };
 
-export const typedFeedStore = <T extends DBElements>({
+export const typedFeed = <T extends DBElements>({
   db,
   schema,
 }: {
@@ -31,11 +31,11 @@ export const typedFeedStore = <T extends DBElements>({
       if (prop === "all") {
         return async (): Promise<{ value: T; hash: string }[]> => {
           const all = await target[prop]();
-          const valides = all.filter((x) => validate(x.value)) as {
+          const valid = all.filter((x) => validate(x.value)) as {
             value: T;
             hash: string;
           }[];
-          return valides;
+          return valid;
         };
       } else if (prop === "add") {
         return async (data: T): Promise<string> => {

@@ -12,10 +12,17 @@ export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   set: TypedKeyValue<T>["put"];
   del<K extends keyof T>(key: K): Promise<string>;
   get<K extends keyof T>(key: K): Promise<T[K] | undefined>;
-  all(): Promise<T>;
+  all: () => Promise<
+    {
+      key: Extract<keyof T, "string">;
+      value: T[keyof T];
+      hash: string;
+    }[]
+  >;
+  allAsJSON(): Promise<T>;
 };
 
-export const typedKeyValueStore = <T extends { [clef: string]: DBElements }>({
+export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
   db,
   schema,
 }: {
@@ -31,6 +38,7 @@ export const typedKeyValueStore = <T extends { [clef: string]: DBElements }>({
         return async (
           key: Extract<keyof T, string>,
         ): Promise<T[typeof key] | undefined> => {
+          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
           const val = await target.get(key);
           if (val === undefined) return val;
           const valide = validateKey(val, key);
@@ -41,16 +49,21 @@ export const typedKeyValueStore = <T extends { [clef: string]: DBElements }>({
           key: Extract<keyof T, string>,
           value: T[typeof key],
         ): Promise<string> => {
+          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
           const valid = validateKey(value, key);
+
           if (valid) return await target.put(key, value);
           else
             throw new Error(
-              supportedKey(key)
-                ? JSON.stringify(getKeyValidator(key).errors, undefined, 2)
-                : `Unsupported key ${key}.`,
+              JSON.stringify(getKeyValidator(key).errors, undefined, 2),
             );
         };
       } else if (prop === "all") {
+        return async () => {
+          const all = await target.all();
+          return all.filter((x) => validateKey(x.value, x.key));
+        };
+      } else if (prop === "allAsJSON") {
         return async () => {
           const all = await target.all();
           const data = Object.fromEntries(all.map((x) => [x.key, x.value]));

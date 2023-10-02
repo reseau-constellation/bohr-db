@@ -3,9 +3,9 @@ import { rimraf } from "rimraf";
 
 import config from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
-import { Set, SetDatabaseType } from "@constl/orbit-db-kuiper";
+import { Feed, FeedDatabaseType } from "@constl/orbit-db-kuiper";
 
-import { TypedSet, typedSet } from "@/set.js";
+import { TypedFeed, typedFeed } from "@/feed.js";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
 import { JSONSchemaType } from "ajv";
@@ -15,14 +15,14 @@ const keysPath = "./testkeys";
 
 const numericSchema: JSONSchemaType<number> = { type: "number" };
 
-describe("Typed Set", () => {
+describe("Typed Feed", () => {
   let ipfs: IPFS.IPFS;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
-  let db: SetDatabaseType;
+  let db: FeedDatabaseType;
 
-  const databaseId = "set-AAA";
+  const databaseId = "feed-AAA";
 
   before(async () => {
     ipfs = await IPFS.create({ ...config.daemon1, repo: "./ipfs1" });
@@ -46,16 +46,16 @@ describe("Typed Set", () => {
     await rimraf("./ipfs1");
   });
 
-  describe("Creating a Typed Set database", () => {
-    let typedDB: TypedSet<number>;
+  describe("Creating a Typed Feed database", () => {
+    let typedDB: TypedFeed<number>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await Feed()({
         ipfs,
         identity: testIdentity1,
         address: databaseId,
       });
-      typedDB = typedSet({
+      typedDB = typedFeed({
         db,
         schema: numericSchema,
       });
@@ -68,9 +68,9 @@ describe("Typed Set", () => {
       }
     });
 
-    it("wraps a set store", async () => {
+    it("wraps a feed store", async () => {
       expect(typedDB.address.toString()).to.equal(databaseId);
-      expect(typedDB.type).to.equal("set");
+      expect(typedDB.type).to.equal("feed");
     });
 
     it("returns 0 items when it's a fresh database", async () => {
@@ -80,16 +80,16 @@ describe("Typed Set", () => {
     });
   });
 
-  describe("Typed Set database - simple type", () => {
-    let typedDB: TypedSet<number>;
+  describe("Typed Feed database - simple type", () => {
+    let typedDB: TypedFeed<number>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await Feed()({
         ipfs,
         identity: testIdentity1,
-        address: "numeric-set",
+        address: "numeric-feed",
       });
-      typedDB = typedSet({
+      typedDB = typedFeed({
         db,
         schema: numericSchema,
       });
@@ -128,7 +128,7 @@ describe("Typed Set", () => {
     });
   });
 
-  describe("Typed Set database - object type", () => {
+  describe("Typed Feed database - object type", () => {
     type structure = {
       a: number;
       b?: string;
@@ -142,15 +142,15 @@ describe("Typed Set", () => {
       required: ["a"],
     };
 
-    let typedDB: TypedSet<structure>;
+    let typedDB: TypedFeed<structure>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await Feed()({
         ipfs,
         identity: testIdentity1,
-        address: "object-set",
+        address: "object-feed",
       });
-      typedDB = typedSet({
+      typedDB = typedFeed({
         db,
         schema: objectSchema,
       });

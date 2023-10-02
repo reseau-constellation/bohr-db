@@ -18,7 +18,7 @@ export type TypedSet<T extends DBElements> = Omit<
   >;
 };
 
-export const typedSetStore = <T extends DBElements>({
+export const typedSet = <T extends DBElements>({
   db,
   schema,
 }: {

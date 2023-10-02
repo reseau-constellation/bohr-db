@@ -29,15 +29,7 @@ export const generateDictValidator = <T extends { [clef: string]: DBElements }>(
     if (s === true) {
       return () => true;
     }
-
-    if (s.nullable) {
-      const f = ajv.compile(s);
-      return (v: unknown) => {
-        return f(v === undefined ? null : v);
-      };
-    } else {
-      return ajv.compile(s);
-    }
+    return ajv.compile(s);
   };
   const validators = Object.fromEntries(
     (
@@ -61,8 +53,8 @@ export const generateDictValidator = <T extends { [clef: string]: DBElements }>(
     return validators[key] || validateAdditionalProperties;
   };
 
-  const supportedKey = (key: string) => {
-    return !!validators[key];
+  const supportedKey = (key: string): boolean => {
+    return !!validators[key] || !!schema.additionalProperties;
   };
 
   return {
