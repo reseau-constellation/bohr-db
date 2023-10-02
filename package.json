@@ -1,6 +1,6 @@
 {
   "name": "@constl/bohr-db",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Type-safe databases for orbit-db.",
   "author": "Julien Jean Malard-Adam",
   "keywords": [
@@ -17,12 +17,12 @@
   "exports": "./dist/src/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "compile": "pnpm version && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
+    "compile": "pnpm updateVersion && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
     "test": "pnpm compile && pnpm aegir test -t node",
     "coverage": "pnpm test -- --coverage",
     "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
     "release": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
-    "version": "pnpm genversion  --es6 --semi src/version.ts"
+    "updateVersion": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "dependencies": {
     "@constl/orbit-db-kuiper": "^0.0.1",
