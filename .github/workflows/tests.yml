@@ -22,7 +22,7 @@ jobs:
           version: latest
 
       - name: Ouvrir la branche
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Nétoyer les dépendances d'installation
         run: pnpm install --lockfile=false
