@@ -9,8 +9,8 @@ overrides:
 
 dependencies:
   '@constl/orbit-db-kuiper':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   '@orbitdb/core':
     specifier: ^1.0.0
     version: 1.0.0
@@ -1098,8 +1098,8 @@ packages:
     engines: {node: '>=0.1.90'}
     dev: true
 
-  /@constl/orbit-db-kuiper@0.0.1:
-    resolution: {integrity: sha512-L9PnO0dlg8R6pT66N8lFB05337xYviGP31dKSH7jX9jbkZWmPE8Iup397VHKWu3HCeA4Pj15cSJ6qBgrlawLcQ==}
+  /@constl/orbit-db-kuiper@0.0.2:
+    resolution: {integrity: sha512-kuGJVDe9DYlBx5gwfxeXTeeWmF83mZpKxUVHZiVowiFij8T2124HXku4LfmBgk9sbXRmMLY7LiZPRU9yazlyWw==}
     dependencies:
       '@orbitdb/core': 1.0.0
       events: 3.3.0
