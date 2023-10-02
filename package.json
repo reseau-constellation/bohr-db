@@ -25,7 +25,7 @@
     "updateVersion": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "dependencies": {
-    "@constl/orbit-db-kuiper": "^0.0.1",
+    "@constl/orbit-db-kuiper": "^0.0.2",
     "@orbitdb/core": "^1.0.0",
     "ajv": "^8.12.0",
     "events": "^3.3.0",
