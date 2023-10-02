@@ -21,7 +21,7 @@
     "test": "pnpm compile && pnpm aegir test -t node",
     "coverage": "pnpm test -- --coverage",
     "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
-    "publish": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
+    "release": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
     "version": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "dependencies": {
