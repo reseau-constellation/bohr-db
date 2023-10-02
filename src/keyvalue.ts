@@ -19,7 +19,7 @@ export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
       hash: string;
     }[]
   >;
-  allAsJSON(): Promise<T>;
+  allAsJSON(): Promise<Partial<T>>;
 };
 
 export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
