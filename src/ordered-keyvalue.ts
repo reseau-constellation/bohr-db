@@ -4,30 +4,29 @@ import { OrderedKeyValueDatabaseType } from "@constl/orbit-db-kuiper";
 import { DBElements } from "./types";
 import { generateDictValidator } from "./utils.js";
 
-export type TypedOrderedKeyValue<T extends { [clef: string]: unknown }> =
-  Omit<
-    OrderedKeyValueDatabaseType,
-    "put" | "set" | "del" | "move" | "get" | "all"
-  > & {
-    put: <K extends keyof T>(
-      key: K,
-      value: T[K],
-      position?: number,
-    ) => Promise<string>;
-    set: TypedOrderedKeyValue<T>["put"];
-    del: <K extends keyof T>(key: K) => Promise<string>;
-    move: <K extends keyof T>(key: K, position: number) => Promise<string>;
-    get: <K extends keyof T>(
-      key: K,
-    ) => Promise<{ value: T[K]; position?: number } | undefined>;
-    all: () => Promise<
-      {
-        key: Extract<keyof T, "string">;
-        value: T[keyof T];
-        hash: string;
-      }[]
-    >;
-  };
+export type TypedOrderedKeyValue<T extends { [clef: string]: unknown }> = Omit<
+  OrderedKeyValueDatabaseType,
+  "put" | "set" | "del" | "move" | "get" | "all"
+> & {
+  put: <K extends keyof T>(
+    key: K,
+    value: T[K],
+    position?: number,
+  ) => Promise<string>;
+  set: TypedOrderedKeyValue<T>["put"];
+  del: <K extends keyof T>(key: K) => Promise<string>;
+  move: <K extends keyof T>(key: K, position: number) => Promise<string>;
+  get: <K extends keyof T>(
+    key: K,
+  ) => Promise<{ value: T[K]; position?: number } | undefined>;
+  all: () => Promise<
+    {
+      key: Extract<keyof T, "string">;
+      value: T[keyof T];
+      hash: string;
+    }[]
+  >;
+};
 
 export const typedOrderedKeyValue = <T extends { [clef: string]: DBElements }>({
   db,
