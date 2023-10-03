@@ -4,7 +4,7 @@ import type { KeyValue } from "@orbitdb/core";
 import type { DBElements } from "./types.js";
 import { generateDictValidator } from "./utils.js";
 
-export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
+export type TypedKeyValue<T extends { [clef: string]: DBElements }> = Omit<
   KeyValue,
   "put" | "set" | "del" | "get" | "all"
 > & {
@@ -19,7 +19,7 @@ export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
       hash: string;
     }[]
   >;
-  allAsJSON(): Promise<Partial<T>>;
+  allAsJSON(): Promise<T>;
 };
 
 export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
