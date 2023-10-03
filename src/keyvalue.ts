@@ -4,7 +4,7 @@ import type { KeyValue } from "@orbitdb/core";
 import type { DBElements } from "./types.js";
 import { generateDictValidator } from "./utils.js";
 
-export type TypedKeyValue<T extends { [clef: string]: DBElements }> = Omit<
+export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   KeyValue,
   "put" | "set" | "del" | "get" | "all"
 > & {
