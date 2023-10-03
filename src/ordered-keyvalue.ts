@@ -16,7 +16,9 @@ export type TypedOrderedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   set: TypedOrderedKeyValue<T>["put"];
   del: <K extends keyof T>(key: K) => Promise<string>;
   move: <K extends keyof T>(key: K, position: number) => Promise<string>;
-  get: <K extends keyof T>(key: K) => Promise<T[K] | undefined>;
+  get: <K extends keyof T>(
+    key: K,
+  ) => Promise<{ value: T[K]; position?: number } | undefined>;
   all: () => Promise<
     {
       key: Extract<keyof T, "string">;
