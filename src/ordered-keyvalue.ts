@@ -4,7 +4,7 @@ import { OrderedKeyValueDatabaseType } from "@constl/orbit-db-kuiper";
 import { DBElements } from "./types";
 import { generateDictValidator } from "./utils.js";
 
-export type TypedOrderedKeyValue<T extends { [clef: string]: DBElements }> =
+export type TypedOrderedKeyValue<T extends { [clef: string]: unknown }> =
   Omit<
     OrderedKeyValueDatabaseType,
     "put" | "set" | "del" | "move" | "get" | "all"
