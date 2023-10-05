@@ -18,8 +18,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "pnpm updateVersion && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
-    "test": "pnpm compile && pnpm aegir test -t node",
-    "coverage": "pnpm test -- --coverage",
+    "test": "pnpm compile && pnpm aegir test -t node --cov -- --exit",
     "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
     "release": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
     "updateVersion": "pnpm genversion  --es6 --semi src/version.ts"
