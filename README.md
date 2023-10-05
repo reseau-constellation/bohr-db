@@ -27,13 +27,15 @@ As simple example with `Set`:
 import { createOrbit } from "@orbitdb/core";
 import { registerAll } from "@constl/orbit-db-kuiper";
 
+import { typedSet } from "@constl/bohr-db";
+
 // Register orbit-db-kuiper database types. IMPORTANT - must call before creating orbit instance !
 registerAll();
 
 const orbit = await createOrbit({ ipfs })
 
 const db = await orbit.open({ type: "set" });
-const typedDB = typedSetStore({
+const typedDB = typedSet({
     db,
     schema: numericSchema,
 });  // Is exactly the same as `db`, but now type-safe
@@ -54,7 +56,7 @@ await db.add("not a number");
 await typedDB.all()  // Yay !! Still [1, 2]
 ```
 
-Any `ajv` schema can be used:
+Any `ajv` schema can be used, for more complex data types:
 ```ts
 type structure = {
     a: number;
@@ -63,14 +65,14 @@ type structure = {
 const objectSchema: JSONSchemaType<structure> = {
     type: "object",
     properties: {
-    a: { type: "number" },
-    b: { type: "string", nullable: true },
+        a: { type: "number" },
+        b: { type: "string", nullable: true },
     },
     required: ["a"],
 };
 
 const db = await orbit.open({ type: "set" });
-const typedDB = typedSetStore({
+const typedDB = typedSet({
     db,
     schema: objectSchema,
 });  
@@ -86,6 +88,8 @@ await typedDB.add({ a: 1, b: 2 });
 ### KeyValue
 A more complex example with `KeyValue`:
 ```ts
+import { typedKeyValue } from "@constl/bohr-db";
+
 type structure = { a: number, b: { c: string, d?: number } };
 const schema: JSONSchemaType<Partial<structure>> = {
     type: "object",
@@ -105,7 +109,7 @@ const schema: JSONSchemaType<Partial<structure>> = {
 };
 
 const db = await orbit.open({ type: "keyvalue" });
-const typedDB = typedSetStore({
+const typedDB = typedKeyValue({
     db,
     schema: objectSchema,
 });  
