@@ -19,11 +19,18 @@ Note: `KeyValue` also offers the additional property `.allAsJSON()`, which retur
 Borh-DB currently supports the orbit-db `KeyValue`, as well as the `Feed`, `Set` and `OrderedKeyValue` databases from `@constl/orbit-db-kuiper`. Pull requests for additional db types are of course welcome!
 
 ## Examples
+Below are a few examples of `bohr-db` with `KeyValue` and `Set` databases. See the test folder for examples with other orbit-db database types.
 
 ### Set
 As simple example with `Set`:
 ```ts
-import { Set } from "@constl/orbit-db-kuiper";
+import { createOrbit } from "@orbitdb/core";
+import { registerAll } from "@constl/orbit-db-kuiper";
+
+// Register orbit-db-kuiper database types. IMPORTANT - must call before creating orbit instance !
+registerAll();
+
+const orbit = await createOrbit({ ipfs })
 
 const db = await orbit.open({ type: "set" });
 const typedDB = typedSetStore({
@@ -79,5 +86,37 @@ await typedDB.add({ a: 1, b: 2 });
 ### KeyValue
 A more complex example with `KeyValue`:
 ```ts
+type structure = { a: number, b: { c: string, d?: number } };
+const schema: JSONSchemaType<Partial<structure>> = {
+    type: "object",
+    properties: {
+        a: { type: "number", nullable: true },
+        b: { 
+            type: "object",
+            properties: {
+                c: { type: "string" },
+                d: { type: "number", nullable: true}
+            }
+            nullable: true,
+            required: []
+        }
+    },
+    required: [],
+};
+
+const db = await orbit.open({ type: "keyvalue" });
+const typedDB = typedSetStore({
+    db,
+    schema: objectSchema,
+});  
+
+// Add valid data
+await typedDB.put("a", 1);
+await typedDB.put("b", { c: 1, d: "e" });
+
+const values = await typedDB.allAsJSON();
+
+// Invalid data
+await typedDB.put("a", "text")  // Error !!
 
 ```
