@@ -1,6 +1,9 @@
 # Bohr-DB
 Discrete types for your orbit-dbs.
 
+[![Tests Bohr-DB](https://github.com/reseau-constellation/bohr-db/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/reseau-constellation/bohr-db/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/reseau-constellation/bohr-db/graph/badge.svg?token=LjBS0gKh6n)](https://codecov.io/gh/reseau-constellation/bohr-db)
+
 ## Installation
 ```
 $ pnpm add @constl/bohr-db
