@@ -43,7 +43,9 @@ export const typedOrderedKeyValue = <T extends { [clef: string]: DBElements }>({
       if (prop === "get") {
         return async (
           key: Extract<keyof T, string>,
-        ): Promise<{ value: T[typeof key]; position?: number } | undefined> => {
+        ): Promise<
+          { value: T[typeof key]; position: number | undefined } | undefined
+        > => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
 
           const val = await target.get(key);
