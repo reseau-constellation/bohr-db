@@ -1,7 +1,7 @@
-import * as IPFS from "ipfs-core";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import config from "./config.js";
+import { createTestHelia } from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
 import {
   OrderedKeyValue,
@@ -25,7 +25,7 @@ const removeHash = <T>(
   data.map((x) => ({ key: x.key, value: x.value }));
 
 describe("Typed OrderedKeyValue", () => {
-  let ipfs: IPFS.IPFS;
+  let ipfs: Helia;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
@@ -34,7 +34,7 @@ describe("Typed OrderedKeyValue", () => {
   const databaseId = "ordered-keyvalue-AAA";
 
   before(async () => {
-    ipfs = await IPFS.create({ ...config.daemon1, repo: "./ipfs1" });
+    ipfs = await createTestHelia();
 
     keystore = await KeyStore({ path: keysPath });
     identities = await Identities({ keystore });
@@ -52,7 +52,6 @@ describe("Typed OrderedKeyValue", () => {
 
     await rimraf(keysPath);
     await rimraf("./orbitdb");
-    await rimraf("./ipfs1");
   });
 
   describe("Creating a Typed OrderedKeyValue database", () => {

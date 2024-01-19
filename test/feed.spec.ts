@@ -1,7 +1,7 @@
-import * as IPFS from "ipfs-core";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import config from "./config.js";
+import { createTestHelia } from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
 import { Feed, FeedDatabaseType } from "@constl/orbit-db-kuiper";
 
@@ -16,7 +16,7 @@ const keysPath = "./testkeys";
 const numericSchema: JSONSchemaType<number> = { type: "number" };
 
 describe("Typed Feed", () => {
-  let ipfs: IPFS.IPFS;
+  let ipfs: Helia;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
@@ -25,7 +25,7 @@ describe("Typed Feed", () => {
   const databaseId = "feed-AAA";
 
   before(async () => {
-    ipfs = await IPFS.create({ ...config.daemon1, repo: "./ipfs1" });
+    ipfs = await createTestHelia();
 
     keystore = await KeyStore({ path: keysPath });
     identities = await Identities({ keystore });
@@ -43,7 +43,6 @@ describe("Typed Feed", () => {
 
     await rimraf(keysPath);
     await rimraf("./orbitdb");
-    await rimraf("./ipfs1");
   });
 
   describe("Creating a Typed Feed database", () => {

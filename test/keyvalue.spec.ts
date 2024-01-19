@@ -1,7 +1,7 @@
-import * as IPFS from "ipfs-core";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import config from "./config.js";
+import { createTestHelia } from "./config.js";
 import { OrbitDB, createOrbitDB } from "@orbitdb/core";
 import { KeyValue as KeyValueDatabaseType } from "@orbitdb/core";
 
@@ -14,14 +14,14 @@ chai.use(chaiAsPromised);
 const keysPath = "./testkeys";
 
 describe("Typed KeyValue", () => {
-  let ipfs: IPFS.IPFS;
+  let ipfs: Helia;
   let orbit: OrbitDB;
   let db: KeyValueDatabaseType;
 
   const databaseId = "keyValue-AAA";
 
   before(async () => {
-    ipfs = await IPFS.create({ ...config.daemon1, repo: "./ipfs1" });
+    ipfs = await createTestHelia();
 
     orbit = await createOrbitDB({ ipfs, directory: "./orbitdb" });
   });
@@ -33,7 +33,6 @@ describe("Typed KeyValue", () => {
 
     await rimraf(keysPath);
     await rimraf("./orbitdb");
-    await rimraf("./ipfs1");
   });
 
   describe("Creating a Typed KeyValue database", () => {
