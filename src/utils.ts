@@ -2,7 +2,7 @@ import Ajv, { JSONSchemaType, ValidateFunction } from "ajv";
 
 import type { DBElements } from "./types";
 
-const ajv = new Ajv();
+const ajv = new Ajv({ allowUnionTypes: true });
 
 export const generateListValidator = <T extends DBElements>(
   schema: JSONSchemaType<T>,
