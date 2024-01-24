@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^1.2.9
     version: 1.2.9
   '@helia/block-brokers':
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^2.0.0
+    version: 2.0.0
   '@libp2p/circuit-relay-v2':
     specifier: ^1.0.12
     version: 1.0.12
@@ -2144,6 +2144,20 @@ packages:
       uint8arrays: 5.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@helia/block-brokers@2.0.0:
+    resolution: {integrity: sha512-6/SeTaVshPzAgSc+mpsQ1tZWy8BcRGx1PdQdYrjyATYjPVTWG30DSEgCBtqNgyyoWN51rhkWQM9TANL0P6iQIg==}
+    dependencies:
+      '@helia/interface': 4.0.0
+      '@libp2p/interface': 1.1.2
+      interface-blockstore: 5.2.9
+      ipfs-bitswap: 20.0.2
+      multiformats: 13.0.1
+      progress-events: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@helia/delegated-routing-v1-http-api-client@1.1.2:
     resolution: {integrity: sha512-u+sVdOxFieusZh/AxC8c0lU1micWfAosju7A80n62rdJ1fr1lclkhhrlfaKWIgVOq+pwonEzoOE7QgnTL22tYw==}
@@ -2178,6 +2192,18 @@ packages:
       progress-events: 1.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@helia/interface@4.0.0:
+    resolution: {integrity: sha512-J8ZGuNac60x1pwMZ7i5rvB9oldnc3rIEhCcZE6vKl5vsDHmlCpG2NmVPM5x1VIfei1JEAygDtfCFUDvGpMxSfw==}
+    dependencies:
+      '@libp2p/interface': 1.1.2
+      interface-blockstore: 5.2.9
+      interface-datastore: 8.2.10
+      interface-store: 5.1.7
+      multiformats: 13.0.1
+      progress-events: 1.0.0
+    dev: true
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
