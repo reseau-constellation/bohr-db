@@ -6,7 +6,7 @@ import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
 import {
   OrderedKeyValue,
   OrderedKeyValueDatabaseType,
-} from "@constl/orbit-db-kuiper";
+} from "@orbitdb/ordered-keyvalue-db";
 
 import {
   TypedOrderedKeyValue,

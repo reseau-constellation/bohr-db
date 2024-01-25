@@ -1,5 +1,5 @@
 import { type JSONSchemaType } from "ajv";
-import { SetDatabaseType } from "@constl/orbit-db-kuiper";
+import { SetDatabaseType } from "@orbitdb/set-db";
 
 import { DBElements } from "@/types";
 import { generateListValidator } from "@/utils.js";

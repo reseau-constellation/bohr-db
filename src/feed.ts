@@ -1,5 +1,5 @@
 import type { JSONSchemaType } from "ajv";
-import type { FeedDatabaseType } from "@constl/orbit-db-kuiper";
+import type { FeedDatabaseType } from "@orbitdb/feed-db";
 
 import type { DBElements } from "./types";
 import { generateListValidator } from "./utils.js";

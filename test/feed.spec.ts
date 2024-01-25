@@ -3,7 +3,7 @@ import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
-import { Feed, FeedDatabaseType } from "@constl/orbit-db-kuiper";
+import { Feed, FeedDatabaseType } from "@orbitdb/feed-db";
 
 import { TypedFeed, typedFeed } from "@/feed.js";
 

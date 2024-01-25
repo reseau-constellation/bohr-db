@@ -1,5 +1,5 @@
 import { JSONSchemaType } from "ajv";
-import { OrderedKeyValueDatabaseType } from "@constl/orbit-db-kuiper";
+import { OrderedKeyValueDatabaseType } from "@orbitdb/ordered-keyvalue-db";
 
 import { DBElements } from "./types";
 import { generateDictValidator } from "./utils.js";

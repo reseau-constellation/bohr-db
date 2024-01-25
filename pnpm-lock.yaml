@@ -8,12 +8,18 @@ overrides:
   iso-constants: git+https://github.com/inverted-capital/iso-constants.git#patch-1
 
 dependencies:
-  '@constl/orbit-db-kuiper':
-    specifier: ^0.1.0
-    version: 0.1.0(react-native@0.73.2)
   '@orbitdb/core':
     specifier: ^2.0.1
     version: 2.0.1
+  '@orbitdb/feed-db':
+    specifier: ^1.0.0
+    version: 1.0.0(react-native@0.73.2)
+  '@orbitdb/ordered-keyvalue-db':
+    specifier: ^1.0.0
+    version: 1.0.0(react-native@0.73.2)
+  '@orbitdb/set-db':
+    specifier: ^1.0.0
+    version: 1.0.0(react-native@0.73.2)
   ajv:
     specifier: ^8.12.0
     version: 8.12.0
@@ -1602,6 +1608,8 @@ packages:
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.1
       wherearewe: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@chainsafe/libp2p-yamux@6.0.1:
@@ -1626,20 +1634,6 @@ packages:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
     dev: true
-
-  /@constl/orbit-db-kuiper@0.1.0(react-native@0.73.2):
-    resolution: {integrity: sha512-OhOHIWdGl3L8dsgxoGuLDuZg3fbUABO1xTXtf9KyOBl8+ujnMmmSRmzviArxQ5Smj8uSapls4uhBnLbIcseEow==}
-    dependencies:
-      '@orbitdb/core': 2.0.1
-      events: 3.3.0
-      helia: 3.0.1(react-native@0.73.2)
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - bufferutil
-      - react-native
-      - supports-color
-      - utf-8-validate
-    dev: false
 
   /@constl/orbit-db-types@1.2.9:
     resolution: {integrity: sha512-Mv+xg2n60cv71f5EZ+X3ZWVwxZeIXBbnjJAnFoYzV0OmyUaJAWgIjvNdx7n3/hGni7Qu9AjstBd8Jff9UbGGwg==}
@@ -3055,6 +3049,42 @@ packages:
       uint8arrays: 5.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@orbitdb/feed-db@1.0.0(react-native@0.73.2):
+    resolution: {integrity: sha512-5wD8fNCwJcsQ+YSbG8J3b0WUSGU1oKkaI8r1nUwflXm9oHOtFoexY+Bq5DCgDvcbB7YBpvQpAX4KejlEu52ZwQ==}
+    dependencies:
+      '@orbitdb/core': 2.0.1
+      helia: 3.0.1(react-native@0.73.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@orbitdb/ordered-keyvalue-db@1.0.0(react-native@0.73.2):
+    resolution: {integrity: sha512-0VTNEpAfQHZifIT1uEo3ghhURhc+I3oj4x13DG4dFnomm4V+ENhSnQPdE69/2b5MVkbcTZt/b6mY2cvmoYi+OQ==}
+    dependencies:
+      '@orbitdb/core': 2.0.1
+      helia: 3.0.1(react-native@0.73.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@orbitdb/set-db@1.0.0(react-native@0.73.2):
+    resolution: {integrity: sha512-XgmB0dGminHK3kHg6TaDjJVLyVEz48YDixVc7YEAYQ8vIjsH4ylBz0kM6hJV87DPX6fgGKWAQYBNbb/TmFdTOA==}
+    dependencies:
+      '@orbitdb/core': 2.0.1
+      helia: 3.0.1(react-native@0.73.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
     dev: false
 
   /@phenomnomnominal/tsquery@5.0.1(typescript@5.3.3):

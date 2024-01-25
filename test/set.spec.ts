@@ -3,7 +3,7 @@ import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
-import { Set, SetDatabaseType } from "@constl/orbit-db-kuiper";
+import { Set, SetDatabaseType } from "@orbitdb/set-db";
 
 import { TypedSet, typedSet } from "@/set.js";
 
