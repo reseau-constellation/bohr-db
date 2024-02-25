@@ -48,7 +48,7 @@ devDependencies:
     version: 2.0.0(react-native@0.73.4)
   '@helia/block-brokers':
     specifier: ^2.0.0
-    version: 2.0.0
+    version: 2.0.1
   '@libp2p/circuit-relay-v2':
     specifier: ^1.0.12
     version: 1.0.12
@@ -2296,14 +2296,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@helia/block-brokers@2.0.0:
-    resolution: {integrity: sha512-6/SeTaVshPzAgSc+mpsQ1tZWy8BcRGx1PdQdYrjyATYjPVTWG30DSEgCBtqNgyyoWN51rhkWQM9TANL0P6iQIg==}
+  /@helia/block-brokers@2.0.1:
+    resolution: {integrity: sha512-KHqL4pcA2dHvRdVuqHKMA5K1ky/VPSzL8/s4NrId5Sxi+Qx7yPYMrDuexau+OZ+wrEnHaKtoEGAydL0imqbvcA==}
     dependencies:
       '@helia/interface': 4.0.0
-      '@libp2p/interface': 1.1.2
-      interface-blockstore: 5.2.9
+      '@libp2p/interface': 1.1.3
+      interface-blockstore: 5.2.10
       ipfs-bitswap: 20.0.2
-      multiformats: 13.0.1
+      multiformats: 13.1.0
       progress-events: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -2345,11 +2345,11 @@ packages:
   /@helia/interface@4.0.0:
     resolution: {integrity: sha512-J8ZGuNac60x1pwMZ7i5rvB9oldnc3rIEhCcZE6vKl5vsDHmlCpG2NmVPM5x1VIfei1JEAygDtfCFUDvGpMxSfw==}
     dependencies:
-      '@libp2p/interface': 1.1.2
-      interface-blockstore: 5.2.9
-      interface-datastore: 8.2.10
-      interface-store: 5.1.7
-      multiformats: 13.0.1
+      '@libp2p/interface': 1.1.3
+      interface-blockstore: 5.2.10
+      interface-datastore: 8.2.11
+      interface-store: 5.1.8
+      multiformats: 13.1.0
       progress-events: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -2380,7 +2380,7 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     dependencies:
       cborg: 4.0.8
-      multiformats: 13.0.1
+      multiformats: 13.1.0
 
   /@ipld/dag-json@10.1.7:
     resolution: {integrity: sha512-ipraTPMA40sZAtUYwFvjHeQjReDJXWI8V3lrOeyedKxMb9rOOCS0B7eodRoWM3RIS2qMqtnu1oZr8kP+QJEN0Q==}
@@ -2553,7 +2553,7 @@ packages:
       it-parallel: 3.0.6
       it-pipe: 3.0.1
       private-ip: 3.0.1
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
     transitivePeerDependencies:
       - supports-color
@@ -2599,7 +2599,7 @@ packages:
       '@noble/hashes': 1.3.3
       multiformats: 12.1.3
       node-forge: 1.3.1
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
       uint8arrays: 4.0.10
     transitivePeerDependencies:
@@ -2611,7 +2611,7 @@ packages:
       '@libp2p/interface': 1.1.3
       '@noble/curves': 1.3.0
       '@noble/hashes': 1.3.3
-      multiformats: 13.0.1
+      multiformats: 13.1.0
       node-forge: 1.3.1
       protons-runtime: 5.2.2
       uint8arraylist: 2.4.8
@@ -2658,7 +2658,7 @@ packages:
       delay: 6.0.0
       it-protobuf-stream: 1.1.2
       private-ip: 3.0.1
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
     transitivePeerDependencies:
       - supports-color
@@ -2769,7 +2769,7 @@ packages:
       p-queue: 8.0.1
       private-ip: 3.0.1
       progress-events: 1.0.0
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       race-signal: 1.0.2
       uint8-varint: 2.0.3
       uint8arraylist: 2.4.8
@@ -3155,7 +3155,7 @@ packages:
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@multiformats/multiaddr': 12.1.12
-      multiformats: 13.0.1
+      multiformats: 13.1.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6171,7 +6171,7 @@ packages:
     dependencies:
       '@libp2p/logger': 4.0.5
       err-code: 3.0.1
-      interface-store: 5.1.7
+      interface-store: 5.1.8
       it-all: 3.0.4
       it-drain: 3.0.5
       it-filter: 3.0.4
@@ -8397,6 +8397,12 @@ packages:
   /ini@1.3.8:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
 
+  /interface-blockstore@5.2.10:
+    resolution: {integrity: sha512-9K48hTvBCGsKVD3pF4ILgDcf+W2P/gq0oxLcsHGB6E6W6nDutYkzR+7k7bCs9REHrBEfKzcVDEKieiuNM9WRZg==}
+    dependencies:
+      interface-store: 5.1.8
+      multiformats: 13.1.0
+
   /interface-blockstore@5.2.9:
     resolution: {integrity: sha512-2nyiiOcmGSE5Z0K/Dck5Ayp2a51g1CEG1JyasqNYU/y+n0ykrT9sxuq+Dtc2w3qGpPuBBUirC4HwfGgBT4Z5lA==}
     dependencies:
@@ -8406,7 +8412,7 @@ packages:
   /interface-datastore@8.2.10:
     resolution: {integrity: sha512-D8RuxMdjOPB+j6WMDJ+I2aXTDzUT6DIVjgzo1E+ODL7w8WrSFl9FXD2SYmgj6vVzdb7Kb5qmAI9pEnDZJz7ifg==}
     dependencies:
-      interface-store: 5.1.7
+      interface-store: 5.1.8
       uint8arrays: 5.0.1
 
   /interface-datastore@8.2.11:
@@ -8457,15 +8463,15 @@ packages:
   /ipfs-bitswap@20.0.2:
     resolution: {integrity: sha512-B/pPf0Dvnp/TzZ/jk7IElxCH+MwxTCe8YvyQzsQ4i8RhUh0IwyyaHPy0LSVGuJpADNjaaZQffe6DSxwmRKF7uA==}
     dependencies:
-      '@libp2p/interface': 1.1.2
-      '@libp2p/logger': 4.0.5
+      '@libp2p/interface': 1.1.3
+      '@libp2p/logger': 4.0.6
       '@libp2p/utils': 5.2.5
-      '@multiformats/multiaddr': 12.1.12
+      '@multiformats/multiaddr': 12.1.14
       '@vascosantos/moving-average': 1.1.0
       any-signal: 4.1.1
       events: 3.3.0
-      interface-blockstore: 5.2.9
-      interface-store: 5.1.7
+      interface-blockstore: 5.2.10
+      interface-store: 5.1.8
       it-drain: 3.0.5
       it-foreach: 2.0.6
       it-length-prefixed: 9.0.4
@@ -8473,12 +8479,12 @@ packages:
       it-pipe: 3.0.1
       it-take: 3.0.4
       just-debounce-it: 3.2.0
-      multiformats: 13.0.1
+      multiformats: 13.1.0
       progress-events: 1.0.0
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       timeout-abort-controller: 3.0.0
       uint8arraylist: 2.4.8
-      uint8arrays: 5.0.1
+      uint8arrays: 5.0.2
       varint: 6.0.0
       varint-decoder: 1.0.0
     transitivePeerDependencies:
@@ -8495,7 +8501,7 @@ packages:
       err-code: 3.0.1
       interface-datastore: 8.2.10
       multiformats: 12.1.3
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       timestamp-nano: 1.0.1
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.1
@@ -8513,7 +8519,7 @@ packages:
       err-code: 3.0.1
       interface-datastore: 8.2.10
       multiformats: 13.0.1
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       timestamp-nano: 1.0.1
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.1
@@ -13773,7 +13779,7 @@ packages:
   /uint8arrays@5.0.2:
     resolution: {integrity: sha512-S0GaeR+orZt7LaqzTRs4ZP8QqzAauJ+0d4xvP2lJTA99jIkKsE2FgDs4tGF/K/z5O9I/2W5Yvrh7IuqNeYH+0Q==}
     dependencies:
-      multiformats: 13.1.0
+      multiformats: 13.0.1
 
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
