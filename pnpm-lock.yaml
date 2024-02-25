@@ -54,7 +54,7 @@ devDependencies:
     version: 1.0.15
   '@libp2p/identify':
     specifier: ^1.0.11
-    version: 1.0.11
+    version: 1.0.14
   '@libp2p/webrtc':
     specifier: ^4.0.16
     version: 4.0.16(react-native@0.73.4)
@@ -2351,6 +2351,8 @@ packages:
       interface-store: 5.1.8
       multiformats: 13.1.0
       progress-events: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@humanwhocodes/config-array@0.11.14:
@@ -2614,6 +2616,8 @@ packages:
       protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.1
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/crypto@4.0.1:
     resolution: {integrity: sha512-lKGbX8TvQt4JbqlttdexEz2VtYJnTwY31kVBDQviwt0pMF+6Uy2hzNnEQ1FHZBwnow8BIlyb6UevHfgyOFlnkw==}
@@ -2640,6 +2644,8 @@ packages:
       protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/dcutr@1.0.9:
     resolution: {integrity: sha512-EJmlMUThkkt8yosEYzlBHaKvrVNMiYCye1mN9Lirm0urc3Omb7KfZqca5tl5NMsldGCeBHWqo/eNb0tqlr792g==}
@@ -2656,19 +2662,19 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@libp2p/identify@1.0.11:
-    resolution: {integrity: sha512-/f6E2Z+H9sU332DipP3wuxtq06WfP1g4gNnjM7EUJjZ3b6igz8sFRnSVhTq5DGcsPBPT01zct3mrKFCj7ag4Uw==}
+  /@libp2p/identify@1.0.14:
+    resolution: {integrity: sha512-615aa4TPtzxUNb24yzxyFdu5/x+3Ge2BD/Ob4RN1PnT+haFQqgbcT2RJfqbyvuo7gzxVEGamqh5uYaChqAQ4IA==}
     dependencies:
-      '@libp2p/interface': 1.1.2
-      '@libp2p/interface-internal': 1.0.7
-      '@libp2p/peer-id': 4.0.5
-      '@libp2p/peer-record': 7.0.6
-      '@multiformats/multiaddr': 12.1.12
+      '@libp2p/interface': 1.1.3
+      '@libp2p/interface-internal': 1.0.8
+      '@libp2p/peer-id': 4.0.6
+      '@libp2p/peer-record': 7.0.9
+      '@multiformats/multiaddr': 12.1.14
       '@multiformats/multiaddr-matcher': 1.1.2
       it-protobuf-stream: 1.1.2
-      protons-runtime: 5.2.2
+      protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
-      uint8arrays: 5.0.1
+      uint8arrays: 5.0.2
       wherearewe: 2.0.1
     transitivePeerDependencies:
       - supports-color
@@ -2872,6 +2878,8 @@ packages:
     dependencies:
       '@libp2p/interface': 1.1.3
       '@libp2p/peer-id': 4.0.6
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-id-factory@4.0.5:
     resolution: {integrity: sha512-9fy1TCiBViqIFuoFzW/o9fVh3j600IYDHaXUqvx6HQFeB/dEM8utRU4FxVZVv/MMcKfUf7mydHXVHRyp28uG8w==}
@@ -2909,19 +2917,6 @@ packages:
       '@libp2p/interface': 1.1.3
       multiformats: 13.1.0
       uint8arrays: 5.0.2
-
-  /@libp2p/peer-record@7.0.6:
-    resolution: {integrity: sha512-mo7WyJltQU5byC1cwMzqGnzlrSsqkCg8AKhWb0wscuIz2LH6cevmkq+h9mzDnn0KGzJIpZvlInygRVxA/SHS3A==}
-    dependencies:
-      '@libp2p/crypto': 4.0.1
-      '@libp2p/interface': 1.1.2
-      '@libp2p/peer-id': 4.0.5
-      '@libp2p/utils': 5.2.2
-      '@multiformats/multiaddr': 12.1.12
-      protons-runtime: 5.2.2
-      uint8-varint: 2.0.3
-      uint8arraylist: 2.4.8
-      uint8arrays: 5.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -3155,7 +3150,7 @@ packages:
     resolution: {integrity: sha512-O7hO+TYsweMjNCqTYKYn8iki2GXA46mxmgqnsOb2Wpr6ca4dRGnPldWTai2WwTeZpQyRJ/7GE+N9zPTfP0xE+Q==}
     dependencies:
       '@chainsafe/is-ip': 2.0.2
-      '@multiformats/multiaddr': 12.1.12
+      '@multiformats/multiaddr': 12.1.14
       multiformats: 13.1.0
     transitivePeerDependencies:
       - supports-color
@@ -3186,11 +3181,11 @@ packages:
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@chainsafe/netmask': 2.0.0
-      '@libp2p/interface': 1.1.3
+      '@libp2p/interface': 1.1.2
       dns-over-http-resolver: 3.0.2
-      multiformats: 13.1.0
+      multiformats: 13.0.1
       uint8-varint: 2.0.4
-      uint8arrays: 5.0.2
+      uint8arrays: 5.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -3337,6 +3332,8 @@ packages:
       p-queue: 8.0.1
       timeout-abort-controller: 3.0.0
       uint8arrays: 5.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@orbitdb/feed-db@1.0.0(react-native@0.73.4):
@@ -8142,7 +8139,7 @@ packages:
       '@libp2p/bootstrap': 10.0.12
       '@libp2p/circuit-relay-v2': 1.0.15
       '@libp2p/dcutr': 1.0.9
-      '@libp2p/identify': 1.0.11
+      '@libp2p/identify': 1.0.14
       '@libp2p/interface': 1.1.2
       '@libp2p/kad-dht': 12.0.4
       '@libp2p/keychain': 4.0.7
@@ -9077,7 +9074,7 @@ packages:
       '@types/ws': 8.5.10
       event-iterator: 2.0.0
       it-stream-types: 2.0.1
-      uint8arrays: 5.0.1
+      uint8arrays: 5.0.2
       ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
