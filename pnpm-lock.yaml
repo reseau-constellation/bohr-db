@@ -81,7 +81,7 @@ devDependencies:
     version: 4.3.10
   blockstore-level:
     specifier: ^1.1.7
-    version: 1.1.7
+    version: 1.1.8
   browserify-fs:
     specifier: ^1.0.0
     version: 1.0.0
@@ -2717,12 +2717,16 @@ packages:
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.1
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-collections@5.1.5:
     resolution: {integrity: sha512-/9VisdPC7+15n/0XntjGCzJ2Ky/zZnqdnuLNEwdu2LuTCbWTaqItG36ecgcVdO9L/V4mELwgY5XCjZKBDrYgjA==}
     dependencies:
       '@libp2p/interface': 1.1.2
       '@libp2p/peer-id': 4.0.5
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-collections@5.1.6:
     resolution: {integrity: sha512-n2Oav1GehdEToeALvSytuYw2wiwzMvbOUxyAFUfF6oqmZgNe9P8cOkyr0w2P0p0hXjdcIeIfDYeTvY4MeHZnjw==}
@@ -2759,6 +2763,8 @@ packages:
       '@libp2p/interface': 1.1.2
       multiformats: 13.0.1
       uint8arrays: 5.0.1
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-id@4.0.6:
     resolution: {integrity: sha512-hAj2bdN+s/cCkiaLthuL412DqLeYZ83yRmbjZfHHJ8d3sV/M7NAxu2v8Zx+3KurFF8ICMoD7bb34IXHo7FH3kw==}
@@ -5071,14 +5077,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /blockstore-level@1.1.7:
-    resolution: {integrity: sha512-ua1obA5WulSWkN1mCQVAZ3VSfYACUjD6pMbqNk5LOgqNAD87pLENrdCFnfY3lYzZJDP4UfK6dBM0tp5fK8fvwA==}
+  /blockstore-level@1.1.8:
+    resolution: {integrity: sha512-8+NLeoyAQZzWIf9TWl0kC3x0JpJf6bts02K1fg8MCxgx/z/Leh4gVCzSGvYDuorHicOCVsyWv4+3ldlrnzRXoA==}
     dependencies:
       blockstore-core: 4.3.10
-      interface-blockstore: 5.2.9
-      interface-store: 5.1.7
-      level: 8.0.0
-      multiformats: 13.0.1
+      interface-blockstore: 5.2.10
+      interface-store: 5.1.8
+      level: 8.0.1
+      multiformats: 13.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9381,6 +9387,16 @@ packages:
     dependencies:
       browser-level: 1.0.1
       classic-level: 1.4.1
+    dev: false
+
+  /level@8.0.1:
+    resolution: {integrity: sha512-oPBGkheysuw7DmzFQYyFe8NAia5jFLAgEnkgWnK3OXAuJr8qFT+xBQIwokAZPME2bhPFzS8hlYcL16m8UZrtwQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      abstract-level: 1.0.4
+      browser-level: 1.0.1
+      classic-level: 1.4.1
+    dev: true
 
   /levelup@0.18.6:
     resolution: {integrity: sha512-uB0auyRqIVXx+hrpIUtol4VAPhLRcnxcOsd2i2m6rbFIDarO5dnrupLOStYYpEcu8ZT087Z9HEuYw1wjr6RL6Q==}
