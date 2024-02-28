@@ -57,7 +57,7 @@ devDependencies:
     version: 1.0.15
   '@libp2p/webrtc':
     specifier: ^4.0.16
-    version: 4.0.19(react-native@0.73.5)
+    version: 4.0.20(react-native@0.73.5)
   '@libp2p/websockets':
     specifier: ^8.0.12
     version: 8.0.15
@@ -2952,8 +2952,6 @@ packages:
       '@libp2p/interface': 1.1.2
       multiformats: 13.0.1
       uint8arrays: 5.0.1
-    transitivePeerDependencies:
-      - supports-color
 
   /@libp2p/peer-id@4.0.6:
     resolution: {integrity: sha512-hAj2bdN+s/cCkiaLthuL412DqLeYZ83yRmbjZfHHJ8d3sV/M7NAxu2v8Zx+3KurFF8ICMoD7bb34IXHo7FH3kw==}
@@ -3146,14 +3144,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@libp2p/webrtc@4.0.19(react-native@0.73.5):
-    resolution: {integrity: sha512-SeEvCkF2nExh5kTvzY8DzEAyeKP6F5oespBn8sfFFMJ0GEtrUxFgrFrT06suVFhkPSKIZ91wbiHxhV1JGO7t0Q==}
+  /@libp2p/webrtc@4.0.20(react-native@0.73.5):
+    resolution: {integrity: sha512-TJ/T9ce2Y5qhX6VcGi8prq6qal3u3cGdM1N8CnNYJ3EFP9T8VYgbwnY/9D7RK08f0r33Z/CMUP0phK4LhS6EWQ==}
     dependencies:
       '@chainsafe/libp2p-noise': 15.0.0
-      '@libp2p/interface': 1.1.3
-      '@libp2p/interface-internal': 1.0.8
-      '@libp2p/peer-id': 4.0.6
-      '@libp2p/utils': 5.2.5
+      '@libp2p/interface': 1.1.4
+      '@libp2p/interface-internal': 1.0.9
+      '@libp2p/peer-id': 4.0.7
+      '@libp2p/utils': 5.2.6
       '@multiformats/mafmt': 12.1.6
       '@multiformats/multiaddr': 12.1.14
       '@multiformats/multiaddr-matcher': 1.1.2
@@ -8270,7 +8268,7 @@ packages:
       '@libp2p/tcp': 9.0.12
       '@libp2p/upnp-nat': 1.0.10
       '@libp2p/utils': 5.2.2
-      '@libp2p/webrtc': 4.0.19(react-native@0.73.5)
+      '@libp2p/webrtc': 4.0.20(react-native@0.73.5)
       '@libp2p/websockets': 8.0.15
       '@libp2p/webtransport': 4.0.16
       blockstore-core: 4.4.0
@@ -9111,7 +9109,7 @@ packages:
       it-stream-types: 2.0.1
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
-      uint8arrays: 5.0.1
+      uint8arrays: 5.0.2
 
   /it-length@3.0.4:
     resolution: {integrity: sha512-RS3thYkvqtWksrV7SaAnTv+pgY7ozpS17HlRvWvcnoRjVyNJMuffdCkIKpKNPTq5uZw9zVnkVKLO077pJn5Yhg==}
