@@ -54,7 +54,7 @@ devDependencies:
     version: 1.0.16
   '@libp2p/identify':
     specifier: ^1.0.11
-    version: 1.0.14
+    version: 1.0.15
   '@libp2p/webrtc':
     specifier: ^4.0.16
     version: 4.0.19(react-native@0.73.5)
@@ -2357,6 +2357,8 @@ packages:
       interface-store: 5.1.8
       multiformats: 13.1.0
       progress-events: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@humanwhocodes/config-array@0.11.14:
@@ -2451,7 +2453,7 @@ packages:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-mock: 29.7.0
 
   /@jest/fake-timers@29.7.0:
@@ -2460,7 +2462,7 @@ packages:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -2477,7 +2479,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -2488,7 +2490,7 @@ packages:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
@@ -2610,6 +2612,8 @@ packages:
       protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/crypto@4.0.1:
     resolution: {integrity: sha512-lKGbX8TvQt4JbqlttdexEz2VtYJnTwY31kVBDQviwt0pMF+6Uy2hzNnEQ1FHZBwnow8BIlyb6UevHfgyOFlnkw==}
@@ -2650,6 +2654,8 @@ packages:
       protons-runtime: 5.4.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/dcutr@1.0.9:
     resolution: {integrity: sha512-EJmlMUThkkt8yosEYzlBHaKvrVNMiYCye1mN9Lirm0urc3Omb7KfZqca5tl5NMsldGCeBHWqo/eNb0tqlr792g==}
@@ -2666,13 +2672,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@libp2p/identify@1.0.14:
-    resolution: {integrity: sha512-615aa4TPtzxUNb24yzxyFdu5/x+3Ge2BD/Ob4RN1PnT+haFQqgbcT2RJfqbyvuo7gzxVEGamqh5uYaChqAQ4IA==}
+  /@libp2p/identify@1.0.15:
+    resolution: {integrity: sha512-Pve7UJKbEqN6nMpc2yjUiNvjpVwewixL3iX/bvhHQi9P4/x9zJkDIgncbdSUAXT0VePkJRRqvFJOye9Pdw4zRQ==}
     dependencies:
-      '@libp2p/interface': 1.1.3
-      '@libp2p/interface-internal': 1.0.8
-      '@libp2p/peer-id': 4.0.6
-      '@libp2p/peer-record': 7.0.9
+      '@libp2p/interface': 1.1.4
+      '@libp2p/interface-internal': 1.0.9
+      '@libp2p/peer-id': 4.0.7
+      '@libp2p/peer-record': 7.0.10
       '@multiformats/multiaddr': 12.1.14
       '@multiformats/multiaddr-matcher': 1.1.2
       it-protobuf-stream: 1.1.2
@@ -2916,6 +2922,8 @@ packages:
     dependencies:
       '@libp2p/interface': 1.1.4
       '@libp2p/peer-id': 4.0.7
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-id-factory@4.0.6:
     resolution: {integrity: sha512-dj5gdPvh3p4n4ltvZF508LA2hvC5COKP6BVFzcUBUy1yp81srSkX6QuV69W61pYfe5VxhVvyjhVkHIZ2l7wB7Q==}
@@ -2962,6 +2970,8 @@ packages:
       '@libp2p/interface': 1.1.4
       multiformats: 13.1.0
       uint8arrays: 5.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   /@libp2p/peer-record@7.0.10:
     resolution: {integrity: sha512-njVSa2mMcGqQoCnhmZQOadHIQMsO52wqKO6fP1On8sVRmb9yXNGBkZ+b5pRXjjPzUpJeUmC+/SZHpeLqpdpPMQ==}
@@ -2969,21 +2979,6 @@ packages:
       '@libp2p/crypto': 4.0.3
       '@libp2p/interface': 1.1.4
       '@libp2p/peer-id': 4.0.7
-      '@libp2p/utils': 5.2.6
-      '@multiformats/multiaddr': 12.1.14
-      protons-runtime: 5.4.0
-      uint8-varint: 2.0.4
-      uint8arraylist: 2.4.8
-      uint8arrays: 5.0.2
-    transitivePeerDependencies:
-      - supports-color
-
-  /@libp2p/peer-record@7.0.9:
-    resolution: {integrity: sha512-uI5kE8K6/CWamxV9NK1p7mdYoWIf1AP+eWWZd+1opa/R7zT/QYmtAc/wWE7uFhfRsB736u9GkiPwU66LzA0reQ==}
-    dependencies:
-      '@libp2p/crypto': 4.0.2
-      '@libp2p/interface': 1.1.3
-      '@libp2p/peer-id': 4.0.6
       '@libp2p/utils': 5.2.6
       '@multiformats/multiaddr': 12.1.14
       protons-runtime: 5.4.0
@@ -3246,11 +3241,11 @@ packages:
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@chainsafe/netmask': 2.0.0
-      '@libp2p/interface': 1.1.4
+      '@libp2p/interface': 1.1.2
       dns-over-http-resolver: 3.0.2
-      multiformats: 13.1.0
+      multiformats: 13.0.1
       uint8-varint: 2.0.4
-      uint8arrays: 5.0.2
+      uint8arrays: 5.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -3397,6 +3392,8 @@ packages:
       p-queue: 8.0.1
       timeout-abort-controller: 3.0.0
       uint8arrays: 5.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@orbitdb/feed-db@1.0.0(react-native@0.73.5):
@@ -4156,8 +4153,8 @@ packages:
     dependencies:
       undici-types: 5.26.5
 
-  /@types/node@20.11.21:
-    resolution: {integrity: sha512-/ySDLGscFPNasfqStUuWWPfL78jompfIoVzLJPVVAHBh6rpG68+pI2Gk+fNLeI8/f1yPYL4s46EleVIc20F1Ow==}
+  /@types/node@20.11.22:
+    resolution: {integrity: sha512-/G+IxWxma6V3E+pqK1tSl2Fo1kl41pK1yeCyDsgkF9WlVAme4j5ISYM2zR11bgLFJGLN5sVK40T4RJNuiZbEjA==}
     dependencies:
       undici-types: 5.26.5
 
@@ -5738,7 +5735,7 @@ packages:
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -5748,7 +5745,7 @@ packages:
   /chromium-edge-launcher@1.0.0:
     resolution: {integrity: sha512-pgtgjNKZ7i5U++1g1PWv75umkHvhVTDOQIZ+sjeUX9483S7Y6MUvO0lrd7ShGlQlFHMN4SwKTCq/X8hWrbv2KA==}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -8262,7 +8259,7 @@ packages:
       '@libp2p/bootstrap': 10.0.12
       '@libp2p/circuit-relay-v2': 1.0.16
       '@libp2p/dcutr': 1.0.9
-      '@libp2p/identify': 1.0.14
+      '@libp2p/identify': 1.0.15
       '@libp2p/interface': 1.1.2
       '@libp2p/kad-dht': 12.0.4
       '@libp2p/keychain': 4.0.7
@@ -9232,7 +9229,7 @@ packages:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -9259,7 +9256,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-util: 29.7.0
 
   /jest-util@29.7.0:
@@ -9267,7 +9264,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -9288,7 +9285,7 @@ packages:
     resolution: {integrity: sha512-eIz2msL/EzL9UFTFFx7jBTkeZfku0yUAyZZZmJ93H2TYEiroIx2PQjEXcwYtYl8zXCxb+PAmA2hLIt/6ZEkPHw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -12125,7 +12122,7 @@ packages:
     dependencies:
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
-      uint8arrays: 5.0.2
+      uint8arrays: 5.0.1
 
   /prr@0.0.0:
     resolution: {integrity: sha512-LmUECmrW7RVj6mDWKjTXfKug7TFGdiz9P18HMcO4RHL+RW7MCOGNvpj5j47Rnp6ne6r4fZ2VzyUWEpKbg+tsjQ==}
@@ -13946,12 +13943,12 @@ packages:
     resolution: {integrity: sha512-FwpTa7ZGA/f/EssWAb5/YV6pHgVF1fViKdW8cWaEarjB8t7NyofSWBdOTyFPaGuUG4gx3v1O3PQ8etsiOs3lcw==}
     dependencies:
       uint8arraylist: 2.4.8
-      uint8arrays: 5.0.2
+      uint8arrays: 5.0.1
 
   /uint8arraylist@2.4.8:
     resolution: {integrity: sha512-vc1PlGOzglLF0eae1M8mLRTBivsvrGsdmJ5RbK3e+QRvRLOZfZhQROTwH/OfyF3+ZVUg9/8hE8bmKP2CvP9quQ==}
     dependencies:
-      uint8arrays: 5.0.2
+      uint8arrays: 5.0.1
 
   /uint8arrays@3.1.1:
     resolution: {integrity: sha512-+QJa8QRnbdXVpHYjLoTpJIdCTiw9Ir62nocClWuXIq2JIh4Uta0cQsTSpFL678p2CN8B+XSApwcU+pQEqVpKWg==}
