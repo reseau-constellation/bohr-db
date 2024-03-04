@@ -30,7 +30,7 @@
     "@orbitdb/set-db": "^1.0.0",
     "ajv": "^8.12.0",
     "events": "^3.3.0",
-    "helia": "^3.0.1",
+    "helia": "^4.0.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
