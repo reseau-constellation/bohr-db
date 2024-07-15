@@ -20,7 +20,7 @@ export const generateDictValidator = <T extends { [clef: string]: DBElements }>(
   validateKey: <K extends keyof T>(v: unknown, key: K) => v is T[K];
   supportedKey: <K extends string>(key: K) => boolean;
 } => {
-  const validateRoot = ajv.compile(schema);
+  const validateRoot = ajv.compile(schema) as ValidateFunction<Partial<T>>;
 
   const compileKeySchema = (
     s: JSONSchemaType<T[keyof T]> | JSONSchemaType<T[keyof T]>["properties"],

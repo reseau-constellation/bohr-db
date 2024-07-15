@@ -1,4 +1,4 @@
-import { type Helia } from "helia";
+import { type HeliaLibp2p } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
@@ -25,7 +25,7 @@ const removeHash = <T>(
   data.map((x) => ({ key: x.key, value: x.value }));
 
 describe("Typed OrderedKeyValue", () => {
-  let ipfs: Helia;
+  let ipfs: HeliaLibp2p;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
