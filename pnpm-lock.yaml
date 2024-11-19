@@ -56,7 +56,7 @@ importers:
         version: 4.0.2
       '@libp2p/circuit-relay-v2':
         specifier: ^3.1.0
-        version: 3.1.2
+        version: 3.1.3
       '@libp2p/identify':
         specifier: ^3.0.10
         version: 3.0.12
@@ -1371,8 +1371,8 @@ packages:
   '@libp2p/bootstrap@11.0.10':
     resolution: {integrity: sha512-9LQ4R76lBXMgkdiYIeEIaYxmtxmFvgkuV0LVuFL4RPQ9dZ3+rv4TK+KzDQHOfhuTFtYI1ZX2M9FME2iCApC5Gw==}
 
-  '@libp2p/circuit-relay-v2@3.1.2':
-    resolution: {integrity: sha512-7U9QgyxAQ5JNSRvXQBL4NPXliGMTnogo0cI7TbGEwr996zAjfyxtVMDi7Gt6Bjgao5GvpmYlB/8G6OW1NNJUmQ==}
+  '@libp2p/circuit-relay-v2@3.1.3':
+    resolution: {integrity: sha512-tdPaNK4ut9FU5uwABf+lj01eul3uVDUyAdlcpnIRgkRTOMZ02C06nyaIFSeHD5ykpyZpDIbLPHHBLd5kRYRfYg==}
 
   '@libp2p/crypto@5.0.6':
     resolution: {integrity: sha512-5mD/riNxUuSOerk3aPXUUMN96lwZsrU33lp97ySfffloh2WhLZcjVJszibBgIP7DP5nqmSOWY9++rqrBuYHvnQ==}
@@ -1923,6 +1923,9 @@ packages:
 
   '@types/node@22.9.0':
     resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
+
+  '@types/node@22.9.1':
+    resolution: {integrity: sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -8970,14 +8973,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -8990,7 +8993,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -8999,7 +9002,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -9056,7 +9059,7 @@ snapshots:
       '@multiformats/mafmt': 12.1.6
       '@multiformats/multiaddr': 12.3.1
 
-  '@libp2p/circuit-relay-v2@3.1.2':
+  '@libp2p/circuit-relay-v2@3.1.3':
     dependencies:
       '@libp2p/crypto': 5.0.7
       '@libp2p/interface': 2.2.1
@@ -10280,6 +10283,10 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/node@22.9.1':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/parse-json@4.0.2': {}
@@ -11306,7 +11313,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -11315,7 +11322,7 @@ snapshots:
 
   chromium-edge-launcher@1.0.0:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -13064,7 +13071,7 @@ snapshots:
       '@helia/utils': 1.0.1
       '@libp2p/autonat': 2.0.10
       '@libp2p/bootstrap': 11.0.10
-      '@libp2p/circuit-relay-v2': 3.1.2
+      '@libp2p/circuit-relay-v2': 3.1.3
       '@libp2p/crypto': 5.0.6
       '@libp2p/dcutr': 2.0.10
       '@libp2p/identify': 3.0.12
@@ -13655,7 +13662,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -13676,13 +13683,13 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       jest-util: 29.7.0
 
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -13699,7 +13706,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
