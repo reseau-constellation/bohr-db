@@ -53,7 +53,7 @@ importers:
         version: 9.15.0
       '@helia/block-brokers':
         specifier: ^4.0.1
-        version: 4.0.1
+        version: 4.0.2
       '@libp2p/circuit-relay-v2':
         specifier: ^3.1.0
         version: 3.1.2
@@ -1233,11 +1233,11 @@ packages:
   '@hapi/topo@5.1.0':
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
 
-  '@helia/bitswap@2.0.1':
-    resolution: {integrity: sha512-9bwjwdgW3LfraDfIlfJ4g1WrO96IKW3hjrc63jXxlKHU8JPwMdd5a//XoNIQfQ5vx6DV0w+w2AM1aHHt+nHBGA==}
+  '@helia/bitswap@2.0.2':
+    resolution: {integrity: sha512-aJfcQeyJFX+f7TWYZhf8zuZJFig6AhzFjiB+mgzL8YnCG01c+ouZ2iYLSImLGndcRr47uOey6rjHvWuwu1Id8Q==}
 
-  '@helia/block-brokers@4.0.1':
-    resolution: {integrity: sha512-djYp4bmC15SBP1/ra9SrOAATr432hDcA2hnHWewkz1l84hCi+gSol7AcdAfW233pZ2ivZcI2Jc1Nyf7Vg6uFeg==}
+  '@helia/block-brokers@4.0.2':
+    resolution: {integrity: sha512-TGn/VFvZTnAZ12J2/l+XShqde+Dz10dVvgllIQlKnSxIcO+U7iGxDusrCvYL5KTn6yy/ghSUsQ2cBMEBCbjgvA==}
 
   '@helia/delegated-routing-v1-http-api-client@4.2.0':
     resolution: {integrity: sha512-2lIL9SyR72yINUIRac5SkY7obMbylEringExSV1t13oM7MjuU+NziCkJr/uU/d3EWwR53fafNsZf8wizQqe8bA==}
@@ -1245,11 +1245,17 @@ packages:
   '@helia/interface@5.0.0':
     resolution: {integrity: sha512-B95cP8RBl7cqSu1VELeRWPUsTNxu2bJ2Y/ihsdYfUCcxHKUUQdDDLTHQzhZe9iC9TYADkfkjIM7gqgmhqYtY6A==}
 
+  '@helia/interface@5.1.0':
+    resolution: {integrity: sha512-5rah5zHBfj6JRsdAtbgS6BaGXu/8pBMOCAAoAYCJntJ7TNSIAF1/Zv5dyK+NoYkgiFZW+8l4Z7cKDCpdC+78pw==}
+
   '@helia/routers@2.1.0':
     resolution: {integrity: sha512-JOvM+EfVd9c999gSz4tHLJWpwexU1kc82ujwoFRaRvKxT5pD77t9h0gwnfnsGbe9Br6iUPFXquNC+g0p8Xll3g==}
 
   '@helia/utils@1.0.1':
     resolution: {integrity: sha512-S1qLDiHNdBxQxtgonqPQHl8Rn7gs4HEQSrVF+ok//T/ZQPItNGnhKudV8qWhoOdpzCDaObx2ryqip+K9FK8VCQ==}
+
+  '@helia/utils@1.1.0':
+    resolution: {integrity: sha512-7DtCVu24qXqqNYwax3rnz9vAOw/SDXSvlcsK60/1irz/2HvxIcOG19bnllL+OGaMKJgfnoDGRbduQNgP04jJXA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1472,6 +1478,9 @@ packages:
 
   '@multiformats/multiaddr-to-uri@10.1.2':
     resolution: {integrity: sha512-6sicfYRjJlHJn4bwsQancs8kXncWU4dDN/+V9sMVTYp9hi8ovWgVkK75AbAv4SfhztmmI+oufVUncQ1n+SukKQ==}
+
+  '@multiformats/multiaddr-to-uri@11.0.0':
+    resolution: {integrity: sha512-9RNmlIGwZbBLsHekT50dbt4o4u8Iciw9kGjv+WHiGxQdsJ6xKKjU1+C0Vbas6RilMbaVOAOnEyfNcXbUmTkLxQ==}
 
   '@multiformats/multiaddr@12.3.1':
     resolution: {integrity: sha512-yoGODQY4nIj41ENJClucS8FtBoe8w682bzbKldEQr9lSlfdHqAsRC+vpJAOBpiMwPps1tHua4kxrDmvprdhoDQ==}
@@ -8751,14 +8760,14 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@helia/bitswap@2.0.1':
+  '@helia/bitswap@2.0.2':
     dependencies:
-      '@helia/interface': 5.0.0
-      '@helia/utils': 1.0.1
-      '@libp2p/interface': 2.2.0
+      '@helia/interface': 5.1.0
+      '@helia/utils': 1.1.0
+      '@libp2p/interface': 2.2.1
       '@libp2p/logger': 5.1.4
       '@libp2p/peer-collections': 6.0.12
-      '@libp2p/utils': 6.1.3
+      '@libp2p/utils': 6.2.1
       '@multiformats/multiaddr': 12.3.1
       any-signal: 4.1.1
       interface-blockstore: 5.3.1
@@ -8778,16 +8787,16 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@helia/block-brokers@4.0.1':
+  '@helia/block-brokers@4.0.2':
     dependencies:
-      '@helia/bitswap': 2.0.1
-      '@helia/interface': 5.0.0
-      '@helia/utils': 1.0.1
-      '@libp2p/interface': 2.2.0
-      '@libp2p/utils': 6.1.3
+      '@helia/bitswap': 2.0.2
+      '@helia/interface': 5.1.0
+      '@helia/utils': 1.1.0
+      '@libp2p/interface': 2.2.1
+      '@libp2p/utils': 6.2.1
       '@multiformats/multiaddr': 12.3.1
       '@multiformats/multiaddr-matcher': 1.6.0
-      '@multiformats/multiaddr-to-uri': 10.1.2
+      '@multiformats/multiaddr-to-uri': 11.0.0
       interface-blockstore: 5.3.1
       interface-store: 6.0.2
       multiformats: 13.3.1
@@ -8820,6 +8829,16 @@ snapshots:
       multiformats: 13.3.1
       progress-events: 1.0.1
 
+  '@helia/interface@5.1.0':
+    dependencies:
+      '@libp2p/interface': 2.2.1
+      '@multiformats/dns': 1.0.6
+      interface-blockstore: 5.3.1
+      interface-datastore: 8.3.1
+      interface-store: 6.0.2
+      multiformats: 13.3.1
+      progress-events: 1.0.1
+
   '@helia/routers@2.1.0':
     dependencies:
       '@helia/delegated-routing-v1-http-api-client': 4.2.0
@@ -8840,8 +8859,34 @@ snapshots:
       '@ipld/dag-json': 10.2.3
       '@ipld/dag-pb': 4.1.3
       '@libp2p/interface': 2.2.0
+      '@libp2p/logger': 5.1.3
+      '@libp2p/utils': 6.2.1
+      '@multiformats/dns': 1.0.6
+      any-signal: 4.1.1
+      blockstore-core: 5.0.2
+      cborg: 4.2.6
+      interface-blockstore: 5.3.1
+      interface-datastore: 8.3.1
+      interface-store: 6.0.2
+      it-drain: 3.0.7
+      it-filter: 3.1.1
+      it-foreach: 2.1.1
+      it-merge: 3.0.5
+      mortice: 3.0.6
+      multiformats: 13.3.1
+      p-defer: 4.0.1
+      progress-events: 1.0.1
+      uint8arrays: 5.1.0
+
+  '@helia/utils@1.1.0':
+    dependencies:
+      '@helia/interface': 5.1.0
+      '@ipld/dag-cbor': 9.2.2
+      '@ipld/dag-json': 10.2.3
+      '@ipld/dag-pb': 4.1.3
+      '@libp2p/interface': 2.2.1
       '@libp2p/logger': 5.1.4
-      '@libp2p/utils': 6.1.3
+      '@libp2p/utils': 6.2.1
       '@multiformats/dns': 1.0.6
       any-signal: 4.1.1
       blockstore-core: 5.0.2
@@ -9465,6 +9510,10 @@ snapshots:
       multiformats: 13.3.1
 
   '@multiformats/multiaddr-to-uri@10.1.2':
+    dependencies:
+      '@multiformats/multiaddr': 12.3.1
+
+  '@multiformats/multiaddr-to-uri@11.0.0':
     dependencies:
       '@multiformats/multiaddr': 12.3.1
 
@@ -13008,7 +13057,7 @@ snapshots:
     dependencies:
       '@chainsafe/libp2p-noise': 16.0.0
       '@chainsafe/libp2p-yamux': 7.0.1
-      '@helia/block-brokers': 4.0.1
+      '@helia/block-brokers': 4.0.2
       '@helia/delegated-routing-v1-http-api-client': 4.2.0
       '@helia/interface': 5.0.0
       '@helia/routers': 2.1.0
