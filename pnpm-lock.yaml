@@ -62,7 +62,7 @@ importers:
         version: 3.0.12
       '@libp2p/webrtc':
         specifier: ^5.0.16
-        version: 5.0.18(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
+        version: 5.0.19(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
       '@libp2p/websockets':
         specifier: ^9.0.11
         version: 9.0.13
@@ -1458,8 +1458,8 @@ packages:
   '@libp2p/utils@6.2.1':
     resolution: {integrity: sha512-uORuQLB75MgbrDA6i0rCw/fqNFgCs1dO3c21Z5WNdRCA4Lcvhgi6wnUf45DwgNCqtljDAnBR0FYI+UbEp5yAuA==}
 
-  '@libp2p/webrtc@5.0.18':
-    resolution: {integrity: sha512-VdMWLLfmq9HYv227b3+uupuN9QwEw3RkQASXdZOQse+MiOPyowYK/Glq4jpGCYCp5Q3ZVvB5wyovEnzEe07odQ==}
+  '@libp2p/webrtc@5.0.19':
+    resolution: {integrity: sha512-WicT2mraZf4ZKqt73MYvfAUvOQehZDPT673GThA3yK02eR6B/c9MenMuUbNb3qGsE4b5yhMjioYjZPahWpxcBw==}
 
   '@libp2p/websockets@9.0.13':
     resolution: {integrity: sha512-e1Lukn8kzJC7YbfufT8rOy/BXUyl213srb+zizFu4JkTRloChEjq7VzARPo9lrMQye71JrTi2eBg+O/XadERsg==}
@@ -9429,7 +9429,7 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@libp2p/webrtc@5.0.18(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))':
+  '@libp2p/webrtc@5.0.19(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))':
     dependencies:
       '@chainsafe/libp2p-noise': 16.0.0
       '@libp2p/interface': 2.2.1
@@ -13085,7 +13085,7 @@ snapshots:
       '@libp2p/tcp': 10.0.11
       '@libp2p/tls': 2.0.10
       '@libp2p/upnp-nat': 2.0.10
-      '@libp2p/webrtc': 5.0.18(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
+      '@libp2p/webrtc': 5.0.19(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
       '@libp2p/websockets': 9.0.13
       '@libp2p/webtransport': 5.0.16
       '@multiformats/dns': 1.0.6
