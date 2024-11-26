@@ -1,11 +1,11 @@
 import type { JSONSchemaType } from "ajv";
-import type { KeyValue } from "@orbitdb/core";
+import type { KeyValueDatabase } from "@orbitdb/core";
 
 import type { DBElements } from "./types.js";
 import { generateDictValidator } from "./utils.js";
 
 export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
-  KeyValue,
+  KeyValueDatabase,
   "put" | "set" | "del" | "get" | "all"
 > & {
   put<K extends keyof T>(key: K, value: T[K]): Promise<string>;
@@ -26,7 +26,7 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
   db,
   schema,
 }: {
-  db: KeyValue;
+  db: KeyValueDatabase;
   schema: JSONSchemaType<Partial<T>>;
 }): TypedKeyValue<T> => {
   const { validateRoot, validateKey, getKeyValidator, supportedKey } =

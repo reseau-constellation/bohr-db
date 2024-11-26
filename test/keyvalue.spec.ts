@@ -3,7 +3,7 @@ import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
 import { OrbitDB, createOrbitDB } from "@orbitdb/core";
-import { KeyValue as KeyValueDatabaseType } from "@orbitdb/core";
+import type { KeyValueDatabase } from "@orbitdb/core";
 
 import { TypedKeyValue, typedKeyValue } from "@/keyvalue.js";
 
@@ -16,7 +16,7 @@ const keysPath = "./testkeys";
 describe("Typed KeyValue", () => {
   let ipfs: HeliaLibp2p;
   let orbit: OrbitDB;
-  let db: KeyValueDatabaseType;
+  let db: KeyValueDatabase;
 
   const databaseId = "keyValue-AAA";
 
@@ -50,7 +50,7 @@ describe("Typed KeyValue", () => {
     beforeEach(async () => {
       db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      })) as unknown as KeyValueDatabaseType;
+      })) as unknown as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
@@ -91,7 +91,7 @@ describe("Typed KeyValue", () => {
     beforeEach(async () => {
       db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      })) as unknown as KeyValueDatabaseType;
+      })) as unknown as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
@@ -177,7 +177,7 @@ describe("Typed KeyValue", () => {
     beforeEach(async () => {
       db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      })) as unknown as KeyValueDatabaseType;
+      })) as unknown as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
