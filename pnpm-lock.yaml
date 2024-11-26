@@ -116,7 +116,7 @@ importers:
         version: 0.3.0
       prettier:
         specifier: ^3.3.3
-        version: 3.3.3
+        version: 3.4.0
       process:
         specifier: ^0.11.10
         version: 0.11.10
@@ -1911,6 +1911,9 @@ packages:
 
   '@types/node@20.17.6':
     resolution: {integrity: sha512-VEI7OdvK2wP7XHnsuXbAJnEpEkF6NjSN45QJlL4VGqZSXsnicpesdTWsg9RISeSdYd3yeRj/y3k5KGjUXYnFwQ==}
+
+  '@types/node@22.10.0':
+    resolution: {integrity: sha512-XC70cRZVElFHfIUB40FgZOBbgJYFKKMa5nb9lxcwYstFG/Mi+/Y0bGS+rs6Dmhmkpq4pnNiLiuZAbc02YCOnmA==}
 
   '@types/node@22.9.0':
     resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
@@ -6045,8 +6048,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.0:
+    resolution: {integrity: sha512-/OXNZcLyWkfo13ofOW5M7SLh+k5pnIs07owXK2teFpnfaOEcycnSy7HQxldaVX1ZP/7Q8oO1eDuQJNwbomQq5Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7179,6 +7182,9 @@ packages:
 
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -8930,14 +8936,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -8950,7 +8956,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -8959,7 +8965,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -10224,6 +10230,10 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/node@22.10.0':
+    dependencies:
+      undici-types: 6.20.0
+
   '@types/node@22.9.0':
     dependencies:
       undici-types: 6.19.8
@@ -11258,7 +11268,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -11267,7 +11277,7 @@ snapshots:
 
   chromium-edge-launcher@1.0.0:
     dependencies:
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -13606,7 +13616,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -13627,13 +13637,13 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       jest-util: 29.7.0
 
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -13650,7 +13660,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.9.1
+      '@types/node': 22.10.0
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -15419,7 +15429,7 @@ snapshots:
 
   premove@4.0.0: {}
 
-  prettier@3.3.3: {}
+  prettier@3.4.0: {}
 
   pretty-format@26.6.2:
     dependencies:
@@ -16728,6 +16738,8 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   undici-types@6.19.8: {}
+
+  undici-types@6.20.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
