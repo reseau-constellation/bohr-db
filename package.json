@@ -59,7 +59,7 @@
     "eslint-config-prettier": "^9.1.0",
     "genversion": "^3.2.0",
     "libp2p": "^2.3.1",
-    "mocha": "^10.8.2",
+    "mocha": "^11.0.0",
     "os-browserify": "^0.3.0",
     "prettier": "^3.4.0",
     "process": "^0.11.10",
