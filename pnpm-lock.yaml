@@ -80,7 +80,7 @@ importers:
         version: 8.17.0(eslint@9.16.0)(typescript@5.7.2)
       aegir:
         specifier: ^45.0.2
-        version: 45.0.7(@babel/core@7.26.0)(@typescript-eslint/parser@8.17.0(eslint@9.16.0)(typescript@5.7.2))(eslint-plugin-n@16.6.2(eslint@9.16.0))
+        version: 45.0.8(@babel/core@7.26.0)(@typescript-eslint/parser@8.17.0(eslint@9.16.0)(typescript@5.7.2))(eslint-plugin-n@16.6.2(eslint@9.16.0))
       blockstore-core:
         specifier: ^5.0.2
         version: 5.0.2
@@ -2158,8 +2158,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  aegir@45.0.7:
-    resolution: {integrity: sha512-9OLmVUkiQ2WVqkCQJzP5kiIe/zlNohrdipsOEpGtljles3TvZac30cqaCC+XK/1vrnhy9p6HLhDl/j4zmg86XA==}
+  aegir@45.0.8:
+    resolution: {integrity: sha512-BCtR+RFCvzAIw5/Dmb1914i6yzGlFPv9xnMvqtqxrTlmRoDr+yP06PTkyNVkSOx0wD5xkSsijfgonGtK9GV9eA==}
     hasBin: true
 
   agent-base@7.1.1:
@@ -6914,8 +6914,8 @@ packages:
     resolution: {integrity: sha512-7jDLIdD2Zp0bDe5r3D2qtkd1QOCacylBuL7oa4udvN6v2pqr4+LcCr67C8DR1zkpaZ8XosF5m1yQSabKAW6f2g==}
     engines: {node: '>=14.16'}
 
-  terser@5.36.0:
-    resolution: {integrity: sha512-IYV9eNMuFAV4THUspIRXkLakHnV6XO7FEdtKjf/mDyrnqUg9LnlOn6/RwRvM9SZjR4GUq8Nk8zj67FzVARr74w==}
+  terser@5.37.0:
+    resolution: {integrity: sha512-B8wRRkmre4ERucLM/uXx4MOV5cbnOlVAqUst+1+iLKPI0dOgFO28f84ptoQt9HEI537PMzfYa/d+GEPKTRXmYA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -10527,7 +10527,7 @@ snapshots:
 
   acorn@8.14.0: {}
 
-  aegir@45.0.7(@babel/core@7.26.0)(@typescript-eslint/parser@8.17.0(eslint@9.16.0)(typescript@5.7.2))(eslint-plugin-n@16.6.2(eslint@9.16.0)):
+  aegir@45.0.8(@babel/core@7.26.0)(@typescript-eslint/parser@8.17.0(eslint@9.16.0)(typescript@5.7.2))(eslint-plugin-n@16.6.2(eslint@9.16.0)):
     dependencies:
       '@electron/get': 3.1.0
       '@polka/send-type': 0.5.2
@@ -14248,7 +14248,7 @@ snapshots:
   metro-minify-terser@0.80.12:
     dependencies:
       flow-enums-runtime: 0.0.6
-      terser: 5.36.0
+      terser: 5.37.0
 
   metro-react-native-babel-preset@0.64.0(@babel/core@7.26.0):
     dependencies:
@@ -16430,7 +16430,7 @@ snapshots:
       type-fest: 2.19.0
       unique-string: 3.0.0
 
-  terser@5.36.0:
+  terser@5.37.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.14.0
