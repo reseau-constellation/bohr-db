@@ -107,7 +107,7 @@ importers:
         version: 3.2.0
       libp2p:
         specifier: ^2.3.1
-        version: 2.4.1
+        version: 2.4.2
       mocha:
         specifier: ^11.0.0
         version: 11.0.1
@@ -4841,8 +4841,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libp2p@2.4.1:
-    resolution: {integrity: sha512-aXd+2JBzrop9kCXgO09JuKR82ydqsztXoamb6mCdXKHXHmW80UyEzMq2+POHCe5BPQX49jCNLEpmCJXhXF6N/Q==}
+  libp2p@2.4.2:
+    resolution: {integrity: sha512-8y+moEpzzkDjRbK7e+0k8zgtCnL4RkttFnjxrnzoVLQdk6ki3xf0SQkH3aD6FHyz8fdHlG48Av6BEOsT+F9TKg==}
 
   lighthouse-logger@1.4.2:
     resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
@@ -13083,7 +13083,7 @@ snapshots:
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       ipns: 10.0.0
-      libp2p: 2.4.1
+      libp2p: 2.4.2
       multiformats: 13.3.1
     transitivePeerDependencies:
       - bufferutil
@@ -13912,7 +13912,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libp2p@2.4.1:
+  libp2p@2.4.2:
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@chainsafe/netmask': 2.0.0
