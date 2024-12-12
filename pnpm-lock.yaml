@@ -107,7 +107,7 @@ importers:
         version: 3.2.0
       libp2p:
         specifier: ^2.3.1
-        version: 2.4.0
+        version: 2.4.1
       mocha:
         specifier: ^11.0.0
         version: 11.0.1
@@ -1379,9 +1379,6 @@ packages:
 
   '@libp2p/interface-internal@2.1.1':
     resolution: {integrity: sha512-7rw7p5wZry9ZPfdhYi4zXRjsgrJ8y/X5M7iWIzUBSJdJP2Zd0ZVStlgyqYm1YAbb8V0mwo5BI/kxd2o9R/9TJQ==}
-
-  '@libp2p/interface-internal@2.2.0':
-    resolution: {integrity: sha512-5qCiIT1Vww6o6rjkbfv88M+tG7tfdLSiSEkM2JWv/wNWUYEn2dt+Qy1RP2z7Sj8Xdl8R7gVSmP3eal+dmon2zQ==}
 
   '@libp2p/interface-internal@2.2.1':
     resolution: {integrity: sha512-GGxQnTgQ891bpOcHQAG9Dy/KXo1OoKnCaV2e02yWNhW8TkqlFJnwdny6tX8O6BN8Od56yuEIS89ZoNn2SK4F5g==}
@@ -4844,8 +4841,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libp2p@2.4.0:
-    resolution: {integrity: sha512-zSpbPNbpBSySjdU7ZssViQ2oG6zg54+WltsGY/ijrabiE72Tva6Qr6cG3DlXa6/AGJMii4Z8HuEFpqApKpBr7g==}
+  libp2p@2.4.1:
+    resolution: {integrity: sha512-aXd+2JBzrop9kCXgO09JuKR82ydqsztXoamb6mCdXKHXHmW80UyEzMq2+POHCe5BPQX49jCNLEpmCJXhXF6N/Q==}
 
   lighthouse-logger@1.4.2:
     resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
@@ -9143,14 +9140,6 @@ snapshots:
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
-  '@libp2p/interface-internal@2.2.0':
-    dependencies:
-      '@libp2p/interface': 2.3.0
-      '@libp2p/peer-collections': 6.0.13
-      '@multiformats/multiaddr': 12.3.4
-      progress-events: 1.0.1
-      uint8arraylist: 2.4.8
-
   '@libp2p/interface-internal@2.2.1':
     dependencies:
       '@libp2p/interface': 2.3.0
@@ -10240,7 +10229,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 22.10.1
+      '@types/node': 22.10.2
 
   '@types/estree@1.0.6': {}
 
@@ -13094,7 +13083,7 @@ snapshots:
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       ipns: 10.0.0
-      libp2p: 2.4.0
+      libp2p: 2.4.1
       multiformats: 13.3.1
     transitivePeerDependencies:
       - bufferutil
@@ -13923,13 +13912,13 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libp2p@2.4.0:
+  libp2p@2.4.1:
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@chainsafe/netmask': 2.0.0
       '@libp2p/crypto': 5.0.8
       '@libp2p/interface': 2.3.0
-      '@libp2p/interface-internal': 2.2.0
+      '@libp2p/interface-internal': 2.2.1
       '@libp2p/logger': 5.1.5
       '@libp2p/multistream-select': 6.0.10
       '@libp2p/peer-collections': 6.0.13
