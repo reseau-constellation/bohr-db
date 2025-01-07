@@ -65,7 +65,7 @@ importers:
         version: 5.0.22(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
       '@libp2p/websockets':
         specifier: ^9.0.13
-        version: 9.1.0
+        version: 9.1.1
       '@types/mocha':
         specifier: ^10.0.10
         version: 10.0.10
@@ -1451,8 +1451,8 @@ packages:
   '@libp2p/webrtc@5.0.22':
     resolution: {integrity: sha512-WVJC4mhFYdZ1wKTZxAwTMXyLqkfcLRM86J8wKgRNTAfvZqet1HQuJ5U/Hp4CngNnuLGHqOKVdn6obDcy6nMWww==}
 
-  '@libp2p/websockets@9.1.0':
-    resolution: {integrity: sha512-110hKTaCO13nUxUAr5KQPyomzbXbwkoyeY0Xr5urX8oAA7R3hQrcs8+luWpouiF8Ui5SvmeWDN8t2yPMoH2v5g==}
+  '@libp2p/websockets@9.1.1':
+    resolution: {integrity: sha512-zOmKvpXvxTw+mLVSBbcOmKxxMub4ii+xy+aM/aG2yRrjwAuT5IlmgXsNQ3Xf8GB8PASjJFQ0YzLf4esI9735IQ==}
 
   '@multiformats/dns@1.0.6':
     resolution: {integrity: sha512-nt/5UqjMPtyvkG9BQYdJ4GfLK3nMqGpFZOzf4hAmIa0sJh2LlS9YKXZ4FgwBDsaHvzZqR/rUFIywIc7pkHNNuw==}
@@ -9517,7 +9517,7 @@ snapshots:
       - react-native
       - supports-color
 
-  '@libp2p/websockets@9.1.0':
+  '@libp2p/websockets@9.1.1':
     dependencies:
       '@libp2p/interface': 2.3.0
       '@libp2p/utils': 6.3.0
@@ -9557,7 +9557,7 @@ snapshots:
 
   '@multiformats/multiaddr-to-uri@11.0.0':
     dependencies:
-      '@multiformats/multiaddr': 12.3.3
+      '@multiformats/multiaddr': 12.3.4
 
   '@multiformats/multiaddr@12.3.3':
     dependencies:
@@ -13157,7 +13157,7 @@ snapshots:
       '@libp2p/tls': 2.0.11
       '@libp2p/upnp-nat': 2.0.12
       '@libp2p/webrtc': 5.0.22(react-native@0.73.5(@babel/core@7.26.0)(@babel/preset-env@7.24.0(@babel/core@7.26.0))(react@18.2.0))
-      '@libp2p/websockets': 9.1.0
+      '@libp2p/websockets': 9.1.1
       '@multiformats/dns': 1.0.6
       blockstore-core: 5.0.2
       datastore-core: 10.0.2
@@ -15296,7 +15296,7 @@ snapshots:
 
   p-event@6.0.1:
     dependencies:
-      p-timeout: 6.1.3
+      p-timeout: 6.1.4
 
   p-filter@4.1.0:
     dependencies:
