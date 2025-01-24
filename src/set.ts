@@ -45,7 +45,8 @@ export const typedSet = <T extends DBElements>({
             return await target.add(data);
           }
           throw new Error(
-            JSON.stringify(data) + JSON.stringify(validate.errors, undefined, 2),
+            JSON.stringify(data) +
+              JSON.stringify(validate.errors, undefined, 2),
           );
         };
       } else {
