@@ -343,7 +343,9 @@ describe("Typed OrderedKeyValue", () => {
       await typedDB.put("a", { b: 1, c: 2 });
 
       const actual = await typedDB.all();
-      expect(removeHash(actual)).to.deep.equal([{ key: "a", value: { b: 1, c: 2 } }]);
+      expect(removeHash(actual)).to.deep.equal([
+        { key: "a", value: { b: 1, c: 2 } },
+      ]);
     });
 
     it("delete key with undefined value", async () => {

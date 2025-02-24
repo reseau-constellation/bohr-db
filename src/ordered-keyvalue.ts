@@ -75,7 +75,7 @@ export const typedOrderedKeyValue = <T extends { [clef: string]: DBElements }>({
           if (typeof value === "object" && !Array.isArray(value)) {
             value = removeUndefinedProperties(value) as T[typeof key];
           }
-          
+
           const valid = validateKey(value, key);
           if (valid) return await target.put(key, value, position);
           else
