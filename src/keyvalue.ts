@@ -2,7 +2,7 @@ import type { JSONSchemaType } from "ajv";
 import type { KeyValueDatabase } from "@orbitdb/core";
 
 import type { DBElements } from "./types.js";
-import { generateDictValidator } from "./utils.js";
+import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
 
 export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   KeyValueDatabase,
@@ -50,6 +50,11 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
           value: T[typeof key],
         ): Promise<string> => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
+
+          if (typeof value === "object" && !Array.isArray(value)) {
+            value = removeUndefinedProperties(value) as T[typeof key];
+          }
+
           const valid = validateKey(value, key);
 
           if (valid) return await target.put(key, value);

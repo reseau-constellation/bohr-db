@@ -299,4 +299,59 @@ describe("Typed OrderedKeyValue", () => {
       ]);
     });
   });
+
+  describe("Typed OrderedKeyValue database - undefined properties", () => {
+    type structure = { a: { b?: number; c: number } };
+    const schema: JSONSchemaType<Partial<structure>> = {
+      type: "object",
+      properties: {
+        a: {
+          type: "object",
+          properties: {
+            b: { type: "number", nullable: true },
+            c: { type: "number" },
+          },
+          required: ["c"],
+          nullable: true,
+        },
+      },
+      additionalProperties: false,
+      required: [],
+    };
+    let typedDB: TypedOrderedKeyValue<structure>;
+
+    beforeEach(async () => {
+      db = await OrderedKeyValue()({
+        ipfs,
+        identity: testIdentity1,
+        address: databaseId,
+      });
+      typedDB = typedOrderedKeyValue({
+        db,
+        schema,
+      });
+    });
+
+    afterEach(async () => {
+      if (typedDB) {
+        await typedDB.drop();
+        await typedDB.close();
+      }
+    });
+
+    it("put valid key/value", async () => {
+      await typedDB.put("a", { b: 1, c: 2 });
+
+      const actual = await typedDB.all();
+      expect(removeHash(actual)).to.deep.equal([{ key: "a", value: { b: 1, c: 2 } }]);
+    });
+
+    it("delete key with undefined value", async () => {
+      // @ts-expect-error Deliberately adding explicit undefined value
+      await typedDB.put("a", { b: undefined, c: 2 });
+
+      const actual = await typedDB.all();
+      expect(removeHash(actual)).to.deep.equal([{ key: "a", value: { c: 2 } }]);
+    });
+  });
 });

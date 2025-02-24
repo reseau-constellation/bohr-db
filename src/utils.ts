@@ -1,6 +1,6 @@
 import Ajv, { JSONSchemaType, ValidateFunction } from "ajv";
 
-import type { DBElements } from "./types";
+import type { DBElements, DBElementsWithUndefined } from "./types";
 
 const ajv = new Ajv({ allowUnionTypes: true });
 
@@ -63,4 +63,27 @@ export const generateDictValidator = <T extends { [clef: string]: DBElements }>(
     getKeyValidator,
     supportedKey,
   };
+};
+
+type NoUndefinedField<T> = {
+  [P in keyof T]-?: NonNullable<T[P]>;
+};
+
+export const removeUndefinedProperties = <
+  T extends { [clef: string]: DBElementsWithUndefined | undefined },
+>(
+  objet: T,
+): NoUndefinedField<T> => {
+  return Object.fromEntries(
+    Object.entries(objet)
+      .filter(([_clef, val]) => val !== undefined)
+      .map(([clef, val]): [string, DBElements] => {
+        return [
+          clef,
+          typeof val === "object" && !Array.isArray(val)
+            ? removeUndefinedProperties(val!)
+            : val!,
+        ] as [string, DBElements];
+      }),
+  ) as NoUndefinedField<T>;
 };

@@ -2,7 +2,7 @@ import { type JSONSchemaType } from "ajv";
 import { SetDatabaseType } from "@orbitdb/set-db";
 
 import { DBElements } from "@/types";
-import { generateListValidator } from "@/utils.js";
+import { generateListValidator, removeUndefinedProperties } from "@/utils.js";
 
 export type TypedSet<T extends DBElements> = Omit<
   SetDatabaseType,
@@ -40,10 +40,15 @@ export const typedSet = <T extends DBElements>({
         };
       } else if (prop === "add") {
         return async (data: T): Promise<string> => {
+          if (typeof data === "object" && !Array.isArray(data)) {
+            data = removeUndefinedProperties(data) as T;
+          }
+
           const valid = validate(data);
           if (valid) {
             return await target.add(data);
           }
+
           throw new Error(
             JSON.stringify(data) +
               JSON.stringify(validate.errors, undefined, 2),

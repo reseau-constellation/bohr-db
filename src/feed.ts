@@ -2,7 +2,7 @@ import type { JSONSchemaType } from "ajv";
 import type { FeedDatabaseType } from "@orbitdb/feed-db";
 
 import type { DBElements } from "./types";
-import { generateListValidator } from "./utils.js";
+import { generateListValidator, removeUndefinedProperties } from "./utils.js";
 
 export type TypedFeed<T extends DBElements> = Omit<
   FeedDatabaseType,
@@ -39,6 +39,10 @@ export const typedFeed = <T extends DBElements>({
         };
       } else if (prop === "add") {
         return async (data: T): Promise<string> => {
+          if (typeof data === "object" && !Array.isArray(data)) {
+            data = removeUndefinedProperties(data) as T;
+          }
+
           const valid = validate(data);
           if (valid) {
             return await target.add(data);

@@ -2,7 +2,7 @@ import { JSONSchemaType } from "ajv";
 import { OrderedKeyValueDatabaseType } from "@orbitdb/ordered-keyvalue-db";
 
 import { DBElements } from "./types";
-import { generateDictValidator } from "./utils.js";
+import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
 
 export type TypedOrderedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   OrderedKeyValueDatabaseType,
@@ -71,6 +71,11 @@ export const typedOrderedKeyValue = <T extends { [clef: string]: DBElements }>({
           position?: number,
         ): Promise<string> => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
+
+          if (typeof value === "object" && !Array.isArray(value)) {
+            value = removeUndefinedProperties(value) as T[typeof key];
+          }
+          
           const valid = validateKey(value, key);
           if (valid) return await target.put(key, value, position);
           else

@@ -219,4 +219,57 @@ describe("Typed KeyValue", () => {
       await expect(typedDB.allAsJSON()).to.be.rejectedWith("must be number");
     });
   });
+
+  describe("Typed KeyValue database - undefined properties", () => {
+    type structure = { a: { b?: number; c: number } };
+    const schema: JSONSchemaType<Partial<structure>> = {
+      type: "object",
+      properties: {
+        a: {
+          type: "object",
+          properties: {
+            b: { type: "number", nullable: true },
+            c: { type: "number" },
+          },
+          required: ["c"],
+          nullable: true,
+        },
+      },
+      additionalProperties: false,
+      required: [],
+    };
+    let typedDB: TypedKeyValue<structure>;
+
+    beforeEach(async () => {
+      db = (await orbit.open(databaseId, {
+        type: "keyvalue",
+      })) as unknown as KeyValueDatabase;
+      typedDB = typedKeyValue({
+        db,
+        schema,
+      });
+    });
+
+    afterEach(async () => {
+      if (typedDB) {
+        await typedDB.drop();
+        await typedDB.close();
+      }
+    });
+
+    it("put valid key/value", async () => {
+      await typedDB.put("a", { b: 1, c: 2 });
+
+      const actual = await typedDB.allAsJSON();
+      expect(actual).to.deep.equal({ a: { b: 1, c: 2 } });
+    });
+
+    it("delete entry on undefined value", async () => {
+      // @ts-expect-error Deliberately adding explicit undefined value
+      await typedDB.put("a", { b: undefined, c: 2 });
+
+      const actual = await typedDB.allAsJSON();
+      expect(actual).to.deep.equal({ a: { c: 2 } });
+    });
+  });
 });

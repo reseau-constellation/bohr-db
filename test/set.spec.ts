@@ -188,5 +188,13 @@ describe("Typed Set", () => {
         { a: 2, b: "c" },
       ]);
     });
+
+    it("undefined values are stripped before adding", async () => {
+      // @ts-expect-error Deliberately adding explicit undefined value
+      await typedDB.add({ a: 2, b: undefined });
+
+      const actual = await typedDB.all();
+      expect(actual.map((x) => x.value)).to.deep.equal([{ a: 2 }]);
+    });
   });
 });
