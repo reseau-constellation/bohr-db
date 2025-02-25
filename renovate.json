@@ -14,6 +14,13 @@
     {
       "matchPackagePatterns": ["^actions/"],
       "automerge": true
+    },
+    {
+      "description": "Group all @libp2p et Helia dependencies.",
+      "groupName": "Libp2p and Helia",
+      "groupSlug": "libp2p-helia-node",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@libp2p/**", "@helia/**", "@chainsafe/**", "libp2p", "helia"]
     }
   ]
 }
