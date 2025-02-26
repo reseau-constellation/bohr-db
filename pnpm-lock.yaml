@@ -56,16 +56,16 @@ importers:
         version: 4.0.4
       '@libp2p/circuit-relay-v2':
         specifier: ^3.2.2
-        version: 3.2.3
+        version: 3.2.4
       '@libp2p/identify':
         specifier: ^3.0.22
         version: 3.0.23
       '@libp2p/webrtc':
         specifier: ^5.2.3
-        version: 5.2.4(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))
+        version: 5.2.5(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))
       '@libp2p/websockets':
         specifier: ^9.2.2
-        version: 9.2.3
+        version: 9.2.4
       '@types/mocha':
         specifier: ^10.0.10
         version: 10.0.10
@@ -107,7 +107,7 @@ importers:
         version: 3.2.0
       libp2p:
         specifier: ^2.7.2
-        version: 2.7.3
+        version: 2.7.4
       mocha:
         specifier: ^11.1.0
         version: 11.1.0
@@ -1587,8 +1587,8 @@ packages:
   '@libp2p/bootstrap@11.0.26':
     resolution: {integrity: sha512-Q2r3RsedwpgUv8gtsapsegs8wxGAbm2rUTjEuTK3wasQoixZ2Q6Kjw4hq+cq4SlbH3XaAO2UXqUEhGT2KLhfoQ==}
 
-  '@libp2p/circuit-relay-v2@3.2.3':
-    resolution: {integrity: sha512-diearrX4Odo8L033DmN+PHqi8bdisi33XAfFGnRpd9zMMNhiZz2nMFQb3IY/eR7ugv9jRZxiD7WyGxstVOjF5A==}
+  '@libp2p/circuit-relay-v2@3.2.4':
+    resolution: {integrity: sha512-335OgOD8Dpjdf/EzzuJPus38Vw6Q6z9eQl9GDBFPJ2W0OGcgJbAu6bzFvE2HHRqDxLAt+faAb1D2Peup1TzolQ==}
 
   '@libp2p/config@1.1.0':
     resolution: {integrity: sha512-dowkLTEPvfvjgA0DrAMJFNM8MaLU7lOgWV2TWK4zUYPU4+JJYBF3arDoD/zSYj2agt5ABERk39F3puMK0sxv4A==}
@@ -1680,11 +1680,11 @@ packages:
   '@libp2p/utils@6.5.5':
     resolution: {integrity: sha512-WidS5xlEhdWExeXI9ryUF2Xl2qzgdcHSMe44V+qt502ik0ehH2NIaZBZAmlz9ugNGW9D5me4mEm8mi12WxBjPw==}
 
-  '@libp2p/webrtc@5.2.4':
-    resolution: {integrity: sha512-cwwtZvwQh3Kdrp5d0Y1BQkv7BmpCw/uqNsvHJeOuwvU1jLW8Cnp8Yg9KdNbgykjx6SgLrp4tva3AYr/zDSDRBg==}
+  '@libp2p/webrtc@5.2.5':
+    resolution: {integrity: sha512-D3jzUfZ0okpOixRnyt+Bt8dVBzM9VhpUopx3ZAka7dp+CQlPjXD0sIAklB3XvF6oTfVMytFSpNUt7cTNvqgQxw==}
 
-  '@libp2p/websockets@9.2.3':
-    resolution: {integrity: sha512-YvWkaFC4QUAl9d9r0A86O+x2M4z1Bz7Ff85DPi4mSN1cQQm3ky3JU1oXy5+Zg4V+VqVCTaAvu6IzjuwL8tKFIA==}
+  '@libp2p/websockets@9.2.4':
+    resolution: {integrity: sha512-2RB4wbuhPBLiBChlyDKfllinarbwHD9gqD/v4hjUadwKahXinxEEPbte74U3utJfIILw7Bj7oiGx5sA15PIfcA==}
 
   '@multiformats/dns@1.0.6':
     resolution: {integrity: sha512-nt/5UqjMPtyvkG9BQYdJ4GfLK3nMqGpFZOzf4hAmIa0sJh2LlS9YKXZ4FgwBDsaHvzZqR/rUFIywIc7pkHNNuw==}
@@ -5196,8 +5196,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libp2p@2.7.3:
-    resolution: {integrity: sha512-+KJvvlXTS0xahxdZ2ppV2crq0WsJwfepKsSMrg1G5anrDT65b3Fc1O7fORB0yi6gQa9VC9qtT8lVIhKe0GVOzA==}
+  libp2p@2.7.4:
+    resolution: {integrity: sha512-/jZCe6khlcTt10USjrWJnqWaX2tiUAtB15qDDWvj0aEKABWWoxQtaK/Yr1l1gJy25IVTWZ/doSCnQftm0fCXJw==}
 
   lighthouse-logger@1.4.2:
     resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
@@ -9694,7 +9694,7 @@ snapshots:
       '@multiformats/mafmt': 12.1.6
       '@multiformats/multiaddr': 12.4.0
 
-  '@libp2p/circuit-relay-v2@3.2.3':
+  '@libp2p/circuit-relay-v2@3.2.4':
     dependencies:
       '@libp2p/crypto': 5.0.13
       '@libp2p/interface': 2.6.1
@@ -10085,7 +10085,7 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@libp2p/webrtc@5.2.4(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))':
+  '@libp2p/webrtc@5.2.5(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/libp2p-noise': 16.0.3
@@ -10121,7 +10121,7 @@ snapshots:
       - react-native
       - supports-color
 
-  '@libp2p/websockets@9.2.3':
+  '@libp2p/websockets@9.2.4':
     dependencies:
       '@libp2p/interface': 2.6.1
       '@libp2p/utils': 6.5.5
@@ -13875,7 +13875,7 @@ snapshots:
       '@ipshipyard/libp2p-auto-tls': 1.0.0
       '@libp2p/autonat': 2.0.23
       '@libp2p/bootstrap': 11.0.26
-      '@libp2p/circuit-relay-v2': 3.2.3
+      '@libp2p/circuit-relay-v2': 3.2.4
       '@libp2p/config': 1.1.0
       '@libp2p/dcutr': 2.0.22
       '@libp2p/identify': 3.0.23
@@ -13888,15 +13888,15 @@ snapshots:
       '@libp2p/tcp': 10.1.2
       '@libp2p/tls': 2.0.16
       '@libp2p/upnp-nat': 3.1.6
-      '@libp2p/webrtc': 5.2.4(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))
-      '@libp2p/websockets': 9.2.3
+      '@libp2p/webrtc': 5.2.5(react-native@0.73.5(@babel/core@7.26.9)(@babel/preset-env@7.24.0(@babel/core@7.26.9))(react@18.2.0))
+      '@libp2p/websockets': 9.2.4
       '@multiformats/dns': 1.0.6
       blockstore-core: 5.0.2
       datastore-core: 10.0.2
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       ipns: 10.0.1
-      libp2p: 2.7.3
+      libp2p: 2.7.4
       multiformats: 13.3.2
     transitivePeerDependencies:
       - bufferutil
@@ -14746,7 +14746,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libp2p@2.7.3:
+  libp2p@2.7.4:
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/netmask': 2.0.0
