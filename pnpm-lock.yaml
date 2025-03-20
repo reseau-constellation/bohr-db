@@ -44,7 +44,7 @@ importers:
         version: 14.1.0
       '@chainsafe/libp2p-noise':
         specifier: ^16.0.3
-        version: 16.0.3
+        version: 16.1.0
       '@chainsafe/libp2p-yamux':
         specifier: ^7.0.1
         version: 7.0.1
@@ -857,8 +857,8 @@ packages:
   '@chainsafe/as-chacha20poly1305@0.1.0':
     resolution: {integrity: sha512-BpNcL8/lji/GM3+vZ/bgRWqJ1q5kwvTFmGPk7pxm/QQZDbaMI98waOHjEymTjq2JmdD/INdNBFOVSyJofXg7ew==}
 
-  '@chainsafe/as-sha256@1.0.0':
-    resolution: {integrity: sha512-EYw5IZ99Mhn7K8d1eDDH66AFhPy9GcD7bfiqm9mwFjsg8MViEEicGl62b5YPzufBTFh7X7qWAe6yWpr/gbaVEw==}
+  '@chainsafe/as-sha256@1.0.1':
+    resolution: {integrity: sha512-4Y/kQm0LsJ6QRtGcMq6gOdQP+fZhWDfIV2eIqP6oFJZBWYGmdh3wm8YbrXDPLJO87X2Fu6koRLdUS00O3k14Hw==}
 
   '@chainsafe/is-ip@2.1.0':
     resolution: {integrity: sha512-KIjt+6IfysQ4GCv66xihEitBjvhU/bixbbbFxdJ1sqCp4uJ0wuZiYBPhksZoy4lfaF0k9cwNzY5upEW/VWdw3w==}
@@ -867,8 +867,8 @@ packages:
     resolution: {integrity: sha512-nzFBbHOoRFa/bXUSzmJaXOgHI+EttTldhLJ33yWcM0DxnWhLKychHkCDLoJO3THa1+dnzrDJoxj3N3/V0WoPVw==}
     engines: {npm: '>=8.7.0'}
 
-  '@chainsafe/libp2p-noise@16.0.3':
-    resolution: {integrity: sha512-g09b2AP7exCVZddN/QB0+MPNc6kc3CyLpNBrNBUlrPRNjKNdx88AM1IcK+e/QCdLFiaY5/27C4GhHOc/VBHd/A==}
+  '@chainsafe/libp2p-noise@16.1.0':
+    resolution: {integrity: sha512-GJA/i5pd6VmetxokvnPlEbVCeL7SfLHkSuUHwbJ4w0u7dZUbse4Hr8SA8RYGwNHbZr2TEKFC9WerhvMWbciIrQ==}
 
   '@chainsafe/libp2p-yamux@7.0.1':
     resolution: {integrity: sha512-949MI0Ll0AsYq1gUETZmL/MijwX0jilOQ1i4s8wDEXGiMhuPWWiMsPgEnX6n+VzFmTrfNYyGaaJj5/MqxV9y/g==}
@@ -2381,6 +2381,9 @@ packages:
 
   abort-error@1.0.0:
     resolution: {integrity: sha512-PMKqKW8CHeXFYW9GdeavZbOt2qE3/UTv5FKk8PGK583pRmvdGq/d8M9UpLBzAL95Ss3Fe3LvGjLhWeWo9d0QAg==}
+
+  abort-error@1.0.1:
+    resolution: {integrity: sha512-fxqCblJiIPdSXIUrxI0PL+eJG49QdP9SQ70qtB65MVAoMr2rASlOyAbJFOylfB467F/f+5BCLJJq58RYi7mGfg==}
 
   abstract-level@1.0.4:
     resolution: {integrity: sha512-eUP/6pbXBkMbXFdx4IH2fVgvB7M0JvR7/lIL33zcs0IBcwjdzSSl31TOJsaCzmKSSDF9h8QYSOJux4Nd4YJqFg==}
@@ -4969,9 +4972,6 @@ packages:
   it-foreach@2.1.2:
     resolution: {integrity: sha512-PvXs3v1FaeWDhWzRxnwB4vSKJngxdLgi0PddkfurCvIFBmKTBfWONLeyDk5dxrvtCzdE4y96KzEQynk4/bbI5A==}
 
-  it-length-prefixed-stream@1.2.0:
-    resolution: {integrity: sha512-vX7dzSl/2UMYYsAr0FQdPNVR5xYEETaeboZ+eXxNBjgARuvxnWA6OedW8lC5/J3ebMTC98JhA3eH76eTijUOsA==}
-
   it-length-prefixed-stream@1.2.1:
     resolution: {integrity: sha512-FYqlxc2toUoK+aPO5r3KDBIUG1mOvk2DzmjQcsfLUTHRWMJP4Va9855tVzg/22Bj+VUUaT7gxBg7HmbiCxTK4w==}
 
@@ -4994,6 +4994,9 @@ packages:
 
   it-merge@3.0.7:
     resolution: {integrity: sha512-4Jzk4ysLW9D6EP6tLCQF253X/ZLO/ELjG9S+Ax79Peo3GQvV4Czux8s3gFS3N/t7/mFhG17ouPvuwY9reFIf+w==}
+
+  it-merge@3.0.9:
+    resolution: {integrity: sha512-TjY4WTiwe4ONmaKScNvHDAJj6Tw0UeQFp4JrtC/3Mq7DTyhytes7mnv5OpZV4gItpZcs0AgRntpT2vAy2cnXUw==}
 
   it-ndjson@1.1.2:
     resolution: {integrity: sha512-TPKpdYSNKjDdroCPnLamM5Up6XnPQ7F1KgNP3Ib5y5O4ayOVP+DHac/pzjUigcg9Kf9gkGVXDz8+FFKpWwoB3w==}
@@ -5023,6 +5026,9 @@ packages:
 
   it-queueless-pushable@1.0.2:
     resolution: {integrity: sha512-BFIm48C4O8+i+oVEPQpZ70+CaAsVUircvZtZCrpG2Q64933aLp+tDmas1mTBwqVBfIUUlg09d+e6SWW1CBuykQ==}
+
+  it-queueless-pushable@2.0.0:
+    resolution: {integrity: sha512-MlNnefWT/ntv5fesrHpxwVIu6ZdtlkN0A4aaJiE5wnmPMBv9ttiwX3UEMf78dFwIj5ZNaU9usYXg4swMEpUNJQ==}
 
   it-reader@6.0.4:
     resolution: {integrity: sha512-XCWifEcNFFjjBHtor4Sfaj8rcpt+FkY0L6WdhD578SCDhV4VUm7fCkF3dv5a+fTcfQqvN9BsxBTvWbYO6iCjTg==}
@@ -8966,7 +8972,7 @@ snapshots:
 
   '@chainsafe/as-chacha20poly1305@0.1.0': {}
 
-  '@chainsafe/as-sha256@1.0.0': {}
+  '@chainsafe/as-sha256@1.0.1': {}
 
   '@chainsafe/is-ip@2.1.0': {}
 
@@ -8987,18 +8993,18 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@chainsafe/libp2p-noise@16.0.3':
+  '@chainsafe/libp2p-noise@16.1.0':
     dependencies:
       '@chainsafe/as-chacha20poly1305': 0.1.0
-      '@chainsafe/as-sha256': 1.0.0
-      '@libp2p/crypto': 5.0.12
-      '@libp2p/interface': 2.6.0
-      '@libp2p/peer-id': 5.0.13
+      '@chainsafe/as-sha256': 1.0.1
+      '@libp2p/crypto': 5.0.15
+      '@libp2p/interface': 2.7.0
+      '@libp2p/peer-id': 5.1.0
       '@noble/ciphers': 1.2.1
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.7.1
-      it-length-prefixed: 9.1.1
-      it-length-prefixed-stream: 1.2.0
+      it-length-prefixed: 10.0.1
+      it-length-prefixed-stream: 1.2.1
       it-pair: 2.0.6
       it-pipe: 3.0.1
       it-stream-types: 2.0.2
@@ -9907,7 +9913,7 @@ snapshots:
       it-length: 3.0.7
       it-length-prefixed: 10.0.1
       it-map: 3.1.2
-      it-merge: 3.0.7
+      it-merge: 3.0.9
       it-parallel: 3.0.9
       it-pipe: 3.0.1
       it-protobuf-stream: 1.1.6
@@ -10181,7 +10187,7 @@ snapshots:
   '@libp2p/webrtc@5.2.9(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
-      '@chainsafe/libp2p-noise': 16.0.3
+      '@chainsafe/libp2p-noise': 16.1.0
       '@ipshipyard/node-datachannel': 0.26.5
       '@libp2p/interface': 2.7.0
       '@libp2p/interface-internal': 2.3.9
@@ -11332,6 +11338,8 @@ snapshots:
       event-target-shim: 5.0.1
 
   abort-error@1.0.0: {}
+
+  abort-error@1.0.1: {}
 
   abstract-level@1.0.4:
     dependencies:
@@ -13974,7 +13982,7 @@ snapshots:
 
   helia@5.3.0(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0)):
     dependencies:
-      '@chainsafe/libp2p-noise': 16.0.3
+      '@chainsafe/libp2p-noise': 16.1.0
       '@chainsafe/libp2p-yamux': 7.0.1
       '@helia/block-brokers': 4.1.0
       '@helia/delegated-routing-v1-http-api-client': 4.2.2
@@ -14512,13 +14520,6 @@ snapshots:
     dependencies:
       it-peekable: 3.0.6
 
-  it-length-prefixed-stream@1.2.0:
-    dependencies:
-      it-byte-stream: 1.1.1
-      it-stream-types: 2.0.2
-      uint8-varint: 2.0.4
-      uint8arraylist: 2.4.8
-
   it-length-prefixed-stream@1.2.1:
     dependencies:
       it-byte-stream: 1.1.1
@@ -14556,6 +14557,10 @@ snapshots:
     dependencies:
       it-pushable: 3.2.3
 
+  it-merge@3.0.9:
+    dependencies:
+      it-queueless-pushable: 2.0.0
+
   it-ndjson@1.1.2:
     dependencies:
       uint8arraylist: 2.4.8
@@ -14575,7 +14580,7 @@ snapshots:
 
   it-pipe@3.0.1:
     dependencies:
-      it-merge: 3.0.7
+      it-merge: 3.0.9
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
 
@@ -14591,6 +14596,12 @@ snapshots:
 
   it-queueless-pushable@1.0.2:
     dependencies:
+      p-defer: 4.0.1
+      race-signal: 1.1.3
+
+  it-queueless-pushable@2.0.0:
+    dependencies:
+      abort-error: 1.0.1
       p-defer: 4.0.1
       race-signal: 1.1.3
 
