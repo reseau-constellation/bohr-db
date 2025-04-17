@@ -56,13 +56,13 @@ importers:
         version: 4.1.0
       '@libp2p/circuit-relay-v2':
         specifier: ^3.2.2
-        version: 3.2.10
+        version: 3.2.11
       '@libp2p/identify':
         specifier: ^3.0.22
         version: 3.0.29
       '@libp2p/webrtc':
         specifier: ^5.2.3
-        version: 5.2.11(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))
+        version: 5.2.12(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))
       '@libp2p/websockets':
         specifier: ^9.2.2
         version: 9.2.10
@@ -107,7 +107,7 @@ importers:
         version: 3.2.0
       libp2p:
         specifier: ^2.7.2
-        version: 2.8.4
+        version: 2.8.5
       mocha:
         specifier: ^11.1.0
         version: 11.1.0
@@ -1476,6 +1476,12 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
+  '@eslint-community/eslint-utils@4.6.1':
+    resolution: {integrity: sha512-KTsJMmobmbrFLe3LDh0PC2FXpcSYJt/MLjlkh/9LEnmKYLSYmT/0EW9JWANjeoemiuZrmogti0tW5Ch+qNUYDw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
+
   '@eslint-community/regexpp@4.12.1':
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
@@ -1665,8 +1671,8 @@ packages:
   '@libp2p/bootstrap@11.0.31':
     resolution: {integrity: sha512-kJniyByoGrVArogL0+TGg+riFFj+uTj8+WWFYxUq+JVmKvv4QZCPwJ2GQExIdvqBU+NCeIRNO+kgKkIV/Yuu/w==}
 
-  '@libp2p/circuit-relay-v2@3.2.10':
-    resolution: {integrity: sha512-WG+8wQniqQG9fljerPz/I00PmaNC09HiqkftlSxz+B3Z9auXadU8Cw4gV21f/U2rs9jzLM+uQV2d+BWopPmb6g==}
+  '@libp2p/circuit-relay-v2@3.2.11':
+    resolution: {integrity: sha512-cSIYAupIDy/nDWc69FYvJp1fbLZaq3CycPzv1bl0lVDySvoVU6MsgOCXn+M8nKcuEXZrmuJGu28hAuor3noNfQ==}
 
   '@libp2p/config@1.1.4':
     resolution: {integrity: sha512-telhYtL8OdRXu0GSgCMtWbZpZy+sQxptU6mmUkZnJLLEAR9CVzRK9W2KzctAon9WSIop7ErKggAaiXeTGMEw8g==}
@@ -1770,8 +1776,8 @@ packages:
   '@libp2p/utils@6.6.2':
     resolution: {integrity: sha512-PjbKA0+l+8mmM7quOnG0D7XKdlF/3Hi5Aco3D0ZQXW68QnzmjEEeTbky1gzrZUgnMBmb2ZYrBlZd0GpsJ7Rc9Q==}
 
-  '@libp2p/webrtc@5.2.11':
-    resolution: {integrity: sha512-u7vE2LicfQ+tcFJdyXn5zz0Hx8qVP2hkG6lyVnELmh/RIg+NkA6cQ44y30DuYP3M6HYCHYPOfEpydWFwe0ssLw==}
+  '@libp2p/webrtc@5.2.12':
+    resolution: {integrity: sha512-ObmCeK28PmN1vqgJ52YPNHfMFrTWBlXEGAXzJlgMuuvJ4Y94of7Ej1kZWhsfGWyfrhELEcFtioPCzeaSdbeB7A==}
 
   '@libp2p/websockets@9.2.10':
     resolution: {integrity: sha512-3UUG8SdTr2pe5Jpv86zu0R8AKXVTtIgBWjIISghjeMDhEEz8lakYGtlUYndWiGe7sICG2EaAQcr/SFwMmzItIg==}
@@ -5334,8 +5340,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libp2p@2.8.4:
-    resolution: {integrity: sha512-NGsbZ8MQFpuiZKP57hn8qe4QZ7r1j6LTlGx4m3FAVurPtyWHpZ702sWrqpFJveXAYl17Lk7OOA0r08T0k0SS2g==}
+  libp2p@2.8.5:
+    resolution: {integrity: sha512-K2jqFmNp3LsTeuJ15t6jG0Z9WoydLs+AfSDvhSYQa7lRTu9IANt84SxNg+PsmGxMMiTOtIoMmo27DHzF3+ON8Q==}
 
   lighthouse-logger@1.4.2:
     resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
@@ -9608,6 +9614,11 @@ snapshots:
       eslint: 9.24.0
       eslint-visitor-keys: 3.4.3
 
+  '@eslint-community/eslint-utils@4.6.1(eslint@9.24.0)':
+    dependencies:
+      eslint: 9.24.0
+      eslint-visitor-keys: 3.4.3
+
   '@eslint-community/regexpp@4.12.1': {}
 
   '@eslint/config-array@0.20.0':
@@ -9956,7 +9967,7 @@ snapshots:
       '@multiformats/mafmt': 12.1.6
       '@multiformats/multiaddr': 12.4.0
 
-  '@libp2p/circuit-relay-v2@3.2.10':
+  '@libp2p/circuit-relay-v2@3.2.11':
     dependencies:
       '@libp2p/crypto': 5.1.1
       '@libp2p/interface': 2.9.0
@@ -10401,7 +10412,7 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@libp2p/webrtc@5.2.11(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))':
+  '@libp2p/webrtc@5.2.12(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/libp2p-noise': 16.1.2
@@ -13319,7 +13330,7 @@ snapshots:
 
   eslint-plugin-es-x@7.8.0(eslint@9.24.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.6.0(eslint@9.24.0)
+      '@eslint-community/eslint-utils': 4.6.1(eslint@9.24.0)
       '@eslint-community/regexpp': 4.12.1
       eslint: 9.24.0
       eslint-compat-utils: 0.5.1(eslint@9.24.0)
@@ -13420,7 +13431,7 @@ snapshots:
 
   eslint-plugin-n@16.6.2(eslint@9.24.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.6.0(eslint@9.24.0)
+      '@eslint-community/eslint-utils': 4.6.1(eslint@9.24.0)
       builtins: 5.1.0
       eslint: 9.24.0
       eslint-plugin-es-x: 7.8.0(eslint@9.24.0)
@@ -14226,7 +14237,7 @@ snapshots:
       '@ipshipyard/libp2p-auto-tls': 1.0.0
       '@libp2p/autonat': 2.0.27
       '@libp2p/bootstrap': 11.0.31
-      '@libp2p/circuit-relay-v2': 3.2.10
+      '@libp2p/circuit-relay-v2': 3.2.11
       '@libp2p/config': 1.1.4
       '@libp2p/dcutr': 2.0.26
       '@libp2p/identify': 3.0.29
@@ -14239,7 +14250,7 @@ snapshots:
       '@libp2p/tcp': 10.1.7
       '@libp2p/tls': 2.1.1
       '@libp2p/upnp-nat': 3.1.10
-      '@libp2p/webrtc': 5.2.11(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))
+      '@libp2p/webrtc': 5.2.12(react-native@0.73.5(@babel/core@7.26.10)(@babel/preset-env@7.24.0(@babel/core@7.26.10))(react@18.2.0))
       '@libp2p/websockets': 9.2.10
       '@multiformats/dns': 1.0.6
       blockstore-core: 5.0.2
@@ -14247,7 +14258,7 @@ snapshots:
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       ipns: 10.0.1
-      libp2p: 2.8.4
+      libp2p: 2.8.5
       multiformats: 13.3.2
     transitivePeerDependencies:
       - bufferutil
@@ -15142,7 +15153,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libp2p@2.8.4:
+  libp2p@2.8.5:
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/netmask': 2.0.0
