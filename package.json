@@ -49,7 +49,7 @@
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
-    "aegir": "^45.1.2",
+    "aegir": "^46.0.0",
     "blockstore-core": "^5.0.2",
     "blockstore-level": "^2.0.1",
     "browserify-fs": "^1.0.0",
