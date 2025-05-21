@@ -34,7 +34,7 @@ importers:
         version: 3.3.0
       helia:
         specifier: ^5.2.1
-        version: 5.4.1(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
+        version: 5.4.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
@@ -53,7 +53,7 @@ importers:
         version: 9.27.0
       '@helia/block-brokers':
         specifier: ^4.0.4
-        version: 4.2.1
+        version: 4.2.2
       '@libp2p/circuit-relay-v2':
         specifier: ^3.2.2
         version: 3.2.13
@@ -80,7 +80,7 @@ importers:
         version: 8.32.1(eslint@9.27.0)(typescript@5.8.3)
       aegir:
         specifier: ^47.0.0
-        version: 47.0.7(@babel/core@7.27.1)
+        version: 47.0.11(@babel/core@7.27.1)
       blockstore-core:
         specifier: ^5.0.2
         version: 5.0.2
@@ -1459,23 +1459,23 @@ packages:
   '@hapi/topo@5.1.0':
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
 
-  '@helia/bitswap@2.1.1':
-    resolution: {integrity: sha512-hqWEV+fQ6ko1QT7Q+yZGY8vsQ9kleB2X9HP5Ho+HKnP3ZX97OhOtSXzRBpkbqvY1GSk2kgqOnh7QIDTcRqkTug==}
+  '@helia/bitswap@2.1.2':
+    resolution: {integrity: sha512-gleOYd5jJPA0jVkm/LKkfEh+Z/TQNviv4e8pCdPlD3V/Sg6q0htdO/ttlAlMyYGY6187fwsCP+fZkqWNao/h9Q==}
 
-  '@helia/block-brokers@4.2.1':
-    resolution: {integrity: sha512-Ndu728nzNoZJEYiIFbfDKhCviFnnBII20HueCn3R6cmUlPsSkpZ1NBkno6HRzewWGqBAvLV1rVd7ccx3b/zHIw==}
+  '@helia/block-brokers@4.2.2':
+    resolution: {integrity: sha512-2Iq5basphEn8RcRK+wMiSfy5EJWgjI69wKH8CB66dSyaiduV7etP8E69eP5oGv43ShPycel4Xnmb2mNl6WWp5w==}
 
   '@helia/delegated-routing-v1-http-api-client@4.2.5':
     resolution: {integrity: sha512-fFqVhs7a4TnpKQ1cZ4im3tj53v+8UZLFkQo85otl/GpbIVBmBoGbjkDHGPv4UdjJ2lmYM/cRdnHsYbfjuc5pwA==}
 
-  '@helia/interface@5.3.1':
-    resolution: {integrity: sha512-MDUIVUHwH2eMDy5msA/cnU+nonpWDgSdWK76lN6st8YFmRjxoDNW7E4L0hOajVzYavZDZWPeUbbgpTKjlK+2CQ==}
+  '@helia/interface@5.3.2':
+    resolution: {integrity: sha512-+NOQrBxsz6i0FOsz16OgTlGAcyQ+cSYGzd9VJE7cMMrrGo9IcDEKp5Kvh980Ajg1LJFgeqYyqmxefnPExUUsBg==}
 
-  '@helia/routers@3.1.1':
-    resolution: {integrity: sha512-7yLsaKBoTbfdwNVBM5Ys1w71ikADEYRbqXoGCaVDgIzVRrolT5eGq0H/mPT9SE6aJxM+MFHUrP2qWx2a0rAV/Q==}
+  '@helia/routers@3.1.2':
+    resolution: {integrity: sha512-Fq5mj7JkeDVHXUak+HJYIK7TGjKGErvWzyjjcOMNrCk0UyWCfLcw3iFwWWfkMOP+e8IN7bgPxXVxxyOir9iL+w==}
 
-  '@helia/utils@1.3.1':
-    resolution: {integrity: sha512-EXkxXqUCsGD4ASZf8IAcxd5JBm5GDBGfarxmZhp1K6PYx1aU3vItuMpXLV7hDmFCBzLJsji8UBOZg1bjJC1ZkA==}
+  '@helia/utils@1.3.2':
+    resolution: {integrity: sha512-epMlRqLyJ95NDem4jc6kNRUlWkW5+HOwxvgJzOn70mMdXFkyYIOx24BpZurCFi+Cg6/k9vSfKsU5V1teWxYfRQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1512,8 +1512,8 @@ packages:
     resolution: {integrity: sha512-u1Pp4Tqz4r9GHGeLIJUJat5slasSxpBiBlL/i5pmGVEkCnQ1plrp5rQ5e+x3wZaPabxvsirQpfR76TPoGAiXiw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  '@ipld/dag-pb@4.1.4':
-    resolution: {integrity: sha512-v8GLZoFYekDCFpgRgS158S1fkXKWVhF0T6wQJqS+aPyBDewygOjHEUJW7C2cDMw/BNwbMlzzieBwZrt7HWFsyw==}
+  '@ipld/dag-pb@4.1.5':
+    resolution: {integrity: sha512-w4PZ2yPqvNmlAir7/2hsCRMqny1EY5jj26iZcSgxREJexmbAc2FI21jp26MqiNdfgAxvkCnf2N/TJI18GaDNwA==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
   '@ipshipyard/libp2p-auto-tls@1.0.0':
@@ -2197,8 +2197,8 @@ packages:
   '@types/multicast-dns@7.2.4':
     resolution: {integrity: sha512-ib5K4cIDR4Ro5SR3Sx/LROkMDa0BHz0OPaCBL/OSPDsAXEGZ3/KQeS6poBKYVN7BfjXDL9lWNwzyHVgt/wkyCw==}
 
-  '@types/node@22.15.19':
-    resolution: {integrity: sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==}
+  '@types/node@22.15.21':
+    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2439,8 +2439,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  aegir@47.0.7:
-    resolution: {integrity: sha512-m/VE4By+cBqn5xbXQO6cazsktaC5COpHSPvr6fBnG6WhQdQCmFlO0pf3hqLyX0rAHlugSIPtXOMa7H+5Ax4U9A==}
+  aegir@47.0.11:
+    resolution: {integrity: sha512-2vNs3JdtxHBSkvTexch4lSZY01ZdZoSkTNA6HVXAUGwXpYzDHYshi8aU7jfK4cRUXISb2HHpLqtzHXFvsERYpQ==}
     hasBin: true
 
   agent-base@7.1.3:
@@ -2906,6 +2906,10 @@ packages:
 
   cborg@4.2.10:
     resolution: {integrity: sha512-ZVA0xrVn8uBfDJYgfKKZzB/93z/Uiz7YtRdBPsZi/gyHNyqFdHMLHURVEk9dejOHepaX0zhcMyNva2/vF972SA==}
+    hasBin: true
+
+  cborg@4.2.11:
+    resolution: {integrity: sha512-7gs3iaqtsD9OHowgqzc6ixQGwSBONqosVR2co0Bg0pARgrLap+LCcEIXJuuIz2jHy0WWQeDMFPEsU2r17I2XPQ==}
     hasBin: true
 
   cborg@4.2.8:
@@ -3597,8 +3601,8 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  env-ci@11.1.0:
-    resolution: {integrity: sha512-Z8dnwSDbV1XYM9SBF2J0GcNVvmfmfh3a49qddGIROhBoVro6MZVTji15z/sJbQ2ko2ei8n988EU1wzoLU/tF+g==}
+  env-ci@11.1.1:
+    resolution: {integrity: sha512-mT3ks8F0kwpo7SYNds6nWj0PaRh+qJxIeBVBXAKTN9hphAzZv7s0QAZQbqnB1fAv/r4pJUGE15BV9UrS31FP2w==}
     engines: {node: ^18.17 || >=20.6.1}
 
   env-paths@2.2.1:
@@ -4241,8 +4245,8 @@ packages:
     resolution: {integrity: sha512-w9UMqWwJxHNOvoNzSJ2oPF5wvYcvP7jUvYzhp67yEhTi17ZDBBC1z9pTdGuzjD+EFIqLSYRweZjqfiPzQ06Ebg==}
     engines: {node: '>= 0.4'}
 
-  get-tsconfig@4.10.0:
-    resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
+  get-tsconfig@4.10.1:
+    resolution: {integrity: sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ==}
 
   gh-pages@6.3.0:
     resolution: {integrity: sha512-Ot5lU6jK0Eb+sszG8pciXdjMXdBJ5wODvgjR+imihTqsUWF2K6dJ9HST55lgqcs8wWcw6o6wAsUzfcYRhJPXbA==}
@@ -4403,8 +4407,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  helia@5.4.1:
-    resolution: {integrity: sha512-doKPI/xD71xdN3RI3OTJaWBoKVz9/2oqdbYbCoI1L+4fY4JQn5+eeVnbqa5ft4U/ri5GibWh791ZMYkTrLxg7Q==}
+  helia@5.4.2:
+    resolution: {integrity: sha512-4jFBFE+dn+1UClCDbJBP+dA6OT9TrD+f8m5VIle7TCTAYTkDfR4mi0VtaWM4CWvrbDYwBk26xR9roYtXlG9oHw==}
 
   hermes-estree@0.15.0:
     resolution: {integrity: sha512-lLYvAd+6BnOqWdnNbP/Q8xfl8LOGw4wVjfrNd9Gt8eoFzhNBRVD95n4l2ksfMVOoxuVyegs85g83KS9QOsxbVQ==}
@@ -4453,6 +4457,9 @@ packages:
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
+
+  html-escaper@3.0.3:
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
   http-cache-semantics@4.2.0:
     resolution: {integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==}
@@ -7632,6 +7639,12 @@ packages:
     peerDependencies:
       typedoc: 0.27.x || 0.28.x
 
+  typedoc-plugin-mermaid@1.12.0:
+    resolution: {integrity: sha512-CRjw29j0YbQEh4ygG7xeGjq8zKUikgd1BBBrW3ttzTeCPLrNKZopWFPd1/leSb9dUEJ3p9exOO84aP4CgjYp3g==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      typedoc: '>=0.23.0 || 0.24.x || 0.25.x || 0.26.x'
+
   typedoc-plugin-missing-exports@4.0.0:
     resolution: {integrity: sha512-Z4ei+853xppDEhcqzyeyRs4+R0kUuKQWnMK1EtSTEd5LFkgkdW5Bdn8vfo/rsCGbYVJxOWU99fxgM1mROw5Fug==}
     peerDependencies:
@@ -9497,12 +9510,12 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@helia/bitswap@2.1.1':
+  '@helia/bitswap@2.1.2':
     dependencies:
-      '@helia/interface': 5.3.1
-      '@helia/utils': 1.3.1
+      '@helia/interface': 5.3.2
+      '@helia/utils': 1.3.2
       '@libp2p/interface': 2.9.0
-      '@libp2p/logger': 5.1.15
+      '@libp2p/logger': 5.1.17
       '@libp2p/peer-collections': 6.0.29
       '@libp2p/utils': 6.6.2
       '@multiformats/multiaddr': 12.4.0
@@ -9523,11 +9536,11 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@helia/block-brokers@4.2.1':
+  '@helia/block-brokers@4.2.2':
     dependencies:
-      '@helia/bitswap': 2.1.1
-      '@helia/interface': 5.3.1
-      '@helia/utils': 1.3.1
+      '@helia/bitswap': 2.1.2
+      '@helia/interface': 5.3.2
+      '@helia/utils': 1.3.2
       '@libp2p/interface': 2.9.0
       '@libp2p/utils': 6.6.2
       '@multiformats/multiaddr': 12.4.0
@@ -9555,7 +9568,7 @@ snapshots:
       p-queue: 8.1.0
       uint8arrays: 5.1.0
 
-  '@helia/interface@5.3.1':
+  '@helia/interface@5.3.2':
     dependencies:
       '@libp2p/interface': 2.9.0
       '@multiformats/dns': 1.0.6
@@ -9566,10 +9579,10 @@ snapshots:
       multiformats: 13.3.3
       progress-events: 1.0.1
 
-  '@helia/routers@3.1.1':
+  '@helia/routers@3.1.2':
     dependencies:
       '@helia/delegated-routing-v1-http-api-client': 4.2.5
-      '@helia/interface': 5.3.1
+      '@helia/interface': 5.3.2
       '@libp2p/interface': 2.9.0
       '@libp2p/peer-id': 5.1.4
       '@multiformats/uri-to-multiaddr': 9.0.1
@@ -9579,20 +9592,20 @@ snapshots:
       multiformats: 13.3.3
       uint8arrays: 5.1.0
 
-  '@helia/utils@1.3.1':
+  '@helia/utils@1.3.2':
     dependencies:
-      '@helia/interface': 5.3.1
+      '@helia/interface': 5.3.2
       '@ipld/dag-cbor': 9.2.3
       '@ipld/dag-json': 10.2.4
-      '@ipld/dag-pb': 4.1.4
+      '@ipld/dag-pb': 4.1.5
       '@libp2p/interface': 2.9.0
-      '@libp2p/logger': 5.1.15
+      '@libp2p/logger': 5.1.17
       '@libp2p/utils': 6.6.2
       '@multiformats/dns': 1.0.6
       '@multiformats/multiaddr': 12.4.0
       any-signal: 4.1.1
       blockstore-core: 5.0.2
-      cborg: 4.2.10
+      cborg: 4.2.11
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       interface-store: 6.0.2
@@ -9628,15 +9641,15 @@ snapshots:
 
   '@ipld/dag-cbor@9.2.3':
     dependencies:
-      cborg: 4.2.10
+      cborg: 4.2.11
       multiformats: 13.3.3
 
   '@ipld/dag-json@10.2.4':
     dependencies:
-      cborg: 4.2.10
+      cborg: 4.2.11
       multiformats: 13.3.3
 
-  '@ipld/dag-pb@4.1.4':
+  '@ipld/dag-pb@4.1.5':
     dependencies:
       multiformats: 13.3.3
 
@@ -9694,14 +9707,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -9714,7 +9727,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -9723,7 +9736,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -10466,7 +10479,7 @@ snapshots:
   '@orbitdb/feed-db@1.1.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
-      helia: 5.4.1(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
+      helia: 5.4.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -10476,7 +10489,7 @@ snapshots:
   '@orbitdb/ordered-keyvalue-db@1.1.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
-      helia: 5.4.1(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
+      helia: 5.4.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -10486,7 +10499,7 @@ snapshots:
   '@orbitdb/set-db@1.1.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
-      helia: 5.4.1(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
+      helia: 5.4.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -11095,7 +11108,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
 
   '@types/estree@1.0.7': {}
 
@@ -11134,9 +11147,9 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
 
-  '@types/node@22.15.19':
+  '@types/node@22.15.21':
     dependencies:
       undici-types: 6.21.0
 
@@ -11166,7 +11179,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -11180,7 +11193,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0)(typescript@5.8.3))(eslint@9.27.0)(typescript@5.8.3)':
@@ -11396,7 +11409,7 @@ snapshots:
 
   acorn@8.14.1: {}
 
-  aegir@47.0.7(@babel/core@7.27.1):
+  aegir@47.0.11(@babel/core@7.27.1):
     dependencies:
       '@electron/get': 4.0.0
       '@polka/send-type': 0.5.2
@@ -11411,7 +11424,7 @@ snapshots:
       '@types/chai-string': 1.4.5
       '@types/chai-subset': 1.3.6(@types/chai@4.3.20)
       '@types/mocha': 10.0.10
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       '@typescript-eslint/parser': 8.32.1(eslint@9.27.0)(typescript@5.8.3)
       buffer: 6.0.3
       bytes: 3.1.2
@@ -11484,9 +11497,10 @@ snapshots:
       tempy: 3.1.0
       typedoc: 0.28.4(typescript@5.8.3)
       typedoc-plugin-mdn-links: 5.0.2(typedoc@0.28.4(typescript@5.8.3))
+      typedoc-plugin-mermaid: 1.12.0(typedoc@0.28.4(typescript@5.8.3))
       typedoc-plugin-missing-exports: 4.0.0(typedoc@0.28.4(typescript@5.8.3))
       typescript: 5.8.3
-      typescript-docs-verifier: 2.5.3(@types/node@22.15.19)(typescript@5.8.3)
+      typescript-docs-verifier: 2.5.3(@types/node@22.15.21)(typescript@5.8.3)
       wherearewe: 2.0.1
       yargs: 17.7.2
       yargs-parser: 21.1.1
@@ -12027,6 +12041,8 @@ snapshots:
 
   cborg@4.2.10: {}
 
+  cborg@4.2.11: {}
+
   cborg@4.2.8: {}
 
   ccount@2.0.1: {}
@@ -12111,7 +12127,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -12120,7 +12136,7 @@ snapshots:
 
   chromium-edge-launcher@1.0.0:
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -12835,7 +12851,7 @@ snapshots:
 
   entities@4.5.0: {}
 
-  env-ci@11.1.0:
+  env-ci@11.1.1:
     dependencies:
       execa: 8.0.1
       java-properties: 1.0.2
@@ -13060,7 +13076,7 @@ snapshots:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1(supports-color@8.1.1)
       eslint: 9.27.0
-      get-tsconfig: 4.10.0
+      get-tsconfig: 4.10.1
       is-bun-module: 2.0.0
       stable-hash: 0.0.5
       tinyglobby: 0.2.13
@@ -13095,7 +13111,7 @@ snapshots:
       debug: 4.4.1(supports-color@8.1.1)
       eslint: 9.27.0
       eslint-import-resolver-node: 0.3.9
-      get-tsconfig: 4.10.0
+      get-tsconfig: 4.10.1
       is-glob: 4.0.3
       minimatch: 10.0.1
       semver: 7.7.2
@@ -13157,7 +13173,7 @@ snapshots:
       enhanced-resolve: 5.18.1
       eslint: 9.27.0
       eslint-plugin-es-x: 7.8.0(eslint@9.27.0)
-      get-tsconfig: 4.10.0
+      get-tsconfig: 4.10.1
       globals: 15.15.0
       ignore: 5.3.2
       minimatch: 9.0.5
@@ -13673,7 +13689,7 @@ snapshots:
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
 
-  get-tsconfig@4.10.0:
+  get-tsconfig@4.10.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
@@ -13878,15 +13894,15 @@ snapshots:
 
   he@1.2.0: {}
 
-  helia@5.4.1(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0)):
+  helia@5.4.2(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0)):
     dependencies:
       '@chainsafe/libp2p-noise': 16.1.3
       '@chainsafe/libp2p-yamux': 7.0.1
-      '@helia/block-brokers': 4.2.1
+      '@helia/block-brokers': 4.2.2
       '@helia/delegated-routing-v1-http-api-client': 4.2.5
-      '@helia/interface': 5.3.1
-      '@helia/routers': 3.1.1
-      '@helia/utils': 1.3.1
+      '@helia/interface': 5.3.2
+      '@helia/routers': 3.1.2
+      '@helia/utils': 1.3.2
       '@ipshipyard/libp2p-auto-tls': 1.0.0
       '@libp2p/autonat': 2.0.30
       '@libp2p/bootstrap': 11.0.35
@@ -13964,6 +13980,8 @@ snapshots:
       lru-cache: 10.4.3
 
   html-escaper@2.0.2: {}
+
+  html-escaper@3.0.3: {}
 
   http-cache-semantics@4.2.0: {}
 
@@ -14587,7 +14605,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -14608,13 +14626,13 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       jest-util: 29.7.0
 
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -14631,7 +14649,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -17042,7 +17060,7 @@ snapshots:
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.8.3)
       debug: 4.4.1(supports-color@8.1.1)
-      env-ci: 11.1.0
+      env-ci: 11.1.1
       execa: 9.5.3
       figures: 6.1.0
       find-versions: 6.0.0
@@ -17652,14 +17670,14 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node@10.9.2(@types/node@22.15.19)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@22.15.21)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -17777,6 +17795,11 @@ snapshots:
     dependencies:
       typedoc: 0.28.4(typescript@5.8.3)
 
+  typedoc-plugin-mermaid@1.12.0(typedoc@0.28.4(typescript@5.8.3)):
+    dependencies:
+      html-escaper: 3.0.3
+      typedoc: 0.28.4(typescript@5.8.3)
+
   typedoc-plugin-missing-exports@4.0.0(typedoc@0.28.4(typescript@5.8.3)):
     dependencies:
       typedoc: 0.28.4(typescript@5.8.3)
@@ -17790,13 +17813,13 @@ snapshots:
       typescript: 5.8.3
       yaml: 2.8.0
 
-  typescript-docs-verifier@2.5.3(@types/node@22.15.19)(typescript@5.8.3):
+  typescript-docs-verifier@2.5.3(@types/node@22.15.21)(typescript@5.8.3):
     dependencies:
       chalk: 4.1.2
       fs-extra: 10.1.0
       ora: 5.4.1
       strip-ansi: 7.1.0
-      ts-node: 10.9.2(@types/node@22.15.19)(typescript@5.8.3)
+      ts-node: 10.9.2(@types/node@22.15.21)(typescript@5.8.3)
       tsconfig: 7.0.0
       typescript: 5.8.3
       yargs: 17.7.2
