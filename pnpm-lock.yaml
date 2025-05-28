@@ -83,10 +83,10 @@ importers:
         version: 47.0.16(@babel/core@7.27.1)
       blockstore-core:
         specifier: ^5.0.2
-        version: 5.0.3
+        version: 5.0.4
       blockstore-level:
         specifier: ^2.0.1
-        version: 2.0.2
+        version: 2.0.3
       browserify-fs:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1699,17 +1699,8 @@ packages:
   '@libp2p/keychain@5.2.4':
     resolution: {integrity: sha512-re9+6ayALUqym+Y82wCDYLqg1B7tv0BV2DundKcLsLxPljrp0gLZu3uX9wzLGhHG8gisCNdwYZDvjS9eMWketg==}
 
-  '@libp2p/logger@5.1.15':
-    resolution: {integrity: sha512-0+rOHEXXDNZvsb9p04jVAFQB0WcvMxFfqzSe271/tg4yVlPF5H99l5BwOqeb+EYhHV1lTk+zrJdPK9easHr1fQ==}
-
-  '@libp2p/logger@5.1.17':
-    resolution: {integrity: sha512-e3qKQEzgg9WsBJmF4nqABqDrVXiF0zwfhD4iUETowonlEAy5XpwoBfepo1RVVtj6ORnsc/Sm27Au/jNwSJz0zQ==}
-
   '@libp2p/logger@5.1.18':
     resolution: {integrity: sha512-venbhUr6riuMTu8c8bnphZ27XcOuDDq6fdYaRVggokQpwSC6QRejlaFnY8w0K1ZuwFv9uc19UA2ELtOBQ26AJw==}
-
-  '@libp2p/logger@5.1.9':
-    resolution: {integrity: sha512-PQbCTSSaJ2sRjV8vbewpS2promeDjEQqCjxWUTvY5RuTOKu5iUApG1JcmjfJ4Y+n9qpuVnE2G6ol9AIyco/EOQ==}
 
   '@libp2p/mdns@11.0.35':
     resolution: {integrity: sha512-7jbPYXVoMrREELzD87OQZzpsAXdglgYuMUCxDfshmu0NPIiPVUZBoPMFpj5IuqIUsAxT32IuHIbv9VnkXB0QmQ==}
@@ -2258,8 +2249,8 @@ packages:
   '@types/node@22.15.21':
     resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
-  '@types/node@22.15.23':
-    resolution: {integrity: sha512-7Ec1zaFPF4RJ0eXu1YT/xgiebqwqoJz8rYPDi/O2BcZ++Wpt0Kq9cl0eg6NN6bYbPnR67ZLo7St5Q3UK0SnARw==}
+  '@types/node@22.15.24':
+    resolution: {integrity: sha512-w9CZGm9RDjzTh/D+hFwlBJ3ziUaVw7oufKA3vOFSOZlzmW9AkZnfjPb+DLnrV6qtgL/LNmP0/2zBNCFHL3F0ng==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2811,11 +2802,11 @@ packages:
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
-  blockstore-core@5.0.3:
-    resolution: {integrity: sha512-TxKk6L4EK10Hc61q4dQvLVjqB8FVI2nHeQBuzN7PVAdhYoiWj9q0JwoSyQ9aJgMAi+GeC8/VF1XuxOe0cymDgw==}
+  blockstore-core@5.0.4:
+    resolution: {integrity: sha512-v7wtBEpW2J/kKljN7Z2u4Tnwr7qwnOvW1aPVfynIxEdejlVC7gg4z9k6iJt7n5XMGkdNnH4HOmVcjYcaMnu7yg==}
 
-  blockstore-level@2.0.2:
-    resolution: {integrity: sha512-DJC/dSf3LzLG0bghhhbKd6B5y52XbwKFpiI+hJQsN4BQMr70czLZ5TbNtsXUiR3kBgK/EdiXK3KU4ae/MHwbww==}
+  blockstore-level@2.0.3:
+    resolution: {integrity: sha512-/GqkHMJDP10fg3Db1Jrn7k2i69TquhlI1TXfs2CJDVb98gBKRHT1nuXjx8r8DS9pK8CDxGkfQJ+DJSmghot4RQ==}
 
   bn.js@4.12.1:
     resolution: {integrity: sha512-k8TVBiPkPJT9uHLdOKfFpqcfprwBFOAAXXozRubr7R7PfIuKvQlzcI4M0pALeqXN09vdaMbUdUj+pass+uULAg==}
@@ -4668,6 +4659,9 @@ packages:
   interface-blockstore@5.3.1:
     resolution: {integrity: sha512-nhgrQnz6yUQEqxTFLhlOBurQOy5lWlwCpgFmZ3GTObTVTQS9RZjK/JTozY6ty9uz2lZs7VFJSqwjWAltorJ4Vw==}
 
+  interface-blockstore@5.3.2:
+    resolution: {integrity: sha512-oA9Pjkxun/JHAsZrYEyKX+EoPjLciTzidE7wipLc/3YoHDjzsnXRJzAzFJXNUvogtY4g7hIwxArx8+WKJs2RIg==}
+
   interface-datastore@8.3.1:
     resolution: {integrity: sha512-3r0ETmHIi6HmvM5sc09QQiCD3gUfwtEM/AAChOyAd/UAKT69uk8LXfTSUBufbUIO/dU65Vj8nb9O6QjwW8vDSQ==}
 
@@ -4676,6 +4670,9 @@ packages:
 
   interface-store@6.0.2:
     resolution: {integrity: sha512-KSFCXtBlNoG0hzwNa0RmhHtrdhzexp+S+UY2s0rWTBJyfdEIgn6i6Zl9otVqrcFYbYrneBT7hbmHQ8gE0C3umA==}
+
+  interface-store@6.0.3:
+    resolution: {integrity: sha512-+WvfEZnFUhRwFxgz+QCQi7UC6o9AM0EHM9bpIe2Nhqb100NHCsTvNAn4eJgvgV2/tmLo1MP9nGxQKEcZTAueLA==}
 
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
@@ -5066,9 +5063,6 @@ packages:
 
   it-merge@3.0.11:
     resolution: {integrity: sha512-7Kzf/XN1jFlhXRfeDoHeBlgmMv/zOv+ji2LXEN6hsIlW2S/8PRjw+4s4dZbtFd+u5Pk7li+2Hd+a/NHwsqT0iQ==}
-
-  it-merge@3.0.9:
-    resolution: {integrity: sha512-TjY4WTiwe4ONmaKScNvHDAJj6Tw0UeQFp4JrtC/3Mq7DTyhytes7mnv5OpZV4gItpZcs0AgRntpT2vAy2cnXUw==}
 
   it-ndjson@1.1.3:
     resolution: {integrity: sha512-HQTTCY1mi651Qz6Ijss1GtammSnPSN+MXzpXcD6RvytG2xJlMxD95RlKQP5JAE8jZtfSugGRUf9geXai7DuNBQ==}
@@ -9659,7 +9653,7 @@ snapshots:
       '@helia/interface': 5.3.2
       '@helia/utils': 1.3.2
       '@libp2p/interface': 2.9.0
-      '@libp2p/logger': 5.1.17
+      '@libp2p/logger': 5.1.18
       '@libp2p/peer-collections': 6.0.30
       '@libp2p/utils': 6.6.2
       '@multiformats/multiaddr': 12.4.0
@@ -9743,12 +9737,12 @@ snapshots:
       '@ipld/dag-json': 10.2.4
       '@ipld/dag-pb': 4.1.5
       '@libp2p/interface': 2.9.0
-      '@libp2p/logger': 5.1.17
+      '@libp2p/logger': 5.1.18
       '@libp2p/utils': 6.6.2
       '@multiformats/dns': 1.0.6
       '@multiformats/multiaddr': 12.4.0
       any-signal: 4.1.1
-      blockstore-core: 5.0.3
+      blockstore-core: 5.0.4
       cborg: 4.2.11
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
@@ -9851,14 +9845,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -9871,7 +9865,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -9880,7 +9874,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -9991,7 +9985,7 @@ snapshots:
       '@libp2p/interface': 2.9.0
       '@noble/curves': 1.9.0
       '@noble/hashes': 1.8.0
-      multiformats: 13.3.3
+      multiformats: 13.3.6
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -10080,7 +10074,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
-      multiformats: 13.3.3
+      multiformats: 13.3.6
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -10098,7 +10092,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
-      multiformats: 13.3.3
+      multiformats: 13.3.6
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -10160,35 +10154,11 @@ snapshots:
       sanitize-filename: 1.6.3
       uint8arrays: 5.1.0
 
-  '@libp2p/logger@5.1.15':
-    dependencies:
-      '@libp2p/interface': 2.9.0
-      '@multiformats/multiaddr': 12.4.0
-      interface-datastore: 8.3.1
-      multiformats: 13.3.3
-      weald: 1.0.4
-
-  '@libp2p/logger@5.1.17':
-    dependencies:
-      '@libp2p/interface': 2.10.2
-      '@multiformats/multiaddr': 12.4.0
-      interface-datastore: 8.3.1
-      multiformats: 13.3.6
-      weald: 1.0.4
-
   '@libp2p/logger@5.1.18':
     dependencies:
       '@libp2p/interface': 2.10.2
       '@multiformats/multiaddr': 12.4.0
       interface-datastore: 8.3.2
-      multiformats: 13.3.6
-      weald: 1.0.4
-
-  '@libp2p/logger@5.1.9':
-    dependencies:
-      '@libp2p/interface': 2.10.2
-      '@multiformats/multiaddr': 12.4.0
-      interface-datastore: 8.3.1
       multiformats: 13.3.6
       weald: 1.0.4
 
@@ -10251,7 +10221,7 @@ snapshots:
     dependencies:
       '@libp2p/crypto': 5.1.1
       '@libp2p/interface': 2.9.0
-      multiformats: 13.3.3
+      multiformats: 13.3.6
       uint8arrays: 5.1.0
 
   '@libp2p/peer-id@5.1.5':
@@ -10367,7 +10337,7 @@ snapshots:
       '@chainsafe/netmask': 2.0.0
       '@libp2p/crypto': 5.1.1
       '@libp2p/interface': 2.6.0
-      '@libp2p/logger': 5.1.9
+      '@libp2p/logger': 5.1.18
       '@multiformats/multiaddr': 12.4.0
       '@sindresorhus/fnv1a': 3.1.0
       any-signal: 4.1.1
@@ -10391,7 +10361,7 @@ snapshots:
       '@chainsafe/netmask': 2.0.0
       '@libp2p/crypto': 5.1.4
       '@libp2p/interface': 2.9.0
-      '@libp2p/logger': 5.1.15
+      '@libp2p/logger': 5.1.18
       '@multiformats/multiaddr': 12.4.0
       '@sindresorhus/fnv1a': 3.1.0
       any-signal: 4.1.1
@@ -11337,7 +11307,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.23':
+  '@types/node@22.15.24':
     dependencies:
       undici-types: 6.21.0
 
@@ -12032,24 +12002,23 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  blockstore-core@5.0.3:
+  blockstore-core@5.0.4:
     dependencies:
       '@libp2p/logger': 5.1.18
-      interface-blockstore: 5.3.1
-      interface-store: 6.0.2
-      it-drain: 3.0.9
+      interface-blockstore: 5.3.2
+      interface-store: 6.0.3
       it-filter: 3.1.3
       it-merge: 3.0.11
-      it-pushable: 3.2.3
       multiformats: 13.3.6
 
-  blockstore-level@2.0.2:
+  blockstore-level@2.0.3:
     dependencies:
-      blockstore-core: 5.0.3
+      blockstore-core: 5.0.4
       interface-blockstore: 5.3.1
       interface-store: 6.0.2
       level: 8.0.1
       multiformats: 13.3.6
+      race-signal: 1.1.3
 
   bn.js@4.12.1: {}
 
@@ -12330,7 +12299,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -12339,7 +12308,7 @@ snapshots:
 
   chromium-edge-launcher@1.0.0:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -12787,7 +12756,7 @@ snapshots:
     dependencies:
       '@libp2p/logger': 5.1.18
       interface-datastore: 8.3.1
-      interface-store: 6.0.2
+      interface-store: 6.0.3
       it-drain: 3.0.9
       it-filter: 3.1.3
       it-map: 3.1.3
@@ -14132,7 +14101,7 @@ snapshots:
       '@libp2p/webrtc': 5.2.15(react-native@0.73.5(@babel/core@7.27.1)(@babel/preset-env@7.24.0(@babel/core@7.27.1))(react@18.2.0))
       '@libp2p/websockets': 9.2.13
       '@multiformats/dns': 1.0.6
-      blockstore-core: 5.0.3
+      blockstore-core: 5.0.4
       datastore-core: 10.0.2
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
@@ -14300,17 +14269,24 @@ snapshots:
       interface-store: 6.0.2
       multiformats: 13.3.3
 
+  interface-blockstore@5.3.2:
+    dependencies:
+      interface-store: 6.0.3
+      multiformats: 13.3.6
+
   interface-datastore@8.3.1:
     dependencies:
-      interface-store: 6.0.2
+      interface-store: 6.0.3
       uint8arrays: 5.1.0
 
   interface-datastore@8.3.2:
     dependencies:
-      interface-store: 6.0.2
+      interface-store: 6.0.3
       uint8arrays: 5.1.0
 
   interface-store@6.0.2: {}
+
+  interface-store@6.0.3: {}
 
   internal-slot@1.1.0:
     dependencies:
@@ -14704,10 +14680,6 @@ snapshots:
     dependencies:
       it-queueless-pushable: 2.0.1
 
-  it-merge@3.0.9:
-    dependencies:
-      it-queueless-pushable: 2.0.1
-
   it-ndjson@1.1.3:
     dependencies:
       uint8arraylist: 2.4.8
@@ -14727,7 +14699,7 @@ snapshots:
 
   it-pipe@3.0.1:
     dependencies:
-      it-merge: 3.0.9
+      it-merge: 3.0.11
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
 
@@ -14810,7 +14782,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -14831,13 +14803,13 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-util: 29.7.0
 
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -14854,7 +14826,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
