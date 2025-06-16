@@ -5,6 +5,7 @@ export {
   TypedOrderedKeyValue,
 } from "@/ordered-keyvalue.js";
 export { typedSet, TypedSet } from "@/set.js";
+export { typedNested, TypedNested } from "@/nested.js";
 
 export { DBElements } from "@/types.js";
 
