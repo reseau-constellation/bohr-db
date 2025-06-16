@@ -1,6 +1,12 @@
 import Ajv, { JSONSchemaType, ValidateFunction } from "ajv";
 
-import type { DBElements, DBElementsWithUndefined, Path, PathValue, RecursivePartial } from "./types";
+import type {
+  DBElements,
+  DBElementsWithUndefined,
+  Path,
+  PathValue,
+  RecursivePartial,
+} from "./types";
 import { NestedValue } from "@orbitdb/nested-db";
 
 const ajv = new Ajv({ allowUnionTypes: true });

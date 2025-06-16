@@ -17,7 +17,7 @@
   "exports": "./dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "compile": "pnpm tspc -p tsconfig.json",
+    "compile": "pnpm clean && pnpm tspc -p tsconfig.json",
     "compile:prod": "pnpm updateVersion && pnpm format && pnpm clean && pnpm tspc -p tsconfig.build.json",
     "test": "pnpm compile && pnpm aegir test -t node --cov -- --exit",
     "format": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint",

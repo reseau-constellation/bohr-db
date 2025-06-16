@@ -24,7 +24,7 @@ export type TypedNested<T extends NestedValue> = Omit<
 
 export const typedNested = <T extends NestedValue>({
   db,
-  _schema,  // TODO
+  _schema, // TODO
 }: {
   db: NestedDatabaseType;
   _schema: JSONSchemaType<RecursivePartial<T>>;
