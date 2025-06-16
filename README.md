@@ -28,12 +28,12 @@ Below are a few examples of `bohr-db` with `KeyValue` and `Set` databases. See t
 As simple example with `Set`:
 ```ts
 import { createOrbit } from "@orbitdb/core";
-import { registerAll } from "@constl/orbit-db-kuiper";
+import { registerSet } from "@orbitdb/set-db";
 
 import { typedSet } from "@constl/bohr-db";
 
-// Register orbit-db-kuiper database types. IMPORTANT - must call before creating orbit instance !
-registerAll();
+// Register set-db database type. IMPORTANT - must call before creating orbit instance !
+registerSet();
 
 const orbit = await createOrbit({ ipfs })
 
