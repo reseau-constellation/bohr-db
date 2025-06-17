@@ -218,6 +218,13 @@ describe.skip("Typed Nested", () => {
       ).to.be.rejectedWith("must be number");
     });
 
+    it("put nested valid with key", async () => {
+      await typedDB.putNested("b", { c: "test" });
+
+      const actual = await typedDB.allAsJSON();
+      expect(actual).to.deep.equal({ b: { c: "test" } });
+    });
+
     it("put valid nested key/value - list key", async () => {
       await typedDB.put(["b", "c"], "test");
 
@@ -230,6 +237,14 @@ describe.skip("Typed Nested", () => {
 
       const actual = await typedDB.get("b");
       expect(actual).to.deep.equal({ c: "test" });
+    });
+
+
+    it("error put nested with key and invalid value", async () => {
+      // @ts-expect-error Deliberately adding invalid value
+      await expect(await typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
+        "Unsupported key b/d.",
+      );
     });
 
     it("error on put invalid nested key - list key", async () => {

@@ -30,6 +30,7 @@ export type TypedNested<T extends NestedValue> = Omit<
   ): Promise<string>;
   set: TypedNested<T>["put"];
   putNested(value: RecursivePartial<T>): Promise<string[]>;
+  putNested<K extends ExtractKeys<T>>(key: K, value: GetValueFromKey<T, K>): Promise<string[]>;
   setNested: TypedNested<T>["putNested"];
   del<K extends ExtractKeys<T>>(key: K): Promise<string>;
   get<K extends ExtractKeys<T>>(
@@ -73,13 +74,24 @@ export const typedNested = <T extends NestedValue>({
     get(target, prop) {
       if (prop === "allAsJSON") {
         // Todo: type check
-        return async () => toNested(await db.all());
+        const typedAllAsJSON: TypedNested<T>["allAsJSON"] = async () => toNested(await db.all()) as T;
+        return typedAllAsJSON;
       } else if (prop === "setNested" || prop === "putNested") {
-        return async (data: T): Promise<string[]> => {
-          data = removeUndefinedProperties(data) as T;
-          // Todo: type check
-          return await db.putNested(data);
+        const typedSetNested: TypedNested<T>["setNested"] = async <K extends ExtractKeys<T>>(keyOrValue: K | RecursivePartial<T>, value?: GetValueFromKey<T, K>): Promise<string[]> => {
+          if (typeof keyOrValue === "string") {
+
+            // @ts-expect-error types in progress
+            const data = removeUndefinedProperties(value);
+            // Todo: type check
+            return await db.putNested(keyOrValue, data);
+          } else {
+            // @ts-expect-error types in progress
+            const data = removeUndefinedProperties(keyOrValue);
+            // Todo: type check
+            return await db.putNested(data);
+          }
         };
+        return typedSetNested
       }
 
       /*if (prop === "get") {
