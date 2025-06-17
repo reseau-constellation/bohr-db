@@ -51,6 +51,7 @@ describe("Typed OrderedKeyValue", () => {
     }
 
     await rimraf(keysPath);
+    await rimraf("./orbitdb");
   });
 
   describe("Creating a Typed OrderedKeyValue database", () => {

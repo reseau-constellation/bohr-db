@@ -37,6 +37,7 @@ describe("Typed Nested", () => {
     }
 
     await rimraf(keysPath);
+    await rimraf("./orbitdb");
   });
 
   describe("Creating a Typed Nested database", () => {
@@ -274,7 +275,7 @@ describe("Typed Nested", () => {
     });
   });
 
-  describe.skip("Typed KeyValue database - additional properties", () => {
+  describe.skip("Typed Nested database - additional properties", () => {
     type structure = { a: string; b: { [key: string]: number } };
     const schema: JSONSchemaType<RecursivePartial<structure>> = {
       type: "object",
@@ -374,7 +375,7 @@ describe("Typed Nested", () => {
     });
   });
 
-  describe.skip("Typed KeyValue database - undefined properties", () => {
+  describe.skip("Typed Nested database - undefined properties", () => {
     type structure = { a: { b: number; c: number } };
     const schema: JSONSchemaType<RecursivePartial<structure>> = {
       type: "object",
