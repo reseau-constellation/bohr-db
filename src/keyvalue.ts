@@ -41,8 +41,8 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
           const val = await target.get(key);
           if (val === undefined) return val;
-          const valide = validateKey(val, key);
-          return valide ? val : undefined;
+          const valid = validateKey(val, key);
+          return valid ? val : undefined;
         };
       } else if (prop === "put" || prop === "set") {
         return async (

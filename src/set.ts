@@ -31,12 +31,12 @@ export const typedSet = <T extends DBElements>({
     get(target, prop) {
       if (prop === "all") {
         return async (): Promise<{ value: T; hash: string }[]> => {
-          const tous = await target[prop]();
-          const valides = tous.filter((x) => validate(x.value)) as {
+          const allValues = await target[prop]();
+          const valids = allValues.filter((x) => validate(x.value)) as {
             value: T;
             hash: string;
           }[];
-          return valides;
+          return valids;
         };
       } else if (prop === "add") {
         return async (data: T): Promise<string> => {
