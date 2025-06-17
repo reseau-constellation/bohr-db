@@ -14,7 +14,7 @@ chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
 
-describe.only("Typed Nested", () => {
+describe("Typed Nested", () => {
   let ipfs: HeliaLibp2p;
   let identities;
   let keystore: KeyStoreType;
