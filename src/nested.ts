@@ -1,5 +1,10 @@
 import type { JSONSchemaType } from "ajv";
-import { splitKey, type NestedDatabaseType, type NestedValue, toNested } from "@orbitdb/nested-db";
+import {
+  splitKey,
+  type NestedDatabaseType,
+  type NestedValue,
+  toNested,
+} from "@orbitdb/nested-db";
 
 import {
   DBElements,
@@ -14,7 +19,10 @@ export type TypedNested<T extends NestedValue> = Omit<
   NestedDatabaseType,
   "put" | "set" | "putNested" | "del" | "get" | "all"
 > & {
-  put<K extends ExtractKeys<T>>(key: K, value: GetValueFromKey<T, K>): Promise<string>;
+  put<K extends ExtractKeys<T>>(
+    key: K,
+    value: GetValueFromKey<T, K>,
+  ): Promise<string>;
   put<K extends ExtractKeysAsList<T>>(
     key: K,
     value: GetValueFromKeyList<T, K>,
@@ -22,7 +30,9 @@ export type TypedNested<T extends NestedValue> = Omit<
   set: TypedNested<T>["put"];
   putNested(value: RecursivePartial<T>): Promise<string[]>;
   del<K extends ExtractKeys<T>>(key: K): Promise<string>;
-  get<K extends ExtractKeys<T>>(key: K): Promise<GetValueFromKey<T, K> | undefined>;
+  get<K extends ExtractKeys<T>>(
+    key: K,
+  ): Promise<GetValueFromKey<T, K> | undefined>;
   all: () => Promise<
     {
       key: ExtractKeys<T>;
@@ -42,27 +52,26 @@ export const typedNested = <T extends NestedValue>({
 }): TypedNested<T> => {
   const supportedKey = (key: string | string[]) => {
     const keyComponents = typeof key === "string" ? splitKey(key) : key;
-    let schemaBranch = schema
+    let schemaBranch = schema;
     for (const k of keyComponents) {
       if (schemaBranch.additionalProperties) return true;
       if (schemaBranch.properties[k] === undefined) return false;
-      schemaBranch = schemaBranch.properties[k]
+      schemaBranch = schemaBranch.properties[k];
     }
     return true;
-  }
+  };
   // const compiledValidators: {[key in ExtractKeys<T>]: (x: unknown)=>x is GetValueFromKey<T, key>} = {};
-  
 
   /*const validateKeyValue = <K extends ExtractKeys<T>>(
     val: unknown, key: K
   ): val is GetValueFromKey<T, K> => {
     return compiledValidators[key](val)
   }*/
-  return new Proxy(db, {   
+  return new Proxy(db, {
     get(target, prop) {
       if (prop === "allAsJSON") {
         // Todo: type check
-        return async () => toNested(await db.all())
+        return async () => toNested(await db.all());
       }
       /*if (prop === "get") {
         return async <K extends ExtractKeys<T>>(key: K): Promise<GetValueFromKey<T, K> | undefined> => {
@@ -78,7 +87,7 @@ export const typedNested = <T extends NestedValue>({
       }
       else {
       };*/
-      return target[prop as keyof typeof target]
-    }
+      return target[prop as keyof typeof target];
+    },
   }) as unknown as TypedNested<T>;
 };

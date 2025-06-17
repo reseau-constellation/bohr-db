@@ -1,4 +1,9 @@
-import { ExtractKeys, ExtractKeysAsList, GetValueFromKey, GetValueFromKeyList } from "@/types";
+import {
+  ExtractKeys,
+  ExtractKeysAsList,
+  GetValueFromKey,
+  GetValueFromKeyList,
+} from "@/types";
 
 describe("Types", () => {
   type S = {
@@ -7,7 +12,6 @@ describe("Types", () => {
     f: { g: { h: "i" } };
   };
   describe("Extract keys as list", () => {
-    
     let _value: ExtractKeys<S>;
     it("Root key assignable", () => {
       _value = "a";
@@ -71,71 +75,71 @@ describe("Types", () => {
   describe("Get path value", () => {
     it("Root key", () => {
       let _value: GetValueFromKey<S, "a"> = "test";
-      
+
       // @ts-expect-error wrong type
-      _value = 1
-    })
+      _value = 1;
+    });
     it("Nested key", () => {
       let _value: GetValueFromKey<S, "b/c"> = 1;
-      
+
       // @ts-expect-error wrong type
-      _value = false
-    })
-    
+      _value = false;
+    });
+
     it("Nested key object value", () => {
       let _value: GetValueFromKey<S, "b/d"> = { e: true };
-    
+
       // @ts-expect-error wrong type
-      _value = {e: 1}
-    })
+      _value = { e: 1 };
+    });
 
     it("Incomplete object type", () => {
       let _value: GetValueFromKey<S, "b"> = { d: { e: false }, c: 2 };
-      
+
       // @ts-expect-error incomplete type
       _value = { c: 1 };
-    })
+    });
 
     it("Deep nested key", () => {
       let _value: GetValueFromKey<S, "b/d/e"> = true;
-        
+
       // @ts-expect-error wrong type
       _value = 1;
-    })
+    });
   });
   describe("Get path value from list", () => {
     it("Root key", () => {
       let _value: GetValueFromKeyList<S, ["a"]> = "test";
-      
+
       // @ts-expect-error wrong type
-      _value = 1
-    })
+      _value = 1;
+    });
     it("Nested key", () => {
       let _value: GetValueFromKeyList<S, ["b", "c"]> = 1;
-      
+
       // @ts-expect-error wrong type
-      _value = false
-    })
-    
+      _value = false;
+    });
+
     it("Nested key object value", () => {
       let _value: GetValueFromKeyList<S, ["b", "d"]> = { e: true };
-    
+
       // @ts-expect-error wrong type
-      _value = {e: 1}
-    })
+      _value = { e: 1 };
+    });
 
     it("Incomplete object type", () => {
       let _value: GetValueFromKeyList<S, ["b"]> = { d: { e: false }, c: 2 };
-      
+
       // @ts-expect-error incomplete type
       _value = { c: 1 };
-    })
+    });
 
     it("Deep nested key", () => {
       let _value: GetValueFromKeyList<S, ["b", "d", "e"]> = true;
-        
+
       // @ts-expect-error wrong type
       _value = 1;
-    })
+    });
   });
 });
