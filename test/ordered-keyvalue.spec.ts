@@ -24,7 +24,7 @@ const removeHash = <T>(
 ): { key: string; value: T }[] =>
   data.map((x) => ({ key: x.key, value: x.value }));
 
-describe.only("Typed OrderedKeyValue", () => {
+describe("Typed OrderedKeyValue", () => {
   let ipfs: HeliaLibp2p;
   let identities;
   let keystore: KeyStoreType;
