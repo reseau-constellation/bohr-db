@@ -14,6 +14,7 @@ import {
   GetValueFromKeyList,
   RecursivePartial,
 } from "./types.js";
+import { removeUndefinedProperties } from "./utils.js";
 
 export type TypedNested<T extends NestedValue> = Omit<
   NestedDatabaseType,
@@ -29,6 +30,7 @@ export type TypedNested<T extends NestedValue> = Omit<
   ): Promise<string>;
   set: TypedNested<T>["put"];
   putNested(value: RecursivePartial<T>): Promise<string[]>;
+  setNested: TypedNested<T>["putNested"];
   del<K extends ExtractKeys<T>>(key: K): Promise<string>;
   get<K extends ExtractKeys<T>>(
     key: K,
@@ -72,7 +74,14 @@ export const typedNested = <T extends NestedValue>({
       if (prop === "allAsJSON") {
         // Todo: type check
         return async () => toNested(await db.all());
-      }
+      } else if (prop === "setNested" || prop === "putNestetd") {
+        return async (data: T): Promise<string[]> => {
+          data = removeUndefinedProperties(data) as T;
+          // Todo: type check
+          return await db.putNested(data);
+        }
+      };
+
       /*if (prop === "get") {
         return async <K extends ExtractKeys<T>>(key: K): Promise<GetValueFromKey<T, K> | undefined> => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
