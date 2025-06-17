@@ -74,7 +74,7 @@ export const typedNested = <T extends NestedValue>({
       if (prop === "allAsJSON") {
         // Todo: type check
         return async () => toNested(await db.all());
-      } else if (prop === "setNested" || prop === "putNestetd") {
+      } else if (prop === "setNested" || prop === "putNested") {
         return async (data: T): Promise<string[]> => {
           data = removeUndefinedProperties(data) as T;
           // Todo: type check
