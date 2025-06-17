@@ -79,8 +79,8 @@ export const typedNested = <T extends NestedValue>({
           data = removeUndefinedProperties(data) as T;
           // Todo: type check
           return await db.putNested(data);
-        }
-      };
+        };
+      }
 
       /*if (prop === "get") {
         return async <K extends ExtractKeys<T>>(key: K): Promise<GetValueFromKey<T, K> | undefined> => {

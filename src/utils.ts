@@ -2,7 +2,7 @@ import Ajv, { JSONSchemaType, ValidateFunction } from "ajv";
 
 import type { DBElements, DBElementsWithUndefined } from "./types";
 import { DagCborEncodable } from "@orbitdb/core";
-import { CID } from 'multiformats/cid'
+import { CID } from "multiformats/cid";
 import { NestedValue } from "@orbitdb/nested-db";
 
 const ajv = new Ajv({ allowUnionTypes: true });
@@ -83,7 +83,9 @@ export const removeUndefinedProperties = <
       .map(([clef, val]): [string, DBElements] => {
         return [
           clef,
-          typeof val === "object" && !Array.isArray(val) && !(val instanceof CID)
+          typeof val === "object" &&
+          !Array.isArray(val) &&
+          !(val instanceof CID)
             ? removeUndefinedProperties(val as NestedValue)
             : val!,
         ] as [string, DBElements];
