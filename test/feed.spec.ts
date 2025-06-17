@@ -42,7 +42,6 @@ describe("Typed Feed", () => {
     }
 
     await rimraf(keysPath);
-    await rimraf("./orbitdb");
   });
 
   describe("Creating a Typed Feed database", () => {

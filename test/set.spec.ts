@@ -42,7 +42,6 @@ describe("Typed Set", () => {
     }
 
     await rimraf(keysPath);
-    await rimraf("./orbitdb");
   });
 
   describe("Creating a Typed Set database", () => {
