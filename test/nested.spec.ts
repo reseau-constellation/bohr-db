@@ -239,7 +239,6 @@ describe.skip("Typed Nested", () => {
       expect(actual).to.deep.equal({ c: "test" });
     });
 
-
     it("error put nested with key and invalid value", async () => {
       // @ts-expect-error Deliberately adding invalid value
       await expect(await typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
