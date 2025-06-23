@@ -60,5 +60,5 @@ export type GetValueFromKeyList<T, P extends ExtractKeysAsList<T>> = P extends [
     ? Rest extends ExtractKeysAsList<T[Key]>
       ? GetValueFromKeyList<T[Key], Rest>
       : T[Key]
-    : Set<true>
+    : never
   : never;
