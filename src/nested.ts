@@ -1,6 +1,5 @@
 import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
 import {
-  flatten,
   joinKey,
   splitKey,
   type NestedDatabaseType,
