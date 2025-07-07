@@ -3,7 +3,6 @@ import {
   splitKey,
   type NestedDatabaseType,
   type NestedValue,
-  toNested,
 } from "@orbitdb/nested-db";
 
 import {
@@ -17,7 +16,7 @@ import { getJoinedKey, removeUndefinedProperties } from "./utils.js";
 
 export type TypedNested<T extends NestedValue> = Omit<
   NestedDatabaseType,
-  "put" | "set" | "putNested" | "del" | "get" | "all"
+  "put" | "set" | "putNested" | "setNested" | "del" | "get" | "all"
 > & {
   put<K extends ExtractKeys<T>>(
     key: K,
