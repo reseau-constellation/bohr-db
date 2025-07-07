@@ -1,5 +1,7 @@
 import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
 import {
+  flatten,
+  joinKey,
   splitKey,
   type NestedDatabaseType,
   type NestedValue,
@@ -44,14 +46,7 @@ export type TypedNested<T extends NestedValue> = Omit<
     key: K,
   ): Promise<GetValueFromKeyList<T, K> | undefined>;
 
-  all: () => Promise<
-    {
-      key: ExtractKeys<T>;
-      value: GetValueFromKey<T, ExtractKeys<T>>;
-      hash: string;
-    }[]
-  >;
-  allAsJSON(): Promise<RecursivePartial<T>>;
+  all: () => Promise<RecursivePartial<T>>;
 };
 
 export const typedNested = <T extends NestedValue>({
@@ -70,6 +65,10 @@ export const typedNested = <T extends NestedValue>({
   ): ValidateFunction<GetValueFromKey<T, K>> => {
     let branchSchema = schema;
     for (const k of splitKey(key)) {
+      if (branchSchema.additionalProperties) {
+        validators[key] = branchSchema.additionalProperties === true ? ((()=>true) as unknown as ValidateFunction): ajv.compile(branchSchema.additionalProperties)
+        break;
+      };
       branchSchema =
         branchSchema.properties[k] || branchSchema.additionalProperties;
     }
@@ -81,12 +80,13 @@ export const typedNested = <T extends NestedValue>({
 
   const supportedKey = (
     key: string | string[],
-  ): key is ExtractKeys<T> | ExtractKeysAsList<T> => {
+  ): key is (ExtractKeys<T> | ExtractKeysAsList<T>) => {
     const keyComponents = typeof key === "string" ? splitKey(key) : key;
     let schemaBranch = schema;
     for (const k of keyComponents) {
       if (schemaBranch.additionalProperties) return true;
-      if (schemaBranch.properties[k] === undefined) return false;
+      // .? is necessary if schemaBranch does not have `properties`
+      if (schemaBranch.properties?.[k] === undefined) return false;
       schemaBranch = schemaBranch.properties[k];
     }
     return true;
@@ -99,9 +99,9 @@ export const typedNested = <T extends NestedValue>({
           ...args: Parameters<TypedNested<T>["put"]>
         ): ReturnType<TypedNested<T>["put"]> => {
           const [key, value] = args;
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
-
           const joinedKey = typeof key === "string" ? key : getJoinedKey(key);
+          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
+
           const valueValidator = getValidator(joinedKey);
           if (valueValidator(value)) return target.put(key, value);
           else
@@ -113,28 +113,33 @@ export const typedNested = <T extends NestedValue>({
       } else if (prop === "get") {
         const typedGet = async (...args: Parameters<TypedNested<T>["get"]>) => {
           const [key] = args;
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
+          const joinedKey = typeof key === "string" ? key : getJoinedKey(key)
+          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
 
-          return target.get(key);
+          const value = await target.get(key);
+          const valueValidator = getValidator(joinedKey);
+          if (valueValidator(value)) return value;
+          return undefined;
         };
         return typedGet;
       } else if (prop === "del") {
         const typedDel = async (...args: Parameters<TypedNested<T>["del"]>) => {
           const [key] = args;
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
+          const joinedKey = typeof key === "string" ? key : joinKey(key)
+          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
 
           return target.del(key);
         };
         return typedDel;
-      } else if (prop === "allAsJSON") {
-        const typedAllAsJSON: TypedNested<T>["allAsJSON"] = async () => {
+      } else if (prop === "all") {
+        const typedAll: TypedNested<T>["all"] = async () => {
           const jsonValue = await db.all();
           if (rootValidator(jsonValue)) {
             return jsonValue;
           }
           throw new Error(JSON.stringify(rootValidator.errors, undefined, 2));
         };
-        return typedAllAsJSON;
+        return typedAll;
       } else if (prop === "setNested" || prop === "putNested") {
         const typedSetNested: TypedNested<T>["setNested"] = async <
           K extends ExtractKeys<T>,
@@ -145,32 +150,38 @@ export const typedNested = <T extends NestedValue>({
           if (typeof keyOrValue === "string") {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(value);
-            // Todo: type check
-            return await db.putNested(keyOrValue, data);
+            
+            if (!supportedKey(keyOrValue)) throw new Error(`Unsupported key ${keyOrValue}.`);
+            const joinedKey: ExtractKeys<T> = typeof keyOrValue === "string" ? keyOrValue : getJoinedKey(keyOrValue);
+            const valueValidator = getValidator(joinedKey);
+
+            if (valueValidator(data)) return await db.putNested(keyOrValue, data);
+            else
+              throw new Error(
+                JSON.stringify(valueValidator.errors, undefined, 2),
+              );
+            
           } else {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(keyOrValue);
-            // Todo: type check
-            return await db.putNested(data);
+
+            if (rootValidator(data)) {
+              return await db.putNested(data)
+            } else {
+              const firstError = rootValidator.errors?.[0]
+              // Provide better error message
+              if (firstError?.message?.includes("must NOT have additional properties")) {
+                throw new Error(`Unsupported key ${firstError.instancePath.replace(/^\//, "")}/${firstError.params.additionalProperty}.`)
+              }
+              throw new Error(
+                JSON.stringify(rootValidator.errors, undefined, 2),
+              );
+            }
           }
         };
         return typedSetNested;
       }
 
-      /*if (prop === "get") {
-        return async <K extends ExtractKeys<T>>(key: K): Promise<GetValueFromKey<T, K> | undefined> => {
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
-          const val = await target.get(key);
-          if (val === undefined) return val;
-          if (validateKeyValue(val, key)) {
-            return val
-          } else {
-            return undefined;
-          };
-        };
-      }
-      else {
-      };*/
       return target[prop as keyof typeof target];
     },
   }) as unknown as TypedNested<T>;

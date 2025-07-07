@@ -83,7 +83,7 @@ describe("Typed Nested", () => {
     });
 
     it("returns 0 items when it's a fresh database", async () => {
-      const all = await typedDB.allAsJSON();
+      const all = await typedDB.all();
 
       expect(all).to.be.an.empty("object");
     });
@@ -102,8 +102,10 @@ describe("Typed Nested", () => {
           },
           required: [],
           nullable: true,
+          additionalProperties: false,
         },
       },
+      additionalProperties: false,
       required: [],
     };
     let typedDB: TypedNested<structure>;
@@ -130,7 +132,7 @@ describe("Typed Nested", () => {
     it("put valid key/value", async () => {
       await typedDB.put("a", 1);
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ a: 1 });
     });
 
@@ -170,16 +172,25 @@ describe("Typed Nested", () => {
       ).to.be.rejectedWith("Unsupported key d.");
     });
 
+    it("undefined on get invalid value", async () => {
+      // Force write invalid key to underlying orbit-db database
+      await db.put("a", "wrong type");
+
+      const val = await typedDB.get("a");
+      expect(val).to.be.undefined();
+    });
+
     it("error on delete invalid key", async () => {
       // @ts-expect-error Deliberately deleting invalid key
       await expect(typedDB.del("c")).to.be.rejectedWith("Unsupported key c.");
     });
 
     it("put valid nested key/value", async () => {
+      await typedDB.put("a", 1);
       await typedDB.put("b/c", "test");
 
-      const actual = await typedDB.allAsJSON();
-      expect(actual).to.deep.equal({ b: { c: "test" } });
+      const actual = await typedDB.all();
+      expect(actual).to.deep.equal({ a: 1, b: { c: "test" } });
     });
 
     it("get valid nested key/value", async () => {
@@ -208,7 +219,7 @@ describe("Typed Nested", () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
         typedDB.put("b/c", 1),
-      ).to.be.rejectedWith("must be number");
+      ).to.be.rejectedWith("must be string");
     });
 
     it("error on get invalid nested key", async () => {
@@ -228,7 +239,7 @@ describe("Typed Nested", () => {
     it("put nested valid", async () => {
       await typedDB.putNested({ b: { c: "test" } });
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
@@ -243,20 +254,20 @@ describe("Typed Nested", () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
         typedDB.putNested({ b: { c: 1 } }),
-      ).to.be.rejectedWith("must be number");
+      ).to.be.rejectedWith("must be string");
     });
 
     it("put nested valid with key", async () => {
       await typedDB.putNested("b", { c: "test" });
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
     it("put valid nested key/value - list key", async () => {
       await typedDB.put(["b", "c"], "test");
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
@@ -282,17 +293,24 @@ describe("Typed Nested", () => {
       );
     });
 
-    it("error put nested with key and invalid value", async () => {
+    it("error on put nested with invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid value
-      await expect(await typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
+      await expect(typedDB.putNested("b/d", 2)).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
-
+  
     it("error on put invalid nested key - list key", async () => {
       // @ts-expect-error Deliberately adding invalid key
       await expect(typedDB.put(["b", "d"], 3)).to.be.rejectedWith(
         "Unsupported key b/d.",
+      );
+    });
+    
+    it("error on put nested with key and invalid value", async () => {
+      // @ts-expect-error Deliberately adding invalid value
+      await expect(typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
+        "must be string",
       );
     });
 
@@ -300,7 +318,7 @@ describe("Typed Nested", () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
         typedDB.put(["b", "c"], 1),
-      ).to.be.rejectedWith("must be number");
+      ).to.be.rejectedWith("must be string");
     });
 
     it("error on get invalid nested key - list key", async () => {
@@ -310,29 +328,29 @@ describe("Typed Nested", () => {
       ).to.be.rejectedWith("Unsupported key b/c/d.");
     });
 
-    it("invalid keys in log lead to error on `db.allAsJSON()`", async () => {
+    it("invalid keys in log lead to error on `db.all()`", async () => {
       // Force write invalid key to underlying orbit-db database
       await db.put("d", 4);
 
       await typedDB.put("a", 1);
       await typedDB.set("b/c", "text");
 
-      await expect(typedDB.allAsJSON()).to.be.rejectedWith(
+      await expect(typedDB.all()).to.be.rejectedWith(
         "must NOT have additional properties",
       );
     });
 
-    it("invalid values in log lead to error on `db.allAsJSON()`", async () => {
+    it("invalid values in log lead to error on `db.all()`", async () => {
       // Force write invalid value to underlying orbit-db database
       await db.put("a", "text");
 
       await typedDB.set("b/c", "text 2");
 
-      await expect(typedDB.allAsJSON()).to.be.rejectedWith("must be number");
+      await expect(typedDB.all()).to.be.rejectedWith("must be number");
     });
   });
 
-  describe.skip("Typed Nested database - additional properties", () => {
+  describe("Typed Nested database - additional properties", () => {
     type structure = { a: string; b: { [key: string]: number } };
     const schema: JSONSchemaType<RecursivePartial<structure>> = {
       type: "object",
@@ -378,7 +396,7 @@ describe("Typed Nested", () => {
     it("get additional property key/value", async () => {
       await typedDB.put("b/d", 1);
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ b: { d: 1 } });
     });
 
@@ -404,7 +422,7 @@ describe("Typed Nested", () => {
     it("get additional property key/value - list", async () => {
       await typedDB.put(["b", "d"], 1);
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ b: { d: 1 } });
     });
 
@@ -422,17 +440,17 @@ describe("Typed Nested", () => {
       ).to.be.rejectedWith("must be number");
     });
 
-    it("invalid values in log lead to error on `db.allAsJSON()`", async () => {
+    it("invalid values in log lead to error on `db.all()`", async () => {
       // Force write invalid value to underlying orbit-db database
       await db.put(["b", "d"], "text");
 
       await typedDB.set("a", "text 2");
 
-      await expect(typedDB.allAsJSON()).to.be.rejectedWith("must be number");
+      await expect(typedDB.all()).to.be.rejectedWith("must be number");
     });
   });
 
-  describe.skip("Typed Nested database - undefined properties", () => {
+  describe("Typed Nested database - undefined properties", () => {
     type structure = { a: { b: number; c: number } };
     const schema: JSONSchemaType<RecursivePartial<structure>> = {
       type: "object",
@@ -474,24 +492,9 @@ describe("Typed Nested", () => {
     it("put valid key/value", async () => {
       await typedDB.put("a", { b: 1, c: 2 });
 
-      const actual = await typedDB.allAsJSON();
+      const actual = await typedDB.all();
       expect(actual).to.deep.equal({ a: { b: 1, c: 2 } });
     });
 
-    it("delete entry on put undefined value", async () => {
-      // @ts-expect-error Deliberately adding explicit undefined value
-      await typedDB.put("a/b", undefined);
-
-      const actual = await typedDB.allAsJSON();
-      expect(actual).to.deep.equal({ a: { c: 2 } });
-    });
-
-    it("delete entry on put nested undefined value", async () => {
-      // @ts-expect-error Deliberately adding explicit undefined value
-      await typedDB.putNested({ a: { b: undefined } });
-
-      const actual = await typedDB.allAsJSON();
-      expect(actual).to.deep.equal({ a: { c: 2 } });
-    });
   });
 });

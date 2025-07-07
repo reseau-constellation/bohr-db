@@ -28,7 +28,7 @@
     "@orbitdb/core": "^3.0.2",
     "@orbitdb/core-types": "^1.1.6",
     "@orbitdb/feed-db": "^1.1.5",
-    "@orbitdb/nested-db": "^1.2.0",
+    "@orbitdb/nested-db": "^1.2.1",
     "@orbitdb/ordered-keyvalue-db": "^1.2.0",
     "@orbitdb/set-db": "^1.2.0",
     "ajv": "^8.17.1",
