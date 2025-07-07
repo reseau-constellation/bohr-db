@@ -14,7 +14,7 @@ chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
 
-describe.skip("Typed Nested", () => {
+describe("Typed Nested", () => {
   let ipfs: HeliaLibp2p;
   let identities;
   let keystore: KeyStoreType;
@@ -89,7 +89,7 @@ describe.skip("Typed Nested", () => {
     });
   });
 
-  describe.skip("Typed Nested database - fixed properties", () => {
+  describe("Typed Nested database - fixed properties", () => {
     type structure = { a: number; b: { c: string } };
     const schema: JSONSchemaType<RecursivePartial<structure>> = {
       type: "object",
@@ -141,6 +141,14 @@ describe.skip("Typed Nested", () => {
       expect(actual).to.equal(1);
     });
 
+    it("delete key", async () => {
+      await typedDB.put("a", 1);
+      await typedDB.del("a");
+
+      const actual = await typedDB.get("a");
+      expect(actual).to.be.undefined();
+    });
+
     it("error on put invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid key
       await expect(typedDB.put("c", 3)).to.be.rejectedWith(
@@ -162,6 +170,11 @@ describe.skip("Typed Nested", () => {
       ).to.be.rejectedWith("Unsupported key d.");
     });
 
+    it("error on delete invalid key", async () => {
+      // @ts-expect-error Deliberately deleting invalid key
+      await expect(typedDB.del("c")).to.be.rejectedWith("Unsupported key c.");
+    });
+
     it("put valid nested key/value", async () => {
       await typedDB.put("b/c", "test");
 
@@ -174,6 +187,14 @@ describe.skip("Typed Nested", () => {
 
       const actual = await typedDB.get("b");
       expect(actual).to.deep.equal({ c: "test" });
+    });
+
+    it("delete nested key", async () => {
+      await typedDB.put("b/c", "test");
+      await typedDB.del("b/c");
+
+      const actual = await typedDB.get("b/c");
+      expect(actual).to.be.undefined();
     });
 
     it("error on put invalid nested key", async () => {
@@ -195,6 +216,13 @@ describe.skip("Typed Nested", () => {
         // @ts-expect-error Deliberately getting invalid key
         typedDB.get("b/c/d"),
       ).to.be.rejectedWith("Unsupported key b/c/d.");
+    });
+
+    it("error on delete invalid nested key", async () => {
+      // @ts-expect-error Deliberately deleting invalid key
+      await expect(typedDB.del("a/b")).to.be.rejectedWith(
+        "Unsupported key a/b.",
+      );
     });
 
     it("put nested valid", async () => {
@@ -235,8 +263,23 @@ describe.skip("Typed Nested", () => {
     it("get valid nested key/value - list key", async () => {
       await typedDB.put(["b", "c"], "test");
 
-      const actual = await typedDB.get("b");
-      expect(actual).to.deep.equal({ c: "test" });
+      const actual = await typedDB.get(["b", "c"]);
+      expect(actual).to.deep.equal("test");
+    });
+
+    it("delete nested list key", async () => {
+      await typedDB.put(["b", "c"], "test");
+      await typedDB.del(["b", "c"]);
+
+      const actual = await typedDB.get(["b", "c"]);
+      expect(actual).to.be.undefined();
+    });
+
+    it("error on delete invalid nested list key", async () => {
+      // @ts-expect-error Deliberately deleting invalid key
+      await expect(typedDB.del(["a", "b"])).to.be.rejectedWith(
+        "Unsupported key a/b.",
+      );
     });
 
     it("error put nested with key and invalid value", async () => {
