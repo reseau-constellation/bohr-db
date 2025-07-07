@@ -19,7 +19,7 @@ importers:
         version: 1.1.7
       '@orbitdb/feed-db':
         specifier: ^1.2.0
-        version: 1.2.0(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))
+        version: 1.2.1(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))
       '@orbitdb/nested-db':
         specifier: ^1.2.1
         version: 1.2.1(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))
@@ -1798,8 +1798,8 @@ packages:
     resolution: {integrity: sha512-YTJIBbe8mIDLpA0T3cOdVjWDeAyIojQLR54p0TfVyUBAjWh7N0rbKBbgQMTOrFxhUmRf/D85iFScmGnnEn5v+w==}
     engines: {node: '>=20.0.0'}
 
-  '@orbitdb/feed-db@1.2.0':
-    resolution: {integrity: sha512-eGafLEbe1BPdX4jeUvyGibZ8DpedjSFsZDUqEGKZ+4cbXfTKv9vtC8ILPe+aiyCqGH7us3upqxJoEE6xC7OD3A==}
+  '@orbitdb/feed-db@1.2.1':
+    resolution: {integrity: sha512-Rbpq4lo/8urvGZFAKWkO/BlBvnnULDDy0EJslWurnGpFmR8btCn+TjZBg98rSguXqOEfSfE42JrgHjj8KzJZ1w==}
 
   '@orbitdb/nested-db@1.2.1':
     resolution: {integrity: sha512-vGlV7fxWv+zaZPMRVfm0HjhBzEYoPPGhVh52SVqqwxb9rzYWXFLmzZlUrVsVkC8wU0VhPHyFXt5gVGlZr8b6Eg==}
@@ -3188,6 +3188,9 @@ packages:
 
   core-js-compat@3.43.0:
     resolution: {integrity: sha512-2GML2ZsCc5LR7hZYz4AXmjQw8zuy2T//2QntwdnpuYI7jteT6GVYJL7F6C2C57R7gSYrcqVW3lAALefdbhBLDA==}
+
+  core-js-compat@3.44.0:
+    resolution: {integrity: sha512-JepmAj2zfl6ogy34qfWtcE7nHKAJnKsQFRn++scjVS2bZFllwptzw61BZcZFYBPpUznLfAvh0LGhxKppk04ClA==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -8924,7 +8927,7 @@ snapshots:
       babel-plugin-polyfill-corejs2: 0.4.14(@babel/core@7.28.0)
       babel-plugin-polyfill-corejs3: 0.9.0(@babel/core@7.28.0)
       babel-plugin-polyfill-regenerator: 0.5.5(@babel/core@7.28.0)
-      core-js-compat: 3.43.0
+      core-js-compat: 3.44.0
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -10346,7 +10349,7 @@ snapshots:
       timeout-abort-controller: 3.0.0
       uint8arrays: 5.1.0
 
-  '@orbitdb/feed-db@1.2.0(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))':
+  '@orbitdb/feed-db@1.2.1(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
       helia: 5.4.2(react-native@0.73.5(@babel/core@7.28.0)(@babel/preset-env@7.24.0(@babel/core@7.28.0))(react@18.2.0))
@@ -11688,7 +11691,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.0
       '@babel/helper-define-polyfill-provider': 0.5.0(@babel/core@7.28.0)
-      core-js-compat: 3.43.0
+      core-js-compat: 3.44.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12260,6 +12263,10 @@ snapshots:
       p-event: 6.0.1
 
   core-js-compat@3.43.0:
+    dependencies:
+      browserslist: 4.25.1
+
+  core-js-compat@3.44.0:
     dependencies:
       browserslist: 4.25.1
 
