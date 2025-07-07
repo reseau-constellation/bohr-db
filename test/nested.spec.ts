@@ -12,7 +12,7 @@ import { TypedNested, typedNested } from "@/nested.js";
 import { RecursivePartial } from "@/types.js";
 chai.use(chaiAsPromised);
 
-const keysPath = "./testkeys";
+const keysPath = "./testkeys-nested";
 
 describe("Typed Nested", () => {
   let ipfs: HeliaLibp2p;
