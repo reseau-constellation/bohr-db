@@ -129,7 +129,7 @@ export const typedNested = <T extends NestedValue>({
         return typedDel;
       } else if (prop === "allAsJSON") {
         const typedAllAsJSON: TypedNested<T>["allAsJSON"] = async () => {
-          const jsonValue = toNested(await db.all());
+          const jsonValue = await db.all();
           if (rootValidator(jsonValue)) {
             return jsonValue;
           }
