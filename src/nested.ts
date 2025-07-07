@@ -65,9 +65,12 @@ export const typedNested = <T extends NestedValue>({
     let branchSchema = schema;
     for (const k of splitKey(key)) {
       if (branchSchema.additionalProperties) {
-        validators[key] = branchSchema.additionalProperties === true ? ((()=>true) as unknown as ValidateFunction): ajv.compile(branchSchema.additionalProperties)
+        validators[key] =
+          branchSchema.additionalProperties === true
+            ? ((() => true) as unknown as ValidateFunction)
+            : ajv.compile(branchSchema.additionalProperties);
         break;
-      };
+      }
       branchSchema =
         branchSchema.properties[k] || branchSchema.additionalProperties;
     }
@@ -79,7 +82,7 @@ export const typedNested = <T extends NestedValue>({
 
   const supportedKey = (
     key: string | string[],
-  ): key is (ExtractKeys<T> | ExtractKeysAsList<T>) => {
+  ): key is ExtractKeys<T> | ExtractKeysAsList<T> => {
     const keyComponents = typeof key === "string" ? splitKey(key) : key;
     let schemaBranch = schema;
     for (const k of keyComponents) {
@@ -99,7 +102,8 @@ export const typedNested = <T extends NestedValue>({
         ): ReturnType<TypedNested<T>["put"]> => {
           const [key, value] = args;
           const joinedKey = typeof key === "string" ? key : getJoinedKey(key);
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
+          if (!supportedKey(key))
+            throw new Error(`Unsupported key ${joinedKey}.`);
 
           const valueValidator = getValidator(joinedKey);
           if (valueValidator(value)) return target.put(key, value);
@@ -112,8 +116,9 @@ export const typedNested = <T extends NestedValue>({
       } else if (prop === "get") {
         const typedGet = async (...args: Parameters<TypedNested<T>["get"]>) => {
           const [key] = args;
-          const joinedKey = typeof key === "string" ? key : getJoinedKey(key)
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
+          const joinedKey = typeof key === "string" ? key : getJoinedKey(key);
+          if (!supportedKey(key))
+            throw new Error(`Unsupported key ${joinedKey}.`);
 
           const value = await target.get(key);
           const valueValidator = getValidator(joinedKey);
@@ -124,8 +129,9 @@ export const typedNested = <T extends NestedValue>({
       } else if (prop === "del") {
         const typedDel = async (...args: Parameters<TypedNested<T>["del"]>) => {
           const [key] = args;
-          const joinedKey = typeof key === "string" ? key : joinKey(key)
-          if (!supportedKey(key)) throw new Error(`Unsupported key ${joinedKey}.`);
+          const joinedKey = typeof key === "string" ? key : joinKey(key);
+          if (!supportedKey(key))
+            throw new Error(`Unsupported key ${joinedKey}.`);
 
           return target.del(key);
         };
@@ -149,28 +155,38 @@ export const typedNested = <T extends NestedValue>({
           if (typeof keyOrValue === "string") {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(value);
-            
-            if (!supportedKey(keyOrValue)) throw new Error(`Unsupported key ${keyOrValue}.`);
-            const joinedKey: ExtractKeys<T> = typeof keyOrValue === "string" ? keyOrValue : getJoinedKey(keyOrValue);
+
+            if (!supportedKey(keyOrValue))
+              throw new Error(`Unsupported key ${keyOrValue}.`);
+            const joinedKey: ExtractKeys<T> =
+              typeof keyOrValue === "string"
+                ? keyOrValue
+                : getJoinedKey(keyOrValue);
             const valueValidator = getValidator(joinedKey);
 
-            if (valueValidator(data)) return await db.putNested(keyOrValue, data);
+            if (valueValidator(data))
+              return await db.putNested(keyOrValue, data);
             else
               throw new Error(
                 JSON.stringify(valueValidator.errors, undefined, 2),
               );
-            
           } else {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(keyOrValue);
 
             if (rootValidator(data)) {
-              return await db.putNested(data)
+              return await db.putNested(data);
             } else {
-              const firstError = rootValidator.errors?.[0]
+              const firstError = rootValidator.errors?.[0];
               // Provide better error message
-              if (firstError?.message?.includes("must NOT have additional properties")) {
-                throw new Error(`Unsupported key ${firstError.instancePath.replace(/^\//, "")}/${firstError.params.additionalProperty}.`)
+              if (
+                firstError?.message?.includes(
+                  "must NOT have additional properties",
+                )
+              ) {
+                throw new Error(
+                  `Unsupported key ${firstError.instancePath.replace(/^\//, "")}/${firstError.params.additionalProperty}.`,
+                );
               }
               throw new Error(
                 JSON.stringify(rootValidator.errors, undefined, 2),

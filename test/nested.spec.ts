@@ -299,14 +299,14 @@ describe("Typed Nested", () => {
         "Unsupported key b/d.",
       );
     });
-  
+
     it("error on put invalid nested key - list key", async () => {
       // @ts-expect-error Deliberately adding invalid key
       await expect(typedDB.put(["b", "d"], 3)).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
-    
+
     it("error on put nested with key and invalid value", async () => {
       // @ts-expect-error Deliberately adding invalid value
       await expect(typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
@@ -495,6 +495,5 @@ describe("Typed Nested", () => {
       const actual = await typedDB.all();
       expect(actual).to.deep.equal({ a: { b: 1, c: 2 } });
     });
-
   });
 });

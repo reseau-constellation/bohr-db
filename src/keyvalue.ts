@@ -34,7 +34,6 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
 
   return new Proxy(db, {
     get(target: KeyValueDatabase, prop) {
-
       if (prop === "get") {
         return async (
           key: Extract<keyof T, string>,
@@ -67,13 +66,21 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
       } else if (prop === "all") {
         return async () => {
           // Todo: check why types don't work automatically here
-          const all = await target.all() as { key: string; value: unknown; hash: string }[];
+          const all = (await target.all()) as {
+            key: string;
+            value: unknown;
+            hash: string;
+          }[];
           return all.filter((x) => validateKey(x.value, x.key));
         };
       } else if (prop === "allAsJSON") {
         return async () => {
           // Todo: check why types don't work automatically here
-          const all = await target.all() as { key: string; value: unknown; hash: string }[];
+          const all = (await target.all()) as {
+            key: string;
+            value: unknown;
+            hash: string;
+          }[];
           const data = Object.fromEntries(all.map((x) => [x.key, x.value]));
           const valid = validateRoot(data);
           if (valid) {
