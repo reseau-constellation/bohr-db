@@ -30,7 +30,7 @@
     "@orbitdb/feed-db": "^1.2.0",
     "@orbitdb/nested-db": "^1.2.1",
     "@orbitdb/ordered-keyvalue-db": "^1.2.1",
-    "@orbitdb/set-db": "^1.2.0",
+    "@orbitdb/set-db": "^2.0.0",
     "ajv": "^8.17.1",
     "events": "^3.3.0",
     "helia": "^5.4.2",
