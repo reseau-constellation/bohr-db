@@ -32,11 +32,6 @@ export type TypedNested<T extends NestedValueObject> = Omit<
     value: GetValueFromKey<T, K>,
     position?: number,
   ): Promise<string[]>;
-  put<K extends ExtractKeysAsList<T>>(
-    key: K,
-    value: GetValueFromKeyList<T, K>,
-    
-  ): Promise<string[]>;
 
 
   put(value: RecursivePartial<T>): Promise<string[]>;
@@ -163,7 +158,7 @@ export const typedNested = <T extends NestedValueObject>({
               throw new Error(`Unsupported key ${joinedKey}.`);
 
             const valueValidator = getValidator(joinedKey)
-            console.log({data, value})
+
             if (valueValidator(data)) {
               return await target.put(joinedKey, data as unknown as NoUndefinedField<T>, position)
             } else{

@@ -53,7 +53,7 @@ export type MultiStrucureToJsonSchema<T extends MultiSchema> = JSONSchemaType<Mu
 
 export type TypedMulti<T extends MultiSchema> = Omit<
   MultiDatabaseType,
-  "put" | "set" | "putNested" | "setNested" | "del" | "get" | "all"
+  "put" | "set" | "del" | "get" | "all"
 > & {
   put<K extends ExtractKeys<T>>(
     key: K,

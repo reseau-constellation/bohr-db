@@ -250,7 +250,7 @@ describe("Typed Nested", () => {
 
     it("error on put nested invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid key
-      await expect(typedDB.putNested({ b: { d: 3 } })).to.be.rejectedWith(
+      await expect(typedDB.put({ b: { d: 3 } })).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
@@ -258,7 +258,7 @@ describe("Typed Nested", () => {
     it("error on put nested invalid value", async () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
-        typedDB.putNested({ b: { c: 1 } }),
+        typedDB.put({ b: { c: 1 } }),
       ).to.be.rejectedWith("must be string");
     });
 
@@ -302,7 +302,7 @@ describe("Typed Nested", () => {
 
     it("error on put nested with invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid value
-      await expect(typedDB.putNested("b/d", 2)).to.be.rejectedWith(
+      await expect(typedDB.put("b/d", 2)).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
@@ -316,7 +316,7 @@ describe("Typed Nested", () => {
 
     it("error on put nested with key and invalid value", async () => {
       // @ts-expect-error Deliberately adding invalid value
-      await expect(typedDB.putNested("b", { c: 1 })).to.be.rejectedWith(
+      await expect(typedDB.put("b", { c: 1 })).to.be.rejectedWith(
         "must be string",
       );
     });
@@ -396,7 +396,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key", async () => {
-      const hash = await typedDB.put("b/d", 1);
+      const hash = (await typedDB.put("b/d", 1))[0];
       expect(hash).to.be.a("string");
     });
 
@@ -423,7 +423,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key - list", async () => {
-      const hash = await typedDB.put(["b", "d"], 1);
+      const hash = (await typedDB.put(["b", "d"], 1))[0];
       expect(hash).to.be.a("string");
     });
 
