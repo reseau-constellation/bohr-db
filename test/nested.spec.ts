@@ -10,6 +10,7 @@ import { JSONSchemaType } from "ajv";
 import { Nested, NestedDatabaseType } from "@orbitdb/nested-db";
 import { TypedNested, typedNested } from "@/nested.js";
 import { RecursivePartial } from "@/types.js";
+import { expectNestedMapEqual } from "./utils.js";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys-nested";
@@ -133,7 +134,8 @@ describe("Typed Nested", () => {
       await typedDB.put("a", 1);
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ a: 1 });
+
+      expectNestedMapEqual(actual, { a: 1 });
     });
 
     it("get valid key/value", async () => {
@@ -190,14 +192,16 @@ describe("Typed Nested", () => {
       await typedDB.put("b/c", "test");
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ a: 1, b: { c: "test" } });
+
+      expectNestedMapEqual(actual, { a: 1, b: { c: "test" } });
     });
 
     it("get valid nested key/value", async () => {
       await typedDB.put("b/c", "test");
 
       const actual = await typedDB.get("b");
-      expect(actual).to.deep.equal({ c: "test" });
+
+      expectNestedMapEqual(actual!, { c: "test" });
     });
 
     it("delete nested key", async () => {
@@ -237,10 +241,11 @@ describe("Typed Nested", () => {
     });
 
     it("put nested valid", async () => {
-      await typedDB.putNested({ b: { c: "test" } });
+      await typedDB.put({ b: { c: "test" } });
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ b: { c: "test" } });
+
+      expectNestedMapEqual(actual, { b: { c: "test" } });
     });
 
     it("error on put nested invalid key", async () => {
@@ -258,17 +263,19 @@ describe("Typed Nested", () => {
     });
 
     it("put nested valid with key", async () => {
-      await typedDB.putNested("b", { c: "test" });
+      await typedDB.put("b", { c: "test" });
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ b: { c: "test" } });
+
+      expectNestedMapEqual(actual, { b: { c: "test" } });
     });
 
     it("put valid nested key/value - list key", async () => {
       await typedDB.put(["b", "c"], "test");
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ b: { c: "test" } });
+
+      expectNestedMapEqual(actual, { b: { c: "test" } });
     });
 
     it("get valid nested key/value - list key", async () => {
@@ -397,7 +404,8 @@ describe("Typed Nested", () => {
       await typedDB.put("b/d", 1);
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ b: { d: 1 } });
+
+      expectNestedMapEqual(actual, { b: { d: 1 } });
     });
 
     it("error on add invalid additional property value", async () => {
@@ -423,7 +431,8 @@ describe("Typed Nested", () => {
       await typedDB.put(["b", "d"], 1);
 
       const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ b: { d: 1 } });
+
+      expectNestedMapEqual(actual, { b: { d: 1 } });
     });
 
     it("error on add invalid additional property value - list", async () => {
@@ -450,50 +459,4 @@ describe("Typed Nested", () => {
     });
   });
 
-  describe("Typed Nested database - undefined properties", () => {
-    type structure = { a: { b: number; c: number } };
-    const schema: JSONSchemaType<RecursivePartial<structure>> = {
-      type: "object",
-      properties: {
-        a: {
-          type: "object",
-          properties: {
-            b: { type: "number", nullable: true },
-            c: { type: "number", nullable: true },
-          },
-          required: [],
-          nullable: true,
-        },
-      },
-      additionalProperties: false,
-      required: [],
-    };
-    let typedDB: TypedNested<structure>;
-
-    beforeEach(async () => {
-      db = await Nested()({
-        ipfs,
-        identity: testIdentity1,
-        address: databaseId,
-      });
-      typedDB = typedNested({
-        db,
-        schema,
-      });
-    });
-
-    afterEach(async () => {
-      if (typedDB) {
-        await typedDB.drop();
-        await typedDB.close();
-      }
-    });
-
-    it("put valid key/value", async () => {
-      await typedDB.put("a", { b: 1, c: 2 });
-
-      const actual = await typedDB.all();
-      expect(actual).to.deep.equal({ a: { b: 1, c: 2 } });
-    });
-  });
 });

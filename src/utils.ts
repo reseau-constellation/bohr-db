@@ -3,7 +3,11 @@ import Ajv, { JSONSchemaType, ValidateFunction } from "ajv";
 import type { DBElements, ExtractKeys, ExtractKeysAsList } from "./types";
 import { DagCborEncodable } from "@orbitdb/core";
 import { CID } from "multiformats/cid";
-import { NestedValue, joinKey } from "@orbitdb/nested-db";
+import { joinKey } from "@orbitdb/nested-db";
+
+type NestedValueObject = {
+  [key: string]: DagCborEncodable | NestedValueObject;
+};
 
 const ajv = new Ajv({ allowUnionTypes: true });
 
@@ -68,8 +72,8 @@ export const generateDictValidator = <T extends { [clef: string]: DBElements }>(
   };
 };
 
-type NoUndefinedField<T> = {
-  [P in keyof T]-?: NonNullable<T[P]>;
+export type NoUndefinedField<T> = {
+  [P in keyof T]-?: T[P] extends undefined ? never : T[P];
 };
 
 export const removeUndefinedProperties = <
@@ -86,14 +90,14 @@ export const removeUndefinedProperties = <
           typeof val === "object" &&
           !Array.isArray(val) &&
           !(val instanceof CID)
-            ? removeUndefinedProperties(val as NestedValue)
+            ? removeUndefinedProperties(val as NestedValueObject)
             : val!,
         ] as [string, DBElements];
       }),
   ) as NoUndefinedField<T>;
 };
 
-export const getJoinedKey = <T extends NestedValue>(
+export const getJoinedKey = <T extends NestedValueObject>(
   key: ExtractKeysAsList<T>,
 ): ExtractKeys<T> => {
   return joinKey(key) as ExtractKeys<T>;

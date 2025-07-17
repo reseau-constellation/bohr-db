@@ -164,7 +164,7 @@ describe("Typed OrderedKeyValue", () => {
       await typedDB.put("a", 1);
 
       const actual = await typedDB.get("a");
-      expect(actual).to.deep.equal({ value: 1, position: undefined });
+      expect(actual).to.equal(1);
     });
 
     it("move valid key", async () => {

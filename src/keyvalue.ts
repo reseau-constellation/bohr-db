@@ -8,13 +8,13 @@ export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   KeyValueDatabase,
   "put" | "set" | "del" | "get" | "all"
 > & {
-  put<K extends keyof T>(key: K, value: T[K]): Promise<string>;
+  put<K extends Extract<keyof T,  string>>(key: K, value: T[K]): Promise<string>;
   set: TypedKeyValue<T>["put"];
-  del<K extends keyof T>(key: K): Promise<string>;
-  get<K extends keyof T>(key: K): Promise<T[K] | undefined>;
+  del<K extends Extract<keyof T,  string>>(key: K): Promise<string>;
+  get<K extends Extract<keyof T,  string>>(key: K): Promise<T[K] | undefined>;
   all: () => Promise<
     {
-      key: Extract<keyof T, "string">;
+      key: Extract<keyof T, string>;
       value: T[keyof T];
       hash: string;
     }[]
@@ -35,17 +35,16 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
   return new Proxy(db, {
     get(target: KeyValueDatabase, prop) {
       if (prop === "get") {
-        return async (
-          key: Extract<keyof T, string>,
-        ): Promise<T[typeof key] | undefined> => {
+        const wrappedGet: TypedKeyValue<T>["get"] = async (key) => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
           const val = await target.get(key);
           if (val === undefined) return val;
           const valid = validateKey(val, key);
           return valid ? val : undefined;
         };
+        return wrappedGet;
       } else if (prop === "put" || prop === "set") {
-        return async (
+        const wrappedPut: TypedKeyValue<T>["put"] =  async (
           key: Extract<keyof T, string>,
           value: T[typeof key],
         ): Promise<string> => {
@@ -63,6 +62,7 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
               JSON.stringify(getKeyValidator(key).errors, undefined, 2),
             );
         };
+        return wrappedPut;
       } else if (prop === "all") {
         return async () => {
           // Todo: check why types don't work automatically here
@@ -93,5 +93,5 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
         return target[prop as keyof typeof target];
       }
     },
-  }) as unknown as TypedKeyValue<T>;
+  }) as TypedKeyValue<T>;
 };

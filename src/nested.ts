@@ -2,8 +2,12 @@ import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
 import {
   joinKey,
   splitKey,
-  type NestedDatabaseType,
-  type NestedValue,
+  NestedObjectToMap,
+  NestedValueObject,
+  NestedDatabaseType,
+  toObject,
+  asJoinedKey,
+  isNestedValueObject
 } from "@orbitdb/nested-db";
 
 import {
@@ -11,44 +15,58 @@ import {
   ExtractKeysAsList,
   GetValueFromKey,
   GetValueFromKeyList,
+  GetValueFromNestedKey,
   RecursivePartial,
 } from "./types.js";
-import { getJoinedKey, removeUndefinedProperties } from "./utils.js";
+import { NoUndefinedField, getJoinedKey, removeUndefinedProperties } from "./utils.js";
 
-export type TypedNested<T extends NestedValue> = Omit<
+// TODO: organise types
+type MapIfObject<T> = T extends NestedValueObject ? NestedObjectToMap<T> : T
+
+export type TypedNested<T extends NestedValueObject> = Omit<
   NestedDatabaseType,
-  "put" | "set" | "putNested" | "setNested" | "del" | "get" | "all"
+  "put" | "set" | "del" | "get" | "move" | "all"
 > & {
   put<K extends ExtractKeys<T>>(
     key: K,
     value: GetValueFromKey<T, K>,
-  ): Promise<string>;
+    position?: number,
+  ): Promise<string[]>;
   put<K extends ExtractKeysAsList<T>>(
     key: K,
     value: GetValueFromKeyList<T, K>,
-  ): Promise<string>;
-  set: TypedNested<T>["put"];
+    
+  ): Promise<string[]>;
 
-  putNested(value: RecursivePartial<T>): Promise<string[]>;
-  putNested<K extends ExtractKeys<T>>(
+
+  put(value: RecursivePartial<T>): Promise<string[]>;
+  put<K extends ExtractKeys<T>>(
     key: K,
     value: RecursivePartial<GetValueFromKey<T, K>>,
+    position?: number,
   ): Promise<string[]>;
-  setNested: TypedNested<T>["putNested"];
+  put<K extends ExtractKeysAsList<T>>(
+    key: K,
+    value: RecursivePartial<GetValueFromKeyList<T, K>>,
+    position?: number,
+  ): Promise<string[]>;
+  set: TypedNested<T>["put"];
 
+  move<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(key: K, position: number): Promise<string>;
+  
   del<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(key: K): Promise<string>;
 
   get<K extends ExtractKeys<T>>(
     key: K,
-  ): Promise<GetValueFromKey<T, K> | undefined>;
+  ): Promise<MapIfObject<GetValueFromKey<T, K>> | undefined>;
   get<K extends ExtractKeysAsList<T>>(
     key: K,
-  ): Promise<GetValueFromKeyList<T, K> | undefined>;
+  ): Promise<MapIfObject<GetValueFromKeyList<T, K>> | undefined>;
 
-  all: () => Promise<RecursivePartial<T>>;
+  all: () => Promise<NestedObjectToMap<T>>;
 };
 
-export const typedNested = <T extends NestedValue>({
+export const typedNested = <T extends NestedValueObject>({
   db,
   schema,
 }: {
@@ -96,38 +114,20 @@ export const typedNested = <T extends NestedValue>({
 
   return new Proxy(db, {
     get(target, prop) {
-      if (prop === "put" || prop === "set") {
-        const typedPut: TypedNested<T>["put"] = async (
-          ...args: Parameters<TypedNested<T>["put"]>
-        ): ReturnType<TypedNested<T>["put"]> => {
-          const [key, value] = args;
-          const joinedKey = typeof key === "string" ? key : getJoinedKey(key);
-          if (!supportedKey(key))
-            throw new Error(`Unsupported key ${joinedKey}.`);
-
-          const valueValidator = getValidator(joinedKey);
-          if (valueValidator(value)) return target.put(key, value);
-          else
-            throw new Error(
-              JSON.stringify(valueValidator.errors, undefined, 2),
-            );
-        };
-        return typedPut;
-      } else if (prop === "get") {
-        const typedGet = async (...args: Parameters<TypedNested<T>["get"]>) => {
-          const [key] = args;
-          const joinedKey = typeof key === "string" ? key : getJoinedKey(key);
+      if (prop === "get") {
+        const typedGet = async <K extends (ExtractKeysAsList<T> | ExtractKeys<T>)>(key: K): Promise<GetValueFromNestedKey<T, K> | undefined> => {
+          const joinedKey = (typeof key === "string" ? key : getJoinedKey(key as ExtractKeysAsList<T>)) as ExtractKeys<T>;
           if (!supportedKey(key))
             throw new Error(`Unsupported key ${joinedKey}.`);
 
           const value = await target.get(key);
           const valueValidator = getValidator(joinedKey);
-          if (valueValidator(value)) return value;
+          if (valueValidator(value)) return value as GetValueFromNestedKey<T, K>;
           return undefined;
         };
         return typedGet;
       } else if (prop === "del") {
-        const typedDel = async (...args: Parameters<TypedNested<T>["del"]>) => {
+        const typedDel: TypedNested<T>["del"] = async (...args) => {
           const [key] = args;
           const joinedKey = typeof key === "string" ? key : joinKey(key);
           if (!supportedKey(key))
@@ -139,43 +139,44 @@ export const typedNested = <T extends NestedValue>({
       } else if (prop === "all") {
         const typedAll: TypedNested<T>["all"] = async () => {
           const jsonValue = await db.all();
-          if (rootValidator(jsonValue)) {
-            return jsonValue;
+          if (rootValidator(toObject(jsonValue))) {
+            return jsonValue as unknown as NestedObjectToMap<T>;
           }
           throw new Error(JSON.stringify(rootValidator.errors, undefined, 2));
         };
         return typedAll;
-      } else if (prop === "setNested" || prop === "putNested") {
-        const typedSetNested: TypedNested<T>["setNested"] = async <
-          K extends ExtractKeys<T>,
-        >(
-          keyOrValue: K | RecursivePartial<T>,
-          value?: RecursivePartial<GetValueFromKey<T, K>>,
+      } else if (prop === "set" || prop === "put") {
+
+        const typedPut = async <K extends ExtractKeys<T> | ExtractKeysAsList<T> | RecursivePartial<T>>(
+          keyOrValue: K,
+          value?: K extends ExtractKeys<T> ? GetValueFromKey<T, K> : K extends ExtractKeysAsList<T> ? GetValueFromKeyList<T, K> : undefined,
+          position?: K extends ExtractKeys<T> | ExtractKeysAsList<T> ? number | undefined : undefined,
         ): Promise<string[]> => {
-          if (typeof keyOrValue === "string") {
+ 
+          if (typeof keyOrValue === "string" || Array.isArray(keyOrValue)) {
             // @ts-expect-error types in progress
-            const data = removeUndefinedProperties(value);
+            const data = isNestedValueObject(value) ? removeUndefinedProperties(value) : value;
 
-            if (!supportedKey(keyOrValue))
-              throw new Error(`Unsupported key ${keyOrValue}.`);
-            const joinedKey: ExtractKeys<T> =
-              typeof keyOrValue === "string"
-                ? keyOrValue
-                : getJoinedKey(keyOrValue);
-            const valueValidator = getValidator(joinedKey);
+            const joinedKey = asJoinedKey(keyOrValue) as ExtractKeys<T> ;
 
-            if (valueValidator(data))
-              return await db.putNested(keyOrValue, data);
-            else
+            if (!supportedKey(joinedKey))
+              throw new Error(`Unsupported key ${joinedKey}.`);
+
+            const valueValidator = getValidator(joinedKey)
+            console.log({data, value})
+            if (valueValidator(data)) {
+              return await target.put(joinedKey, data as unknown as NoUndefinedField<T>, position)
+            } else{
               throw new Error(
-                JSON.stringify(valueValidator.errors, undefined, 2),
-              );
+                JSON.stringify(valueValidator.errors, undefined, 2)
+              )
+            };
           } else {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(keyOrValue);
 
             if (rootValidator(data)) {
-              return await db.putNested(data);
+              return await db.put(data as unknown as NoUndefinedField<T>);
             } else {
               const firstError = rootValidator.errors?.[0];
               // Provide better error message
@@ -194,7 +195,7 @@ export const typedNested = <T extends NestedValue>({
             }
           }
         };
-        return typedSetNested;
+        return typedPut;
       }
 
       return target[prop as keyof typeof target];

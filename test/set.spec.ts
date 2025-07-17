@@ -3,7 +3,7 @@ import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
 import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
-import { Set, SetDatabaseType } from "@orbitdb/set-db";
+import { SetDb, SetDatabaseType } from "@orbitdb/set-db";
 
 import { TypedSet, typedSet } from "@/set.js";
 
@@ -49,7 +49,7 @@ describe("Typed Set", () => {
     let typedDB: TypedSet<number>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await SetDb()({
         ipfs,
         identity: testIdentity1,
         address: databaseId,
@@ -75,7 +75,7 @@ describe("Typed Set", () => {
     it("returns 0 items when it's a fresh database", async () => {
       const all = await typedDB.all();
 
-      expect(all.length).to.equal(0);
+      expect(all).to.be.empty();
     });
   });
 
@@ -83,7 +83,7 @@ describe("Typed Set", () => {
     let typedDB: TypedSet<number>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await SetDb()({
         ipfs,
         identity: testIdentity1,
         address: "numeric-set",
@@ -105,7 +105,7 @@ describe("Typed Set", () => {
       await typedDB.add(1);
       await typedDB.add(2);
       const actual = await typedDB.all();
-      expect(actual.map((x) => x.value)).to.deep.equal([1, 2]);
+      expect([...actual]).to.have.same.members([1, 2]);
     });
 
     it("error on add invalid values", async () => {
@@ -123,7 +123,7 @@ describe("Typed Set", () => {
       await typedDB.add(2);
 
       const actual = await typedDB.all();
-      expect(actual.map((x) => x.value)).to.deep.equal([1, 2]);
+      expect([...actual]).to.have.same.members([1, 2]);
     });
   });
 
@@ -144,7 +144,7 @@ describe("Typed Set", () => {
     let typedDB: TypedSet<structure>;
 
     beforeEach(async () => {
-      db = await Set()({
+      db = await SetDb()({
         ipfs,
         identity: testIdentity1,
         address: "object-set",
@@ -165,7 +165,7 @@ describe("Typed Set", () => {
     it("add valid object", async () => {
       await typedDB.add({ a: 1, b: "c" });
       const actual = await typedDB.all();
-      expect(actual.map((x) => x.value)).to.deep.eq([{ a: 1, b: "c" }]);
+      expect([...actual]).to.have.same.deep.members([{ a: 1, b: "c" }]);
     });
 
     it("error on add invalid object", async () => {
@@ -183,7 +183,7 @@ describe("Typed Set", () => {
       await typedDB.add({ a: 2, b: "c" });
 
       const actual = await typedDB.all();
-      expect(actual.map((x) => x.value)).to.deep.equal([
+      expect([...actual]).to.have.same.deep.members([
         { a: 1 },
         { a: 2, b: "c" },
       ]);
@@ -194,7 +194,7 @@ describe("Typed Set", () => {
       await typedDB.add({ a: 2, b: undefined });
 
       const actual = await typedDB.all();
-      expect(actual.map((x) => x.value)).to.deep.equal([{ a: 2 }]);
+      expect([...actual]).to.have.same.deep.members([{ a: 2 }]);
     });
   });
 });

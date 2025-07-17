@@ -1,5 +1,5 @@
-# Bohr-DB
-Discrete types for your orbit-dbs.
+# BohrDB
+Discrete types for your OrbitDBs.
 
 [![Tests Bohr-DB](https://github.com/reseau-constellation/bohr-db/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/reseau-constellation/bohr-db/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/reseau-constellation/bohr-db/graph/badge.svg?token=LjBS0gKh6n)](https://codecov.io/gh/reseau-constellation/bohr-db)
@@ -27,13 +27,13 @@ Below are a few examples of `bohr-db` with `KeyValue` and `Set` databases. See t
 ### Set
 As simple example with `Set`:
 ```ts
-import { createOrbit } from "@orbitdb/core";
-import { registerSet } from "@orbitdb/set-db";
+import { createOrbit, useDatabaseType } from "@orbitdb/core";
+import { SetDb } from "@orbitdb/set-db";
 
 import { typedSet } from "@constl/bohr-db";
 
 // Register set-db database type. IMPORTANT - must call before creating orbit instance !
-registerSet();
+useDatabaseType(SetDb);
 
 const orbit = await createOrbit({ ipfs })
 

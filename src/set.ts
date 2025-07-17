@@ -10,12 +10,7 @@ export type TypedSet<T extends DBElements> = Omit<
 > & {
   add: (value: T) => Promise<string>;
   del: (value: T) => Promise<string>;
-  all: () => Promise<
-    {
-      value: T;
-      hash: string;
-    }[]
-  >;
+  all: () => Promise<Set<T>>;
 };
 
 export const typedSet = <T extends DBElements>({
@@ -30,16 +25,14 @@ export const typedSet = <T extends DBElements>({
   return new Proxy(db, {
     get(target, prop) {
       if (prop === "all") {
-        return async (): Promise<{ value: T; hash: string }[]> => {
-          const allValues = await target[prop]();
-          const valids = allValues.filter((x) => validate(x.value)) as {
-            value: T;
-            hash: string;
-          }[];
-          return valids;
+        const wrappedAll: TypedSet<T>["all"] = async () => {
+          const allValues = await target.all();
+          const valids = [...allValues].filter((x) => validate(x)) as T[];
+          return new Set(valids);
         };
+        return wrappedAll
       } else if (prop === "add") {
-        return async (data: T): Promise<string> => {
+        const wrappedAdd: TypedSet<T>["add"] = async (data) => {
           if (typeof data === "object" && !Array.isArray(data)) {
             data = removeUndefinedProperties(data) as T;
           }
@@ -54,9 +47,10 @@ export const typedSet = <T extends DBElements>({
               JSON.stringify(validate.errors, undefined, 2),
           );
         };
+        return wrappedAdd;
       } else {
         return target[prop as keyof typeof target];
       }
     },
-  }) as TypedSet<T>;
+  }) as  unknown as TypedSet<T>;
 };

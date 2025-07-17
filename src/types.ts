@@ -62,3 +62,5 @@ export type GetValueFromKeyList<T, P extends ExtractKeysAsList<T>> = P extends [
       : T[Key]
     : never
   : never;
+
+export type GetValueFromNestedKey<T, K extends (ExtractKeysAsList<T> | ExtractKeys<T>)> = (K extends ExtractKeys<T> ? GetValueFromKey<T, K> : K extends ExtractKeysAsList<T> ?GetValueFromKeyList<T, K> : never);
