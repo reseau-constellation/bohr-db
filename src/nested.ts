@@ -27,17 +27,11 @@ export type TypedNested<T extends NestedValueObject> = Omit<
   NestedDatabaseType,
   "put" | "set" | "del" | "get" | "move" | "all"
 > & {
-  put<K extends ExtractKeys<T>>(
-    key: K,
-    value: GetValueFromKey<T, K>,
-    position?: number,
-  ): Promise<string[]>;
-
 
   put(value: RecursivePartial<T>): Promise<string[]>;
   put<K extends ExtractKeys<T>>(
     key: K,
-    value: RecursivePartial<GetValueFromKey<T, K>>,
+    value: GetValueFromKey<T, K>,
     position?: number,
   ): Promise<string[]>;
   put<K extends ExtractKeysAsList<T>>(
