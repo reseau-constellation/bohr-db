@@ -44,6 +44,9 @@ importers:
       multiformats:
         specifier: ^13.3.7
         version: 13.3.7
+      ts-deepmerge:
+        specifier: ^7.0.3
+        version: 7.0.3
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
@@ -7003,6 +7006,10 @@ packages:
     resolution: {integrity: sha512-EDyGAwH1gO0Ausm9gV6T2nUvBgXT5kGoCMJPllOaooZ+4VvJiKBdZE7wK18N1deEowhcUptS+5GXZK8U/fvpwA==}
     peerDependencies:
       typescript: '>=4.0.0'
+
+  ts-deepmerge@7.0.3:
+    resolution: {integrity: sha512-Du/ZW2RfwV/D4cmA5rXafYjBQVuvu4qGiEEla4EmEHVHgRdx68Gftx7i66jn2bzHPwSVZY36Ae6OuDn9el4ZKA==}
+    engines: {node: '>=14.13.1'}
 
   ts-node@10.9.2:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
@@ -16324,6 +16331,8 @@ snapshots:
     dependencies:
       picomatch: 4.0.3
       typescript: 5.8.3
+
+  ts-deepmerge@7.0.3: {}
 
   ts-node@10.9.2(@types/node@22.16.4)(typescript@5.8.3):
     dependencies:
