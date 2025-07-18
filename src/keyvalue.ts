@@ -8,10 +8,10 @@ export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   KeyValueDatabase,
   "put" | "set" | "del" | "get" | "all"
 > & {
-  put<K extends Extract<keyof T,  string>>(key: K, value: T[K]): Promise<string>;
+  put<K extends Extract<keyof T, string>>(key: K, value: T[K]): Promise<string>;
   set: TypedKeyValue<T>["put"];
-  del<K extends Extract<keyof T,  string>>(key: K): Promise<string>;
-  get<K extends Extract<keyof T,  string>>(key: K): Promise<T[K] | undefined>;
+  del<K extends Extract<keyof T, string>>(key: K): Promise<string>;
+  get<K extends Extract<keyof T, string>>(key: K): Promise<T[K] | undefined>;
   all: () => Promise<
     {
       key: Extract<keyof T, string>;
@@ -44,7 +44,7 @@ export const typedKeyValue = <T extends { [clef: string]: DBElements }>({
         };
         return wrappedGet;
       } else if (prop === "put" || prop === "set") {
-        const wrappedPut: TypedKeyValue<T>["put"] =  async (
+        const wrappedPut: TypedKeyValue<T>["put"] = async (
           key: Extract<keyof T, string>,
           value: T[typeof key],
         ): Promise<string> => {

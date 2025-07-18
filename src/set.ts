@@ -30,7 +30,7 @@ export const typedSet = <T extends DBElements>({
           const valids = [...allValues].filter((x) => validate(x)) as T[];
           return new Set(valids);
         };
-        return wrappedAll
+        return wrappedAll;
       } else if (prop === "add") {
         const wrappedAdd: TypedSet<T>["add"] = async (data) => {
           if (typeof data === "object" && !Array.isArray(data)) {
@@ -52,5 +52,5 @@ export const typedSet = <T extends DBElements>({
         return target[prop as keyof typeof target];
       }
     },
-  }) as  unknown as TypedSet<T>;
+  }) as unknown as TypedSet<T>;
 };

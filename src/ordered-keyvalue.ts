@@ -5,7 +5,9 @@ import { DBElements } from "./types";
 import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
 import { DagCborEncodable } from "@orbitdb/core";
 
-export type TypedOrderedKeyValue<T extends { [clef: string]: DagCborEncodable }> = Omit<
+export type TypedOrderedKeyValue<
+  T extends { [clef: string]: DagCborEncodable },
+> = Omit<
   OrderedKeyValueDatabaseType,
   "put" | "set" | "del" | "move" | "get" | "all"
 > & {
@@ -16,7 +18,10 @@ export type TypedOrderedKeyValue<T extends { [clef: string]: DagCborEncodable }>
   ) => Promise<string>;
   set: TypedOrderedKeyValue<T>["put"];
   del: <K extends keyof T>(key: K) => Promise<string>;
-  move: <K extends Extract<keyof T, string>>(key: K, position: number) => Promise<void>;
+  move: <K extends Extract<keyof T, string>>(
+    key: K,
+    position: number,
+  ) => Promise<void>;
   get: <K extends Extract<keyof T, string>>(
     key: K,
   ) => Promise<T[K] | undefined>;
@@ -54,7 +59,10 @@ export const typedOrderedKeyValue = <T extends { [clef: string]: DBElements }>({
         };
         return wrappedGet;
       } else if (prop === "move") {
-        const wrappedMove: TypedOrderedKeyValue<T>["move"] = async (key, position) => {
+        const wrappedMove: TypedOrderedKeyValue<T>["move"] = async (
+          key,
+          position,
+        ) => {
           if (!supportedKey(key)) throw new Error(`Unsupported key ${key}.`);
           return await target.move(key, position);
         };

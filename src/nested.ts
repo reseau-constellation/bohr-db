@@ -7,7 +7,7 @@ import {
   NestedDatabaseType,
   toObject,
   asJoinedKey,
-  isNestedValueObject
+  isNestedValueObject,
 } from "@orbitdb/nested-db";
 
 import {
@@ -18,16 +18,19 @@ import {
   GetValueFromNestedKey,
   RecursivePartial,
 } from "./types.js";
-import { NoUndefinedField, getJoinedKey, removeUndefinedProperties } from "./utils.js";
+import {
+  NoUndefinedField,
+  getJoinedKey,
+  removeUndefinedProperties,
+} from "./utils.js";
 
 // TODO: organise types
-type MapIfObject<T> = T extends NestedValueObject ? NestedObjectToMap<T> : T
+type MapIfObject<T> = T extends NestedValueObject ? NestedObjectToMap<T> : T;
 
 export type TypedNested<T extends NestedValueObject> = Omit<
   NestedDatabaseType,
   "put" | "set" | "del" | "get" | "move" | "all"
 > & {
-
   put(value: RecursivePartial<T>): Promise<string[]>;
   put<K extends ExtractKeys<T>>(
     key: K,
@@ -41,8 +44,11 @@ export type TypedNested<T extends NestedValueObject> = Omit<
   ): Promise<string[]>;
   set: TypedNested<T>["put"];
 
-  move<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(key: K, position: number): Promise<string>;
-  
+  move<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(
+    key: K,
+    position: number,
+  ): Promise<string>;
+
   del<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(key: K): Promise<string>;
 
   get<K extends ExtractKeys<T>>(
@@ -104,14 +110,23 @@ export const typedNested = <T extends NestedValueObject>({
   return new Proxy(db, {
     get(target, prop) {
       if (prop === "get") {
-        const typedGet = async <K extends (ExtractKeysAsList<T> | ExtractKeys<T>)>(key: K): Promise<GetValueFromNestedKey<T, K> | undefined> => {
-          const joinedKey = (typeof key === "string" ? key : getJoinedKey(key as ExtractKeysAsList<T>)) as ExtractKeys<T>;
+        const typedGet = async <
+          K extends ExtractKeysAsList<T> | ExtractKeys<T>,
+        >(
+          key: K,
+        ): Promise<GetValueFromNestedKey<T, K> | undefined> => {
+          const joinedKey = (
+            typeof key === "string"
+              ? key
+              : getJoinedKey(key as ExtractKeysAsList<T>)
+          ) as ExtractKeys<T>;
           if (!supportedKey(key))
             throw new Error(`Unsupported key ${joinedKey}.`);
 
           const value = await target.get(key);
           const valueValidator = getValidator(joinedKey);
-          if (valueValidator(value)) return value as GetValueFromNestedKey<T, K>;
+          if (valueValidator(value))
+            return value as GetValueFromNestedKey<T, K>;
           return undefined;
         };
         return typedGet;
@@ -135,31 +150,43 @@ export const typedNested = <T extends NestedValueObject>({
         };
         return typedAll;
       } else if (prop === "set" || prop === "put") {
-
-        const typedPut = async <K extends ExtractKeys<T> | ExtractKeysAsList<T> | RecursivePartial<T>>(
+        const typedPut = async <
+          K extends ExtractKeys<T> | ExtractKeysAsList<T> | RecursivePartial<T>,
+        >(
           keyOrValue: K,
-          value?: K extends ExtractKeys<T> ? GetValueFromKey<T, K> : K extends ExtractKeysAsList<T> ? GetValueFromKeyList<T, K> : undefined,
-          position?: K extends ExtractKeys<T> | ExtractKeysAsList<T> ? number | undefined : undefined,
+          value?: K extends ExtractKeys<T>
+            ? GetValueFromKey<T, K>
+            : K extends ExtractKeysAsList<T>
+              ? GetValueFromKeyList<T, K>
+              : undefined,
+          position?: K extends ExtractKeys<T> | ExtractKeysAsList<T>
+            ? number | undefined
+            : undefined,
         ): Promise<string[]> => {
- 
           if (typeof keyOrValue === "string" || Array.isArray(keyOrValue)) {
             // @ts-expect-error types in progress
-            const data = isNestedValueObject(value) ? removeUndefinedProperties(value) : value;
+            const data = isNestedValueObject(value)
+              ? removeUndefinedProperties(value)
+              : value;
 
-            const joinedKey = asJoinedKey(keyOrValue) as ExtractKeys<T> ;
+            const joinedKey = asJoinedKey(keyOrValue) as ExtractKeys<T>;
 
             if (!supportedKey(joinedKey))
               throw new Error(`Unsupported key ${joinedKey}.`);
 
-            const valueValidator = getValidator(joinedKey)
+            const valueValidator = getValidator(joinedKey);
 
             if (valueValidator(data)) {
-              return await target.put(joinedKey, data as unknown as NoUndefinedField<T>, position)
-            } else{
+              return await target.put(
+                joinedKey,
+                data as unknown as NoUndefinedField<T>,
+                position,
+              );
+            } else {
               throw new Error(
-                JSON.stringify(valueValidator.errors, undefined, 2)
-              )
-            };
+                JSON.stringify(valueValidator.errors, undefined, 2),
+              );
+            }
           } else {
             // @ts-expect-error types in progress
             const data = removeUndefinedProperties(keyOrValue);

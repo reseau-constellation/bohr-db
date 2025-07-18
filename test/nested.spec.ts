@@ -458,5 +458,4 @@ describe("Typed Nested", () => {
       await expect(typedDB.all()).to.be.rejectedWith("must be number");
     });
   });
-
 });

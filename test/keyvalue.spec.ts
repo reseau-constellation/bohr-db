@@ -48,9 +48,9 @@ describe("Typed KeyValue", () => {
     let typedDB: TypedKeyValue<structure>;
 
     beforeEach(async () => {
-      db = await orbit.open(databaseId, {
+      db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      }) as KeyValueDatabase;
+      })) as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
@@ -89,9 +89,9 @@ describe("Typed KeyValue", () => {
     let typedDB: TypedKeyValue<structure>;
 
     beforeEach(async () => {
-      db = await orbit.open(databaseId, {
+      db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      }) as KeyValueDatabase;
+      })) as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
@@ -175,9 +175,9 @@ describe("Typed KeyValue", () => {
     let typedDB: TypedKeyValue<structure>;
 
     beforeEach(async () => {
-      db = await orbit.open(databaseId, {
+      db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      }) as KeyValueDatabase;
+      })) as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,
@@ -241,9 +241,9 @@ describe("Typed KeyValue", () => {
     let typedDB: TypedKeyValue<structure>;
 
     beforeEach(async () => {
-      db = await orbit.open(databaseId, {
+      db = (await orbit.open(databaseId, {
         type: "keyvalue",
-      }) as KeyValueDatabase;
+      })) as KeyValueDatabase;
       typedDB = typedKeyValue({
         db,
         schema,

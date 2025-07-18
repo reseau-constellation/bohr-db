@@ -1,4 +1,9 @@
-import { NestedObjectToMap, NestedValueMap, NestedValueObject, toObject } from "@orbitdb/nested-db";
+import {
+  NestedObjectToMap,
+  NestedValueMap,
+  NestedValueObject,
+  toObject,
+} from "@orbitdb/nested-db";
 
 import { expect } from "aegir/chai";
 
