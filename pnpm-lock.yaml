@@ -22,7 +22,7 @@ importers:
         version: 1.2.0
       '@orbitdb/feed-db':
         specifier: ^1.2.1
-        version: 1.2.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+        version: 1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/nested-db':
         specifier: ^1.3.4
         version: 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
@@ -1539,16 +1539,12 @@ packages:
   '@orbitdb/core-types@1.2.0':
     resolution: {integrity: sha512-AjJl9Y7CAiGOJob2JUafLwqOByd82oxVLQemVZKsr6gpIn7G9cYLyLdMPEF+VJe3iKHgAaz+Jdcyr4ceqe1UTg==}
 
-  '@orbitdb/core@2.5.0':
-    resolution: {integrity: sha512-RE+te/z8MCLhkawby2j9J0T0hH8Mi9BgTUATWd99ih/cyU9OTbbXVuY64A64bdAQ4EZkfJ+OjO9vAMhJHwgnew==}
-    engines: {node: '>=20.0.0'}
-
   '@orbitdb/core@3.0.2':
     resolution: {integrity: sha512-YTJIBbe8mIDLpA0T3cOdVjWDeAyIojQLR54p0TfVyUBAjWh7N0rbKBbgQMTOrFxhUmRf/D85iFScmGnnEn5v+w==}
     engines: {node: '>=20.0.0'}
 
-  '@orbitdb/feed-db@1.2.1':
-    resolution: {integrity: sha512-Rbpq4lo/8urvGZFAKWkO/BlBvnnULDDy0EJslWurnGpFmR8btCn+TjZBg98rSguXqOEfSfE42JrgHjj8KzJZ1w==}
+  '@orbitdb/feed-db@1.3.0':
+    resolution: {integrity: sha512-SMnIAv5OkSnm6ZsuqgG8fR/S4W3TcwHnbC7XUJ+yyoV604abwC9a+6lsM/ovzLXrr04yTjaaDnc2t1coNflg5A==}
 
   '@orbitdb/nested-db@1.3.5':
     resolution: {integrity: sha512-hKoc9aLyhELAOiIaG0OZYRePIrs7bnC7qJ9si+jMjp6E323eI00iUA/31Ufv6aXNiVbAF5XKZBMgLvgc/D6MsA==}
@@ -8184,7 +8180,7 @@ snapshots:
   '@constl/multi-db@0.1.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 3.0.2
-      '@orbitdb/feed-db': 1.2.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      '@orbitdb/feed-db': 1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/nested-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/set-db': 2.0.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
@@ -9480,18 +9476,6 @@ snapshots:
 
   '@orbitdb/core-types@1.2.0': {}
 
-  '@orbitdb/core@2.5.0':
-    dependencies:
-      '@ipld/dag-cbor': 9.2.4
-      '@libp2p/crypto': 5.1.7
-      it-pipe: 3.0.1
-      level: 8.0.1
-      lru: 3.1.0
-      multiformats: 12.1.3
-      p-queue: 8.1.0
-      timeout-abort-controller: 3.0.0
-      uint8arrays: 5.1.0
-
   '@orbitdb/core@3.0.2':
     dependencies:
       '@ipld/dag-cbor': 9.2.4
@@ -9504,9 +9488,9 @@ snapshots:
       timeout-abort-controller: 3.0.0
       uint8arrays: 5.1.0
 
-  '@orbitdb/feed-db@1.2.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
+  '@orbitdb/feed-db@1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
-      '@orbitdb/core': 2.5.0
+      '@orbitdb/core': 3.0.2
       helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
     transitivePeerDependencies:
       - bufferutil
