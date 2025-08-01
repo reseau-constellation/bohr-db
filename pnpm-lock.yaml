@@ -40,7 +40,7 @@ importers:
         version: 3.3.0
       helia:
         specifier: ^5.4.2
-        version: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+        version: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       multiformats:
         specifier: ^13.3.7
         version: 13.3.7
@@ -65,7 +65,7 @@ importers:
         version: 9.31.0
       '@helia/block-brokers':
         specifier: ^4.2.2
-        version: 4.2.2
+        version: 4.2.3
       '@libp2p/circuit-relay-v2':
         specifier: ^3.2.23
         version: 3.2.23
@@ -1219,23 +1219,23 @@ packages:
   '@gerrit0/mini-shiki@3.8.0':
     resolution: {integrity: sha512-tloLVqvvoyv636PilYZwNhCmZ+xxgRicysMvpKdZ4Y6+9IH6v4lp7GodbDDncApNQjflwTSnXuYQoe3el5C59w==}
 
-  '@helia/bitswap@2.1.2':
-    resolution: {integrity: sha512-gleOYd5jJPA0jVkm/LKkfEh+Z/TQNviv4e8pCdPlD3V/Sg6q0htdO/ttlAlMyYGY6187fwsCP+fZkqWNao/h9Q==}
+  '@helia/bitswap@2.1.3':
+    resolution: {integrity: sha512-nK8clINmgKlD9FTh1hTWPxceitt7vZqKpZO8Q+OzcmU6HFC62VXWItxbaEAireJ7vnNRDhYeaLxyQ+94EfUS/g==}
 
-  '@helia/block-brokers@4.2.2':
-    resolution: {integrity: sha512-2Iq5basphEn8RcRK+wMiSfy5EJWgjI69wKH8CB66dSyaiduV7etP8E69eP5oGv43ShPycel4Xnmb2mNl6WWp5w==}
+  '@helia/block-brokers@4.2.3':
+    resolution: {integrity: sha512-Bv/CVJka2/XkD8SfnQloD6uQCu2hPHw57dEGPivTzyLR0s/TKC1HAP2nwaOcn64Bb29BQ18QK48/6agnVeEBaA==}
 
   '@helia/delegated-routing-v1-http-api-client@4.2.5':
     resolution: {integrity: sha512-fFqVhs7a4TnpKQ1cZ4im3tj53v+8UZLFkQo85otl/GpbIVBmBoGbjkDHGPv4UdjJ2lmYM/cRdnHsYbfjuc5pwA==}
 
-  '@helia/interface@5.3.2':
-    resolution: {integrity: sha512-+NOQrBxsz6i0FOsz16OgTlGAcyQ+cSYGzd9VJE7cMMrrGo9IcDEKp5Kvh980Ajg1LJFgeqYyqmxefnPExUUsBg==}
+  '@helia/interface@5.4.0':
+    resolution: {integrity: sha512-UfY/Xa2qYJ6Bh4XUUSgwU3s2VY69cKwRznkS9Ab0C3ciU+dUeyz3IPIn5qqRGVfNVM9SD2wISXmwA7FJvhdRAQ==}
 
-  '@helia/routers@3.1.2':
-    resolution: {integrity: sha512-Fq5mj7JkeDVHXUak+HJYIK7TGjKGErvWzyjjcOMNrCk0UyWCfLcw3iFwWWfkMOP+e8IN7bgPxXVxxyOir9iL+w==}
+  '@helia/routers@3.1.3':
+    resolution: {integrity: sha512-BPbzN3WCe6EF3yXjeORJbbb5hZjv0PKaJri1sSPHRZX6sKUCvRzwAc0AkQKUMHeMzTLrrAcl0yAz5x1r8z3Ynw==}
 
-  '@helia/utils@1.3.2':
-    resolution: {integrity: sha512-epMlRqLyJ95NDem4jc6kNRUlWkW5+HOwxvgJzOn70mMdXFkyYIOx24BpZurCFi+Cg6/k9vSfKsU5V1teWxYfRQ==}
+  '@helia/utils@1.4.0':
+    resolution: {integrity: sha512-xXwhQbfSQEC5uHd6HVwdGXksZayy5xnYB5aOk0TU1fDnwbaeJz46o/GdWcxkTxnbfGyxqs9hyK5NqHw1B58yAw==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1814,8 +1814,8 @@ packages:
   '@types/babel__template@7.4.4':
     resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
 
-  '@types/babel__traverse@7.20.7':
-    resolution: {integrity: sha512-dkO5fhS7+/oos4ciWxyEyjWe48zmG6wbCheo/G2ZnHx4fs3EU6YC6UM8rk56gAjNJ9P3MTH2jo5jb92/K6wbng==}
+  '@types/babel__traverse@7.28.0':
+    resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
   '@types/chai-as-promised@7.1.8':
     resolution: {integrity: sha512-ThlRVIJhr69FLlh6IctTXFkmhtP3NpMZ2QGq69StYLyKZFp/HOp1VdKZj7RvfNWYYcJ1xlbLGLLWj1UvP5u/Gw==}
@@ -2370,8 +2370,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.10.0:
-    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
+  axios@1.11.0:
+    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
 
   babel-jest@29.7.0:
     resolution: {integrity: sha512-BrvGY3xZSwEcCzKvKsCi2GgHqDqsYkOP4/by5xCgIwGXQxIEh+8ew3gmrE1y7XRR6LHZIj6yLYnUi/mm2KXKBg==}
@@ -3728,8 +3728,8 @@ packages:
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
 
-  follow-redirects@1.15.9:
-    resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
+  follow-redirects@1.15.11:
+    resolution: {integrity: sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -4046,8 +4046,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  helia@5.4.2:
-    resolution: {integrity: sha512-4jFBFE+dn+1UClCDbJBP+dA6OT9TrD+f8m5VIle7TCTAYTkDfR4mi0VtaWM4CWvrbDYwBk26xR9roYtXlG9oHw==}
+  helia@5.5.0:
+    resolution: {integrity: sha512-nQT+447bM1WYOrKjy0jQkhwSsvoTlfeu0yjSaoa6/3iFCQp9dsoIo5SbKeiSLumiOM+JAkrBz8w2Y9fSJQA+bQ==}
 
   hermes-estree@0.28.1:
     resolution: {integrity: sha512-w3nxl/RGM7LBae0v8LH2o36+8VqwOZGv9rX1wyoWT6YaKZLqpJZ0YQ5P0LVr3tuRpf7vCx0iIG4i/VmBJejxTQ==}
@@ -6147,6 +6147,9 @@ packages:
   race-event@1.6.0:
     resolution: {integrity: sha512-hXkk3CDepWELBG2MsT/zIiTbjNNucMo49vwZEdjChJlxJivc8fWIu/Gh/4vEJdWsHDmnGCC6++ftP2Afep6RUg==}
 
+  race-event@1.6.1:
+    resolution: {integrity: sha512-vi7WH5g5KoTFpu2mme/HqZiWH14XSOtg5rfp6raBskBHl7wnmy3F/biAIyY5MsK+BHWhoPhxtZ1Y2R7OHHaWyQ==}
+
   race-signal@1.1.3:
     resolution: {integrity: sha512-Mt2NznMgepLfORijhQMncE26IhkmjEphig+/1fKC0OtaKwys/gpvpmswSjoN01SS+VO951mj0L4VIDXdXsjnfA==}
 
@@ -8184,7 +8187,7 @@ snapshots:
       '@orbitdb/feed-db': 1.2.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/nested-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/set-db': 2.0.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
-      helia: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       it-all: 3.0.9
       tiny-typed-emitter: 2.1.0
     transitivePeerDependencies:
@@ -8648,10 +8651,10 @@ snapshots:
       '@shikijs/types': 3.8.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@helia/bitswap@2.1.2':
+  '@helia/bitswap@2.1.3':
     dependencies:
-      '@helia/interface': 5.3.2
-      '@helia/utils': 1.3.2
+      '@helia/interface': 5.4.0
+      '@helia/utils': 1.4.0
       '@libp2p/interface': 2.10.5
       '@libp2p/logger': 5.1.21
       '@libp2p/peer-collections': 6.0.34
@@ -8669,25 +8672,26 @@ snapshots:
       p-defer: 4.0.1
       progress-events: 1.0.1
       protons-runtime: 5.6.0
-      race-event: 1.6.0
+      race-event: 1.6.1
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@helia/block-brokers@4.2.2':
+  '@helia/block-brokers@4.2.3':
     dependencies:
-      '@helia/bitswap': 2.1.2
-      '@helia/interface': 5.3.2
-      '@helia/utils': 1.3.2
+      '@helia/bitswap': 2.1.3
+      '@helia/interface': 5.4.0
+      '@helia/utils': 1.4.0
       '@libp2p/interface': 2.10.5
       '@libp2p/utils': 6.7.1
       '@multiformats/multiaddr': 12.5.1
-      '@multiformats/multiaddr-matcher': 1.8.0
+      '@multiformats/multiaddr-matcher': 2.0.2
       '@multiformats/multiaddr-to-uri': 11.0.2
       interface-blockstore: 5.3.2
       interface-store: 6.0.3
       multiformats: 13.3.7
       progress-events: 1.0.1
+      uint8arraylist: 2.4.8
 
   '@helia/delegated-routing-v1-http-api-client@4.2.5':
     dependencies:
@@ -8706,7 +8710,7 @@ snapshots:
       p-queue: 8.1.0
       uint8arrays: 5.1.0
 
-  '@helia/interface@5.3.2':
+  '@helia/interface@5.4.0':
     dependencies:
       '@libp2p/interface': 2.10.5
       '@multiformats/dns': 1.0.6
@@ -8717,10 +8721,10 @@ snapshots:
       multiformats: 13.3.7
       progress-events: 1.0.1
 
-  '@helia/routers@3.1.2':
+  '@helia/routers@3.1.3':
     dependencies:
       '@helia/delegated-routing-v1-http-api-client': 4.2.5
-      '@helia/interface': 5.3.2
+      '@helia/interface': 5.4.0
       '@libp2p/interface': 2.10.5
       '@libp2p/peer-id': 5.1.8
       '@multiformats/uri-to-multiaddr': 9.0.1
@@ -8730,13 +8734,14 @@ snapshots:
       multiformats: 13.3.7
       uint8arrays: 5.1.0
 
-  '@helia/utils@1.3.2':
+  '@helia/utils@1.4.0':
     dependencies:
-      '@helia/interface': 5.3.2
+      '@helia/interface': 5.4.0
       '@ipld/dag-cbor': 9.2.4
       '@ipld/dag-json': 10.2.5
       '@ipld/dag-pb': 4.1.5
       '@libp2p/interface': 2.10.5
+      '@libp2p/keychain': 5.2.8
       '@libp2p/logger': 5.1.21
       '@libp2p/utils': 6.7.1
       '@multiformats/dns': 1.0.6
@@ -8751,6 +8756,7 @@ snapshots:
       it-filter: 3.1.4
       it-foreach: 2.1.4
       it-merge: 3.0.12
+      libp2p: 2.9.0
       mortice: 3.3.1
       multiformats: 13.3.7
       p-defer: 4.0.1
@@ -9224,7 +9230,7 @@ snapshots:
       p-defer: 4.0.1
       p-event: 6.0.1
       progress-events: 1.0.1
-      race-event: 1.6.0
+      race-event: 1.6.1
       stream-to-it: 1.0.1
 
   '@libp2p/tls@2.2.6':
@@ -9277,7 +9283,7 @@ snapshots:
       main-event: 1.0.1
       netmask: 2.0.2
       p-defer: 4.0.1
-      race-event: 1.6.0
+      race-event: 1.6.1
       race-signal: 1.1.3
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -9501,7 +9507,7 @@ snapshots:
   '@orbitdb/feed-db@1.2.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
-      helia: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -9512,7 +9518,7 @@ snapshots:
     dependencies:
       '@orbitdb/core': 3.0.2
       '@orbitdb/ordered-keyvalue-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
-      helia: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       it-all: 3.0.9
     transitivePeerDependencies:
       - bufferutil
@@ -9523,7 +9529,7 @@ snapshots:
   '@orbitdb/ordered-keyvalue-db@1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 3.0.2
-      helia: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       it-all: 3.0.9
     transitivePeerDependencies:
       - bufferutil
@@ -9534,7 +9540,7 @@ snapshots:
   '@orbitdb/set-db@2.0.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 3.0.2
-      helia: 5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -9905,7 +9911,7 @@ snapshots:
       '@babel/types': 7.28.2
       '@types/babel__generator': 7.27.0
       '@types/babel__template': 7.4.4
-      '@types/babel__traverse': 7.20.7
+      '@types/babel__traverse': 7.28.0
 
   '@types/babel__generator@7.27.0':
     dependencies:
@@ -9916,7 +9922,7 @@ snapshots:
       '@babel/parser': 7.28.0
       '@babel/types': 7.28.2
 
-  '@types/babel__traverse@7.20.7':
+  '@types/babel__traverse@7.28.0':
     dependencies:
       '@babel/types': 7.28.2
 
@@ -9940,7 +9946,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 24.0.14
+      '@types/node': 24.1.0
 
   '@types/estree@1.0.8': {}
 
@@ -9983,7 +9989,7 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 24.0.14
+      '@types/node': 24.1.0
 
   '@types/node@22.16.4':
     dependencies:
@@ -10251,7 +10257,7 @@ snapshots:
     dependencies:
       '@peculiar/x509': 1.13.0
       asn1js: 3.0.6
-      axios: 1.10.0(debug@4.4.1)
+      axios: 1.11.0(debug@4.4.1)
       debug: 4.4.1(supports-color@8.1.1)
       node-forge: 1.3.1
     transitivePeerDependencies:
@@ -10596,9 +10602,9 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.10.0(debug@4.4.1):
+  axios@1.11.0(debug@4.4.1):
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.1)
+      follow-redirects: 1.15.11(debug@4.4.1)
       form-data: 4.0.4
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -10632,7 +10638,7 @@ snapshots:
       '@babel/template': 7.27.2
       '@babel/types': 7.28.2
       '@types/babel__core': 7.20.5
-      '@types/babel__traverse': 7.20.7
+      '@types/babel__traverse': 7.28.0
 
   babel-plugin-polyfill-corejs2@0.4.14(@babel/core@7.28.0):
     dependencies:
@@ -12364,7 +12370,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  follow-redirects@1.15.9(debug@4.4.1):
+  follow-redirects@1.15.11(debug@4.4.1):
     optionalDependencies:
       debug: 4.4.1(supports-color@8.1.1)
 
@@ -12720,15 +12726,15 @@ snapshots:
 
   he@1.2.0: {}
 
-  helia@5.4.2(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0)):
+  helia@5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0)):
     dependencies:
       '@chainsafe/libp2p-noise': 16.1.4
       '@chainsafe/libp2p-yamux': 7.0.4
-      '@helia/block-brokers': 4.2.2
+      '@helia/block-brokers': 4.2.3
       '@helia/delegated-routing-v1-http-api-client': 4.2.5
-      '@helia/interface': 5.3.2
-      '@helia/routers': 3.1.2
-      '@helia/utils': 1.3.2
+      '@helia/interface': 5.4.0
+      '@helia/routers': 3.1.3
+      '@helia/utils': 1.4.0
       '@ipshipyard/libp2p-auto-tls': 1.0.0
       '@libp2p/autonat': 2.0.37
       '@libp2p/bootstrap': 11.0.46
@@ -12750,7 +12756,6 @@ snapshots:
       '@multiformats/dns': 1.0.6
       blockstore-core: 5.0.4
       datastore-core: 10.0.4
-      interface-blockstore: 5.3.2
       interface-datastore: 8.3.2
       ipns: 10.1.2
       libp2p: 2.9.0
@@ -13332,7 +13337,7 @@ snapshots:
       abort-error: 1.0.1
       it-pushable: 3.2.3
       main-event: 1.0.1
-      race-event: 1.6.0
+      race-event: 1.6.1
       race-signal: 1.1.3
 
   it-queueless-pushable@2.0.2:
@@ -15305,6 +15310,10 @@ snapshots:
   quick-lru@5.1.1: {}
 
   race-event@1.6.0:
+    dependencies:
+      abort-error: 1.0.1
+
+  race-event@1.6.1:
     dependencies:
       abort-error: 1.0.1
 
