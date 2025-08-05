@@ -25,7 +25,7 @@ importers:
         version: 1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/nested-db':
         specifier: ^1.3.4
-        version: 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+        version: 1.3.6(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/ordered-keyvalue-db':
         specifier: ^1.3.5
         version: 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
@@ -1546,8 +1546,8 @@ packages:
   '@orbitdb/feed-db@1.3.0':
     resolution: {integrity: sha512-SMnIAv5OkSnm6ZsuqgG8fR/S4W3TcwHnbC7XUJ+yyoV604abwC9a+6lsM/ovzLXrr04yTjaaDnc2t1coNflg5A==}
 
-  '@orbitdb/nested-db@1.3.5':
-    resolution: {integrity: sha512-hKoc9aLyhELAOiIaG0OZYRePIrs7bnC7qJ9si+jMjp6E323eI00iUA/31Ufv6aXNiVbAF5XKZBMgLvgc/D6MsA==}
+  '@orbitdb/nested-db@1.3.6':
+    resolution: {integrity: sha512-bgCtGXNTuioKy7reJ1+CoBoFzmBqBygKiSu8l5uMVBn/CV3UPUPIRyr7i66iTfkTnzlkenQdXfHjys6St7rU2A==}
 
   '@orbitdb/ordered-keyvalue-db@1.3.5':
     resolution: {integrity: sha512-Sq2V6BVwcaK0AUACQaeP4o6y/tjGPieT+k3oto8wMvPi1EkSxWvEe2CjIlCmwb9WYIDlfa00N7PEtW8DXtm7cQ==}
@@ -8187,7 +8187,7 @@ snapshots:
     dependencies:
       '@orbitdb/core': 3.0.2
       '@orbitdb/feed-db': 1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
-      '@orbitdb/nested-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
+      '@orbitdb/nested-db': 1.3.6(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       '@orbitdb/set-db': 2.0.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       helia: 5.5.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       it-all: 3.0.9
@@ -9504,7 +9504,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@orbitdb/nested-db@1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
+  '@orbitdb/nested-db@1.3.6(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 3.0.2
       '@orbitdb/ordered-keyvalue-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
