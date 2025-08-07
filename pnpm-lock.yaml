@@ -19,7 +19,7 @@ importers:
         version: 3.0.2
       '@orbitdb/core-types':
         specifier: ^1.1.7
-        version: 1.2.0
+        version: 1.2.1
       '@orbitdb/feed-db':
         specifier: ^1.2.1
         version: 1.3.0(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
@@ -1388,8 +1388,8 @@ packages:
   '@octokit/types@14.1.0':
     resolution: {integrity: sha512-1y6DgTy8Jomcpu33N+p5w58l6xyt55Ar2I91RPiIA0xCJBXyUAhXCcmZaDWSANiha7R9a6qJJ2CRomGPZ6f46g==}
 
-  '@orbitdb/core-types@1.2.0':
-    resolution: {integrity: sha512-AjJl9Y7CAiGOJob2JUafLwqOByd82oxVLQemVZKsr6gpIn7G9cYLyLdMPEF+VJe3iKHgAaz+Jdcyr4ceqe1UTg==}
+  '@orbitdb/core-types@1.2.1':
+    resolution: {integrity: sha512-HHXeQz9BoUCRBYbmDzyhL9bmC6/o4Y1OmJ84t01RLwWHjPVj7UTAG5IQmg30TjxfSBIP+wb4oOM6KGTuJo6a9A==}
 
   '@orbitdb/core@3.0.2':
     resolution: {integrity: sha512-YTJIBbe8mIDLpA0T3cOdVjWDeAyIojQLR54p0TfVyUBAjWh7N0rbKBbgQMTOrFxhUmRf/D85iFScmGnnEn5v+w==}
@@ -9235,7 +9235,7 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 25.1.0
 
-  '@orbitdb/core-types@1.2.0': {}
+  '@orbitdb/core-types@1.2.1': {}
 
   '@orbitdb/core@3.0.2':
     dependencies:
