@@ -43,7 +43,7 @@ importers:
         version: 5.5.1(react-native@0.80.1(@babel/core@7.28.0)(react@19.1.0))
       multiformats:
         specifier: ^13.3.7
-        version: 13.4.0
+        version: 13.4.1
       ts-deepmerge:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1220,8 +1220,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
 
-  '@jridgewell/trace-mapping@0.3.30':
-    resolution: {integrity: sha512-GQ7Nw5G2lTu/BtHTKfXhKHok2WGetd4XYcVKGx00SjAk8GMwgJM3zr6zORiPGuOE+/vkc90KtTosSSvaCjKb2Q==}
+  '@jridgewell/trace-mapping@0.3.31':
+    resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
@@ -1789,8 +1789,8 @@ packages:
   '@types/node@24.3.0':
     resolution: {integrity: sha512-aPTXCrfwnDLj4VvXrm+UUCQjNEvJgNA8s5F1cvwQU+3KNltTOkBm1j30uNLyqqPNe7gE3KFzImYoZEfLhp4Yow==}
 
-  '@types/node@24.3.1':
-    resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
+  '@types/node@24.5.0':
+    resolution: {integrity: sha512-y1dMvuvJspJiPSDZUQ+WMBvF7dpnEqN4x9DDC9ie5Fs/HUZJA3wFp7EhHoVaKX/iI0cRoECV8X2jL8zi0xrHCg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2927,6 +2927,15 @@ packages:
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  debug@4.4.3:
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -5287,8 +5296,8 @@ packages:
     resolution: {integrity: sha512-eajQ/ZH7qXZQR2AgtfpmSMizQzmyYVmCql7pdhldPuYQi4atACekbJaQplk6dWyIi10jCaFnd6pqvcEFXjbaJw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  multiformats@13.4.0:
-    resolution: {integrity: sha512-Mkb/QcclrJxKC+vrcIFl297h52QcKh2Az/9A5vbWytbQt4225UWWWmIuSsKksdww9NkIeYcA7DkfftyLuC/JSg==}
+  multiformats@13.4.1:
+    resolution: {integrity: sha512-VqO6OSvLrFVAYYjgsr8tyv62/rCQhPgsZUXLTqoFLSgdkgiUYKYeArbt1uWLlEpkjxQe+P0+sHlbPEte1Bi06Q==}
 
   multimatch@5.0.0:
     resolution: {integrity: sha512-ypMKuglUrZUD99Tk2bUQ+xNQj43lPEfAeX2o9cTteAmShXy2VHDJpuwu1o0xqoKCt9jLVAvwyFKdLTPXKAfJyA==}
@@ -7090,6 +7099,9 @@ packages:
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
+  undici-types@7.12.0:
+    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
+
   undici@6.21.3:
     resolution: {integrity: sha512-gBLkYIlEnSp8pFbT64yFgGE6UIB9tAkhukC23PmMDCe5Nd+cRqKxSjw5y54MK2AZMgZfJWMaNE4nYUHgi1XEOw==}
     engines: {node: '>=18.17'}
@@ -7529,7 +7541,7 @@ snapshots:
       '@babel/parser': 7.28.4
       '@babel/types': 7.28.4
       '@jridgewell/gen-mapping': 0.3.13
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
       jsesc: 3.1.0
 
   '@babel/helper-annotate-as-pure@7.27.3':
@@ -8013,7 +8025,7 @@ snapshots:
       '@babel/parser': 7.28.4
       '@babel/template': 7.27.2
       '@babel/types': 7.28.4
-      debug: 4.4.1(supports-color@8.1.1)
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -8047,7 +8059,7 @@ snapshots:
       it-length-prefixed: 9.1.1
       it-pipe: 3.0.1
       it-pushable: 3.2.3
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -8509,7 +8521,7 @@ snapshots:
       it-map: 3.1.4
       it-pipe: 3.0.1
       it-take: 3.0.9
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       progress-events: 1.0.1
       protons-runtime: 5.6.0
@@ -8530,7 +8542,7 @@ snapshots:
       '@multiformats/multiaddr-to-uri': 11.0.2
       interface-blockstore: 5.3.2
       interface-store: 6.0.3
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -8546,7 +8558,7 @@ snapshots:
       it-first: 3.0.9
       it-map: 3.1.4
       it-ndjson: 1.1.4
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       p-queue: 8.1.0
       uint8arrays: 5.1.0
@@ -8559,7 +8571,7 @@ snapshots:
       interface-blockstore: 5.3.2
       interface-datastore: 8.3.2
       interface-store: 6.0.3
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       progress-events: 1.0.1
 
   '@helia/routers@3.1.3':
@@ -8572,7 +8584,7 @@ snapshots:
       ipns: 10.1.2
       it-first: 3.0.9
       it-map: 3.1.4
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       uint8arrays: 5.1.0
 
   '@helia/utils@1.4.0':
@@ -8599,7 +8611,7 @@ snapshots:
       it-merge: 3.0.12
       libp2p: 2.10.0
       mortice: 3.3.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       progress-events: 1.0.1
       uint8arrays: 5.1.0
@@ -8620,16 +8632,16 @@ snapshots:
   '@ipld/dag-cbor@9.2.4':
     dependencies:
       cborg: 4.2.12
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   '@ipld/dag-json@10.2.5':
     dependencies:
       cborg: 4.2.12
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   '@ipld/dag-pb@4.1.5':
     dependencies:
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   '@ipshipyard/libp2p-auto-tls@1.0.0':
     dependencies:
@@ -8647,7 +8659,7 @@ snapshots:
       any-signal: 4.1.1
       delay: 6.0.0
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       uint8arrays: 5.1.0
     transitivePeerDependencies:
       - supports-color
@@ -8691,14 +8703,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -8711,7 +8723,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.0
       '@jest/types': 29.6.3
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
       babel-plugin-istanbul: 6.1.1
       chalk: 4.1.2
       convert-source-map: 2.0.0
@@ -8732,7 +8744,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -8744,14 +8756,14 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/source-map@0.3.11':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/sourcemap-codec@1.5.4': {}
 
@@ -8762,7 +8774,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
 
-  '@jridgewell/trace-mapping@0.3.30':
+  '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -8785,7 +8797,7 @@ snapshots:
       any-signal: 4.1.1
       it-protobuf-stream: 2.0.3
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8arraylist: 2.4.8
 
@@ -8813,7 +8825,7 @@ snapshots:
       it-protobuf-stream: 2.0.3
       it-stream-types: 2.0.2
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       nanoid: 5.1.5
       progress-events: 1.0.1
       protons-runtime: 5.6.0
@@ -8834,7 +8846,7 @@ snapshots:
       '@libp2p/interface': 2.10.5
       '@noble/curves': 1.9.3
       '@noble/hashes': 1.8.0
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -8844,7 +8856,7 @@ snapshots:
       '@libp2p/interface': 2.11.0
       '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -8917,7 +8929,7 @@ snapshots:
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -8928,7 +8940,7 @@ snapshots:
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -8956,7 +8968,7 @@ snapshots:
       it-pushable: 3.2.3
       it-take: 3.0.9
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       p-event: 6.0.1
       progress-events: 1.0.1
@@ -8974,7 +8986,7 @@ snapshots:
       '@noble/hashes': 1.8.0
       asn1js: 3.0.6
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       sanitize-filename: 1.6.3
       uint8arrays: 5.1.0
 
@@ -8986,7 +8998,7 @@ snapshots:
       '@noble/hashes': 1.8.0
       asn1js: 3.0.6
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       sanitize-filename: 1.6.3
       uint8arrays: 5.1.0
 
@@ -8995,7 +9007,7 @@ snapshots:
       '@libp2p/interface': 2.11.0
       '@multiformats/multiaddr': 12.5.1
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       weald: 1.0.4
 
   '@libp2p/logger@5.2.0':
@@ -9003,7 +9015,7 @@ snapshots:
       '@libp2p/interface': 2.11.0
       '@multiformats/multiaddr': 12.5.1
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       weald: 1.0.4
 
   '@libp2p/mdns@11.0.46':
@@ -9046,20 +9058,20 @@ snapshots:
       '@libp2p/interface': 2.11.0
       '@libp2p/peer-id': 5.1.9
       '@libp2p/utils': 6.7.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   '@libp2p/peer-id@5.1.8':
     dependencies:
       '@libp2p/crypto': 5.1.7
       '@libp2p/interface': 2.10.5
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       uint8arrays: 5.1.0
 
   '@libp2p/peer-id@5.1.9':
     dependencies:
       '@libp2p/crypto': 5.1.8
       '@libp2p/interface': 2.11.0
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       uint8arrays: 5.1.0
 
   '@libp2p/peer-record@8.0.35':
@@ -9069,7 +9081,7 @@ snapshots:
       '@libp2p/peer-id': 5.1.9
       '@libp2p/utils': 6.7.2
       '@multiformats/multiaddr': 12.5.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
@@ -9087,7 +9099,7 @@ snapshots:
       it-all: 3.0.9
       main-event: 1.0.1
       mortice: 3.3.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -9114,7 +9126,7 @@ snapshots:
       it-pipe: 3.0.1
       it-pushable: 3.2.3
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-queue: 8.1.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -9244,7 +9256,7 @@ snapshots:
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       p-timeout: 6.1.4
       p-wait-for: 5.0.2
@@ -9297,7 +9309,7 @@ snapshots:
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@multiformats/multiaddr': 12.5.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   '@multiformats/multiaddr-matcher@2.0.2':
     dependencies:
@@ -9313,7 +9325,7 @@ snapshots:
       '@chainsafe/netmask': 2.0.0
       '@multiformats/dns': 1.0.6
       abort-error: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       uint8-varint: 2.0.4
       uint8arrays: 5.1.0
 
@@ -9609,7 +9621,7 @@ snapshots:
     dependencies:
       '@react-native/dev-middleware': 0.80.1
       chalk: 4.1.2
-      debug: 4.4.1(supports-color@8.1.1)
+      debug: 4.4.3
       invariant: 2.2.4
       metro: 0.82.5
       metro-config: 0.82.5
@@ -9629,7 +9641,7 @@ snapshots:
       chrome-launcher: 0.15.2
       chromium-edge-launcher: 0.2.0
       connect: 3.7.0
-      debug: 4.4.1(supports-color@8.1.1)
+      debug: 4.4.3
       invariant: 2.2.4
       nullthrows: 1.1.1
       open: 7.4.2
@@ -9876,7 +9888,7 @@ snapshots:
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
 
   '@types/hast@3.0.4':
     dependencies:
@@ -9923,9 +9935,9 @@ snapshots:
     dependencies:
       undici-types: 7.10.0
 
-  '@types/node@24.3.1':
+  '@types/node@24.5.0':
     dependencies:
-      undici-types: 7.10.0
+      undici-types: 7.12.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -10723,7 +10735,7 @@ snapshots:
       interface-store: 6.0.3
       it-filter: 3.1.4
       it-merge: 3.0.12
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   blockstore-level@2.0.5:
     dependencies:
@@ -10731,7 +10743,7 @@ snapshots:
       interface-blockstore: 5.3.2
       interface-store: 6.0.3
       level: 8.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       race-signal: 2.0.0
 
   bn.js@4.12.2: {}
@@ -10997,7 +11009,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -11006,7 +11018,7 @@ snapshots:
 
   chromium-edge-launcher@0.2.0:
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -11465,6 +11477,10 @@ snapshots:
       ms: 2.1.3
     optionalDependencies:
       supports-color: 8.1.1
+
+  debug@4.4.3:
+    dependencies:
+      ms: 2.1.3
 
   decamelize-keys@1.1.1:
     dependencies:
@@ -12716,7 +12732,7 @@ snapshots:
       interface-datastore: 8.3.2
       ipns: 10.1.2
       libp2p: 2.10.0
-      multiformats: 13.4.0
+      multiformats: 13.4.1
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -12872,7 +12888,7 @@ snapshots:
   interface-blockstore@5.3.2:
     dependencies:
       interface-store: 6.0.3
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   interface-datastore@8.3.2:
     dependencies:
@@ -12905,7 +12921,7 @@ snapshots:
       '@libp2p/logger': 5.2.0
       cborg: 4.2.12
       interface-datastore: 8.3.2
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       protons-runtime: 5.6.0
       timestamp-nano: 1.0.1
       uint8arraylist: 2.4.8
@@ -13356,7 +13372,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -13366,7 +13382,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -13393,7 +13409,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       jest-util: 29.7.0
 
   jest-regex-util@29.6.3: {}
@@ -13401,7 +13417,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -13418,7 +13434,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.5.0
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -13599,7 +13615,7 @@ snapshots:
       it-merge: 3.0.12
       it-parallel: 3.0.13
       main-event: 1.0.1
-      multiformats: 13.4.0
+      multiformats: 13.4.1
       p-defer: 4.0.1
       p-retry: 6.2.1
       progress-events: 1.0.1
@@ -14016,7 +14032,7 @@ snapshots:
 
   metro-file-map@0.82.5:
     dependencies:
-      debug: 4.4.1(supports-color@8.1.1)
+      debug: 4.4.3
       fb-watchman: 2.0.2
       flow-enums-runtime: 0.0.6
       graceful-fs: 4.2.11
@@ -14156,7 +14172,7 @@ snapshots:
       chalk: 4.1.2
       ci-info: 2.0.0
       connect: 3.7.0
-      debug: 4.4.1(supports-color@8.1.1)
+      debug: 4.4.3
       error-stack-parser: 2.1.4
       flow-enums-runtime: 0.0.6
       graceful-fs: 4.2.11
@@ -14503,7 +14519,7 @@ snapshots:
 
   multiformats@12.1.3: {}
 
-  multiformats@13.4.0: {}
+  multiformats@13.4.1: {}
 
   multimatch@5.0.0:
     dependencies:
@@ -16520,7 +16536,7 @@ snapshots:
 
   uint8arrays@5.1.0:
     dependencies:
-      multiformats: 13.4.0
+      multiformats: 13.4.1
 
   unbox-primitive@1.1.0:
     dependencies:
@@ -16532,6 +16548,8 @@ snapshots:
   undici-types@6.21.0: {}
 
   undici-types@7.10.0: {}
+
+  undici-types@7.12.0: {}
 
   undici@6.21.3: {}
 
