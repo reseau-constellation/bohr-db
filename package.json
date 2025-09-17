@@ -50,7 +50,7 @@
     "@libp2p/webrtc": "^5.2.23",
     "@libp2p/websockets": "^9.2.18",
     "@types/mocha": "^10.0.10",
-    "@types/uuid": "^10.0.0",
+    "@types/uuid": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0",
     "aegir": "^47.0.20",
