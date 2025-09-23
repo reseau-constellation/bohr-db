@@ -56,7 +56,7 @@ importers:
         version: 14.1.2
       '@chainsafe/libp2p-noise':
         specifier: ^16.1.4
-        version: 16.1.4
+        version: 16.1.5
       '@chainsafe/libp2p-yamux':
         specifier: ^7.0.4
         version: 7.0.4
@@ -614,8 +614,8 @@ packages:
     resolution: {integrity: sha512-HuyB1dO+GwqpbvKhq2TdrsvrtNt19iOWLEfjy2N3ItYY1gA2F67KtCOLmZ1NlEcCbjFDg+qRffQMjgkDwHSFOg==}
     engines: {npm: '>=8.7.0'}
 
-  '@chainsafe/libp2p-noise@16.1.4':
-    resolution: {integrity: sha512-f4FlyRVndcs4PoioOIZWrFc6wfO/mrAj7H63o0+eA0O2xhcoRkxHh6zna4W+WtScaF/Ua/UULgiNGuKNpLvLlQ==}
+  '@chainsafe/libp2p-noise@16.1.5':
+    resolution: {integrity: sha512-yac0bknwfuYdXXOAFGVL4fYR0de0p1Uk7W0gIkuxlj8JSqhkHr+kEt3958PfnfmX880QJAIogsh/ZupFjg0uJA==}
 
   '@chainsafe/libp2p-yamux@7.0.4':
     resolution: {integrity: sha512-Qw+EB9ew/9hRCq9V702gkm5xXThFHQ3Bdvh01M+enI1RScriSDWFGod02dwNHUxsYRc743i49sLlHp0edC7hSQ==}
@@ -1415,9 +1415,6 @@ packages:
   '@libp2p/peer-collections@6.0.35':
     resolution: {integrity: sha512-QiloK3T7DXW7R2cpL38dBnALCHf5pMzs/TyFzlEK33WezA2YFVoj7CtOJKqbn29bmV9uspWOxMgfmLUXf8ALvA==}
 
-  '@libp2p/peer-id@5.1.8':
-    resolution: {integrity: sha512-pGaM4BwjnXdGtAtd84L4/wuABpsnFYE+AQ+h3GxNFme0IsTaTVKWd1jBBE5YFeKHBHGUOhF3TlHsdjFfjQA7TA==}
-
   '@libp2p/peer-id@5.1.9':
     resolution: {integrity: sha512-cVDp7lX187Epmi/zr0Qq2RsEMmueswP9eIxYSFoMcHL/qcvRFhsxOfUGB8361E26s2WJvC9sXZ0oJS9XVueJhQ==}
 
@@ -1486,10 +1483,6 @@ packages:
 
   '@noble/ciphers@1.3.0':
     resolution: {integrity: sha512-2I0gnIVPtfnMw9ee9h1dJG7tp81+8Ob3OJb3Mv37rx5L40/b0i7djjCVvGOVqc9AEIQyvyu1i6ypKdFw8R8gQw==}
-    engines: {node: ^14.21.3 || >=16}
-
-  '@noble/curves@1.9.3':
-    resolution: {integrity: sha512-NiHFh8qtZRREtY0Bpup+xpmLnB0bn9UAtj8CARBc2x1zjpVLDC84u+Bvy2+uaSgA3AmMP9zsacMZT1echgVAdQ==}
     engines: {node: ^14.21.3 || >=16}
 
   '@noble/curves@1.9.7':
@@ -8167,15 +8160,15 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@chainsafe/libp2p-noise@16.1.4':
+  '@chainsafe/libp2p-noise@16.1.5':
     dependencies:
       '@chainsafe/as-chacha20poly1305': 0.1.0
       '@chainsafe/as-sha256': 1.2.0
-      '@libp2p/crypto': 5.1.7
-      '@libp2p/interface': 2.10.5
-      '@libp2p/peer-id': 5.1.8
+      '@libp2p/crypto': 5.1.8
+      '@libp2p/interface': 2.11.0
+      '@libp2p/peer-id': 5.1.9
       '@noble/ciphers': 1.3.0
-      '@noble/curves': 1.9.3
+      '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
       it-length-prefixed: 10.0.1
       it-length-prefixed-stream: 2.0.3
@@ -9012,8 +9005,8 @@ snapshots:
 
   '@libp2p/crypto@5.1.7':
     dependencies:
-      '@libp2p/interface': 2.10.5
-      '@noble/curves': 1.9.3
+      '@libp2p/interface': 2.11.0
+      '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
       multiformats: 13.4.1
       protons-runtime: 5.6.0
@@ -9222,13 +9215,6 @@ snapshots:
       '@libp2p/utils': 6.7.2
       multiformats: 13.4.1
 
-  '@libp2p/peer-id@5.1.8':
-    dependencies:
-      '@libp2p/crypto': 5.1.7
-      '@libp2p/interface': 2.10.5
-      multiformats: 13.4.1
-      uint8arrays: 5.1.0
-
   '@libp2p/peer-id@5.1.9':
     dependencies:
       '@libp2p/crypto': 5.1.8
@@ -9397,7 +9383,7 @@ snapshots:
   '@libp2p/webrtc@5.2.24(react-native@0.80.1(@babel/core@7.28.4)(react@19.1.0))':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
-      '@chainsafe/libp2p-noise': 16.1.4
+      '@chainsafe/libp2p-noise': 16.1.5
       '@ipshipyard/node-datachannel': 0.26.6
       '@libp2p/crypto': 5.1.8
       '@libp2p/interface': 2.11.0
@@ -9513,10 +9499,6 @@ snapshots:
     optional: true
 
   '@noble/ciphers@1.3.0': {}
-
-  '@noble/curves@1.9.3':
-    dependencies:
-      '@noble/hashes': 1.8.0
 
   '@noble/curves@1.9.7':
     dependencies:
@@ -12898,7 +12880,7 @@ snapshots:
 
   helia@5.5.1(react-native@0.80.1(@babel/core@7.28.4)(react@19.1.0)):
     dependencies:
-      '@chainsafe/libp2p-noise': 16.1.4
+      '@chainsafe/libp2p-noise': 16.1.5
       '@chainsafe/libp2p-yamux': 7.0.4
       '@helia/block-brokers': 4.2.4
       '@helia/delegated-routing-v1-http-api-client': 4.2.5
