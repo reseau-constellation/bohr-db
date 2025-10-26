@@ -499,6 +499,19 @@ describe("Typed Nested", () => {
       expectNestedMapEqual(actual, { b: { d: { c: 1 } } });
     });
 
+    it("add additional property nested key/raw value", async () => {
+      const hash = (await typedDB.put("b/d/c", 1))[0];
+      expect(hash).to.be.a("string");
+    });
+
+    it("get additional property nested key/raw value", async () => {
+      await typedDB.put("b/d", { c: 1 });
+
+      const actual = await typedDB.get("b/d/c");
+
+      expect(actual).to.equal(1);
+    });
+
     it("error on add invalid additional property value", async () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
