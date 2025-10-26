@@ -77,16 +77,14 @@ export const typedNested = <T extends NestedValueObject>({
   ): ValidateFunction<GetValueFromKey<T, K>> => {
     let branchSchema = schema;
     for (const k of splitKey(key)) {
-      if (branchSchema.additionalProperties) {
-        validators[key] =
-          branchSchema.additionalProperties === true
-            ? ((() => true) as unknown as ValidateFunction)
-            : ajv.compile(branchSchema.additionalProperties);
+      if (branchSchema.additionalProperties === true) {
+        validators[key] = (() => true) as unknown as ValidateFunction;
         break;
       }
       branchSchema =
-        branchSchema.properties[k] || branchSchema.additionalProperties;
+        branchSchema.properties?.[k] || branchSchema.additionalProperties;
     }
+
     if (!validators[key]) {
       validators[key] = ajv.compile(branchSchema);
     }
