@@ -415,13 +415,6 @@ describe("Typed Nested", () => {
       ).to.be.rejectedWith("must be number");
     });
 
-    it("error on add invalid additional property value", async () => {
-      await expect(
-        // @ts-expect-error Deliberately adding invalid value
-        typedDB.put("b/d", "text"),
-      ).to.be.rejectedWith("must be number");
-    });
-
     it("add additional property key - list", async () => {
       const hash = (await typedDB.put(["b", "d"], 1))[0];
       expect(hash).to.be.a("string");
@@ -442,16 +435,123 @@ describe("Typed Nested", () => {
       ).to.be.rejectedWith("must be number");
     });
 
+    it("invalid values in log lead to error on `db.all()`", async () => {
+      // Force write invalid value to underlying orbit-db database
+      await db.put(["b", "d"], "text");
+
+      await typedDB.set("a", "text 2");
+
+      await expect(typedDB.all()).to.be.rejectedWith("must be number");
+    });
+  });
+
+  describe("Typed Nested database - additional structured properties", () => {
+    type structure = { a: string; b: { [key: string]: { c: number } } };
+    const schema: JSONSchemaType<RecursivePartial<structure>> = {
+      type: "object",
+      properties: {
+        a: { type: "string", nullable: true },
+        b: {
+          type: "object",
+          additionalProperties: {
+            type: "object",
+            properties: {
+              c: { type: "number", nullable: true },
+            },
+          },
+          required: [],
+          nullable: true,
+        },
+      },
+      required: [],
+    };
+    let typedDB: TypedNested<structure>;
+
+    beforeEach(async () => {
+      db = await Nested()({
+        ipfs,
+        identity: testIdentity1,
+        address: databaseId,
+      });
+      typedDB = typedNested({
+        db,
+        schema,
+      });
+    });
+
+    afterEach(async () => {
+      if (typedDB) {
+        await typedDB.drop();
+        await typedDB.close();
+      }
+    });
+
+    it("add additional property key", async () => {
+      const hash = (await typedDB.put("b/d", { c: 1 }))[0];
+      expect(hash).to.be.a("string");
+    });
+
+    it("get additional property key/value", async () => {
+      await typedDB.put("b/d", { c: 1 });
+
+      const actual = await typedDB.all();
+
+      expectNestedMapEqual(actual, { b: { d: { c: 1 } } });
+    });
+
+    it("error on add invalid additional property value", async () => {
+      await expect(
+        // @ts-expect-error Deliberately adding invalid value
+        typedDB.put("b/d", "text"),
+      ).to.be.rejectedWith("must be object");
+    });
+
+    it("error on add invalid additional nested property value", async () => {
+      await expect(
+        // @ts-expect-error Deliberately adding invalid value
+        typedDB.put("b/d", { c: "text" }),
+      ).to.be.rejectedWith("must be number");
+    });
+
+    it("add additional property key - list", async () => {
+      const hash = (await typedDB.put(["b", "d"], { c: 1 }))[0];
+      expect(hash).to.be.a("string");
+    });
+
+    it("get additional property key/value - list", async () => {
+      await typedDB.put(["b", "d"], { c: 1 });
+
+      const actual = await typedDB.all();
+
+      expectNestedMapEqual(actual, { b: { d: { c: 1 } } });
+    });
+
     it("error on add invalid additional property value - list", async () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
         typedDB.put(["b", "d"], "text"),
+      ).to.be.rejectedWith("must be object");
+    });
+
+    it("error on add invalid additional nested property value - list", async () => {
+      await expect(
+        // @ts-expect-error Deliberately adding invalid value
+        typedDB.put(["b", "d"], { c: "text" }),
       ).to.be.rejectedWith("must be number");
     });
 
     it("invalid values in log lead to error on `db.all()`", async () => {
       // Force write invalid value to underlying orbit-db database
       await db.put(["b", "d"], "text");
+
+      await typedDB.set("a", "text 2");
+
+      await expect(typedDB.all()).to.be.rejectedWith("must be object");
+    });
+
+    it("invalid nested values in log lead to error on `db.all()`", async () => {
+      // Force write invalid value to underlying orbit-db database
+      await db.put(["b", "d"], { c: "text" });
 
       await typedDB.set("a", "text 2");
 
