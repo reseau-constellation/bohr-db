@@ -97,8 +97,8 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
       blockstore-level:
-        specifier: ^2.0.3
-        version: 2.0.5
+        specifier: ^3.0.0
+        version: 3.0.2
       browserify-fs:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1387,6 +1387,9 @@ packages:
   '@libp2p/interface@2.11.0':
     resolution: {integrity: sha512-0MUFKoXWHTQW3oWIgSHApmYMUKWO/Y02+7Hpyp+n3z+geD4Xo2Rku2gYWmxcq+Pyjkz6Q9YjDWz3Yb2SoV2E8Q==}
 
+  '@libp2p/interface@3.1.0':
+    resolution: {integrity: sha512-RE7/XyvC47fQBe1cHxhMvepYKa5bFCUyFrrpj8PuM0E7JtzxU7F+Du5j4VXbg2yLDcToe0+j8mB7jvwE2AThYw==}
+
   '@libp2p/kad-dht@15.1.10':
     resolution: {integrity: sha512-0lZOLQ+I6fbmf01K3RwPScXgQOjB4gl+YUJQ5ys9VVfNsj1XU+PHgWSy4e+ZHvK/xTskcIqwLJGdkluFflw7Qg==}
 
@@ -1401,6 +1404,9 @@ packages:
 
   '@libp2p/logger@5.2.0':
     resolution: {integrity: sha512-OEFS529CnIKfbWEHmuCNESw9q0D0hL8cQ8klQfjIVPur15RcgAEgc1buQ7Y6l0B6tCYg120bp55+e9tGvn8c0g==}
+
+  '@libp2p/logger@6.2.2':
+    resolution: {integrity: sha512-XtanXDT+TuMuZoCK760HGV1AmJsZbwAw5AiRUxWDbsZPwAroYq64nb41AHRu9Gyc0TK9YD+p72+5+FIxbw0hzw==}
 
   '@libp2p/mdns@11.0.46':
     resolution: {integrity: sha512-7E3kkdzXe6x+6lBc3ogniJJubaxz6SCAASi70Ne2NWZSMCOYaCjtGtnh5/Ddtel80ZJl92C/0nj9T4Gtgtr+Zg==}
@@ -1473,6 +1479,9 @@ packages:
 
   '@multiformats/multiaddr@12.5.1':
     resolution: {integrity: sha512-+DDlr9LIRUS8KncI1TX/FfUn8F2dl6BIxJgshS/yFQCNB5IAF0OGzcwB39g5NLE22s4qqDePv0Qof6HdpJ/4aQ==}
+
+  '@multiformats/multiaddr@13.0.1':
+    resolution: {integrity: sha512-XToN915cnfr6Lr9EdGWakGJbPT0ghpg/850HvdC+zFX8XvpLZElwa8synCiwa8TuvKNnny6m8j8NVBNCxhIO3g==}
 
   '@multiformats/uri-to-multiaddr@9.0.1':
     resolution: {integrity: sha512-xH2nIA98EGNfrjt4A3wiT9xw8bg7HkrRhSIUTb8am9flxweu6ObUZSAhSmaRMBWL1UnlBMPDiGNYGxVlhmygBQ==}
@@ -2116,6 +2125,10 @@ packages:
     resolution: {integrity: sha512-eUP/6pbXBkMbXFdx4IH2fVgvB7M0JvR7/lIL33zcs0IBcwjdzSSl31TOJsaCzmKSSDF9h8QYSOJux4Nd4YJqFg==}
     engines: {node: '>=12'}
 
+  abstract-level@3.1.1:
+    resolution: {integrity: sha512-CW2gKbJFTuX1feMvOrvsVMmijAOgI9kg2Ie9Dq3gOcMt/dVVoVmqNlLcEUCT13NxHFMEajcUcVBIplbyDroDiw==}
+    engines: {node: '>=18'}
+
   abstract-leveldown@0.12.4:
     resolution: {integrity: sha512-TOod9d5RDExo6STLMGa+04HGkl+TlMfbDnTyN93/ETJ9DpQ0DaYLqcMZlbXvdc4W3vVo1Qrl+WhSp8zvDsJ+jA==}
     deprecated: Superseded by abstract-level (https://github.com/Level/community#faq)
@@ -2431,8 +2444,11 @@ packages:
   blockstore-core@5.0.4:
     resolution: {integrity: sha512-v7wtBEpW2J/kKljN7Z2u4Tnwr7qwnOvW1aPVfynIxEdejlVC7gg4z9k6iJt7n5XMGkdNnH4HOmVcjYcaMnu7yg==}
 
-  blockstore-level@2.0.5:
-    resolution: {integrity: sha512-UxPCb6OKXxrImXo//sOg/sD1sMW6C7wMAja9Rh9xllJKPBsxnilui49B0nrcf9YM+oVyRDBnAkddLEEQX6PUmw==}
+  blockstore-core@6.1.1:
+    resolution: {integrity: sha512-swHp4vMywzPbsfDQiPzaAHL2A/5Qz5exlh69LNoPRv+tg23wD6N8IWDFdzXw34RsRQKXm+UWQIRcde+uppMRuA==}
+
+  blockstore-level@3.0.2:
+    resolution: {integrity: sha512-RYgLU+NVg4pyukyCVfJlQViR4OmeWgmL0ynFmsavTd8ML8QvOToQhNvSzidDOhiflNr6MtAmTUHe+rRIihtR2A==}
 
   bn.js@4.12.2:
     resolution: {integrity: sha512-n4DSx829VRTRByMRGdjQ9iqsN0Bh4OolPsFnaZBLcbi8iXcB+kJ9s7EnRt4wILZNV3kPLHkRVfOc/HvhC3ovDw==}
@@ -2462,6 +2478,9 @@ packages:
 
   browser-level@1.0.1:
     resolution: {integrity: sha512-XECYKJ+Dbzw0lbydyQuJzwNXtOpbMSq737qxJN11sIRTErOMShvDpbzTlgju7orJKvx4epULolZAuJGLzCmWRQ==}
+
+  browser-level@3.0.0:
+    resolution: {integrity: sha512-kGXtLh29jMwqKaskz5xeDLtCtN1KBz/DbQSqmvH7QdJiyGRC7RAM8PPg6gvUiNMa+wVnaxS9eSmEtP/f5ajOVw==}
 
   browser-readablestream-to-it@2.0.10:
     resolution: {integrity: sha512-I/9hEcRtjct8CzD9sVo9Mm4ntn0D+7tOVrjbPl69XAoOfgJ8NBdOQU+WX+5SHhcELJDb14mWt7zuvyqha+MEAQ==}
@@ -2690,6 +2709,10 @@ packages:
   classic-level@1.4.1:
     resolution: {integrity: sha512-qGx/KJl3bvtOHrGau2WklEZuXhS3zme+jf+fsu6Ej7W7IP/C49v7KNlWIsT1jZu0YnfzSIYDGcEWpCa1wKGWXQ==}
     engines: {node: '>=12'}
+
+  classic-level@3.0.0:
+    resolution: {integrity: sha512-yGy8j8LjPbN0Bh3+ygmyYvrmskVita92pD/zCoalfcC9XxZj6iDtZTAnz+ot7GG8p9KLTG+MZ84tSA4AhkgVZQ==}
+    engines: {node: '>=18'}
 
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
@@ -4193,11 +4216,20 @@ packages:
   interface-blockstore@5.3.2:
     resolution: {integrity: sha512-oA9Pjkxun/JHAsZrYEyKX+EoPjLciTzidE7wipLc/3YoHDjzsnXRJzAzFJXNUvogtY4g7hIwxArx8+WKJs2RIg==}
 
+  interface-blockstore@6.0.1:
+    resolution: {integrity: sha512-AVcUbMwrhiO4RqDljUitUt3aoon6MD2fblsN7vEVBDsmHFQT0LIOODVK5Qxe28h1uUvVykyZqmo09f6w55KiJg==}
+
   interface-datastore@8.3.2:
     resolution: {integrity: sha512-R3NLts7pRbJKc3qFdQf+u40hK8XWc0w4Qkx3OFEstC80VoaDUABY/dXA2EJPhtNC+bsrf41Ehvqb6+pnIclyRA==}
 
+  interface-datastore@9.0.2:
+    resolution: {integrity: sha512-jebn+GV/5LTDDoyicNIB4D9O0QszpPqT09Z/MpEWvf3RekjVKpXJCDguM5Au2fwIFxFDAQMZe5bSla0jMamCNg==}
+
   interface-store@6.0.3:
     resolution: {integrity: sha512-+WvfEZnFUhRwFxgz+QCQi7UC6o9AM0EHM9bpIe2Nhqb100NHCsTvNAn4eJgvgV2/tmLo1MP9nGxQKEcZTAueLA==}
+
+  interface-store@7.0.1:
+    resolution: {integrity: sha512-OPRRUO3Cs6Jr/t98BrJLQp1jUTPgrRH0PqFfuNoPAqd+J7ABN1tjFVjQdaOBiybYJTS/AyBSZnZVWLPvp3dW3w==}
 
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
@@ -4618,6 +4650,9 @@ packages:
   it-take@3.0.9:
     resolution: {integrity: sha512-XMeUbnjOcgrhFXPUqa7H0VIjYSV/BvyxxjCp76QHVAFDJw2LmR1SHxUFiqyGeobgzJr7P2ZwSRRJQGn4D2BVlA==}
 
+  it-to-buffer@4.0.10:
+    resolution: {integrity: sha512-dXNHSILSPVv+31nxav+egNxWA/RpSuAHCSurJCLxkFDpmzAyYPJwIkPfLkYiHLoJqyE6Z5nVFILp6aDvz9V5pw==}
+
   it-ws@6.1.5:
     resolution: {integrity: sha512-uWjMtpy5HqhSd/LlrlP3fhYrr7rUfJFFMABv0F5d6n13Q+0glhZthwUKpEAVhDrXY95Tb1RB5lLqqef+QbVNaw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
@@ -4798,9 +4833,17 @@ packages:
     resolution: {integrity: sha512-PbXpve8rKeNcZ9C1mUicC9auIYFyGpkV9/i6g76tLgANwWhtG2v7I4xNBUlkn3lE2/dZF3Pi0ygYGtLc4RXXdA==}
     engines: {node: '>=12'}
 
+  level-supports@6.2.0:
+    resolution: {integrity: sha512-QNxVXP0IRnBmMsJIh+sb2kwNCYcKciQZJEt+L1hPCHrKNELllXhvrlClVHXBYZVT+a7aTSM6StgNXdAldoab3w==}
+    engines: {node: '>=16'}
+
   level-transcoder@1.0.1:
     resolution: {integrity: sha512-t7bFwFtsQeD8cl8NIoQ2iwxA0CL/9IFw7/9gAjOonH0PWTTiRfY7Hq+Ejbsxh86tXobDQ6IOiddjNYIfOBs06w==}
     engines: {node: '>=12'}
+
+  level@10.0.0:
+    resolution: {integrity: sha512-aZJvdfRr/f0VBbSRF5C81FHON47ZsC2TkGxbBezXpGGXAUEL/s6+GP73nnhAYRSCIqUNsmJjfeOF4lzRDKbUig==}
+    engines: {node: '>=18'}
 
   level@8.0.1:
     resolution: {integrity: sha512-oPBGkheysuw7DmzFQYyFe8NAia5jFLAgEnkgWnK3OXAuJr8qFT+xBQIwokAZPME2bhPFzS8hlYcL16m8UZrtwQ==}
@@ -5024,6 +5067,10 @@ packages:
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
+
+  maybe-combine-errors@1.0.0:
+    resolution: {integrity: sha512-eefp6IduNPT6fVdwPp+1NgD0PML1NU5P6j1Mj5nz1nidX8/sWY7119WL8vTAHgqfsY74TzW0w1XPgdYEKkGZ5A==}
+    engines: {node: '>=10'}
 
   md5.js@1.3.5:
     resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
@@ -6842,6 +6889,10 @@ packages:
     resolution: {integrity: sha512-WHkws2ZflZe41zj6AolvvmaTrWds/VuyeYr9iPVv/oQeaIoVxMKaushfFWpOGDT+GuBrM/sVqF8KUCYQlSSTdQ==}
     engines: {node: '>=18'}
 
+  supports-color@10.2.2:
+    resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
+    engines: {node: '>=18'}
+
   supports-color@2.0.0:
     resolution: {integrity: sha512-KKNVtd6pCYgPIKU4cp2733HWYCpplQhddZLBUryaAHou723x+FRzQ5Df824Fj+IyyuiQTRoub4SnIFfIcrp70g==}
     engines: {node: '>=0.8.0'}
@@ -7326,6 +7377,9 @@ packages:
 
   weald@1.0.4:
     resolution: {integrity: sha512-+kYTuHonJBwmFhP1Z4YQK/dGi3jAnJGCYhyODFpHK73rbxnp9lnZQj7a2m+WVgn8fXr5bJaxUpF6l8qZpPeNWQ==}
+
+  weald@1.1.1:
+    resolution: {integrity: sha512-PaEQShzMCz8J/AD2N3dJMc1hTZWkJeLKS2NMeiVkV5KDHwgZe7qXLEzyodsT/SODxWDdXJJqocuwf3kHzcXhSQ==}
 
   web-worker@1.2.0:
     resolution: {integrity: sha512-PgF341avzqyx60neE9DD+XS26MMNMoUQRz9NOZwW32nPQrF6p77f1htcnjBSEV8BGMKZ16choqUG4hyI0Hx7mA==}
@@ -9052,6 +9106,15 @@ snapshots:
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
+  '@libp2p/interface@3.1.0':
+    dependencies:
+      '@multiformats/dns': 1.0.9
+      '@multiformats/multiaddr': 13.0.1
+      main-event: 1.0.1
+      multiformats: 13.4.2
+      progress-events: 1.0.1
+      uint8arraylist: 2.4.8
+
   '@libp2p/kad-dht@15.1.10':
     dependencies:
       '@libp2p/crypto': 5.1.8
@@ -9125,6 +9188,14 @@ snapshots:
       interface-datastore: 8.3.2
       multiformats: 13.4.2
       weald: 1.0.4
+
+  '@libp2p/logger@6.2.2':
+    dependencies:
+      '@libp2p/interface': 3.1.0
+      '@multiformats/multiaddr': 13.0.1
+      interface-datastore: 9.0.2
+      multiformats: 13.4.2
+      weald: 1.1.1
 
   '@libp2p/mdns@11.0.46':
     dependencies:
@@ -9435,6 +9506,13 @@ snapshots:
       '@chainsafe/netmask': 2.0.0
       '@multiformats/dns': 1.0.9
       abort-error: 1.0.1
+      multiformats: 13.4.2
+      uint8-varint: 2.0.4
+      uint8arrays: 5.1.0
+
+  '@multiformats/multiaddr@13.0.1':
+    dependencies:
+      '@chainsafe/is-ip': 2.1.0
       multiformats: 13.4.2
       uint8-varint: 2.0.4
       uint8arrays: 5.1.0
@@ -9789,7 +9867,7 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@semantic-release/changelog@6.0.3(semantic-release@24.2.9(typescript@5.8.3))':
+  '@semantic-release/changelog@6.0.3(semantic-release@24.2.9(typescript@5.9.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -9815,7 +9893,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/git@10.0.1(semantic-release@24.2.9(typescript@5.8.3))':
+  '@semantic-release/git@10.0.1(semantic-release@24.2.9(typescript@5.9.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -10353,6 +10431,15 @@ snapshots:
       module-error: 1.0.2
       queue-microtask: 1.2.3
 
+  abstract-level@3.1.1:
+    dependencies:
+      buffer: 6.0.3
+      is-buffer: 2.0.5
+      level-supports: 6.2.0
+      level-transcoder: 1.0.1
+      maybe-combine-errors: 1.0.0
+      module-error: 1.0.2
+
   abstract-leveldown@0.12.4:
     dependencies:
       xtend: 3.0.0
@@ -10386,9 +10473,9 @@ snapshots:
     dependencies:
       '@electron/get': 4.0.2
       '@polka/send-type': 0.5.2
-      '@semantic-release/changelog': 6.0.3(semantic-release@24.2.9(typescript@5.8.3))
+      '@semantic-release/changelog': 6.0.3(semantic-release@24.2.9(typescript@5.9.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.9(typescript@5.9.3))
-      '@semantic-release/git': 10.0.1(semantic-release@24.2.9(typescript@5.8.3))
+      '@semantic-release/git': 10.0.1(semantic-release@24.2.9(typescript@5.9.3))
       '@semantic-release/github': 11.0.6(semantic-release@24.2.9(typescript@5.9.3))
       '@semantic-release/npm': 12.0.2(semantic-release@24.2.9(typescript@5.9.3))
       '@semantic-release/release-notes-generator': 14.1.0(semantic-release@24.2.9(typescript@5.9.3))
@@ -10461,7 +10548,7 @@ snapshots:
       read-pkg-up: 11.0.0
       rimraf: 6.1.2
       semantic-release: 24.2.9(typescript@5.8.3)
-      semantic-release-monorepo: 8.0.2(semantic-release@24.2.9(typescript@5.8.3))
+      semantic-release-monorepo: 8.0.2(semantic-release@24.2.9(typescript@5.9.3))
       semver: 7.7.3
       source-map-support: 0.5.21
       strip-bom: 5.0.0
@@ -10469,9 +10556,9 @@ snapshots:
       strong-log-transformer: 2.1.0
       tempy: 3.1.0
       typedoc: 0.28.15(typescript@5.8.3)
-      typedoc-plugin-mdn-links: 5.0.10(typedoc@0.28.15(typescript@5.8.3))
-      typedoc-plugin-mermaid: 1.12.0(typedoc@0.28.15(typescript@5.8.3))
-      typedoc-plugin-missing-exports: 4.1.2(typedoc@0.28.15(typescript@5.8.3))
+      typedoc-plugin-mdn-links: 5.0.10(typedoc@0.28.15(typescript@5.9.3))
+      typedoc-plugin-mermaid: 1.12.0(typedoc@0.28.15(typescript@5.9.3))
+      typedoc-plugin-missing-exports: 4.1.2(typedoc@0.28.15(typescript@5.9.3))
       typescript: 5.8.3
       typescript-docs-verifier: 3.0.1(typescript@5.8.3)
       wherearewe: 2.0.1
@@ -10823,14 +10910,27 @@ snapshots:
       it-merge: 3.0.12
       multiformats: 13.4.2
 
-  blockstore-level@2.0.5:
+  blockstore-core@6.1.1:
     dependencies:
-      blockstore-core: 5.0.4
-      interface-blockstore: 5.3.2
-      interface-store: 6.0.3
-      level: 8.0.1
+      '@libp2p/logger': 6.2.2
+      interface-blockstore: 6.0.1
+      interface-store: 7.0.1
+      it-all: 3.0.9
+      it-filter: 3.1.4
+      it-merge: 3.0.12
+      multiformats: 13.4.2
+
+  blockstore-level@3.0.2:
+    dependencies:
+      blockstore-core: 6.1.1
+      interface-blockstore: 6.0.1
+      interface-store: 7.0.1
+      it-all: 3.0.9
+      it-to-buffer: 4.0.10
+      level: 10.0.0
       multiformats: 13.4.2
       race-signal: 2.0.0
+      uint8arrays: 5.1.0
 
   bn.js@4.12.2: {}
 
@@ -10862,6 +10962,10 @@ snapshots:
       catering: 2.1.1
       module-error: 1.0.2
       run-parallel-limit: 1.1.0
+
+  browser-level@3.0.0:
+    dependencies:
+      abstract-level: 3.1.1
 
   browser-readablestream-to-it@2.0.10: {}
 
@@ -11129,6 +11233,13 @@ snapshots:
     dependencies:
       abstract-level: 1.0.4
       catering: 2.1.1
+      module-error: 1.0.2
+      napi-macros: 2.2.2
+      node-gyp-build: 4.8.4
+
+  classic-level@3.0.0:
+    dependencies:
+      abstract-level: 3.1.1
       module-error: 1.0.2
       napi-macros: 2.2.2
       node-gyp-build: 4.8.4
@@ -12989,12 +13100,24 @@ snapshots:
       interface-store: 6.0.3
       multiformats: 13.4.2
 
+  interface-blockstore@6.0.1:
+    dependencies:
+      interface-store: 7.0.1
+      multiformats: 13.4.2
+
   interface-datastore@8.3.2:
     dependencies:
       interface-store: 6.0.3
       uint8arrays: 5.1.0
 
+  interface-datastore@9.0.2:
+    dependencies:
+      interface-store: 7.0.1
+      uint8arrays: 5.1.0
+
   interface-store@6.0.3: {}
+
+  interface-store@7.0.1: {}
 
   internal-slot@1.1.0:
     dependencies:
@@ -13430,6 +13553,10 @@ snapshots:
 
   it-take@3.0.9: {}
 
+  it-to-buffer@4.0.10:
+    dependencies:
+      uint8arrays: 5.1.0
+
   it-ws@6.1.5:
     dependencies:
       '@types/ws': 8.18.1
@@ -13670,10 +13797,18 @@ snapshots:
 
   level-supports@4.0.1: {}
 
+  level-supports@6.2.0: {}
+
   level-transcoder@1.0.1:
     dependencies:
       buffer: 6.0.3
       module-error: 1.0.2
+
+  level@10.0.0:
+    dependencies:
+      abstract-level: 3.1.1
+      browser-level: 3.0.0
+      classic-level: 3.0.0
 
   level@8.0.1:
     dependencies:
@@ -13945,6 +14080,8 @@ snapshots:
       '@arr/every': 1.0.1
 
   math-intrinsics@1.1.0: {}
+
+  maybe-combine-errors@1.0.0: {}
 
   md5.js@1.3.5:
     dependencies:
@@ -15821,7 +15958,7 @@ snapshots:
 
   scheduler@0.26.0: {}
 
-  semantic-release-monorepo@8.0.2(semantic-release@24.2.9(typescript@5.8.3)):
+  semantic-release-monorepo@8.0.2(semantic-release@24.2.9(typescript@5.9.3)):
     dependencies:
       debug: 4.4.3(supports-color@8.1.1)
       execa: 5.1.1
@@ -15835,12 +15972,12 @@ snapshots:
       ramda: 0.27.2
       read-pkg: 5.2.0
       semantic-release: 24.2.9(typescript@5.8.3)
-      semantic-release-plugin-decorators: 4.0.0(semantic-release@24.2.9(typescript@5.8.3))
+      semantic-release-plugin-decorators: 4.0.0(semantic-release@24.2.9(typescript@5.9.3))
       tempy: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
-  semantic-release-plugin-decorators@4.0.0(semantic-release@24.2.9(typescript@5.8.3)):
+  semantic-release-plugin-decorators@4.0.0(semantic-release@24.2.9(typescript@5.9.3)):
     dependencies:
       semantic-release: 24.2.9(typescript@5.8.3)
 
@@ -16289,6 +16426,8 @@ snapshots:
       make-asynchronous: 1.0.1
       time-span: 5.1.0
 
+  supports-color@10.2.2: {}
+
   supports-color@2.0.0: {}
 
   supports-color@5.5.0:
@@ -16562,16 +16701,16 @@ snapshots:
 
   typedarray@0.0.6: {}
 
-  typedoc-plugin-mdn-links@5.0.10(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-mdn-links@5.0.10(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       typedoc: 0.28.15(typescript@5.8.3)
 
-  typedoc-plugin-mermaid@1.12.0(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-mermaid@1.12.0(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       html-escaper: 3.0.3
       typedoc: 0.28.15(typescript@5.8.3)
 
-  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       typedoc: 0.28.15(typescript@5.8.3)
 
@@ -16794,6 +16933,11 @@ snapshots:
     dependencies:
       ms: 3.0.0-canary.202508261828
       supports-color: 9.4.0
+
+  weald@1.1.1:
+    dependencies:
+      ms: 3.0.0-canary.202508261828
+      supports-color: 10.2.2
 
   web-worker@1.2.0: {}
 
