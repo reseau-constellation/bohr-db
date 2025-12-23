@@ -24,8 +24,8 @@ importers:
         specifier: ^1.2.1
         version: 1.3.0(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
       '@orbitdb/nested-db':
-        specifier: ^1.3.4
-        version: 1.3.6(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
+        specifier: ^2.0.0
+        version: 2.0.1(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
       '@orbitdb/ordered-keyvalue-db':
         specifier: ^1.3.5
         version: 1.3.5(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
@@ -1574,6 +1574,9 @@ packages:
 
   '@orbitdb/nested-db@1.3.6':
     resolution: {integrity: sha512-bgCtGXNTuioKy7reJ1+CoBoFzmBqBygKiSu8l5uMVBn/CV3UPUPIRyr7i66iTfkTnzlkenQdXfHjys6St7rU2A==}
+
+  '@orbitdb/nested-db@2.0.1':
+    resolution: {integrity: sha512-+gXzoF4/jdokIRnxdeV2KD+YRnlLup0xdYOucT75U6NGYG/wqkxIniuy4zXBPDHWNRTtbhzzWwlHTfZgKSnQKw==}
 
   '@orbitdb/ordered-keyvalue-db@1.3.5':
     resolution: {integrity: sha512-Sq2V6BVwcaK0AUACQaeP4o6y/tjGPieT+k3oto8wMvPi1EkSxWvEe2CjIlCmwb9WYIDlfa00N7PEtW8DXtm7cQ==}
@@ -9568,6 +9571,19 @@ snapshots:
       '@orbitdb/ordered-keyvalue-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
       helia: 5.5.1(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
       it-all: 3.0.9
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
+
+  '@orbitdb/nested-db@2.0.1(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))':
+    dependencies:
+      '@orbitdb/core': 3.0.2
+      '@orbitdb/ordered-keyvalue-db': 1.3.5(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
+      helia: 5.5.1(react-native@0.80.1(@babel/core@7.28.5)(react@19.1.0))
+      it-all: 3.0.9
+      ts-deepmerge: 7.0.3
     transitivePeerDependencies:
       - bufferutil
       - react-native
