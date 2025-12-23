@@ -48,8 +48,8 @@ importers:
         specifier: ^7.0.3
         version: 7.0.3
       uuid:
-        specifier: ^11.1.0
-        version: 11.1.0
+        specifier: ^13.0.0
+        version: 13.0.0
     devDependencies:
       '@chainsafe/libp2p-gossipsub':
         specifier: ^14.1.2
@@ -7254,8 +7254,8 @@ packages:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
 
-  uuid@11.1.0:
-    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
+  uuid@13.0.0:
+    resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
     hasBin: true
 
   uuid@8.3.2:
@@ -10406,9 +10406,9 @@ snapshots:
       strong-log-transformer: 2.1.0
       tempy: 3.1.0
       typedoc: 0.28.15(typescript@5.8.3)
-      typedoc-plugin-mdn-links: 5.0.10(typedoc@0.28.15(typescript@5.8.3))
-      typedoc-plugin-mermaid: 1.12.0(typedoc@0.28.15(typescript@5.8.3))
-      typedoc-plugin-missing-exports: 4.1.2(typedoc@0.28.15(typescript@5.8.3))
+      typedoc-plugin-mdn-links: 5.0.10(typedoc@0.28.15(typescript@5.9.3))
+      typedoc-plugin-mermaid: 1.12.0(typedoc@0.28.15(typescript@5.9.3))
+      typedoc-plugin-missing-exports: 4.1.2(typedoc@0.28.15(typescript@5.9.3))
       typescript: 5.8.3
       typescript-docs-verifier: 3.0.1(typescript@5.8.3)
       wherearewe: 2.0.1
@@ -16463,16 +16463,16 @@ snapshots:
 
   typedarray@0.0.6: {}
 
-  typedoc-plugin-mdn-links@5.0.10(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-mdn-links@5.0.10(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       typedoc: 0.28.15(typescript@5.8.3)
 
-  typedoc-plugin-mermaid@1.12.0(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-mermaid@1.12.0(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       html-escaper: 3.0.3
       typedoc: 0.28.15(typescript@5.8.3)
 
-  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.15(typescript@5.8.3)):
+  typedoc-plugin-missing-exports@4.1.2(typedoc@0.28.15(typescript@5.9.3)):
     dependencies:
       typedoc: 0.28.15(typescript@5.8.3)
 
@@ -16658,7 +16658,7 @@ snapshots:
 
   utils-merge@1.0.1: {}
 
-  uuid@11.1.0: {}
+  uuid@13.0.0: {}
 
   uuid@8.3.2: {}
 
