@@ -1,4 +1,4 @@
-import { type HeliaLibp2p } from "helia";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
@@ -10,13 +10,12 @@ import { JSONSchemaType } from "ajv";
 import { Nested, NestedDatabaseType } from "@orbitdb/nested-db";
 import { TypedNested, typedNested } from "@/nested.js";
 import { RecursivePartial } from "@/types.js";
-import { expectNestedMapEqual } from "./utils.js";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys-nested";
 
 describe("Typed Nested", () => {
-  let ipfs: HeliaLibp2p;
+  let ipfs: Helia;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
@@ -42,8 +41,8 @@ describe("Typed Nested", () => {
   });
 
   describe("Creating a Typed Nested database", () => {
-    type structure = { a: number; b: { c: string } };
-    const schema: JSONSchemaType<RecursivePartial<structure>> = {
+    type Structure = { a: number; b: { c: string } };
+    const schema: JSONSchemaType<RecursivePartial<Structure>> = {
       type: "object",
       properties: {
         a: { type: "number", nullable: true },
@@ -58,7 +57,7 @@ describe("Typed Nested", () => {
       },
       required: [],
     };
-    let typedDB: TypedNested<structure>;
+    let typedDB: TypedNested<Structure>;
 
     beforeEach(async () => {
       db = await Nested()({
@@ -66,7 +65,7 @@ describe("Typed Nested", () => {
         identity: testIdentity1,
         address: databaseId,
       });
-      typedDB = typedNested({
+      typedDB = typedNested<Structure>({
         db,
         schema,
       });
@@ -91,8 +90,8 @@ describe("Typed Nested", () => {
   });
 
   describe("Typed Nested database - fixed properties", () => {
-    type structure = { a: number; b: { c: string } };
-    const schema: JSONSchemaType<RecursivePartial<structure>> = {
+    type Structure = { a: number; b: { c: string } };
+    const schema: JSONSchemaType<RecursivePartial<Structure>> = {
       type: "object",
       properties: {
         a: { type: "number", nullable: true },
@@ -109,7 +108,7 @@ describe("Typed Nested", () => {
       additionalProperties: false,
       required: [],
     };
-    let typedDB: TypedNested<structure>;
+    let typedDB: TypedNested<Structure>;
 
     beforeEach(async () => {
       db = await Nested()({
@@ -117,7 +116,7 @@ describe("Typed Nested", () => {
         identity: testIdentity1,
         address: databaseId,
       });
-      typedDB = typedNested({
+      typedDB = typedNested<Structure>({
         db,
         schema,
       });
@@ -135,7 +134,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { a: 1 });
+      expect(actual).to.deep.equal({ a: 1 });
     });
 
     it("get valid key/value", async () => {
@@ -193,7 +192,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { a: 1, b: { c: "test" } });
+      expect(actual).to.deep.equal({ a: 1, b: { c: "test" } });
     });
 
     it("get valid nested key/value", async () => {
@@ -201,7 +200,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.get("b");
 
-      expectNestedMapEqual(actual!, { c: "test" });
+      expect(actual).to.deep.equal({ c: "test" });
     });
 
     it("delete nested key", async () => {
@@ -240,42 +239,42 @@ describe("Typed Nested", () => {
       );
     });
 
-    it("put nested valid", async () => {
-      await typedDB.put({ b: { c: "test" } });
+    it("insert nested valid", async () => {
+      await typedDB.insert({ b: { c: "test" } });
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { c: "test" } });
+      expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
-    it("error on put nested invalid key", async () => {
+    it("error on insert nested invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid key
-      await expect(typedDB.put({ b: { d: 3 } })).to.be.rejectedWith(
+      await expect(typedDB.insert({ b: { d: 3 } })).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
 
-    it("error on put nested invalid value", async () => {
+    it("error on insert nested invalid value", async () => {
       await expect(
         // @ts-expect-error Deliberately adding invalid value
-        typedDB.put({ b: { c: 1 } }),
+        typedDB.insert({ b: { c: 1 } }),
       ).to.be.rejectedWith("must be string");
     });
 
-    it("put nested valid with key", async () => {
-      await typedDB.put("b", { c: "test" });
+    it("insert valid with key", async () => {
+      await typedDB.insert("b", { c: "test" });
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { c: "test" } });
+      expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
-    it("put valid nested key/value - list key", async () => {
-      await typedDB.put(["b", "c"], "test");
+    it("insert nested key/value - list key", async () => {
+      await typedDB.insert(["b"], { c: "test" });
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { c: "test" } });
+      expect(actual).to.deep.equal({ b: { c: "test" } });
     });
 
     it("get valid nested key/value - list key", async () => {
@@ -300,9 +299,9 @@ describe("Typed Nested", () => {
       );
     });
 
-    it("error on put nested with invalid key", async () => {
+    it("error on insert with invalid key", async () => {
       // @ts-expect-error Deliberately adding invalid value
-      await expect(typedDB.put("b/d", 2)).to.be.rejectedWith(
+      await expect(typedDB.insert("b/d", 2)).to.be.rejectedWith(
         "Unsupported key b/d.",
       );
     });
@@ -314,9 +313,9 @@ describe("Typed Nested", () => {
       );
     });
 
-    it("error on put nested with key and invalid value", async () => {
+    it("error on insert with key and invalid value", async () => {
       // @ts-expect-error Deliberately adding invalid value
-      await expect(typedDB.put("b", { c: 1 })).to.be.rejectedWith(
+      await expect(typedDB.insert("b", { c: 1 })).to.be.rejectedWith(
         "must be string",
       );
     });
@@ -358,8 +357,8 @@ describe("Typed Nested", () => {
   });
 
   describe("Typed Nested database - additional properties", () => {
-    type structure = { a: string; b: { [key: string]: number } };
-    const schema: JSONSchemaType<RecursivePartial<structure>> = {
+    type Structure = { a: string; b: { [key: string]: number } };
+    const schema: JSONSchemaType<RecursivePartial<Structure>> = {
       type: "object",
       properties: {
         a: { type: "string", nullable: true },
@@ -374,7 +373,7 @@ describe("Typed Nested", () => {
       },
       required: [],
     };
-    let typedDB: TypedNested<structure>;
+    let typedDB: TypedNested<Structure>;
 
     beforeEach(async () => {
       db = await Nested()({
@@ -382,7 +381,7 @@ describe("Typed Nested", () => {
         identity: testIdentity1,
         address: databaseId,
       });
-      typedDB = typedNested({
+      typedDB = typedNested<Structure>({
         db,
         schema,
       });
@@ -396,7 +395,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key", async () => {
-      const hash = (await typedDB.put("b/d", 1))[0];
+      const hash = await typedDB.put("b/d", 1);
       expect(hash).to.be.a("string");
     });
 
@@ -405,7 +404,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { d: 1 } });
+      expect(actual).to.deep.equal({ b: { d: 1 } });
     });
 
     it("error on add invalid additional property value", async () => {
@@ -416,7 +415,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key - list", async () => {
-      const hash = (await typedDB.put(["b", "d"], 1))[0];
+      const hash = await typedDB.put(["b", "d"], 1);
       expect(hash).to.be.a("string");
     });
 
@@ -425,7 +424,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { d: 1 } });
+      expect(actual).to.deep.equal({ b: { d: 1 } });
     });
 
     it("error on add invalid additional property value - list", async () => {
@@ -446,8 +445,8 @@ describe("Typed Nested", () => {
   });
 
   describe("Typed Nested database - additional structured properties", () => {
-    type structure = { a: string; b: { [key: string]: { c: number } } };
-    const schema: JSONSchemaType<RecursivePartial<structure>> = {
+    type Structure = { a: string; b: { [key: string]: { c: number } } };
+    const schema: JSONSchemaType<RecursivePartial<Structure>> = {
       type: "object",
       properties: {
         a: { type: "string", nullable: true },
@@ -465,7 +464,7 @@ describe("Typed Nested", () => {
       },
       required: [],
     };
-    let typedDB: TypedNested<structure>;
+    let typedDB: TypedNested<Structure>;
 
     beforeEach(async () => {
       db = await Nested()({
@@ -473,7 +472,7 @@ describe("Typed Nested", () => {
         identity: testIdentity1,
         address: databaseId,
       });
-      typedDB = typedNested({
+      typedDB = typedNested<Structure>({
         db,
         schema,
       });
@@ -487,7 +486,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key", async () => {
-      const hash = (await typedDB.put("b/d", { c: 1 }))[0];
+      const hash = await typedDB.put("b/d", { c: 1 });
       expect(hash).to.be.a("string");
     });
 
@@ -496,11 +495,11 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { d: { c: 1 } } });
+      expect(actual).to.deep.equal({ b: { d: { c: 1 } } });
     });
 
     it("add additional property nested key/raw value", async () => {
-      const hash = (await typedDB.put("b/d/c", 1))[0];
+      const hash = await typedDB.put("b/d/c", 1);
       expect(hash).to.be.a("string");
     });
 
@@ -527,7 +526,7 @@ describe("Typed Nested", () => {
     });
 
     it("add additional property key - list", async () => {
-      const hash = (await typedDB.put(["b", "d"], { c: 1 }))[0];
+      const hash = await typedDB.put(["b", "d"], { c: 1 });
       expect(hash).to.be.a("string");
     });
 
@@ -536,7 +535,7 @@ describe("Typed Nested", () => {
 
       const actual = await typedDB.all();
 
-      expectNestedMapEqual(actual, { b: { d: { c: 1 } } });
+      expect(actual).to.deep.equal({ b: { d: { c: 1 } } });
     });
 
     it("error on add invalid additional property value - list", async () => {

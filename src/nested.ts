@@ -2,12 +2,8 @@ import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
 import {
   joinKey,
   splitKey,
-  NestedObjectToMap,
-  NestedValueObject,
   NestedDatabaseType,
-  toObject,
   asJoinedKey,
-  isNestedValueObject,
 } from "@orbitdb/nested-db";
 
 import {
@@ -23,45 +19,46 @@ import {
   getJoinedKey,
   removeUndefinedProperties,
 } from "./utils.js";
+import { NestedValue } from "@orbitdb/nested-db/dist/types.js";
+import { DagCborEncodable } from "@orbitdb/core";
 
-// TODO: organise types
-type MapIfObject<T> = T extends NestedValueObject ? NestedObjectToMap<T> : T;
-
-export type TypedNested<T extends NestedValueObject> = Omit<
+export type TypedNested<T extends NestedValue> = Omit<
   NestedDatabaseType,
-  "put" | "set" | "del" | "get" | "move" | "all"
+  "put" | "set" | "insert" | "del" | "get" | "move" | "all"
 > & {
-  put(value: RecursivePartial<T>): Promise<string[]>;
+  insert(value: RecursivePartial<T>): Promise<string[]>;
+  insert<K extends ExtractKeys<T>>(
+    key: K,
+    value: RecursivePartial<GetValueFromKey<T, K>>,
+  ): Promise<string[]>;
+  insert<K extends ExtractKeysAsList<T>>(
+    key: K,
+    value: RecursivePartial<GetValueFromKeyList<T, K>>,
+  ): Promise<string[]>;
+
   put<K extends ExtractKeys<T>>(
     key: K,
     value: GetValueFromKey<T, K>,
-    position?: number,
   ): Promise<string[]>;
   put<K extends ExtractKeysAsList<T>>(
     key: K,
-    value: RecursivePartial<GetValueFromKeyList<T, K>>,
-    position?: number,
+    value: GetValueFromKeyList<T, K>,
   ): Promise<string[]>;
   set: TypedNested<T>["put"];
-
-  move<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(
-    key: K,
-    position: number,
-  ): Promise<string>;
 
   del<K extends ExtractKeys<T> | ExtractKeysAsList<T>>(key: K): Promise<string>;
 
   get<K extends ExtractKeys<T>>(
     key: K,
-  ): Promise<MapIfObject<GetValueFromKey<T, K>> | undefined>;
+  ): Promise<GetValueFromKey<T, K> | undefined>;
   get<K extends ExtractKeysAsList<T>>(
     key: K,
-  ): Promise<MapIfObject<GetValueFromKeyList<T, K>> | undefined>;
+  ): Promise<GetValueFromKeyList<T, K> | undefined>;
 
-  all: () => Promise<NestedObjectToMap<T>>;
+  all: () => Promise<RecursivePartial<T>>;
 };
 
-export const typedNested = <T extends NestedValueObject>({
+export const typedNested = <T extends NestedValue>({
   db,
   schema,
 }: {
@@ -141,14 +138,14 @@ export const typedNested = <T extends NestedValueObject>({
       } else if (prop === "all") {
         const typedAll: TypedNested<T>["all"] = async () => {
           const jsonValue = await db.all();
-          if (rootValidator(toObject(jsonValue))) {
-            return jsonValue as unknown as NestedObjectToMap<T>;
+          if (rootValidator(jsonValue)) {
+            return jsonValue as unknown as RecursivePartial<T>;
           }
           throw new Error(JSON.stringify(rootValidator.errors, undefined, 2));
         };
         return typedAll;
-      } else if (prop === "set" || prop === "put") {
-        const typedPut = async <
+      } else if (prop === "insert") {
+        const typedInsert = async <
           K extends ExtractKeys<T> | ExtractKeysAsList<T> | RecursivePartial<T>,
         >(
           keyOrValue: K,
@@ -157,16 +154,8 @@ export const typedNested = <T extends NestedValueObject>({
             : K extends ExtractKeysAsList<T>
               ? GetValueFromKeyList<T, K>
               : undefined,
-          position?: K extends ExtractKeys<T> | ExtractKeysAsList<T>
-            ? number | undefined
-            : undefined,
-        ): Promise<string[]> => {
+        ): Promise<string> => {
           if (typeof keyOrValue === "string" || Array.isArray(keyOrValue)) {
-            // @ts-expect-error types in progress
-            const data = isNestedValueObject(value)
-              ? removeUndefinedProperties(value)
-              : value;
-
             const joinedKey = asJoinedKey(keyOrValue) as ExtractKeys<T>;
 
             if (!supportedKey(joinedKey))
@@ -174,11 +163,10 @@ export const typedNested = <T extends NestedValueObject>({
 
             const valueValidator = getValidator(joinedKey);
 
-            if (valueValidator(data)) {
-              return await target.put(
+            if (valueValidator(value)) {
+              return await target.insert(
                 joinedKey,
-                data as unknown as NoUndefinedField<T>,
-                position,
+                value as unknown as NoUndefinedField<T>,
               );
             } else {
               throw new Error(
@@ -190,7 +178,7 @@ export const typedNested = <T extends NestedValueObject>({
             const data = removeUndefinedProperties(keyOrValue);
 
             if (rootValidator(data)) {
-              return await db.put(data as unknown as NoUndefinedField<T>);
+              return await db.insert(data as unknown as NoUndefinedField<T>);
             } else {
               const firstError = rootValidator.errors?.[0];
               // Provide better error message
@@ -207,6 +195,34 @@ export const typedNested = <T extends NestedValueObject>({
                 JSON.stringify(rootValidator.errors, undefined, 2),
               );
             }
+          }
+        };
+        return typedInsert;
+      } else if (prop === "set" || prop === "put") {
+        const typedPut = async <
+          K extends ExtractKeysAsList<T> | ExtractKeys<T>,
+        >(
+          key: K,
+          value: GetValueFromNestedKey<T, K>,
+        ): Promise<string> => {
+          const joinedKey = (
+            typeof key === "string"
+              ? key
+              : getJoinedKey(key as ExtractKeysAsList<T>)
+          ) as ExtractKeys<T>;
+          if (!supportedKey(key))
+            throw new Error(`Unsupported key ${joinedKey}.`);
+
+          const valueValidator = getValidator(joinedKey);
+          if (valueValidator(value)) {
+            return await target.put(
+              joinedKey,
+              value as { [key: string]: DagCborEncodable },
+            );
+          } else {
+            throw new Error(
+              JSON.stringify(valueValidator.errors, undefined, 2),
+            );
           }
         };
         return typedPut;
