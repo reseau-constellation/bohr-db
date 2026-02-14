@@ -91,8 +91,8 @@ importers:
         specifier: ^47.0.25
         version: 47.0.26(@babel/core@7.28.6)(@typescript-eslint/utils@8.55.0(eslint@10.0.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)
       blockstore-core:
-        specifier: ^5.0.4
-        version: 5.0.4
+        specifier: ^6.0.0
+        version: 6.1.2
       blockstore-level:
         specifier: ^2.0.5
         version: 2.0.5
@@ -2505,6 +2505,9 @@ packages:
   blockstore-core@5.0.4:
     resolution: {integrity: sha512-v7wtBEpW2J/kKljN7Z2u4Tnwr7qwnOvW1aPVfynIxEdejlVC7gg4z9k6iJt7n5XMGkdNnH4HOmVcjYcaMnu7yg==}
 
+  blockstore-core@6.1.2:
+    resolution: {integrity: sha512-yWU38RM8DJ6C7Y2shIeTNVgGiJX/ko2RXqDyNlxMakOc+aVS7k1SCiakMlh6ix0juRNPtj0ySMTXU8UBDXXRCQ==}
+
   blockstore-level@2.0.5:
     resolution: {integrity: sha512-UxPCb6OKXxrImXo//sOg/sD1sMW6C7wMAja9Rh9xllJKPBsxnilui49B0nrcf9YM+oVyRDBnAkddLEEQX6PUmw==}
 
@@ -4300,6 +4303,9 @@ packages:
 
   interface-blockstore@5.3.2:
     resolution: {integrity: sha512-oA9Pjkxun/JHAsZrYEyKX+EoPjLciTzidE7wipLc/3YoHDjzsnXRJzAzFJXNUvogtY4g7hIwxArx8+WKJs2RIg==}
+
+  interface-blockstore@6.0.1:
+    resolution: {integrity: sha512-AVcUbMwrhiO4RqDljUitUt3aoon6MD2fblsN7vEVBDsmHFQT0LIOODVK5Qxe28h1uUvVykyZqmo09f6w55KiJg==}
 
   interface-datastore@8.3.2:
     resolution: {integrity: sha512-R3NLts7pRbJKc3qFdQf+u40hK8XWc0w4Qkx3OFEstC80VoaDUABY/dXA2EJPhtNC+bsrf41Ehvqb6+pnIclyRA==}
@@ -11017,6 +11023,16 @@ snapshots:
       it-merge: 3.0.12
       multiformats: 13.4.2
 
+  blockstore-core@6.1.2:
+    dependencies:
+      '@libp2p/logger': 6.2.2
+      interface-blockstore: 6.0.1
+      interface-store: 7.0.1
+      it-all: 3.0.9
+      it-filter: 3.1.4
+      it-merge: 3.0.12
+      multiformats: 13.4.2
+
   blockstore-level@2.0.5:
     dependencies:
       blockstore-core: 5.0.4
@@ -13228,6 +13244,11 @@ snapshots:
   interface-blockstore@5.3.2:
     dependencies:
       interface-store: 6.0.3
+      multiformats: 13.4.2
+
+  interface-blockstore@6.0.1:
+    dependencies:
+      interface-store: 7.0.1
       multiformats: 13.4.2
 
   interface-datastore@8.3.2:
