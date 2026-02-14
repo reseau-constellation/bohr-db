@@ -54,7 +54,7 @@
     "@typescript-eslint/parser": "^8.50.1",
     "aegir": "^47.0.25",
     "blockstore-core": "^5.0.4",
-    "blockstore-level": "^2.0.5",
+    "blockstore-level": "^3.0.0",
     "browserify-fs": "^1.0.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
