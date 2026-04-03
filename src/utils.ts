@@ -89,9 +89,10 @@ export const removeUndefinedProperties = <
           clef,
           typeof val === "object" &&
           !Array.isArray(val) &&
+          val !== null &&
           !(val instanceof CID)
             ? removeUndefinedProperties(val as NestedValueObject)
-            : val!,
+            : val,
         ] as [string, DBElements];
       }),
   ) as NoUndefinedField<T>;
