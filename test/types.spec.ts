@@ -3,7 +3,7 @@ import {
   ExtractKeysAsList,
   GetValueFromKey,
   GetValueFromKeyList,
-} from "@/types";
+} from "@/types.js";
 
 describe("Types", () => {
   type S = {
@@ -64,7 +64,7 @@ describe("Types", () => {
       _value = ["f", "h", "g"];
     });
     it("Error for wrong nested key", () => {
-      //@ts-expect-error wrogn key
+      //@ts-expect-error wrong key
       _value = ["f", "g", "z"];
     });
     it("Error for too deep", () => {

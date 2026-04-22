@@ -1,7 +1,7 @@
 import type { JSONSchemaType } from "ajv";
 import type { FeedDatabaseType } from "@orbitdb/feed-db";
 
-import type { DBElements } from "./types";
+import type { DBElements } from "./types.js";
 import { generateListValidator, removeUndefinedProperties } from "./utils.js";
 
 export type TypedFeed<T extends DBElements> = Omit<

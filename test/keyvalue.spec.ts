@@ -1,4 +1,4 @@
-import { type HeliaLibp2p } from "helia";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
@@ -14,7 +14,7 @@ chai.use(chaiAsPromised);
 const keysPath = "./testkeys";
 
 describe("Typed KeyValue", () => {
-  let ipfs: HeliaLibp2p;
+  let ipfs: Helia;
   let orbit: OrbitDB;
   let db: KeyValueDatabase;
 

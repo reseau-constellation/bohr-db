@@ -1,7 +1,7 @@
 import { JSONSchemaType } from "ajv";
 import { OrderedKeyValueDatabaseType } from "@orbitdb/ordered-keyvalue-db";
 
-import { DBElements } from "./types";
+import { DBElements } from "./types.js";
 import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
 import { DagCborEncodable } from "@orbitdb/core";
 

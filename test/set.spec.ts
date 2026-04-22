@@ -1,4 +1,4 @@
-import { type HeliaLibp2p } from "helia";
+import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.js";
@@ -16,7 +16,7 @@ const keysPath = "./testkeys";
 const numericSchema: JSONSchemaType<number> = { type: "number" };
 
 describe("Typed Set", () => {
-  let ipfs: HeliaLibp2p;
+  let ipfs: Helia;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
