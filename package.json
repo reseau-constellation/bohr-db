@@ -1,6 +1,6 @@
 {
   "name": "@constl/bohr-db",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Type-safe databases for orbit-db.",
   "author": "Julien Jean Malard-Adam",
   "keywords": [
@@ -29,7 +29,7 @@
     "@orbitdb/core": "^3.0.2",
     "@orbitdb/core-types": "^1.2.3",
     "@orbitdb/feed-db": "^1.4.0",
-    "@orbitdb/nested-db": "^2.1.1",
+    "@orbitdb/nested-db": "^2.1.3",
     "@orbitdb/ordered-keyvalue-db": "^1.4.0",
     "@orbitdb/set-db": "^2.1.0",
     "ajv": "^8.18.0",

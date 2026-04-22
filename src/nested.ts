@@ -2,8 +2,9 @@ import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
 import {
   joinKey,
   splitKey,
-  NestedDatabaseType,
+  type NestedDatabaseType,
   asJoinedKey,
+  type NestedValue,
 } from "@orbitdb/nested-db";
 
 import {
@@ -19,7 +20,6 @@ import {
   getJoinedKey,
   removeUndefinedProperties,
 } from "./utils.js";
-import { NestedValue } from "@orbitdb/nested-db/dist/types.js";
 import { DagCborEncodable } from "@orbitdb/core";
 
 export type TypedNested<T extends NestedValue> = Omit<

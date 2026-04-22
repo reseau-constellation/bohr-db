@@ -24,8 +24,8 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       '@orbitdb/nested-db':
-        specifier: ^2.1.1
-        version: 2.1.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
+        specifier: ^2.1.3
+        version: 2.1.3(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       '@orbitdb/ordered-keyvalue-db':
         specifier: ^1.4.0
         version: 1.4.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
@@ -1744,8 +1744,8 @@ packages:
   '@orbitdb/nested-db@1.3.6':
     resolution: {integrity: sha512-bgCtGXNTuioKy7reJ1+CoBoFzmBqBygKiSu8l5uMVBn/CV3UPUPIRyr7i66iTfkTnzlkenQdXfHjys6St7rU2A==}
 
-  '@orbitdb/nested-db@2.1.1':
-    resolution: {integrity: sha512-/viSoGyqrE6nKBsRhQDji/R0eN8vnUGX6GunCc8pmZKVcMGtua7tmn/iLDQEJSikD1NB4vCyNhqK5CQ+9F7Mkg==}
+  '@orbitdb/nested-db@2.1.3':
+    resolution: {integrity: sha512-KQ5OgodTaXa5bxg1kXkn/cm3lgBtVq6yeKM6ofM5TeWBJdc770QpPgo4E5KXaQSrPPhHoqDaCASaDJdD1ChEhA==}
 
   '@orbitdb/ordered-keyvalue-db@1.4.0':
     resolution: {integrity: sha512-RYQyVG9AJ5g9/l2LiqdXFE+rhksVdkQ5NZLoW59RZ3uAulGKNPJtVaZGxElA9c3SPHhwP3lv7yfpb5qd6dYTTw==}
@@ -2279,20 +2279,20 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@vue/compiler-core@3.5.32':
-    resolution: {integrity: sha512-4x74Tbtqnda8s/NSD6e1Dr5p1c8HdMU5RWSjMSUzb8RTcUQqevDCxVAitcLBKT+ie3o0Dl9crc/S/opJM7qBGQ==}
+  '@vue/compiler-core@3.5.33':
+    resolution: {integrity: sha512-3PZLQwFw4Za3TC8t0FvTy3wI16Kt+pmwcgNZca4Pj9iWL2E72a/gZlpBtAJvEdDMdCxdG/qq0C7PN0bsJuv0Rw==}
 
-  '@vue/compiler-dom@3.5.32':
-    resolution: {integrity: sha512-ybHAu70NtiEI1fvAUz3oXZqkUYEe5J98GjMDpTGl5iHb0T15wQYLR4wE3h9xfuTNA+Cm2f4czfe8B4s+CCH57Q==}
+  '@vue/compiler-dom@3.5.33':
+    resolution: {integrity: sha512-PXq0yrfCLzzL07rbXO4awtXY1Z06LG2eu6Adg3RJFa/j3Cii217XxxLXG22N330gw7GmALCY0Z8RgXEviwgpjA==}
 
-  '@vue/compiler-sfc@3.5.32':
-    resolution: {integrity: sha512-8UYUYo71cP/0YHMO814TRZlPuUUw3oifHuMR7Wp9SNoRSrxRQnhMLNlCeaODNn6kNTJsjFoQ/kqIj4qGvya4Xg==}
+  '@vue/compiler-sfc@3.5.33':
+    resolution: {integrity: sha512-UTUvRO9cY+rROrx/pvN9P5Z7FgA6QGfokUCfhQE4EnmUj3rVnK+CHI0LsEO1pg+I7//iRYMUfcNcCPe7tg0CoA==}
 
-  '@vue/compiler-ssr@3.5.32':
-    resolution: {integrity: sha512-Gp4gTs22T3DgRotZ8aA/6m2jMR+GMztvBXUBEUOYOcST+giyGWJ4WvFd7QLHBkzTxkfOt8IELKNdpzITLbA2rw==}
+  '@vue/compiler-ssr@3.5.33':
+    resolution: {integrity: sha512-IErjYdnj1qIupG5xxiVIYiiRvDhGWV4zuh/RCrwfYpuL+HWQzeU6lCk/nF9r7olWMnjKxCAkOctT2qFWFkzb1A==}
 
-  '@vue/shared@3.5.32':
-    resolution: {integrity: sha512-ksNyrmRQzWJJ8n3cRDuSF7zNNontuJg1YHnmWRJd2AMu8Ij2bqwiiri2lH5rHtYPZjj4STkNcgcmiQqlOjiYGg==}
+  '@vue/shared@3.5.33':
+    resolution: {integrity: sha512-5vR2QIlmaLG77Ygd4pMP6+SGQ5yox9VhtnbDWTy9DzMzdmeLxZ1QqxrywEZ9sa1AVubfIJyaCG3ytyWU81ufcQ==}
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -10506,11 +10506,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@orbitdb/nested-db@2.1.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))':
+  '@orbitdb/nested-db@2.1.3(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))':
     dependencies:
-      '@libp2p/gossipsub': 15.0.19
       '@orbitdb/core': 3.0.2
-      '@orbitdb/ordered-keyvalue-db': 1.4.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       helia: 6.1.4(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       it-all: 3.0.11
       ts-deepmerge: 7.0.3
@@ -11265,37 +11263,37 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
-  '@vue/compiler-core@3.5.32':
+  '@vue/compiler-core@3.5.33':
     dependencies:
       '@babel/parser': 7.29.2
-      '@vue/shared': 3.5.32
+      '@vue/shared': 3.5.33
       entities: 7.0.1
       estree-walker: 2.0.2
       source-map-js: 1.2.1
 
-  '@vue/compiler-dom@3.5.32':
+  '@vue/compiler-dom@3.5.33':
     dependencies:
-      '@vue/compiler-core': 3.5.32
-      '@vue/shared': 3.5.32
+      '@vue/compiler-core': 3.5.33
+      '@vue/shared': 3.5.33
 
-  '@vue/compiler-sfc@3.5.32':
+  '@vue/compiler-sfc@3.5.33':
     dependencies:
       '@babel/parser': 7.29.2
-      '@vue/compiler-core': 3.5.32
-      '@vue/compiler-dom': 3.5.32
-      '@vue/compiler-ssr': 3.5.32
-      '@vue/shared': 3.5.32
+      '@vue/compiler-core': 3.5.33
+      '@vue/compiler-dom': 3.5.33
+      '@vue/compiler-ssr': 3.5.33
+      '@vue/shared': 3.5.33
       estree-walker: 2.0.2
       magic-string: 0.30.21
       postcss: 8.5.10
       source-map-js: 1.2.1
 
-  '@vue/compiler-ssr@3.5.32':
+  '@vue/compiler-ssr@3.5.33':
     dependencies:
-      '@vue/compiler-dom': 3.5.32
-      '@vue/shared': 3.5.32
+      '@vue/compiler-dom': 3.5.33
+      '@vue/shared': 3.5.33
 
-  '@vue/shared@3.5.32': {}
+  '@vue/shared@3.5.33': {}
 
   '@yarnpkg/lockfile@1.1.0': {}
 
@@ -12658,7 +12656,7 @@ snapshots:
     dependencies:
       '@babel/parser': 7.29.2
       '@babel/traverse': 7.29.0
-      '@vue/compiler-sfc': 3.5.32
+      '@vue/compiler-sfc': 3.5.33
       callsite: 1.0.0
       camelcase: 6.3.0
       cosmiconfig: 7.1.0
