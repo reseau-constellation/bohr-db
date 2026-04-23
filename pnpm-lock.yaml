@@ -31,7 +31,7 @@ importers:
         version: 1.4.2(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       '@orbitdb/set-db':
         specifier: ^2.1.0
-        version: 2.1.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
+        version: 2.1.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       ajv:
         specifier: ^8.18.0
         version: 8.18.0
@@ -1750,8 +1750,8 @@ packages:
   '@orbitdb/ordered-keyvalue-db@1.4.2':
     resolution: {integrity: sha512-rk7OZUfJHAcfCPrNr2Awh+rISWlJUXhKCpVKh4/+y6CszxF6sGN8lqmvYyPdNbl7Em+jUvY2UJWvv42dReVaRQ==}
 
-  '@orbitdb/set-db@2.1.0':
-    resolution: {integrity: sha512-8Rqyd3qy9YKcfds3+6W68z0YMUjDhzR3M2XtOcDZ1IFm40ooS/oy4DPxowohckEOpQPj9lARkPDV2dGVYJZiYQ==}
+  '@orbitdb/set-db@2.1.1':
+    resolution: {integrity: sha512-nRwx0zAXZgd850eAMvI5XlyID3Hysep7EFpU+cWMqvSxFYg4FmgDxnOI1m0MW6Dc1PmI9emh8fJhezJZz8XeTg==}
 
   '@package-json/types@0.0.12':
     resolution: {integrity: sha512-uu43FGU34B5VM9mCNjXCwLaGHYjXdNincqKLaraaCW+7S2+SmiBg1Nv8bPnmschrIfZmfKNY9f3fC376MRrObw==}
@@ -8546,7 +8546,7 @@ snapshots:
       '@orbitdb/core': 3.0.2
       '@orbitdb/feed-db': 1.4.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       '@orbitdb/nested-db': 1.3.6(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
-      '@orbitdb/set-db': 2.1.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
+      '@orbitdb/set-db': 2.1.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       helia: 5.5.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
       it-all: 3.0.11
       tiny-typed-emitter: 2.1.0
@@ -10529,7 +10529,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@orbitdb/set-db@2.1.0(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))':
+  '@orbitdb/set-db@2.1.1(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))':
     dependencies:
       '@orbitdb/core': 4.0.0-3e1d628.0
       helia: 6.1.4(react-native@0.80.1(@babel/core@7.29.0)(react@19.1.0))
