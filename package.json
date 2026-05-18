@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@constl/multi-db": "^0.1.0",
-    "@orbitdb/core": "^3.0.2",
+    "@orbitdb/core": "^4.0.0",
     "@orbitdb/core-types": "^1.2.3",
     "@orbitdb/feed-db": "^1.4.0",
     "@orbitdb/nested-db": "^2.1.3",
