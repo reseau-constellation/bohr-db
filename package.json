@@ -35,7 +35,7 @@
     "events": "^3.3.0",
     "helia": "^6.1.4",
     "multiformats": "^14.0.0",
-    "ts-deepmerge": "^7.0.3",
+    "ts-deepmerge": "^8.0.0",
     "uuid": "^14.0.0"
   },
   "devDependencies": {
