@@ -44,7 +44,7 @@
     "@eslint/js": "^10.0.1",
     "@helia/block-brokers": "^5.2.4",
     "@libp2p/circuit-relay-v2": "^4.2.2",
-    "@libp2p/gossipsub": "^15.0.19",
+    "@libp2p/gossipsub": "^16.0.0",
     "@libp2p/identify": "^4.1.2",
     "@libp2p/webrtc": "^6.0.19",
     "@libp2p/websockets": "^10.1.10",
