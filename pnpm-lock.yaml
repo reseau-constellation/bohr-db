@@ -119,7 +119,7 @@ importers:
         version: 0.3.0
       prettier:
         specifier: ^3.8.3
-        version: 3.8.4
+        version: 3.8.5
       process:
         specifier: ^0.11.10
         version: 0.11.10
@@ -1990,8 +1990,8 @@ packages:
   '@types/node@25.9.1':
     resolution: {integrity: sha512-xfrlY7UD5rMJk3ZVJP8BNzS28J36YJg+xp+LPXV1TdWxr8uMH5A860QNxYDGQe/ylDSgjxE52Q9VnO7p75tJxg==}
 
-  '@types/node@26.0.0':
-    resolution: {integrity: sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA==}
+  '@types/node@26.0.1':
+    resolution: {integrity: sha512-fc3KiUoBt6kie0N9bIW3E47vZsuaMf0PM2AaUpLCLT0s/LvX1nxAim6Fc049cNxODPpGm6qRAuUOB86SkRuPQw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2545,8 +2545,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  baseline-browser-mapping@2.10.38:
-    resolution: {integrity: sha512-31/02mVB4yuQU6adKk5SlY6m+mxDwUq5KZkyYgnLrrKl7TEm1+3PyDtDBz2kOv/wxZz41GHsvV1A/u6RmiyBvw==}
+  baseline-browser-mapping@2.10.40:
+    resolution: {integrity: sha512-BSSLZ9/Cjjv7Gtj5B68ZzXcXUg8iOf3fme+FCuh8rC/Go+Kmh8cox7M3A8dolou16s64QjLPOSdngh7GxXvkSw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3343,8 +3343,8 @@ packages:
     engines: {node: '>= 16.0.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.377:
-    resolution: {integrity: sha512-cH1jZgJHoezfTnKfKwnScpHywTFVnJUNITDPREFdhNjiuD502+QFpG0Qk7G8jhsV/f+CEAFlIrzP1fT+IMb92g==}
+  electron-to-chromium@1.5.378:
+    resolution: {integrity: sha512-VinvOAuuPmdD1guEgGv5f2Qp7/vlfqOrUOMYNnOD4wj3pit8kRsQHzfIf6teyUGWo15Tg5+bOJaRunvyltpVWQ==}
 
   electron-window@0.8.1:
     resolution: {integrity: sha512-W1i9LfnZJozk3MXE8VgsL2E5wOUHSgyCvcg1H2vQQjj+gqhO9lVudgY3z3SF7LJAmi+0vy3CJkbMqsynWB49EA==}
@@ -5554,9 +5554,6 @@ packages:
   multiformats@13.4.2:
     resolution: {integrity: sha512-eh6eHCrRi1+POZ3dA+Dq1C6jhP1GNtr9CRINMb67OKzqW9I5DUuZM/3jLPlzhgpGeiNUlEGEbkCYChXMCc/8DQ==}
 
-  multiformats@14.0.0:
-    resolution: {integrity: sha512-iWK1RrAS58p2NDfeZFuSUSv3ZPewTIhsGbh/5NgeGGJwJmRljLxGtjRR3nkn+loG3zl+IrfR/W1590QnrSK+Gg==}
-
   multiformats@14.0.2:
     resolution: {integrity: sha512-sF7F3gBKCyehzIhDwVuTRf79TZ8qWRz5NXwWYBX+4a+n22KcFqqcDYJvZr7tySrI0MhuTBXVOlo3qMTiAHC78g==}
 
@@ -5649,8 +5646,8 @@ packages:
     resolution: {integrity: sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==}
     engines: {node: '>=8'}
 
-  node-releases@2.0.48:
-    resolution: {integrity: sha512-1uz8041X6LoI6ZSdZacM9lVY28vuzDlSKitnpbSNK0RfKoIJkX29NBPVEFXhnuSuEOA9Ww0xnPJ+ILWbGAv8DA==}
+  node-releases@2.0.50:
+    resolution: {integrity: sha512-J6l92tKHX6w8Jy5nO1Vuc01NoIiRGi/d6qBKVxh+IQ8Cr3b6HbVNfKiF8ZpFKufTwpwxMmce2W3iQZ861ZRyTg==}
     engines: {node: '>=18'}
 
   normalize-package-data@2.5.0:
@@ -6205,8 +6202,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  prettier@3.8.4:
-    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
+  prettier@3.8.5:
+    resolution: {integrity: sha512-zxcTTCedNGJM4R8sj/Cq/F0W/c4iE0afWBcBwMTRtw4WHYP9TWkYjdiH3npPRUYsXQCPR0hTU9yjovOu+E6EQA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6740,8 +6737,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.4:
-    resolution: {integrity: sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==}
+  shell-quote@1.9.0:
+    resolution: {integrity: sha512-Iov+JwFv/2HcTpcwNMKd8+IWNb8tboQJNQTkAY/LLVK7gGH9jy+LGkVqPxfekHl+yMmiqXszdGWXgkfml7hjqA==}
     engines: {node: '>= 0.4'}
 
   side-channel-list@1.0.1:
@@ -9060,7 +9057,7 @@ snapshots:
 
   '@ipld/dag-pb@4.1.7':
     dependencies:
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   '@ipshipyard/libp2p-auto-tls@2.0.1':
     dependencies:
@@ -9113,7 +9110,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 26.0.0
+      '@types/node': 26.0.1
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -9181,7 +9178,7 @@ snapshots:
       '@multiformats/multiaddr-matcher': 3.0.2
       any-signal: 4.2.0
       main-event: 1.0.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       nanoid: 5.1.11
       progress-events: 1.1.0
       protons-runtime: 7.0.0
@@ -9212,7 +9209,7 @@ snapshots:
       '@libp2p/interface': 3.2.3
       '@noble/curves': 2.2.0
       '@noble/hashes': 2.2.0
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       protons-runtime: 6.0.2
       uint8arraylist: 2.4.9
       uint8arrays: 6.1.1
@@ -9222,7 +9219,7 @@ snapshots:
       '@libp2p/interface': 3.2.4
       '@noble/curves': 2.2.0
       '@noble/hashes': 2.2.0
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       protons-runtime: 7.0.0
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9250,7 +9247,7 @@ snapshots:
       it-length-prefixed: 11.0.1
       it-pipe: 3.0.1
       it-pushable: 3.2.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       protons-runtime: 7.0.0
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9356,7 +9353,7 @@ snapshots:
       '@multiformats/dns': 1.0.13
       '@multiformats/multiaddr': 13.0.3
       main-event: 1.0.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       progress-events: 1.1.0
       uint8arraylist: 2.4.9
 
@@ -9365,7 +9362,7 @@ snapshots:
       '@multiformats/dns': 1.0.13
       '@multiformats/multiaddr': 13.0.3
       main-event: 1.0.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       progress-events: 1.1.0
       uint8arraylist: 3.0.2
 
@@ -9421,7 +9418,7 @@ snapshots:
       '@noble/hashes': 2.2.0
       asn1js: 3.0.10
       interface-datastore: 9.0.3
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -9432,7 +9429,7 @@ snapshots:
       '@noble/hashes': 2.2.0
       asn1js: 3.0.10
       interface-datastore: 10.0.1
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -9449,7 +9446,7 @@ snapshots:
       '@libp2p/interface': 3.2.3
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 9.0.3
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       weald: 1.1.3
 
   '@libp2p/logger@6.2.9':
@@ -9457,7 +9454,7 @@ snapshots:
       '@libp2p/interface': 3.2.4
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 10.0.1
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       weald: 1.1.3
 
   '@libp2p/mdns@12.0.22':
@@ -9494,27 +9491,27 @@ snapshots:
       '@libp2p/interface': 3.2.3
       '@libp2p/peer-id': 6.0.10
       '@libp2p/utils': 7.2.2
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   '@libp2p/peer-collections@7.0.22':
     dependencies:
       '@libp2p/interface': 3.2.4
       '@libp2p/peer-id': 6.0.11
       '@libp2p/utils': 7.2.3
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   '@libp2p/peer-id@6.0.10':
     dependencies:
       '@libp2p/crypto': 5.1.19
       '@libp2p/interface': 3.2.3
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       uint8arrays: 6.1.1
 
   '@libp2p/peer-id@6.0.11':
     dependencies:
       '@libp2p/crypto': 5.1.20
       '@libp2p/interface': 3.2.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       uint8arrays: 6.1.1
 
   '@libp2p/peer-id@6.0.9':
@@ -9530,7 +9527,7 @@ snapshots:
       '@libp2p/interface': 3.2.4
       '@libp2p/peer-id': 6.0.11
       '@multiformats/multiaddr': 13.0.3
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       protons-runtime: 7.0.0
       uint8-varint: 3.0.0
       uint8arraylist: 3.0.2
@@ -9548,7 +9545,7 @@ snapshots:
       it-all: 3.0.11
       main-event: 1.0.4
       mortice: 3.3.1
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       protons-runtime: 7.0.0
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9714,7 +9711,7 @@ snapshots:
       it-pushable: 3.2.4
       it-stream-types: 2.0.4
       main-event: 1.0.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       node-datachannel: 0.32.3
       p-defer: 4.0.1
       p-event: 7.1.0
@@ -9769,7 +9766,7 @@ snapshots:
   '@multiformats/multiaddr@13.0.3':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       uint8-varint: 3.0.0
       uint8arrays: 6.1.1
 
@@ -10391,7 +10388,7 @@ snapshots:
     dependencies:
       undici-types: 7.24.6
 
-  '@types/node@26.0.0':
+  '@types/node@26.0.1':
     dependencies:
       undici-types: 8.3.0
 
@@ -11212,7 +11209,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  baseline-browser-mapping@2.10.38: {}
+  baseline-browser-mapping@2.10.40: {}
 
   before-after-hook@4.0.0: {}
 
@@ -11245,7 +11242,7 @@ snapshots:
       it-all: 3.0.11
       it-filter: 3.1.6
       it-merge: 3.0.14
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   blockstore-level@4.0.1:
     dependencies:
@@ -11256,7 +11253,7 @@ snapshots:
       it-all: 3.0.11
       it-to-buffer: 5.0.0
       level: 10.0.0
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       race-signal: 2.0.0
       uint8arrays: 6.1.1
 
@@ -11355,10 +11352,10 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.38
+      baseline-browser-mapping: 2.10.40
       caniuse-lite: 1.0.30001799
-      electron-to-chromium: 1.5.377
-      node-releases: 2.0.48
+      electron-to-chromium: 1.5.378
+      node-releases: 2.0.50
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
   bser@2.1.1:
@@ -11541,7 +11538,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 26.0.0
+      '@types/node': 26.0.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -11550,7 +11547,7 @@ snapshots:
 
   chromium-edge-launcher@0.3.0:
     dependencies:
-      '@types/node': 26.0.0
+      '@types/node': 26.0.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -12198,7 +12195,7 @@ snapshots:
       which: 5.0.0
       yargs: 17.7.2
 
-  electron-to-chromium@1.5.377: {}
+  electron-to-chromium@1.5.378: {}
 
   electron-window@0.8.1:
     dependencies:
@@ -13520,7 +13517,7 @@ snapshots:
   interface-blockstore@7.0.1:
     dependencies:
       interface-store: 8.0.0
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   interface-datastore@10.0.1:
     dependencies:
@@ -13992,7 +13989,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 26.0.0
+      '@types/node': 26.0.1
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -14009,7 +14006,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 26.0.0
+      '@types/node': 26.0.1
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -14199,7 +14196,7 @@ snapshots:
       it-merge: 3.0.14
       it-parallel: 3.0.15
       main-event: 1.0.4
-      multiformats: 14.0.0
+      multiformats: 14.0.2
       p-defer: 4.0.1
       p-event: 7.1.0
       p-retry: 8.0.0
@@ -15121,8 +15118,6 @@ snapshots:
 
   multiformats@13.4.2: {}
 
-  multiformats@14.0.0: {}
-
   multiformats@14.0.2: {}
 
   multimatch@5.0.0:
@@ -15216,7 +15211,7 @@ snapshots:
     dependencies:
       process-on-spawn: 1.1.0
 
-  node-releases@2.0.48: {}
+  node-releases@2.0.50: {}
 
   normalize-package-data@2.5.0:
     dependencies:
@@ -15792,7 +15787,7 @@ snapshots:
 
   premove@4.0.0: {}
 
-  prettier@3.8.4: {}
+  prettier@3.8.5: {}
 
   pretty-format@29.7.0:
     dependencies:
@@ -15930,7 +15925,7 @@ snapshots:
 
   react-devtools-core@6.1.5:
     dependencies:
-      shell-quote: 1.8.4
+      shell-quote: 1.9.0
       ws: 7.5.11
     transitivePeerDependencies:
       - bufferutil
@@ -16483,7 +16478,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.4: {}
+  shell-quote@1.9.0: {}
 
   side-channel-list@1.0.1:
     dependencies:
@@ -17159,7 +17154,7 @@ snapshots:
 
   uint8arrays@6.1.1:
     dependencies:
-      multiformats: 14.0.0
+      multiformats: 14.0.2
 
   unbox-primitive@1.1.0:
     dependencies:
