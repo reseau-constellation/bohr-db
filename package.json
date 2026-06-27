@@ -51,7 +51,7 @@
     "@types/mocha": "^10.0.10",
     "@typescript-eslint/eslint-plugin": "^8.59.0",
     "@typescript-eslint/parser": "^8.59.0",
-    "aegir": "^47.1.7",
+    "aegir": "^48.0.0",
     "blockstore-core": "^7.0.1",
     "blockstore-level": "^4.0.1",
     "browserify-fs": "^1.0.0",
