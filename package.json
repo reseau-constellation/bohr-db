@@ -1,6 +1,6 @@
 {
   "name": "@constl/bohr-db",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Type-safe databases for OrbitDB.",
   "author": "Julien Jean Malard-Adam",
   "keywords": [
