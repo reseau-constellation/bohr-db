@@ -7,6 +7,15 @@ export {
 export { typedSet, TypedSet } from "@/set.js";
 export { typedNested, TypedNested } from "@/nested.js";
 
-export { DBElements } from "@/types.js";
+export {
+  DBElements,
+  DBElementsWithUndefined,
+  RecursivePartial,
+  ExtractKeys,
+  ExtractKeysAsList,
+  GetValueFromKey,
+  GetValueFromKeyList,
+  GetValueFromNestedKey,
+} from "@/types.js";
 
 export { version } from "@/version.js";
