@@ -1,9 +1,5 @@
 export type DBElements =
-  | number
-  | boolean
-  | string
-  | { [key: string]: DBElements }
-  | Array<DBElements>;
+  number | boolean | string | { [key: string]: DBElements } | Array<DBElements>;
 
 export type DBElementsWithUndefined =
   | number
@@ -22,16 +18,14 @@ export type RecursivePartial<T> = {
 export type ExtractKeys<T> = T extends object
   ? {
       [K in keyof T & string]:
-        | K
-        | (T[K] extends object ? `${K}/${ExtractKeys<T[K]>}` : K);
+        K | (T[K] extends object ? `${K}/${ExtractKeys<T[K]>}` : K);
     }[keyof T & string]
   : never;
 
 export type ExtractKeysAsList<T> = T extends object
   ? {
       [K in keyof T & string]:
-        | [K]
-        | (T[K] extends object ? [K, ...ExtractKeysAsList<T[K]>] : [K]);
+        [K] | (T[K] extends object ? [K, ...ExtractKeysAsList<T[K]>] : [K]);
     }[keyof T & string]
   : never;
 
