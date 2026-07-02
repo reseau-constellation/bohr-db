@@ -16,7 +16,7 @@ importers:
         version: 1.2.4
       '@orbitdb/feed-db':
         specifier: ^1.4.1
-        version: 1.4.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+        version: 1.4.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)
       '@orbitdb/nested-db':
         specifier: ^2.1.4
         version: 2.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
@@ -33,8 +33,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0
       helia:
-        specifier: ^6.1.4
-        version: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+        specifier: ^7.0.0
+        version: 7.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
       multiformats:
         specifier: ^14.0.2
         version: 14.0.3
@@ -77,10 +77,10 @@ importers:
         version: 10.0.10
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.62.0
-        version: 8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+        version: 8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/parser':
         specifier: ^8.62.0
-        version: 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+        version: 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       aegir:
         specifier: ^47.2.0
         version: 47.2.0(@babel/core@7.29.7)(@typescript-eslint/utils@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(supports-color@8.1.1)
@@ -1248,20 +1248,47 @@ packages:
   '@helia/bitswap@3.2.3':
     resolution: {integrity: sha512-uquUTgYaU5Z08SVFn+Psg1xhkeAqCdLWav0zAaNJE1bQX7UeLItW82+Nh5I40RaH9gMFFqL3IQR0mIzi+bj5Gg==}
 
+  '@helia/bitswap@4.0.0':
+    resolution: {integrity: sha512-68MLzAwLiAUce20CzCmsX2HbQLanA+aoZluPGYP+MW2pfTTPjuSfQTvO3ufRzBbZC2Qz7k6Y1NljKLl8ppkXYQ==}
+
   '@helia/block-brokers@5.2.4':
     resolution: {integrity: sha512-UsxtWVy2W95FVM561BZXEnb41RL6pr+cLF+AIxVIaugEvg4edUKh+3sbZXoINtzbqS664Ss2dhisHR1ZnYI57Q==}
+
+  '@helia/delegated-routing-client@1.0.0':
+    resolution: {integrity: sha512-klKjQ50t6h54UDhQCwcYlkm6YJ4d9AhSThsNohGDtirTGs3NnL42ZBGyhrHDH0NRhyiNSdjV1UdFUfTmmb/ZNg==}
 
   '@helia/delegated-routing-v1-http-api-client@6.0.1':
     resolution: {integrity: sha512-Y1nGpUQrdN80XSDDAfe7azJFKKD0MxM0mQqfbefNEcrYMM344rHNQJ7xgiSqsH20vMIaKv+NnQqT/MEg2aWv6g==}
 
+  '@helia/delegated-routing-v1-http-api-client@8.0.1':
+    resolution: {integrity: sha512-O9SjMwd4Xb1Umr8yyyxeCdL+0dNb/BF+ceN/CCTWE/Mfiy+B0aEafpcoSm/3Wn3e0WwXHnGfNWQqBN6cLu30qQ==}
+
+  '@helia/fallback-router@1.0.0':
+    resolution: {integrity: sha512-1M+qgN9OeWQhU55GH298ewHs0SPhMdZIDQIP0iMukOFzuL1ux3dT/cjCWuPyEGid2cWnTosAqkHUyhVZ1S4onA==}
+
+  '@helia/http@4.0.0':
+    resolution: {integrity: sha512-cgyWmvMPU/oMTpo8bNbmp4/LHlr15RPNgXaLu03yICFqjyZA81ohFFz5YKiflbranRNcy3dsjB+zgSTvHImQ3Q==}
+
   '@helia/interface@6.2.1':
     resolution: {integrity: sha512-lL0q4mpJjUdQ3J/KjSQAoYb6KQZl5SUqQvEBIA5KMrOyuD7m31lbx8elGLttDVVzZtVp03tS4tlDIzsaVJ/Evw==}
+
+  '@helia/interface@7.0.0':
+    resolution: {integrity: sha512-1Y6xTCbPzY7rx+bIzfVR+YWqzdX2hS4dWwRiwMW2GnFz1DFNRS4lueDpQ1n2g7Diq62/t0HhRZLi1KYiRl55sw==}
+
+  '@helia/libp2p@1.0.0':
+    resolution: {integrity: sha512-0MQU4QdvbdulCR2brqfXTLJHuEgRd1xpNxhbN+cNm2RzxWMNWCqVCtp3ZlcdR3YaJAxgK3431Cwy3RJIlF27pA==}
 
   '@helia/routers@5.1.1':
     resolution: {integrity: sha512-ZQbF3fX3y9aBnwKx4FsgEETJ0tfop6CPu4uw+jecnW1FAL9fE0vjYwa90Q7KRXoCCjyu9q96cZ/8nzoipuy86A==}
 
+  '@helia/trustless-gateway-client@1.0.0':
+    resolution: {integrity: sha512-AOqJzGL0NQ7TRrvYN4GqNZm8KQVuKBROXatG2IQUwTwQKS/dncA+mxUUsJQmCdduBrjOiHQEO6Np7DR2Jb6NdQ==}
+
   '@helia/utils@2.5.2':
     resolution: {integrity: sha512-6/+RInRpJsJoo13ECQsSkBtK2xUGl/KWaJpBuK9tqg+ng3s5cec2qO9RVhZt4bdkPPqJc/PX+G9zwVhKqp5UwQ==}
+
+  '@helia/utils@3.0.0':
+    resolution: {integrity: sha512-XzbaMo+oY3OSOOnojEBaxXKj+M127S9a23As3KwIrKbUEgbg1I80/wubYtG3E/PzGTXV5yRuNeC82n8gukVN2w==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1286,15 +1313,27 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@ipld/dag-cbor@10.0.1':
+    resolution: {integrity: sha512-nF07iiZPqduSXyMxc0jGANArRHFa9hjMQpQlgLOV2O/3xI1CNb5sXhvbmigbMiz5owSGi0Oq10VtauupMojuiw==}
+
   '@ipld/dag-cbor@9.2.7':
     resolution: {integrity: sha512-ZmfXmElRWATr+hoUTSAOr6HUcjVhOcNHDqgczc76qte2DHHFEK0ZhNzUcdTDQhF/VSIvf2ioaRTRLWwLc83sNw==}
 
   '@ipld/dag-json@10.2.9':
     resolution: {integrity: sha512-opNPQQsTuCFZkaJCAqXrB/n9OqUD6W2Boz/Au5HjhLQyczmT8lxoOZObqQ5S5hhnV8p6sgKAimNhUB2W6y0Mzg==}
 
+  '@ipld/dag-json@11.0.0':
+    resolution: {integrity: sha512-MeBu61ZwXV1C1s/weqaDz1jyYcnzFd7sFizx1ZoWtPqIzwd8vi4ZeCZpBRSIQ9FdClQMt5FNJPz4ECukKM/SwA==}
+
   '@ipld/dag-pb@4.1.7':
     resolution: {integrity: sha512-/i/13trFihjWfDyXlylRwhuYjtzYjvOFw0vlRjYGnZuv7d7MOgA2lV/vRuL5RfeUajM03aZfFLdq4S7cTbbTRg==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+
+  '@ipshipyard/crypto@1.1.0':
+    resolution: {integrity: sha512-xMnzqJFuDirmjdMlmHb9r/olj++oFv3Pf5utF49+MvNQqKjYZ2YHMiO8Y8xk8nh6E+xa4g9+r/hij0FpNVZusw==}
+
+  '@ipshipyard/keychain@1.0.2':
+    resolution: {integrity: sha512-otMCFOItScEX3VNy/gHF+CVd2QGPNo75uwZBoYUj2Rr8xnF5eq1nlbk6iEqH6cwqu2j/UuzFvtD2s2lmGo0mDA==}
 
   '@ipshipyard/libp2p-auto-tls@2.0.1':
     resolution: {integrity: sha512-zpDXVMY1ZgB6o30zFocXUzrD9+tz1bbEdgewFoBf4olDh5/CwjDi/k9v2RrJqujWKYWyRuHRg6Q+VRpvtGrpuw==}
@@ -2408,6 +2447,9 @@ packages:
 
   before-after-hook@4.0.0:
     resolution: {integrity: sha512-q6tR3RPqIB1pMiTRMFcZwuG5T8vwp+vUvEG0vuI6B+Rikh5BfPp2fQ82c925FOs+b0lcFQ8CFrL+KbilfZFhOQ==}
+
+  birnam@1.0.0:
+    resolution: {integrity: sha512-lropqEwi52w2aoOQQ+V4MGc8KP5mVef9DaEKv73dkVXb8UN6moQ7j/f19NesXPYt/l+8MkkHtMBAQsBKR8BqgQ==}
 
   bl@0.8.2:
     resolution: {integrity: sha512-pfqikmByp+lifZCS0p6j6KreV6kNU6Apzpm2nKOk+94cZb/jvle55+JxWiByUQ0Wo/+XnDXEy5MxxKMb6r0VIw==}
@@ -4053,6 +4095,9 @@ packages:
   helia@6.1.4:
     resolution: {integrity: sha512-MSfgusZMjUMsVIYJ0pd430Z58YEWWJbtSYVH7IWwBiMwn9t5s/ymLElhQl4qMv9DitQEiWIUTW1sX1phP6FfOw==}
 
+  helia@7.0.0:
+    resolution: {integrity: sha512-jTIVAdsWCwERcap3yUpeybWxhn9iLrV1w6M4jAaOL6oOQUWfL8oYCw0JKTHm2yeq9HVUaM1j9G7qyiiM2VKFcg==}
+
   hermes-compiler@250829098.0.10:
     resolution: {integrity: sha512-TcRlZ0/TlyfJqquRFAWoyElVNnkdYRi/sEp4/Qy8/GYxjg8j2cS9D4MjuaQ+qimkmLN7AmO+44IznRf06mAr0w==}
 
@@ -4606,6 +4651,9 @@ packages:
 
   it-ndjson@1.1.6:
     resolution: {integrity: sha512-qseYKspd95qnYUnJ2DE8R25N2+Q+cPCEXTTpyLe7FHaxjbOc/wtyOgKbuzJrQS9bnFJ6yM9wVooC3C0pX44IWQ==}
+
+  it-ndjson@2.0.0:
+    resolution: {integrity: sha512-6QOU+X9zBSolfcYGXY5CSJchHb57MgkoDgVJA5Tdh1CwzUHKKJYS0lTzdVR9hefVpiQNhTB/glEU8i37LpP7qw==}
 
   it-parallel@3.0.15:
     resolution: {integrity: sha512-1iUV4wg7cDy40N32/XosK7mcwKM+oeSGq0r7czxNaUGGSQvbdSmkIoK4Vu/XPsXZIqBLt9tO+LDPi8RJBJ/Qwg==}
@@ -8706,6 +8754,39 @@ snapshots:
       uint8arraylist: 2.4.9
       uint8arrays: 5.1.1
 
+  '@helia/bitswap@4.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
+    dependencies:
+      '@helia/interface': 7.0.0
+      '@helia/libp2p': 1.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      '@helia/utils': 3.0.0
+      '@libp2p/interface': 3.2.4
+      '@libp2p/logger': 6.2.9
+      '@libp2p/peer-collections': 7.0.22
+      '@libp2p/peer-id': 6.0.11
+      '@libp2p/utils': 7.2.3
+      '@multiformats/multiaddr': 13.0.3
+      any-signal: 4.2.0
+      interface-blockstore: 7.0.1
+      it-drain: 3.0.12
+      it-length-prefixed: 11.0.1
+      it-map: 3.1.6
+      it-pushable: 3.2.4
+      it-take: 3.0.11
+      it-to-buffer: 5.0.0
+      multiformats: 14.0.3
+      p-defer: 4.0.1
+      progress-events: 1.1.0
+      protons-runtime: 7.0.0
+      race-event: 1.6.1
+      uint8-varint: 3.0.0
+      uint8arraylist: 3.0.2
+      uint8arrays: 6.1.1
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
+
   '@helia/block-brokers@5.2.4':
     dependencies:
       '@helia/bitswap': 3.2.3
@@ -8724,6 +8805,16 @@ snapshots:
       uint8arraylist: 2.4.9
       uint8arrays: 5.1.1
 
+  '@helia/delegated-routing-client@1.0.0':
+    dependencies:
+      '@helia/delegated-routing-v1-http-api-client': 8.0.1
+      '@helia/interface': 7.0.0
+      '@libp2p/interface': 3.2.4
+      it-first: 3.0.11
+      it-map: 3.1.6
+      multiformats: 14.0.3
+      uint8arrays: 6.1.1
+
   '@helia/delegated-routing-v1-http-api-client@6.0.1':
     dependencies:
       '@libp2p/interface': 3.2.4
@@ -8740,6 +8831,34 @@ snapshots:
       p-queue: 9.3.0
       uint8arrays: 5.1.1
 
+  '@helia/delegated-routing-v1-http-api-client@8.0.1':
+    dependencies:
+      '@libp2p/interface': 3.2.4
+      '@libp2p/peer-id': 6.0.11
+      '@libp2p/utils': 7.2.3
+      '@multiformats/multiaddr': 13.0.3
+      any-signal: 4.2.0
+      browser-readablestream-to-it: 2.0.12
+      it-first: 3.0.11
+      it-map: 3.1.6
+      it-ndjson: 2.0.0
+      multiformats: 14.0.3
+      uint8arrays: 6.1.1
+
+  '@helia/fallback-router@1.0.0':
+    dependencies:
+      '@helia/interface': 7.0.0
+      '@multiformats/uri-to-multiaddr': 10.0.0
+      multiformats: 14.0.3
+      uint8arrays: 6.1.1
+
+  '@helia/http@4.0.0':
+    dependencies:
+      '@helia/delegated-routing-client': 1.0.0
+      '@helia/fallback-router': 1.0.0
+      '@helia/interface': 7.0.0
+      '@helia/trustless-gateway-client': 1.0.0
+
   '@helia/interface@6.2.1':
     dependencies:
       '@libp2p/interface': 3.2.4
@@ -8750,6 +8869,58 @@ snapshots:
       interface-store: 7.0.2
       multiformats: 13.4.2
       progress-events: 1.1.0
+
+  '@helia/interface@7.0.0':
+    dependencies:
+      '@ipshipyard/crypto': 1.1.0
+      '@ipshipyard/keychain': 1.0.2
+      '@libp2p/interface': 3.2.4
+      '@multiformats/dns': 1.0.15
+      '@multiformats/multiaddr': 13.0.3
+      abort-error: 1.0.2
+      birnam: 1.0.0
+      interface-blockstore: 7.0.1
+      interface-datastore: 10.0.1
+      main-event: 1.0.4
+      multiformats: 14.0.3
+      progress-events: 1.1.0
+
+  '@helia/libp2p@1.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
+    dependencies:
+      '@chainsafe/libp2p-noise': 17.0.0
+      '@chainsafe/libp2p-yamux': 8.0.1
+      '@helia/delegated-routing-client': 1.0.0
+      '@helia/delegated-routing-v1-http-api-client': 8.0.1
+      '@helia/interface': 7.0.0
+      '@ipshipyard/libp2p-auto-tls': 2.0.1(supports-color@8.1.1)
+      '@libp2p/autonat': 3.0.22
+      '@libp2p/bootstrap': 12.0.25
+      '@libp2p/circuit-relay-v2': 4.2.7
+      '@libp2p/config': 1.1.33
+      '@libp2p/dcutr': 3.0.22
+      '@libp2p/http': 2.0.4
+      '@libp2p/identify': 4.1.8
+      '@libp2p/interface': 3.2.4
+      '@libp2p/kad-dht': 16.3.3
+      '@libp2p/keychain': 6.1.3
+      '@libp2p/mdns': 12.0.25
+      '@libp2p/mplex': 12.0.25
+      '@libp2p/peer-id': 6.0.11
+      '@libp2p/ping': 3.1.7
+      '@libp2p/tcp': 11.0.22
+      '@libp2p/tls': 3.1.4
+      '@libp2p/upnp-nat': 4.0.22
+      '@libp2p/webrtc': 6.0.25(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      '@libp2p/websockets': 10.1.15
+      '@multiformats/dns': 1.0.15
+      it-map: 3.1.6
+      libp2p: 3.3.4
+      multiformats: 14.0.3
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
 
   '@helia/routers@5.1.1':
     dependencies:
@@ -8763,6 +8934,22 @@ snapshots:
       it-map: 3.1.6
       multiformats: 13.4.2
       uint8arrays: 5.1.1
+
+  '@helia/trustless-gateway-client@1.0.0':
+    dependencies:
+      '@helia/interface': 7.0.0
+      '@helia/utils': 3.0.0
+      '@libp2p/utils': 7.2.3
+      '@multiformats/multiaddr': 13.0.3
+      '@multiformats/multiaddr-matcher': 3.0.2
+      '@multiformats/multiaddr-to-uri': 12.0.0
+      '@multiformats/uri-to-multiaddr': 10.0.0
+      abort-error: 1.0.2
+      birnam: 1.0.0
+      multiformats: 14.0.3
+      progress-events: 1.1.0
+      uint8arraylist: 3.0.2
+      uint8arrays: 6.1.1
 
   '@helia/utils@2.5.2':
     dependencies:
@@ -8794,6 +8981,19 @@ snapshots:
       race-signal: 2.0.0
       uint8arrays: 5.1.1
 
+  '@helia/utils@3.0.0':
+    dependencies:
+      '@helia/interface': 7.0.0
+      '@libp2p/interface': 3.2.4
+      '@libp2p/utils': 7.2.3
+      '@multiformats/multiaddr': 13.0.3
+      it-filter: 3.1.6
+      it-to-buffer: 5.0.0
+      multiformats: 14.0.3
+      p-defer: 4.0.1
+      progress-events: 1.1.0
+      race-signal: 2.0.0
+
   '@humanfs/core@0.19.2':
     dependencies:
       '@humanfs/types': 0.15.0
@@ -8812,6 +9012,11 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@ipld/dag-cbor@10.0.1':
+    dependencies:
+      cborg: 5.1.4
+      multiformats: 14.0.3
+
   '@ipld/dag-cbor@9.2.7':
     dependencies:
       cborg: 5.1.4
@@ -8822,11 +9027,33 @@ snapshots:
       cborg: 5.1.4
       multiformats: 13.4.2
 
+  '@ipld/dag-json@11.0.0':
+    dependencies:
+      cborg: 5.1.4
+      multiformats: 14.0.3
+
   '@ipld/dag-pb@4.1.7':
     dependencies:
       multiformats: 14.0.3
 
-  '@ipshipyard/libp2p-auto-tls@2.0.1':
+  '@ipshipyard/crypto@1.1.0':
+    dependencies:
+      abort-error: 1.0.2
+      multiformats: 14.0.3
+      protons-runtime: 7.0.0
+      uint8arraylist: 3.0.2
+      uint8arrays: 6.1.1
+
+  '@ipshipyard/keychain@1.0.2':
+    dependencies:
+      '@ipshipyard/crypto': 1.1.0
+      abort-error: 1.0.2
+      interface-datastore: 10.0.1
+      multiformats: 14.0.3
+      sanitize-filename: 1.6.4
+      uint8arrays: 6.1.1
+
+  '@ipshipyard/libp2p-auto-tls@2.0.1(supports-color@8.1.1)':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@libp2p/crypto': 5.1.20
@@ -8838,7 +9065,7 @@ snapshots:
       '@multiformats/multiaddr': 13.0.3
       '@multiformats/multiaddr-matcher': 3.0.2
       '@peculiar/x509': 1.14.3
-      acme-client: 5.4.0
+      acme-client: 5.4.0(supports-color@8.1.1)
       any-signal: 4.2.0
       delay: 6.0.0
       interface-datastore: 9.0.3
@@ -9510,10 +9737,10 @@ snapshots:
       timeout-abort-controller: 3.0.0
       uint8arrays: 5.1.1
 
-  '@orbitdb/feed-db@1.4.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
+  '@orbitdb/feed-db@1.4.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)':
     dependencies:
       '@orbitdb/core': 4.0.0-3e1d628.0
-      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -9523,7 +9750,7 @@ snapshots:
   '@orbitdb/nested-db@2.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
       '@orbitdb/core': 3.0.2
-      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)
       it-all: 3.0.11
       ts-deepmerge: 7.0.3
     transitivePeerDependencies:
@@ -9535,7 +9762,7 @@ snapshots:
   '@orbitdb/ordered-keyvalue-db@1.4.2(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
       '@orbitdb/core': 3.0.2
-      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)
       it-all: 3.0.11
     transitivePeerDependencies:
       - bufferutil
@@ -9546,7 +9773,7 @@ snapshots:
   '@orbitdb/set-db@2.1.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
       '@orbitdb/core': 4.0.0-3e1d628.0
-      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1)
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -9779,9 +10006,9 @@ snapshots:
       aggregate-error: 3.1.0
       fs-extra: 11.3.5
       lodash: 4.18.1
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
 
-  '@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))':
+  '@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))':
     dependencies:
       conventional-changelog-angular: 8.3.1
       conventional-changelog-writer: 8.4.0
@@ -9791,7 +10018,7 @@ snapshots:
       import-from-esm: 2.0.0
       lodash-es: 4.18.1
       micromatch: 4.0.8
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -9809,11 +10036,11 @@ snapshots:
       lodash: 4.18.1
       micromatch: 4.0.8
       p-reduce: 2.1.0
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))':
+  '@semantic-release/github@12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))':
     dependencies:
       '@octokit/core': 7.0.6
       '@octokit/plugin-paginate-rest': 14.0.0(@octokit/core@7.0.6)
@@ -9829,7 +10056,7 @@ snapshots:
       lodash-es: 4.18.1
       mime: 4.1.0
       p-filter: 4.1.0
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
       tinyglobby: 0.2.17
       undici: 7.28.0
       url-join: 5.0.0
@@ -9837,7 +10064,7 @@ snapshots:
       - kerberos
       - supports-color
 
-  '@semantic-release/npm@13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))':
+  '@semantic-release/npm@13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))':
     dependencies:
       '@actions/core': 3.0.1
       '@semantic-release/error': 4.0.0
@@ -9852,11 +10079,11 @@ snapshots:
       rc: 1.2.8
       read-pkg: 10.1.0
       registry-auth-token: 5.1.1
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
       semver: 7.8.5
       tempy: 3.2.0
 
-  '@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))':
+  '@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))':
     dependencies:
       conventional-changelog-angular: 8.3.1
       conventional-changelog-writer: 8.4.0
@@ -9866,7 +10093,7 @@ snapshots:
       import-from-esm: 2.0.0
       lodash-es: 4.18.1
       read-package-up: 11.0.0
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -10011,12 +10238,12 @@ snapshots:
       '@types/node': 22.20.0
     optional: true
 
-  '@typescript-eslint/eslint-plugin@8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)':
+  '@typescript-eslint/eslint-plugin@8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
-      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/scope-manager': 8.62.1
-      '@typescript-eslint/type-utils': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+      '@typescript-eslint/type-utils': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
       '@typescript-eslint/visitor-keys': 8.62.1
       eslint: 10.6.0(supports-color@8.1.1)
@@ -10043,11 +10270,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)':
+  '@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.62.1
       '@typescript-eslint/types': 8.62.1
-      '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/typescript-estree': 8.62.1(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/visitor-keys': 8.62.1
       debug: 4.4.3(supports-color@8.1.1)
       eslint: 10.6.0(supports-color@8.1.1)
@@ -10067,21 +10294,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/project-service@8.62.1(supports-color@8.1.1)(typescript@6.0.3)':
+    dependencies:
+      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/types': 8.62.1
+      debug: 4.4.3(supports-color@8.1.1)
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/project-service@8.62.1(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@5.8.3)
       '@typescript-eslint/types': 8.62.1
       debug: 4.4.3(supports-color@8.1.1)
       typescript: 5.8.3
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/project-service@8.62.1(typescript@6.0.3)':
-    dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
-      '@typescript-eslint/types': 8.62.1
-      debug: 4.4.3(supports-color@8.1.1)
-      typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
@@ -10098,10 +10325,10 @@ snapshots:
     dependencies:
       typescript: 6.0.3
 
-  '@typescript-eslint/type-utils@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)':
+  '@typescript-eslint/type-utils@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/types': 8.62.1
-      '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/typescript-estree': 8.62.1(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
       debug: 4.4.3(supports-color@8.1.1)
       eslint: 10.6.0(supports-color@8.1.1)
@@ -10124,6 +10351,21 @@ snapshots:
 
   '@typescript-eslint/types@8.62.1': {}
 
+  '@typescript-eslint/typescript-estree@8.62.1(supports-color@8.1.1)(typescript@6.0.3)':
+    dependencies:
+      '@typescript-eslint/project-service': 8.62.1(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/types': 8.62.1
+      '@typescript-eslint/visitor-keys': 8.62.1
+      debug: 4.4.3(supports-color@8.1.1)
+      minimatch: 10.2.5
+      semver: 7.8.5
+      tinyglobby: 0.2.17
+      ts-api-utils: 2.5.0(typescript@6.0.3)
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/typescript-estree@8.62.1(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/project-service': 8.62.1(typescript@5.8.3)
@@ -10139,27 +10381,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3)':
-    dependencies:
-      '@typescript-eslint/project-service': 8.62.1(typescript@6.0.3)
-      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
-      '@typescript-eslint/types': 8.62.1
-      '@typescript-eslint/visitor-keys': 8.62.1
-      debug: 4.4.3(supports-color@8.1.1)
-      minimatch: 10.2.5
-      semver: 7.8.5
-      tinyglobby: 0.2.17
-      ts-api-utils: 2.5.0(typescript@6.0.3)
-      typescript: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/utils@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.6.0(supports-color@8.1.1))
       '@typescript-eslint/scope-manager': 8.62.1
       '@typescript-eslint/types': 8.62.1
-      '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/typescript-estree': 8.62.1(supports-color@8.1.1)(typescript@6.0.3)
       eslint: 10.6.0(supports-color@8.1.1)
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -10319,11 +10546,11 @@ snapshots:
       mime-types: 3.0.2
       negotiator: 1.0.0
 
-  acme-client@5.4.0:
+  acme-client@5.4.0(supports-color@8.1.1):
     dependencies:
       '@peculiar/x509': 1.14.3
       asn1js: 3.0.10
-      axios: 1.18.1(debug@4.4.3)
+      axios: 1.18.1(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)
       debug: 4.4.3(supports-color@8.1.1)
       node-forge: 1.4.0
     transitivePeerDependencies:
@@ -10344,11 +10571,11 @@ snapshots:
       '@electron/get': 4.0.3(supports-color@8.1.1)
       '@polka/send-type': 0.5.2
       '@semantic-release/changelog': 6.0.3(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
-      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
       '@semantic-release/git': 10.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))(supports-color@8.1.1)
-      '@semantic-release/github': 12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
-      '@semantic-release/npm': 13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
-      '@semantic-release/release-notes-generator': 14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
+      '@semantic-release/github': 12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
+      '@semantic-release/npm': 13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
+      '@semantic-release/release-notes-generator': 14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
       '@types/chai': 4.3.20
       '@types/chai-as-promised': 7.1.8
       '@types/chai-string': 1.4.5
@@ -10376,7 +10603,7 @@ snapshots:
       esbuild: 0.28.1
       eslint: 9.39.4(supports-color@8.1.1)
       eslint-formatter-unix: 9.0.1
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))
       eslint-plugin-jsdoc: 62.9.0(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)
       eslint-plugin-no-only-tests: 3.4.0
       execa: 9.6.1
@@ -10418,7 +10645,7 @@ snapshots:
       react-native-test-runner: 5.0.0(@babel/core@7.29.7)(supports-color@8.1.1)
       read-pkg-up: 11.0.0
       rimraf: 6.1.3
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
       semantic-release-monorepo: 8.0.2(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))(supports-color@8.1.1)
       semver: 7.8.5
       source-map-support: 0.5.21
@@ -10448,7 +10675,7 @@ snapshots:
       - zen-observable
       - zenObservable
 
-  agent-base@6.0.2:
+  agent-base@6.0.2(supports-color@8.1.1):
     dependencies:
       debug: 4.4.3(supports-color@8.1.1)
     transitivePeerDependencies:
@@ -10670,11 +10897,11 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.18.1(debug@4.4.3):
+  axios@1.18.1(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.4.3)
+      follow-redirects: 1.16.0(debug@4.4.3(supports-color@8.1.1))
       form-data: 4.0.6
-      https-proxy-agent: 5.0.1
+      https-proxy-agent: 5.0.1(supports-color@8.1.1)
       proxy-from-env: 2.1.0
     transitivePeerDependencies:
       - debug
@@ -10719,6 +10946,11 @@ snapshots:
   baseline-browser-mapping@2.10.40: {}
 
   before-after-hook@4.0.0: {}
+
+  birnam@1.0.0:
+    dependencies:
+      multiformats: 14.0.3
+      weald: 1.1.3
 
   bl@0.8.2:
     dependencies:
@@ -11994,16 +12226,16 @@ snapshots:
       tinyglobby: 0.2.17
       unrs-resolver: 1.12.2
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))
       eslint-plugin-import-x: 4.17.1(@typescript-eslint/utils@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.13.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.6.0(supports-color@8.1.1)):
+  eslint-module-utils@2.13.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.6.0(supports-color@8.1.1)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
-      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       eslint: 10.6.0(supports-color@8.1.1)
       eslint-import-resolver-node: 0.3.10
     transitivePeerDependencies:
@@ -12034,7 +12266,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1)):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -12045,7 +12277,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 10.6.0(supports-color@8.1.1)
       eslint-import-resolver-node: 0.3.10
-      eslint-module-utils: 2.13.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.6.0(supports-color@8.1.1))
+      eslint-module-utils: 2.13.0(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.6.0(supports-color@8.1.1))
       hasown: 2.0.4
       is-core-module: 2.16.2
       is-glob: 4.0.3
@@ -12057,7 +12289,7 @@ snapshots:
       string.prototype.trimend: 1.0.10
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
+      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -12475,7 +12707,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  follow-redirects@1.16.0(debug@4.4.3):
+  follow-redirects@1.16.0(debug@4.4.3(supports-color@8.1.1)):
     optionalDependencies:
       debug: 4.4.3(supports-color@8.1.1)
 
@@ -12825,7 +13057,7 @@ snapshots:
 
   he@1.2.0: {}
 
-  helia@6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6)):
+  helia@6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))(supports-color@8.1.1):
     dependencies:
       '@chainsafe/libp2p-noise': 17.0.0
       '@chainsafe/libp2p-yamux': 8.0.1
@@ -12834,7 +13066,7 @@ snapshots:
       '@helia/interface': 6.2.1
       '@helia/routers': 5.1.1
       '@helia/utils': 2.5.2
-      '@ipshipyard/libp2p-auto-tls': 2.0.1
+      '@ipshipyard/libp2p-auto-tls': 2.0.1(supports-color@8.1.1)
       '@libp2p/autonat': 3.0.22
       '@libp2p/bootstrap': 12.0.25
       '@libp2p/circuit-relay-v2': 4.2.7
@@ -12860,6 +13092,45 @@ snapshots:
       ipns: 10.1.6
       libp2p: 3.3.4
       multiformats: 13.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - react-native
+      - supports-color
+      - utf-8-validate
+
+  helia@7.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6)):
+    dependencies:
+      '@helia/bitswap': 4.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      '@helia/http': 4.0.0
+      '@helia/interface': 7.0.0
+      '@helia/libp2p': 1.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+      '@helia/utils': 3.0.0
+      '@ipld/dag-cbor': 10.0.1
+      '@ipld/dag-json': 11.0.0
+      '@ipld/dag-pb': 4.1.7
+      '@ipshipyard/crypto': 1.1.0
+      '@ipshipyard/keychain': 1.0.2
+      '@libp2p/interface': 3.2.4
+      '@libp2p/utils': 7.2.3
+      '@multiformats/dns': 1.0.15
+      '@multiformats/multiaddr': 13.0.3
+      abort-error: 1.0.2
+      any-signal: 4.2.0
+      birnam: 1.0.0
+      blockstore-core: 7.0.1
+      cborg: 5.1.4
+      datastore-core: 12.0.1
+      interface-blockstore: 7.0.1
+      interface-datastore: 10.0.1
+      it-drain: 3.0.12
+      it-filter: 3.1.6
+      it-foreach: 2.1.7
+      it-merge: 3.0.14
+      main-event: 1.0.4
+      mortice: 3.3.1
+      multiformats: 14.0.3
+      progress-events: 1.1.0
+      uint8arrays: 6.1.1
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -12938,9 +13209,9 @@ snapshots:
       quick-lru: 5.1.1
       resolve-alpn: 1.2.1
 
-  https-proxy-agent@5.0.1:
+  https-proxy-agent@5.0.1(supports-color@8.1.1):
     dependencies:
-      agent-base: 6.0.2
+      agent-base: 6.0.2(supports-color@8.1.1)
       debug: 4.4.3(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -13411,6 +13682,10 @@ snapshots:
   it-ndjson@1.1.6:
     dependencies:
       uint8arraylist: 2.4.9
+
+  it-ndjson@2.0.0:
+    dependencies:
+      uint8arraylist: 3.0.2
 
   it-parallel@3.0.15:
     dependencies:
@@ -15852,7 +16127,7 @@ snapshots:
       pkg-up: 3.1.0
       ramda: 0.27.2
       read-pkg: 5.2.0
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
       semantic-release-plugin-decorators: 4.0.0(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
       tempy: 1.0.1
     transitivePeerDependencies:
@@ -15860,15 +16135,15 @@ snapshots:
 
   semantic-release-plugin-decorators@4.0.0(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3)):
     dependencies:
-      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@5.8.3)
+      semantic-release: 25.0.5(supports-color@8.1.1)(typescript@6.0.3)
 
-  semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3):
+  semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3):
     dependencies:
-      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
-      '@semantic-release/npm': 13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
-      '@semantic-release/release-notes-generator': 14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@5.8.3))
+      '@semantic-release/github': 12.0.8(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
+      '@semantic-release/npm': 13.1.5(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
+      '@semantic-release/release-notes-generator': 14.1.1(semantic-release@25.0.5(supports-color@8.1.1)(typescript@6.0.3))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.2(typescript@5.8.3)
       debug: 4.4.3(supports-color@8.1.1)
@@ -16607,9 +16882,9 @@ snapshots:
 
   typescript-eslint@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3):
     dependencies:
-      '@typescript-eslint/eslint-plugin': 8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
-      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
-      '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/eslint-plugin': 8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/typescript-estree': 8.62.1(supports-color@8.1.1)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.62.1(eslint@10.6.0(supports-color@8.1.1))(typescript@6.0.3)
       eslint: 10.6.0(supports-color@8.1.1)
       typescript: 6.0.3
