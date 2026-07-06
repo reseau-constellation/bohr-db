@@ -58,7 +58,10 @@ export type TypedNested<T extends NestedValue> = Omit<
   all: () => Promise<RecursivePartial<T>>;
 };
 
-const nestedCache = new WeakMap<NestedDatabaseType, WeakMap<JSONSchemaType<unknown>, TypedNested<NestedValue>>>();
+const nestedCache = new WeakMap<
+  NestedDatabaseType,
+  WeakMap<JSONSchemaType<unknown>, TypedNested<NestedValue>>
+>();
 
 export const typedNested = <T extends NestedValue>({
   db,
@@ -67,10 +70,10 @@ export const typedNested = <T extends NestedValue>({
   db: NestedDatabaseType;
   schema: JSONSchemaType<RecursivePartial<T>>;
 }): TypedNested<T> => {
-  const dbCache = nestedCache.get(db)
+  const dbCache = nestedCache.get(db);
   if (dbCache) {
-    const cached = dbCache.get(schema as JSONSchemaType<unknown>)
-    if (cached) return cached as TypedNested<T>
+    const cached = dbCache.get(schema as JSONSchemaType<unknown>);
+    if (cached) return cached as TypedNested<T>;
   }
   const ajv = new Ajv({ allowUnionTypes: true });
   const rootValidator = ajv.compile<RecursivePartial<T>>(schema);
