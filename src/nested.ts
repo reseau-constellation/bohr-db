@@ -1,4 +1,4 @@
-import { Ajv, ValidateFunction, type JSONSchemaType } from "ajv";
+import { Ajv, type ValidateFunction, type JSONSchemaType } from "ajv";
 import {
   joinKey,
   splitKey,
@@ -7,20 +7,20 @@ import {
   type NestedValue,
 } from "@orbitdb/nested-db";
 
-import {
+import type {
   ExtractKeys,
   ExtractKeysAsList,
   GetValueFromKey,
   GetValueFromKeyList,
   GetValueFromNestedKey,
   RecursivePartial,
-} from "./types.js";
+} from "./types.ts";
 import {
-  NoUndefinedField,
   getJoinedKey,
   removeUndefinedProperties,
-} from "./utils.js";
-import { DagCborEncodable } from "@orbitdb/core";
+  type NoUndefinedField,
+} from "./utils.ts";
+import type { DagCborEncodable } from "@orbitdb/core";
 
 export type TypedNested<T extends NestedValue> = Omit<
   NestedDatabaseType,

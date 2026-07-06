@@ -1,9 +1,9 @@
-import {
+import type {
   ExtractKeys,
   ExtractKeysAsList,
   GetValueFromKey,
   GetValueFromKeyList,
-} from "@/types.js";
+} from "../src/types.ts";
 
 describe("Types", () => {
   type S = {

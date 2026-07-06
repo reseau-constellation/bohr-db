@@ -1,8 +1,8 @@
 import type { JSONSchemaType } from "ajv";
 import type { KeyValueDatabase } from "@orbitdb/core";
 
-import type { DBElements } from "./types.js";
-import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
+import type { DBElements } from "./types.ts";
+import { generateDictValidator, removeUndefinedProperties } from "./utils.ts";
 
 export type TypedKeyValue<T extends { [clef: string]: unknown }> = Omit<
   KeyValueDatabase,

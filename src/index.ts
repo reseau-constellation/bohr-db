@@ -1,13 +1,13 @@
-export { typedFeed, TypedFeed } from "@/feed.js";
-export { typedKeyValue, TypedKeyValue } from "@/keyvalue.js";
+export { typedFeed, type TypedFeed } from "../src/feed.ts";
+export { typedKeyValue, type TypedKeyValue } from "../src/keyvalue.ts";
 export {
   typedOrderedKeyValue,
-  TypedOrderedKeyValue,
-} from "@/ordered-keyvalue.js";
-export { typedSet, TypedSet } from "@/set.js";
-export { typedNested, TypedNested } from "@/nested.js";
+  type TypedOrderedKeyValue,
+} from "../src/ordered-keyvalue.ts";
+export { typedSet, type TypedSet } from "../src/set.ts";
+export { typedNested, type TypedNested } from "../src/nested.ts";
 
-export {
+export type {
   DBElements,
   DBElementsWithUndefined,
   RecursivePartial,
@@ -16,6 +16,6 @@ export {
   GetValueFromKey,
   GetValueFromKeyList,
   GetValueFromNestedKey,
-} from "@/types.js";
+} from "../src/types.ts";
 
-export { version } from "@/version.js";
+export { version } from "../src/version.ts";

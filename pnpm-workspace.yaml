@@ -1,4 +1,5 @@
 allowBuilds:
+  bun: true
   classic-level: true
   deno: true
   esbuild: true

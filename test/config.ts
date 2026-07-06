@@ -1,5 +1,5 @@
 // From @orbit-db/core (MIT)
-import { Helia, createHelia } from "helia";
+import { createHelia, type Helia } from "helia";
 import { bitswap } from "@helia/block-brokers";
 import { createLibp2p } from "libp2p";
 import { MemoryBlockstore } from "blockstore-core";

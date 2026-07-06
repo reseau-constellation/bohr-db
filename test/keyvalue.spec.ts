@@ -1,14 +1,14 @@
 import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import { createTestHelia } from "./config.js";
-import { OrbitDB, createOrbitDB } from "@orbitdb/core";
+import { createTestHelia } from "./config.ts";
+import { type OrbitDB, createOrbitDB } from "@orbitdb/core";
 import type { KeyValueDatabase } from "@orbitdb/core";
 
-import { TypedKeyValue, typedKeyValue } from "@/keyvalue.js";
+import { type TypedKeyValue, typedKeyValue } from "../src/keyvalue.ts";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
-import { JSONSchemaType } from "ajv";
+import { type JSONSchemaType } from "ajv";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
