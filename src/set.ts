@@ -1,11 +1,11 @@
 import { type JSONSchemaType } from "ajv";
 import type { SetDatabaseType } from "@orbitdb/set-db";
 
-import type { DBElements } from "../src/types.ts";
+import type { DBElements } from "./types.ts";
 import {
   generateListValidator,
   removeUndefinedProperties,
-} from "../src/utils.ts";
+} from "./utils.ts";
 
 export type TypedSet<T extends DBElements> = Omit<
   SetDatabaseType,

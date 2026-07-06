@@ -1,11 +1,11 @@
-export { typedFeed, type TypedFeed } from "../src/feed.ts";
-export { typedKeyValue, type TypedKeyValue } from "../src/keyvalue.ts";
+export { typedFeed, type TypedFeed } from "./feed.ts";
+export { typedKeyValue, type TypedKeyValue } from "./keyvalue.ts";
 export {
   typedOrderedKeyValue,
   type TypedOrderedKeyValue,
-} from "../src/ordered-keyvalue.ts";
-export { typedSet, type TypedSet } from "../src/set.ts";
-export { typedNested, type TypedNested } from "../src/nested.ts";
+} from "./ordered-keyvalue.ts";
+export { typedSet, type TypedSet } from "./set.ts";
+export { typedNested, type TypedNested } from "./nested.ts";
 
 export type {
   DBElements,
@@ -16,6 +16,6 @@ export type {
   GetValueFromKey,
   GetValueFromKeyList,
   GetValueFromNestedKey,
-} from "../src/types.ts";
+} from "./types.ts";
 
-export { version } from "../src/version.ts";
+export { version } from "./version.ts";
