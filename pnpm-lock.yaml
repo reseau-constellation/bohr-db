@@ -22,7 +22,7 @@ importers:
         version: 2.1.5(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
       '@orbitdb/ordered-keyvalue-db':
         specifier: ^1.4.2
-        version: 1.4.2(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+        version: 1.4.5(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
       '@orbitdb/set-db':
         specifier: ^2.1.1
         version: 2.1.1(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
@@ -1526,10 +1526,6 @@ packages:
   '@orbitdb/core-types@1.2.5':
     resolution: {integrity: sha512-dzeX5aVuQOX51JTj4DAqmgLvh/SFqMOTqwSJI+ijkRLWIpd7vWlhgsJCcNWG1XR9rVRnDGEiuLs+fz8ME+zSzw==}
 
-  '@orbitdb/core@3.0.2':
-    resolution: {integrity: sha512-YTJIBbe8mIDLpA0T3cOdVjWDeAyIojQLR54p0TfVyUBAjWh7N0rbKBbgQMTOrFxhUmRf/D85iFScmGnnEn5v+w==}
-    engines: {node: '>=20.0.0'}
-
   '@orbitdb/core@4.0.0':
     resolution: {integrity: sha512-JPnoVzNYxJ8XxjXVzkuVOK/eLzz5xGzRHhPJaUdDhWwBDqvQkpks7bxL4qiA+HswN7EgyC6u20WIt62fRU9wDg==}
     engines: {node: '>=22.0.0'}
@@ -1544,8 +1540,8 @@ packages:
   '@orbitdb/nested-db@2.1.5':
     resolution: {integrity: sha512-ceT6Uqf4GwPREjNjEwZduDf4bdp3gCEdScAhjcPLatgmTa0aV22ABIlQvqvFNaYeY0zLAxUUR7W7Ss4x8fM14A==}
 
-  '@orbitdb/ordered-keyvalue-db@1.4.2':
-    resolution: {integrity: sha512-rk7OZUfJHAcfCPrNr2Awh+rISWlJUXhKCpVKh4/+y6CszxF6sGN8lqmvYyPdNbl7Em+jUvY2UJWvv42dReVaRQ==}
+  '@orbitdb/ordered-keyvalue-db@1.4.5':
+    resolution: {integrity: sha512-PzzxQUUO3kUCtEWXTO1a5LGhAkZfQyvmMdIPX3AJfpHm7qx4MN66uZXArgBlkfYS7vDa9N/spmwkQiTUETCoLQ==}
 
   '@orbitdb/set-db@2.1.1':
     resolution: {integrity: sha512-nRwx0zAXZgd850eAMvI5XlyID3Hysep7EFpU+cWMqvSxFYg4FmgDxnOI1m0MW6Dc1PmI9emh8fJhezJZz8XeTg==}
@@ -2039,10 +2035,6 @@ packages:
   abort-error@1.0.2:
     resolution: {integrity: sha512-lVgvB2NyPLqbXXhVmXcYFTC1x5K7CiVdPgdY7LGgFQWC8506oN01sPN3i9cl9ynuwF4iJ0TS9exnR7cZ9FuX4w==}
 
-  abstract-level@1.0.4:
-    resolution: {integrity: sha512-eUP/6pbXBkMbXFdx4IH2fVgvB7M0JvR7/lIL33zcs0IBcwjdzSSl31TOJsaCzmKSSDF9h8QYSOJux4Nd4YJqFg==}
-    engines: {node: '>=12'}
-
   abstract-level@3.1.1:
     resolution: {integrity: sha512-CW2gKbJFTuX1feMvOrvsVMmijAOgI9kg2Ie9Dq3gOcMt/dVVoVmqNlLcEUCT13NxHFMEajcUcVBIplbyDroDiw==}
     engines: {node: '>=18'}
@@ -2378,9 +2370,6 @@ packages:
   brorand@1.1.0:
     resolution: {integrity: sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==}
 
-  browser-level@1.0.1:
-    resolution: {integrity: sha512-XECYKJ+Dbzw0lbydyQuJzwNXtOpbMSq737qxJN11sIRTErOMShvDpbzTlgju7orJKvx4epULolZAuJGLzCmWRQ==}
-
   browser-level@3.0.0:
     resolution: {integrity: sha512-kGXtLh29jMwqKaskz5xeDLtCtN1KBz/DbQSqmvH7QdJiyGRC7RAM8PPg6gvUiNMa+wVnaxS9eSmEtP/f5ajOVw==}
 
@@ -2502,10 +2491,6 @@ packages:
   caniuse-lite@1.0.30001800:
     resolution: {integrity: sha512-MMHtuAz9Ys840zAY5F4k6fV5GaivZ9sPk+nz0mY+GYVzRBnYkN0mpqkSR92oWRQ19yQWo4HvBV/FnC16AJX8MA==}
 
-  catering@2.1.1:
-    resolution: {integrity: sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==}
-    engines: {node: '>=6'}
-
   cborg@5.1.4:
     resolution: {integrity: sha512-EDoD59RBV51H5ar6i29ut7AyOJi0BUIEhtbnJJac3qYcMG74Db6eVce/dIh+Wh6tVwBi7cRWDXmdms+fKPQvcQ==}
     hasBin: true
@@ -2594,10 +2579,6 @@ packages:
   cipher-base@1.0.7:
     resolution: {integrity: sha512-Mz9QMT5fJe7bKI7MH31UilT5cEK5EHHRCccw/YRFsRY47AuNgaV6HY3rscp0/I4Q+tTW/5zoqpSeRRI54TkDWA==}
     engines: {node: '>= 0.10'}
-
-  classic-level@1.4.1:
-    resolution: {integrity: sha512-qGx/KJl3bvtOHrGau2WklEZuXhS3zme+jf+fsu6Ej7W7IP/C49v7KNlWIsT1jZu0YnfzSIYDGcEWpCa1wKGWXQ==}
-    engines: {node: '>=12'}
 
   classic-level@3.0.0:
     resolution: {integrity: sha512-yGy8j8LjPbN0Bh3+ygmyYvrmskVita92pD/zCoalfcC9XxZj6iDtZTAnz+ot7GG8p9KLTG+MZ84tSA4AhkgVZQ==}
@@ -4641,10 +4622,6 @@ packages:
   level-sublevel@5.2.3:
     resolution: {integrity: sha512-tO8jrFp+QZYrxx/Gnmjawuh1UBiifpvKNAcm4KCogesWr1Nm2+ckARitf+Oo7xg4OHqMW76eAqQ204BoIlscjA==}
 
-  level-supports@4.0.1:
-    resolution: {integrity: sha512-PbXpve8rKeNcZ9C1mUicC9auIYFyGpkV9/i6g76tLgANwWhtG2v7I4xNBUlkn3lE2/dZF3Pi0ygYGtLc4RXXdA==}
-    engines: {node: '>=12'}
-
   level-supports@6.2.0:
     resolution: {integrity: sha512-QNxVXP0IRnBmMsJIh+sb2kwNCYcKciQZJEt+L1hPCHrKNELllXhvrlClVHXBYZVT+a7aTSM6StgNXdAldoab3w==}
     engines: {node: '>=16'}
@@ -4656,10 +4633,6 @@ packages:
   level@10.0.0:
     resolution: {integrity: sha512-aZJvdfRr/f0VBbSRF5C81FHON47ZsC2TkGxbBezXpGGXAUEL/s6+GP73nnhAYRSCIqUNsmJjfeOF4lzRDKbUig==}
     engines: {node: '>=18'}
-
-  level@8.0.1:
-    resolution: {integrity: sha512-oPBGkheysuw7DmzFQYyFe8NAia5jFLAgEnkgWnK3OXAuJr8qFT+xBQIwokAZPME2bhPFzS8hlYcL16m8UZrtwQ==}
-    engines: {node: '>=12'}
 
   levelup@0.18.6:
     resolution: {integrity: sha512-uB0auyRqIVXx+hrpIUtol4VAPhLRcnxcOsd2i2m6rbFIDarO5dnrupLOStYYpEcu8ZT087Z9HEuYw1wjr6RL6Q==}
@@ -5231,10 +5204,6 @@ packages:
   multicast-dns@7.2.5:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
     hasBin: true
-
-  multiformats@12.1.3:
-    resolution: {integrity: sha512-eajQ/ZH7qXZQR2AgtfpmSMizQzmyYVmCql7pdhldPuYQi4atACekbJaQplk6dWyIi10jCaFnd6pqvcEFXjbaJw==}
-    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
   multiformats@13.4.2:
     resolution: {integrity: sha512-eh6eHCrRi1+POZ3dA+Dq1C6jhP1GNtr9CRINMb67OKzqW9I5DUuZM/3jLPlzhgpGeiNUlEGEbkCYChXMCc/8DQ==}
@@ -6268,9 +6237,6 @@ packages:
   ripemd160@2.0.3:
     resolution: {integrity: sha512-5Di9UC0+8h1L6ZD2d7awM7E/T4uA1fJRlx6zk/NvdCCVEoAnFqvHmCuNeIKoCeIixBX/q8uM+6ycDvF8woqosA==}
     engines: {node: '>= 0.8'}
-
-  run-parallel-limit@1.1.0:
-    resolution: {integrity: sha512-jJA7irRNM91jaKc3Hcl1npHsFLOXOoTkPCUL1JEa1R82O2miplXXRaGdjW/KM/98YQWDhJLiSs793CnXfblJUw==}
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -9258,18 +9224,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@orbitdb/core@3.0.2':
-    dependencies:
-      '@ipld/dag-cbor': 9.2.7
-      '@libp2p/crypto': 5.1.20
-      it-pipe: 3.0.1
-      level: 8.0.1
-      lru: 3.1.0
-      multiformats: 12.1.3
-      p-queue: 8.1.1
-      timeout-abort-controller: 3.0.0
-      uint8arrays: 5.1.1
-
   '@orbitdb/core@4.0.0':
     dependencies:
       '@ipld/dag-cbor': 9.2.7
@@ -9320,11 +9274,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@orbitdb/ordered-keyvalue-db@1.4.2(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
+  '@orbitdb/ordered-keyvalue-db@1.4.5(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
-      '@orbitdb/core': 3.0.2
+      '@orbitdb/core': 4.0.0
       helia: 6.1.4(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
       it-all: 3.0.11
+      tiny-typed-emitter: 2.1.0
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -10031,16 +9986,6 @@ snapshots:
 
   abort-error@1.0.2: {}
 
-  abstract-level@1.0.4:
-    dependencies:
-      buffer: 6.0.3
-      catering: 2.1.1
-      is-buffer: 2.0.5
-      level-supports: 4.0.1
-      level-transcoder: 1.0.1
-      module-error: 1.0.2
-      queue-microtask: 1.2.3
-
   abstract-level@3.1.1:
     dependencies:
       buffer: 6.0.3
@@ -10529,13 +10474,6 @@ snapshots:
 
   brorand@1.1.0: {}
 
-  browser-level@1.0.1:
-    dependencies:
-      abstract-level: 1.0.4
-      catering: 2.1.1
-      module-error: 1.0.2
-      run-parallel-limit: 1.1.0
-
   browser-level@3.0.0:
     dependencies:
       abstract-level: 3.1.1
@@ -10707,8 +10645,6 @@ snapshots:
 
   caniuse-lite@1.0.30001800: {}
 
-  catering@2.1.1: {}
-
   cborg@5.1.4: {}
 
   ccount@2.0.1: {}
@@ -10805,14 +10741,6 @@ snapshots:
       inherits: 2.0.4
       safe-buffer: 5.2.1
       to-buffer: 1.2.2
-
-  classic-level@1.4.1:
-    dependencies:
-      abstract-level: 1.0.4
-      catering: 2.1.1
-      module-error: 1.0.2
-      napi-macros: 2.2.2
-      node-gyp-build: 4.8.4
 
   classic-level@3.0.0:
     dependencies:
@@ -13290,8 +13218,6 @@ snapshots:
       string-range: 1.2.2
       xtend: 2.0.6
 
-  level-supports@4.0.1: {}
-
   level-supports@6.2.0: {}
 
   level-transcoder@1.0.1:
@@ -13304,12 +13230,6 @@ snapshots:
       abstract-level: 3.1.1
       browser-level: 3.0.0
       classic-level: 3.0.0
-
-  level@8.0.1:
-    dependencies:
-      abstract-level: 1.0.4
-      browser-level: 1.0.1
-      classic-level: 1.4.1
 
   levelup@0.18.6:
     dependencies:
@@ -14258,8 +14178,6 @@ snapshots:
     dependencies:
       dns-packet: 5.6.1
       thunky: 1.1.0
-
-  multiformats@12.1.3: {}
 
   multiformats@13.4.2: {}
 
@@ -15408,10 +15326,6 @@ snapshots:
     dependencies:
       hash-base: 3.1.2
       inherits: 2.0.4
-
-  run-parallel-limit@1.1.0:
-    dependencies:
-      queue-microtask: 1.2.3
 
   run-parallel@1.2.0:
     dependencies:
