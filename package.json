@@ -33,7 +33,7 @@
     "@orbitdb/set-db": "^2.1.1",
     "ajv": "^8.20.0",
     "events": "^3.3.0",
-    "helia": "^6.1.4",
+    "helia": "^7.0.0",
     "multiformats": "^14.0.2",
     "ts-deepmerge": "^8.0.0",
     "uuid": "^14.0.1"
