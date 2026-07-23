@@ -37,7 +37,7 @@ importers:
         version: 6.1.4(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)
       multiformats:
         specifier: ^14.0.2
-        version: 14.0.4
+        version: 14.0.5
       ts-deepmerge:
         specifier: ^8.0.0
         version: 8.0.0
@@ -5323,11 +5323,11 @@ packages:
   multiformats@13.4.2:
     resolution: {integrity: sha512-eh6eHCrRi1+POZ3dA+Dq1C6jhP1GNtr9CRINMb67OKzqW9I5DUuZM/3jLPlzhgpGeiNUlEGEbkCYChXMCc/8DQ==}
 
-  multiformats@14.0.3:
-    resolution: {integrity: sha512-l7FEUCJb3tx1UWeovywhaidQdOGQOOKTfl51G2y6CQbcOHe9dp3z90NHqQ3v2SKetKgkxwa3wI+2jsyJrjJjTg==}
-
   multiformats@14.0.4:
     resolution: {integrity: sha512-+SXItmOUWzT0kjlIfkZ4NawJaC9jW/mPlyn902V9Qgpc7YDwdEiwqbiZxTyvC0XWh1jZguXca3A/WQ+UOPRLUA==}
+
+  multiformats@14.0.5:
+    resolution: {integrity: sha512-vbIm83F2yZ1pWJGS0yl0ysracIvv56LtbrIyiIQHoLdYDJOMoLfVFsXhh9DUH4SFdkdkFhucyWniihsNzVEjkQ==}
 
   multimatch@5.0.0:
     resolution: {integrity: sha512-ypMKuglUrZUD99Tk2bUQ+xNQj43lPEfAeX2o9cTteAmShXy2VHDJpuwu1o0xqoKCt9jLVAvwyFKdLTPXKAfJyA==}
@@ -9106,7 +9106,7 @@ snapshots:
       '@libp2p/interface': 3.2.4
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 10.0.1
-      multiformats: 14.0.3
+      multiformats: 14.0.4
       weald: 1.1.3
 
   '@libp2p/mdns@12.0.25':
@@ -10830,7 +10830,7 @@ snapshots:
       it-all: 3.0.11
       it-filter: 3.1.6
       it-merge: 3.0.14
-      multiformats: 14.0.3
+      multiformats: 14.0.4
 
   blockstore-level@4.0.1:
     dependencies:
@@ -10841,7 +10841,7 @@ snapshots:
       it-all: 3.0.11
       it-to-buffer: 5.0.0
       level: 10.0.0
-      multiformats: 14.0.3
+      multiformats: 14.0.4
       race-signal: 2.0.0
       uint8arrays: 6.1.1
 
@@ -13013,7 +13013,7 @@ snapshots:
   interface-blockstore@7.0.1:
     dependencies:
       interface-store: 8.0.0
-      multiformats: 14.0.3
+      multiformats: 14.0.4
 
   interface-datastore@10.0.1:
     dependencies:
@@ -14617,9 +14617,9 @@ snapshots:
 
   multiformats@13.4.2: {}
 
-  multiformats@14.0.3: {}
-
   multiformats@14.0.4: {}
+
+  multiformats@14.0.5: {}
 
   multimatch@5.0.0:
     dependencies:
