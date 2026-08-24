@@ -58,6 +58,20 @@ export type TypedNested<T extends NestedValue> = Omit<
   all: () => Promise<RecursivePartial<T>>;
 };
 
+const ajv = new Ajv({ allowUnionTypes: true });
+
+const cache = new WeakMap();
+
+const compileAjv = <T extends NestedValue>(
+  schema: JSONSchemaType<RecursivePartial<T>>,
+): ValidateFunction<RecursivePartial<T>> => {
+  const existing = cache.get(schema);
+  if (existing) return existing;
+  const validator = ajv.compile<RecursivePartial<T>>(schema);
+  cache.set(schema, validator);
+  return validator;
+};
+
 export const typedNested = <T extends NestedValue>({
   db,
   schema,
@@ -66,7 +80,7 @@ export const typedNested = <T extends NestedValue>({
   schema: JSONSchemaType<RecursivePartial<T>>;
 }): TypedNested<T> => {
   const ajv = new Ajv({ allowUnionTypes: true });
-  const rootValidator = ajv.compile<RecursivePartial<T>>(schema);
+  const rootValidator = compileAjv<T>(schema);
 
   const validators: { [key in ExtractKeys<T>]?: ValidateFunction } = {};
   const getValidator = <K extends ExtractKeys<T>>(
@@ -83,7 +97,7 @@ export const typedNested = <T extends NestedValue>({
     }
 
     if (!validators[key]) {
-      validators[key] = ajv.compile(branchSchema);
+      validators[key] = compileAjv(branchSchema);
     }
     return validators[key] as ValidateFunction<GetValueFromKey<T, K>>;
   };
