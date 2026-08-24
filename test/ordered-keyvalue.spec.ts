@@ -1,20 +1,25 @@
 import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import { createTestHelia } from "./config.js";
-import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
+import { createTestHelia } from "./config.ts";
+import {
+  Identities,
+  type Identity,
+  KeyStore,
+  type KeyStoreType,
+} from "@orbitdb/core";
 import {
   OrderedKeyValue,
-  OrderedKeyValueDatabaseType,
+  type OrderedKeyValueDatabaseType,
 } from "@orbitdb/ordered-keyvalue-db";
 
 import {
-  TypedOrderedKeyValue,
+  type TypedOrderedKeyValue,
   typedOrderedKeyValue,
-} from "@/ordered-keyvalue.js";
+} from "../src/ordered-keyvalue.ts";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
-import { JSONSchemaType } from "ajv";
+import type { JSONSchemaType } from "ajv";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";

@@ -1,14 +1,19 @@
 import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import { createTestHelia } from "./config.js";
-import { Identities, Identity, KeyStore, KeyStoreType } from "@orbitdb/core";
-import { Feed, FeedDatabaseType } from "@orbitdb/feed-db";
+import { createTestHelia } from "./config.ts";
+import {
+  Identities,
+  type Identity,
+  KeyStore,
+  type KeyStoreType,
+} from "@orbitdb/core";
+import { Feed, type FeedDatabaseType } from "@orbitdb/feed-db";
 
-import { TypedFeed, typedFeed } from "@/feed.js";
+import { type TypedFeed, typedFeed } from "../src/feed.ts";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
-import { JSONSchemaType } from "ajv";
+import { type JSONSchemaType } from "ajv";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";

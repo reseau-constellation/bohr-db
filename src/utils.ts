@@ -1,7 +1,7 @@
-import { Ajv, JSONSchemaType, ValidateFunction } from "ajv";
+import { Ajv, type JSONSchemaType, type ValidateFunction } from "ajv";
 
-import type { DBElements, ExtractKeys, ExtractKeysAsList } from "./types.js";
-import { DagCborEncodable } from "@orbitdb/core";
+import type { DBElements, ExtractKeys, ExtractKeysAsList } from "./types.ts";
+import type { DagCborEncodable } from "@orbitdb/core";
 import { CID } from "multiformats/cid";
 import { joinKey } from "@orbitdb/nested-db";
 

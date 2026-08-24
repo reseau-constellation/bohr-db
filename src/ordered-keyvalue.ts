@@ -1,9 +1,9 @@
-import { JSONSchemaType } from "ajv";
-import { OrderedKeyValueDatabaseType } from "@orbitdb/ordered-keyvalue-db";
+import type { JSONSchemaType } from "ajv";
+import type { OrderedKeyValueDatabaseType } from "@orbitdb/ordered-keyvalue-db";
 
-import { DBElements } from "./types.js";
-import { generateDictValidator, removeUndefinedProperties } from "./utils.js";
-import { DagCborEncodable } from "@orbitdb/core";
+import type { DBElements } from "./types.ts";
+import { generateDictValidator, removeUndefinedProperties } from "./utils.ts";
+import type { DagCborEncodable } from "@orbitdb/core";
 
 export type TypedOrderedKeyValue<
   T extends { [clef: string]: DagCborEncodable },

@@ -1,15 +1,15 @@
 import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
-import { createTestHelia } from "./config.js";
+import { createTestHelia } from "./config.ts";
 import { Identities, KeyStore } from "@orbitdb/core";
 import type { Identity, KeyStoreType } from "@orbitdb/core";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
-import { JSONSchemaType } from "ajv";
-import { Nested, NestedDatabaseType } from "@orbitdb/nested-db";
-import { TypedNested, typedNested } from "@/nested.js";
-import { RecursivePartial } from "@/types.js";
+import { type JSONSchemaType } from "ajv";
+import { Nested, type NestedDatabaseType } from "@orbitdb/nested-db";
+import { type TypedNested, typedNested } from "../src/nested.ts";
+import { type RecursivePartial } from "../src/types.ts";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys-nested";
