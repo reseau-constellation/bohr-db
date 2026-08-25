@@ -9,9 +9,9 @@ Discrete types for your OrbitDBs.
 $ pnpm add @constl/bohr-db
 ```
 ## Introduction
-Bohr-DB brings both **TypeScript and runtime-checked types to your orbit-db databases**, so that you can be sure that you'll only receive values that correspond to your specified data schema.
+Bohr-DB brings both **TypeScript and runtime-checked types to your OrbitDB databases**, so that you can be sure that you'll only receive values that correspond to your specified data schema.
 
-Borh-DB uses AJV to check for data validity behind the scenes. It wraps around existing orbit-db databases with a proxy, so you can use typed Borh-DB databases as a **drop-in and type-safe replacement for the original orbit-db databases** in your code.
+Borh-DB uses AJV to check for data validity behind the scenes. It wraps around existing OrbitDB databases with a proxy, so you can use typed Borh-DB databases as a **drop-in and type-safe replacement for the original OrbitDB databases** in your code.
 
 Note: `KeyValue` also offers the additional property `.allAsJSON()`, which returns a key, value object instead of a list of entries.
 
@@ -19,10 +19,10 @@ Note: `KeyValue` also offers the additional property `.allAsJSON()`, which retur
 ...because now your orbits can only take on [deterministic values](https://en.wikipedia.org/wiki/Bohr_model). 
 
 ## Support
-Borh-DB currently supports the orbit-db `KeyValue`, as well as the `Feed`, `Set` and `OrderedKeyValue` databases from `@constl/orbit-db-kuiper`. Pull requests for additional db types are of course welcome!
+Borh-DB currently supports the OrbitDB `KeyValue`, as well as the `Feed`, `Set` and `OrderedKeyValue` databases. Pull requests for additional db types are of course welcome!
 
 ## Examples
-Below are a few examples of `bohr-db` with `KeyValue` and `Set` databases. See the test folder for examples with other orbit-db database types.
+Below are a few examples of `bohr-db` with `KeyValue` and `Set` databases. See the test folder for examples with other OrbitDB database types.
 
 ### Set
 As simple example with `Set`:
@@ -54,7 +54,7 @@ const all = await typedDB.all();  // [1, 2]
 await typedDB.add("not a number")  // throws both TypeScript and runtime errors !
 
 // Even invalid values somehow added to the log (already present, or received from a peer) will not appear in the data
-// Force write invalid value to underlying orbit-db database
+// Force write invalid value to underlying OrbitDB database
 await db.add("not a number");
 await typedDB.all()  // Yay !! Still [1, 2]
 ```
