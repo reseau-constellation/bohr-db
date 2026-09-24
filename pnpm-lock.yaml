@@ -68,7 +68,7 @@ importers:
         version: 4.1.14
       '@libp2p/webrtc':
         specifier: ^6.0.30
-        version: 6.0.32(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)
+        version: 6.0.33(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)
       '@libp2p/websockets':
         specifier: ^10.1.20
         version: 10.1.21
@@ -1418,8 +1418,8 @@ packages:
   '@libp2p/multistream-select@7.0.28':
     resolution: {integrity: sha512-X6rmxeAlFeTDHDc4IPujz+y9TdA8cSMFfWyGJfxdIbQpDc1PwZI/Ttt3YWp0LAT9sbSYVFaWA6cGTN9EnMWtGQ==}
 
-  '@libp2p/noise@17.0.2':
-    resolution: {integrity: sha512-FY83yQf4/aqqiJHY6XB5aO7vtst6mMoy0r/vGsnTaosaYQ6g9xwkNbTq/juzTXjRbz9pBVkp62zXKJrXmm9G3w==}
+  '@libp2p/noise@17.0.3':
+    resolution: {integrity: sha512-dUmOjqkkeyUm9NCaFiSEqif1vsLsRFmlZXEfIeREerKXB7sLBvRLbpGiglsLNu7BlA6mrnsQk4BMjZ8aEDqzdA==}
 
   '@libp2p/peer-collections@7.0.28':
     resolution: {integrity: sha512-+evafZ5oSnGRfB7z+ycf09ehzNhCKoOZaiHgi6TpnDitpRQM5KQeN0H9Ep2uNJtzyW944HOG41BqcSaHbEHv7Q==}
@@ -1454,8 +1454,8 @@ packages:
   '@libp2p/utils@7.4.1':
     resolution: {integrity: sha512-e9cZeop+awI0rFczG4DvAwVeHqBhuCZfTyskvgONfKQrsT7L0BSlTlTTzZoFF8Dnb+QrzHsoIpnl0PrCr0h+Hg==}
 
-  '@libp2p/webrtc@6.0.32':
-    resolution: {integrity: sha512-XJTKNlsVh6v0LqbvBUFQqlwxHEQRA8KW8W2aLEZrjf8NtIww6BYozsaYVe+0W6ujjZWHjTkVjUwPgVqbIPzNFA==}
+  '@libp2p/webrtc@6.0.33':
+    resolution: {integrity: sha512-vnjOnmUl7+0Cuy/khNjbDY0KUk/7JZ+fyf27lGmHHZas2mXJ5wzLZOS1b63/5yIq6EtIdouF0wpSdjLh1cvA7g==}
 
   '@libp2p/websockets@10.1.21':
     resolution: {integrity: sha512-2iItZGEfTlGFUEcFCghtlsIiQ+fBowopysBB/8ya0MvZkRic/6o9oSklWT5pWDmXtmqmbp1Dko/iLcBOhDOgFw==}
@@ -9036,7 +9036,7 @@ snapshots:
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
 
-  '@libp2p/noise@17.0.2':
+  '@libp2p/noise@17.0.3':
     dependencies:
       '@chainsafe/as-chacha20poly1305': 0.1.0
       '@chainsafe/as-sha256': 1.2.5
@@ -9207,14 +9207,14 @@ snapshots:
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
 
-  '@libp2p/webrtc@6.0.32(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)':
+  '@libp2p/webrtc@6.0.33(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@libp2p/crypto': 5.1.23
       '@libp2p/interface': 3.3.0
       '@libp2p/interface-internal': 3.1.13
       '@libp2p/keychain': 6.1.7
-      '@libp2p/noise': 17.0.2
+      '@libp2p/noise': 17.0.3
       '@libp2p/peer-id': 6.0.15
       '@libp2p/utils': 7.4.1
       '@multiformats/multiaddr': 13.0.3
@@ -12658,7 +12658,7 @@ snapshots:
       '@libp2p/tcp': 11.0.27
       '@libp2p/tls': 3.1.9
       '@libp2p/upnp-nat': 4.0.27
-      '@libp2p/webrtc': 6.0.32(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)
+      '@libp2p/webrtc': 6.0.33(react-native@0.85.3(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.6)(supports-color@8.1.1))(supports-color@8.1.1)
       '@libp2p/websockets': 10.1.21
       '@multiformats/dns': 1.0.15
       blockstore-core: 6.1.3
