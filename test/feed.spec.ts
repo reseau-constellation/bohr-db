@@ -1,4 +1,3 @@
-import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.ts";
@@ -14,6 +13,7 @@ import { type TypedFeed, typedFeed } from "../src/feed.ts";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
 import { type JSONSchemaType } from "ajv";
+import type { HeliaWithLibp2p } from "@helia/libp2p";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
@@ -21,7 +21,7 @@ const keysPath = "./testkeys";
 const numericSchema: JSONSchemaType<number> = { type: "number" };
 
 describe("Typed Feed", () => {
-  let ipfs: Helia;
+  let ipfs: HeliaWithLibp2p;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
@@ -195,7 +195,6 @@ describe("Typed Feed", () => {
     });
 
     it("undefined values are stripped before adding", async () => {
-      // @ts-expect-error Deliberately adding explicit undefined value
       await typedDB.add({ a: 2, b: undefined });
 
       const actual = await typedDB.all();

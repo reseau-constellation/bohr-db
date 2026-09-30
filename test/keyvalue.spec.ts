@@ -1,4 +1,3 @@
-import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.ts";
@@ -9,12 +8,13 @@ import { type TypedKeyValue, typedKeyValue } from "../src/keyvalue.ts";
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
 import { type JSONSchemaType } from "ajv";
+import type { HeliaWithLibp2p } from "@helia/libp2p";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
 
 describe("Typed KeyValue", () => {
-  let ipfs: Helia;
+  let ipfs: HeliaWithLibp2p;
   let orbit: OrbitDB;
   let db: KeyValueDatabase;
 
@@ -265,7 +265,6 @@ describe("Typed KeyValue", () => {
     });
 
     it("delete entry on undefined value", async () => {
-      // @ts-expect-error Deliberately adding explicit undefined value
       await typedDB.put("a", { b: undefined, c: 2 });
 
       const actual = await typedDB.allAsJSON();

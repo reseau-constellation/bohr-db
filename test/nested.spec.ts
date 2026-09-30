@@ -1,4 +1,3 @@
-import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.ts";
@@ -10,12 +9,13 @@ import { type JSONSchemaType } from "ajv";
 import { Nested, type NestedDatabaseType } from "@orbitdb/nested-db";
 import { type TypedNested, typedNested } from "../src/nested.ts";
 import { type RecursivePartial } from "../src/types.ts";
+import type { HeliaWithLibp2p } from "@helia/libp2p";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys-nested";
 
 describe("Typed Nested", () => {
-  let ipfs: Helia;
+  let ipfs: HeliaWithLibp2p;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;

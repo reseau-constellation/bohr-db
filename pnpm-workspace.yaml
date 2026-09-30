@@ -3,7 +3,9 @@ allowBuilds:
   classic-level: true
   deno: true
   esbuild: true
-  node-datachannel: true
-  unrs-resolver: true
-
-packages: []
+minimumReleaseAgeExclude:
+  - '@orbitdb/core-types@2.0.0'
+  - '@orbitdb/feed-db@2.0.0'
+  - '@orbitdb/nested-db@2.2.0'
+  - '@orbitdb/set-db@2.2.1'
+  - '@orbitdb/ordered-keyvalue-db@2.0.0 || 2.0.1'

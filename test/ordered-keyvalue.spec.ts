@@ -1,4 +1,3 @@
-import { type Helia } from "helia";
 import { rimraf } from "rimraf";
 
 import { createTestHelia } from "./config.ts";
@@ -20,6 +19,7 @@ import {
 
 import { chai, chaiAsPromised, expect } from "aegir/chai";
 import type { JSONSchemaType } from "ajv";
+import type { HeliaWithLibp2p } from "@helia/libp2p";
 chai.use(chaiAsPromised);
 
 const keysPath = "./testkeys";
@@ -30,7 +30,7 @@ const removeHash = <T>(
   data.map((x) => ({ key: x.key, value: x.value }));
 
 describe("Typed OrderedKeyValue", () => {
-  let ipfs: Helia;
+  let ipfs: HeliaWithLibp2p;
   let identities;
   let keystore: KeyStoreType;
   let testIdentity1: Identity;
@@ -354,7 +354,6 @@ describe("Typed OrderedKeyValue", () => {
     });
 
     it("delete key with undefined value", async () => {
-      // @ts-expect-error Deliberately adding explicit undefined value
       await typedDB.put("a", { b: undefined, c: 2 });
 
       const actual = await typedDB.all();
