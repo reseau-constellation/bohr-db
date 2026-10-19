@@ -46,7 +46,7 @@
     "@libp2p/circuit-relay-v2": "^4.2.13",
     "@libp2p/gossipsub": "^17.1.2",
     "@libp2p/identify": "^4.1.14",
-    "@libp2p/webrtc": "^6.0.33",
+    "@libp2p/webrtc": "^7.0.0",
     "@libp2p/websockets": "^10.1.21",
     "@types/mocha": "^10.0.10",
     "@types/node": "^26.6.3",
