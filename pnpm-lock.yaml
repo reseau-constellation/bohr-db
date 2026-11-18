@@ -37,7 +37,7 @@ importers:
         version: 7.1.16(react-native@0.87.1(@babel/core@7.29.7(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)
       multiformats:
         specifier: ^14.0.5
-        version: 14.0.5
+        version: 14.0.6
       ts-deepmerge:
         specifier: ^8.0.0
         version: 8.0.0
@@ -5470,6 +5470,9 @@ packages:
 
   multiformats@14.0.5:
     resolution: {integrity: sha512-vbIm83F2yZ1pWJGS0yl0ysracIvv56LtbrIyiIQHoLdYDJOMoLfVFsXhh9DUH4SFdkdkFhucyWniihsNzVEjkQ==}
+
+  multiformats@14.0.6:
+    resolution: {integrity: sha512-0YlOSF+MAPh+68ao+Qcya4SkiF/amdpAe0jmOsCH7ztKoWiQJbVjkVKqjgyJK5TApL5zyDExT56aFf6A+H/WIA==}
 
   multimatch@5.0.0:
     resolution: {integrity: sha512-ypMKuglUrZUD99Tk2bUQ+xNQj43lPEfAeX2o9cTteAmShXy2VHDJpuwu1o0xqoKCt9jLVAvwyFKdLTPXKAfJyA==}
@@ -14839,6 +14842,8 @@ snapshots:
   multiformats@13.4.2: {}
 
   multiformats@14.0.5: {}
+
+  multiformats@14.0.6: {}
 
   multimatch@5.0.0:
     dependencies:
