@@ -86,7 +86,7 @@ importers:
         version: 8.73.0(eslint@10.15.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@7.0.2)
       aegir:
         specifier: ^48.1.6
-        version: 48.1.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1)
+        version: 48.2.0(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1)
       blockstore-core:
         specifier: ^7.0.1
         version: 7.0.1
@@ -2339,8 +2339,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  aegir@48.1.7:
-    resolution: {integrity: sha512-76saIaqHAEGUylcc+TJEHBto8oVsyTnaMQu/87eEvaKl80WumkABuw7qEG0KmGIFsFZnrHqzyfO4Xjly/q2Bhg==}
+  aegir@48.2.0:
+    resolution: {integrity: sha512-ENj9q4S+M3TpXdDK7fDfFiDLEk28PAnkDPgFps/+K9wqxCiiL60YHcbTo6odgTl0K8tAmuMpeD20/ZNGP6WbnA==}
     hasBin: true
 
   agent-base@6.0.2:
@@ -8688,7 +8688,7 @@ snapshots:
       it-pushable: 3.2.4
       it-take: 3.0.11
       it-to-buffer: 5.0.0
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       p-defer: 4.0.1
       progress-events: 1.1.0
       protons-runtime: 8.0.1
@@ -8787,7 +8787,7 @@ snapshots:
       it-foreach: 2.1.7
       it-map: 3.1.6
       libp2p: 3.5.1
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       uint8arrays: 6.1.1
     transitivePeerDependencies:
       - bufferutil
@@ -8894,7 +8894,7 @@ snapshots:
       any-signal: 4.2.0
       delay: 7.0.0
       interface-datastore: 10.0.1
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       reflect-metadata: 0.2.2
       uint8arrays: 6.1.1
     transitivePeerDependencies:
@@ -9603,7 +9603,7 @@ snapshots:
       it-pushable: 3.2.4
       it-stream-types: 2.0.4
       main-event: 1.0.5
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       node-datachannel: 0.33.4
       p-defer: 4.0.1
       p-event: 7.1.1
@@ -9641,7 +9641,7 @@ snapshots:
       it-pushable: 3.2.4
       it-stream-types: 2.0.4
       main-event: 1.0.5
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       node-datachannel: 0.33.4
       p-defer: 4.0.1
       p-event: 8.0.1
@@ -9827,7 +9827,7 @@ snapshots:
     dependencies:
       '@helia/libp2p': 2.1.5(react-native@0.87.1(@babel/core@7.29.7(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)
       '@libp2p/interface': 3.3.0
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       tiny-typed-emitter: 2.1.0
     transitivePeerDependencies:
       - bufferutil
@@ -10708,7 +10708,7 @@ snapshots:
 
   acorn@8.18.0: {}
 
-  aegir@48.1.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1):
+  aegir@48.2.0(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
       '@electron/get': 5.1.0(supports-color@8.1.1)
       '@polka/send-type': 0.5.2
@@ -13118,7 +13118,7 @@ snapshots:
       it-merge: 3.0.15
       main-event: 1.0.5
       mortice: 3.3.1
-      multiformats: 14.0.5
+      multiformats: 14.0.6
       progress-events: 1.1.0
       uint8arrays: 6.1.1
     transitivePeerDependencies:
