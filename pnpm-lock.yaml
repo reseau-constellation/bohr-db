@@ -37,7 +37,7 @@ importers:
         version: 7.1.16(react-native@0.87.1(@babel/core@7.29.7(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)
       multiformats:
         specifier: ^14.0.5
-        version: 14.0.7
+        version: 14.0.8
       ts-deepmerge:
         specifier: ^8.0.0
         version: 8.0.0
@@ -5468,11 +5468,8 @@ packages:
   multiformats@13.4.2:
     resolution: {integrity: sha512-eh6eHCrRi1+POZ3dA+Dq1C6jhP1GNtr9CRINMb67OKzqW9I5DUuZM/3jLPlzhgpGeiNUlEGEbkCYChXMCc/8DQ==}
 
-  multiformats@14.0.6:
-    resolution: {integrity: sha512-0YlOSF+MAPh+68ao+Qcya4SkiF/amdpAe0jmOsCH7ztKoWiQJbVjkVKqjgyJK5TApL5zyDExT56aFf6A+H/WIA==}
-
-  multiformats@14.0.7:
-    resolution: {integrity: sha512-cakOJESELiIY9QbUL9DlnWxJE/lH7Z5hxhPWnG8PONvjMBsbE8jWGQE0ujidINS0bWOF0Knkf0iRY7e81hRgCQ==}
+  multiformats@14.0.8:
+    resolution: {integrity: sha512-zIqvA0fi/y9lFJhC0IysGlXKMBB3CDDi2Ppp8NWiR85dwRhyl54rVK8ZtjfeNz/f1tdq+aZSFIF5aRGpDjZ6Bw==}
 
   multimatch@5.0.0:
     resolution: {integrity: sha512-ypMKuglUrZUD99Tk2bUQ+xNQj43lPEfAeX2o9cTteAmShXy2VHDJpuwu1o0xqoKCt9jLVAvwyFKdLTPXKAfJyA==}
@@ -8692,7 +8689,7 @@ snapshots:
       it-pushable: 3.2.4
       it-take: 3.0.11
       it-to-buffer: 5.0.0
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       p-defer: 4.0.1
       progress-events: 1.1.0
       protons-runtime: 8.0.1
@@ -8713,7 +8710,7 @@ snapshots:
       '@libp2p/interface': 3.3.0
       it-first: 3.0.11
       it-map: 3.1.6
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
 
   '@helia/delegated-routing-v1-http-api-client@9.0.2':
@@ -8727,7 +8724,7 @@ snapshots:
       it-first: 3.0.11
       it-map: 3.1.6
       it-ndjson: 2.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       race-signal: 2.0.2
       uint8arrays: 6.1.1
 
@@ -8735,7 +8732,7 @@ snapshots:
     dependencies:
       '@helia/interface': 7.1.2
       '@multiformats/uri-to-multiaddr': 10.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
 
   '@helia/http@4.0.8':
@@ -8757,7 +8754,7 @@ snapshots:
       interface-blockstore: 7.0.1
       interface-datastore: 10.0.1
       main-event: 1.0.5
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       progress-events: 1.1.0
 
   '@helia/libp2p@2.1.5(react-native@0.87.1(@babel/core@7.29.7(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)':
@@ -8791,7 +8788,7 @@ snapshots:
       it-foreach: 2.1.7
       it-map: 3.1.6
       libp2p: 3.5.2
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
     transitivePeerDependencies:
       - bufferutil
@@ -8810,7 +8807,7 @@ snapshots:
       '@multiformats/uri-to-multiaddr': 10.0.0
       abort-error: 1.0.2
       birnam: 1.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       progress-events: 1.1.0
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -8823,7 +8820,7 @@ snapshots:
       '@multiformats/multiaddr': 13.0.3
       it-filter: 3.1.6
       it-to-buffer: 5.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       p-defer: 4.0.1
       progress-events: 1.1.0
       race-signal: 2.0.2
@@ -8849,7 +8846,7 @@ snapshots:
   '@ipld/dag-cbor@10.0.2':
     dependencies:
       cborg: 6.1.2
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   '@ipld/dag-cbor@9.2.7':
     dependencies:
@@ -8859,16 +8856,16 @@ snapshots:
   '@ipld/dag-json@11.0.1':
     dependencies:
       cborg: 6.1.2
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   '@ipld/dag-pb@4.2.0':
     dependencies:
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   '@ipshipyard/crypto@1.1.0':
     dependencies:
       abort-error: 1.0.2
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -8878,7 +8875,7 @@ snapshots:
       '@ipshipyard/crypto': 1.1.0
       abort-error: 1.0.2
       interface-datastore: 10.0.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -8898,7 +8895,7 @@ snapshots:
       any-signal: 4.2.0
       delay: 7.0.0
       interface-datastore: 10.0.1
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       reflect-metadata: 0.2.2
       uint8arrays: 6.1.1
     transitivePeerDependencies:
@@ -8938,7 +8935,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 24.19.0
+      '@types/node': 26.6.11
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -8986,7 +8983,7 @@ snapshots:
       '@multiformats/multiaddr': 13.0.3
       any-signal: 4.2.0
       main-event: 1.0.5
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
 
@@ -9012,7 +9009,7 @@ snapshots:
       '@multiformats/multiaddr-matcher': 3.0.2
       any-signal: 4.2.0
       main-event: 1.0.5
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       nanoid: 6.0.1
       progress-events: 1.1.0
       protons-runtime: 7.1.2
@@ -9033,7 +9030,7 @@ snapshots:
       '@libp2p/interface': 3.3.0
       '@noble/curves': 2.4.0
       '@noble/hashes': 2.4.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9043,7 +9040,7 @@ snapshots:
       '@libp2p/interface': 3.3.1
       '@noble/curves': 2.4.0
       '@noble/hashes': 2.4.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9053,7 +9050,7 @@ snapshots:
       '@libp2p/interface': 3.4.0
       '@noble/curves': 2.4.0
       '@noble/hashes': 2.4.0
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9081,7 +9078,7 @@ snapshots:
       it-length-prefixed: 11.0.1
       it-pipe: 3.0.1
       it-pushable: 3.2.4
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9111,7 +9108,7 @@ snapshots:
       '@multiformats/multiaddr-to-uri': 12.0.0
       '@multiformats/uri-to-multiaddr': 10.0.0
       it-to-browser-readablestream: 2.0.14
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       race-event: 1.6.1
       readable-stream: 4.7.0
       uint8arraylist: 3.0.2
@@ -9125,7 +9122,7 @@ snapshots:
       '@libp2p/interface-internal': 3.1.13
       '@libp2p/utils': 7.4.1
       '@multiformats/multiaddr': 13.0.3
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       race-event: 1.6.1
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9185,7 +9182,7 @@ snapshots:
       '@multiformats/dns': 1.0.15
       '@multiformats/multiaddr': 13.0.3
       main-event: 1.0.5
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       progress-events: 1.1.0
       uint8arraylist: 3.0.2
 
@@ -9194,7 +9191,7 @@ snapshots:
       '@multiformats/dns': 1.0.15
       '@multiformats/multiaddr': 13.0.3
       main-event: 1.0.5
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       progress-events: 1.1.0
       uint8arraylist: 3.0.2
 
@@ -9203,7 +9200,7 @@ snapshots:
       '@multiformats/dns': 1.0.15
       '@multiformats/multiaddr': 13.0.3
       main-event: 1.0.5
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       progress-events: 1.1.0
       uint8arraylist: 3.0.2
 
@@ -9231,7 +9228,7 @@ snapshots:
       it-pushable: 3.2.4
       it-take: 3.0.11
       main-event: 1.0.5
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       p-defer: 4.0.1
       p-event: 7.1.1
       progress-events: 1.1.0
@@ -9248,7 +9245,7 @@ snapshots:
       '@noble/hashes': 2.4.0
       asn1js: 3.0.10
       interface-datastore: 10.0.1
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -9259,7 +9256,7 @@ snapshots:
       '@noble/hashes': 2.4.0
       asn1js: 3.0.10
       interface-datastore: 10.0.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -9270,7 +9267,7 @@ snapshots:
       '@noble/hashes': 2.4.0
       asn1js: 3.0.10
       interface-datastore: 10.0.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       sanitize-filename: 1.6.4
       uint8arrays: 6.1.1
 
@@ -9279,7 +9276,7 @@ snapshots:
       '@libp2p/interface': 3.3.0
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 10.0.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       weald: 1.1.3
 
   '@libp2p/logger@6.2.14':
@@ -9287,7 +9284,7 @@ snapshots:
       '@libp2p/interface': 3.3.1
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 10.0.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       weald: 1.1.3
 
   '@libp2p/logger@6.2.16':
@@ -9295,7 +9292,7 @@ snapshots:
       '@libp2p/interface': 3.4.0
       '@multiformats/multiaddr': 13.0.3
       interface-datastore: 10.0.1
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       weald: 1.1.3
 
   '@libp2p/mdns@12.0.32':
@@ -9380,41 +9377,41 @@ snapshots:
       '@libp2p/interface': 3.3.0
       '@libp2p/peer-id': 6.0.15
       '@libp2p/utils': 7.4.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   '@libp2p/peer-collections@7.0.29':
     dependencies:
       '@libp2p/interface': 3.3.1
       '@libp2p/peer-id': 6.0.16
       '@libp2p/utils': 7.4.2
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   '@libp2p/peer-collections@7.0.33':
     dependencies:
       '@libp2p/interface': 3.4.0
       '@libp2p/peer-id': 6.0.18
       '@libp2p/utils': 7.4.6
-      multiformats: 14.0.7
+      multiformats: 14.0.8
 
   '@libp2p/peer-id@6.0.15':
     dependencies:
       '@libp2p/crypto': 5.1.23
       '@libp2p/interface': 3.3.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
 
   '@libp2p/peer-id@6.0.16':
     dependencies:
       '@libp2p/crypto': 5.1.24
       '@libp2p/interface': 3.3.1
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
 
   '@libp2p/peer-id@6.0.18':
     dependencies:
       '@libp2p/crypto': 5.2.0
       '@libp2p/interface': 3.4.0
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       uint8arrays: 6.1.1
 
   '@libp2p/peer-record@9.0.19':
@@ -9423,7 +9420,7 @@ snapshots:
       '@libp2p/interface': 3.4.0
       '@libp2p/peer-id': 6.0.18
       '@multiformats/multiaddr': 13.0.3
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8-varint: 3.0.0
       uint8arraylist: 3.0.2
@@ -9441,7 +9438,7 @@ snapshots:
       it-all: 3.0.11
       main-event: 1.0.5
       mortice: 3.3.1
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       protons-runtime: 7.1.2
       uint8arraylist: 3.0.2
       uint8arrays: 6.1.1
@@ -9606,7 +9603,7 @@ snapshots:
       it-pushable: 3.2.4
       it-stream-types: 2.0.4
       main-event: 1.0.5
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       node-datachannel: 0.33.4
       p-defer: 4.0.1
       p-event: 7.1.1
@@ -9644,7 +9641,7 @@ snapshots:
       it-pushable: 3.2.4
       it-stream-types: 2.0.4
       main-event: 1.0.5
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       node-datachannel: 0.33.4
       p-defer: 4.0.1
       p-event: 8.0.1
@@ -9702,7 +9699,7 @@ snapshots:
   '@multiformats/multiaddr@13.0.3':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       uint8-varint: 3.0.0
       uint8arrays: 6.1.1
 
@@ -9828,7 +9825,7 @@ snapshots:
     dependencies:
       '@helia/libp2p': 2.1.5(react-native@0.87.1(@babel/core@7.29.7(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)
       '@libp2p/interface': 3.3.0
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       tiny-typed-emitter: 2.1.0
     transitivePeerDependencies:
       - bufferutil
@@ -11087,7 +11084,7 @@ snapshots:
 
   birnam@1.0.0:
     dependencies:
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       weald: 1.1.3
 
   bl@0.8.2:
@@ -11109,7 +11106,7 @@ snapshots:
       it-all: 3.0.11
       it-filter: 3.1.6
       it-merge: 3.0.15
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   blockstore-level@4.0.1:
     dependencies:
@@ -11120,7 +11117,7 @@ snapshots:
       it-all: 3.0.11
       it-to-buffer: 5.0.0
       level: 10.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
       race-signal: 2.0.2
       uint8arrays: 6.1.1
 
@@ -11400,7 +11397,7 @@ snapshots:
 
   chrome-launcher@0.15.2(supports-color@8.1.1):
     dependencies:
-      '@types/node': 24.19.0
+      '@types/node': 26.6.11
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2(supports-color@8.1.1)
@@ -11409,7 +11406,7 @@ snapshots:
 
   chromium-edge-launcher@0.3.0(supports-color@8.1.1):
     dependencies:
-      '@types/node': 24.19.0
+      '@types/node': 26.6.11
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2(supports-color@8.1.1)
@@ -13119,7 +13116,7 @@ snapshots:
       it-merge: 3.0.15
       main-event: 1.0.5
       mortice: 3.3.1
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       progress-events: 1.1.0
       uint8arrays: 6.1.1
     transitivePeerDependencies:
@@ -13274,7 +13271,7 @@ snapshots:
   interface-blockstore@7.0.1:
     dependencies:
       interface-store: 8.0.0
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   interface-datastore@10.0.1:
     dependencies:
@@ -13708,7 +13705,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.19.0
+      '@types/node': 26.6.11
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -13725,7 +13722,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 24.19.0
+      '@types/node': 26.6.11
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -13908,7 +13905,7 @@ snapshots:
       it-merge: 3.0.15
       it-parallel: 3.0.16
       main-event: 1.0.5
-      multiformats: 14.0.7
+      multiformats: 14.0.8
       p-defer: 4.0.1
       p-event: 8.0.1
       p-retry: 8.0.1
@@ -14842,9 +14839,7 @@ snapshots:
 
   multiformats@13.4.2: {}
 
-  multiformats@14.0.6: {}
-
-  multiformats@14.0.7: {}
+  multiformats@14.0.8: {}
 
   multimatch@5.0.0:
     dependencies:
@@ -16822,7 +16817,7 @@ snapshots:
 
   uint8arrays@6.1.1:
     dependencies:
-      multiformats: 14.0.6
+      multiformats: 14.0.8
 
   unbox-primitive@1.1.0:
     dependencies:
